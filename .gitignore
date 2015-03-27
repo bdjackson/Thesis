@@ -1,0 +1,10 @@
+*.log
+*.aux
+thesis.pdf
+*.d
+*.bbl
+*.blg
+*.brf
+*.out
+*.toc
+thesis-feyn.*
