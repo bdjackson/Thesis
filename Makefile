@@ -155,7 +155,7 @@ endef
 #------------------------------------------------------------------------------
 # named targets
 #------------------------------------------------------------------------------
-default: pdf
+default: pdf pages
 
 pdf: pdf-imp
 	@$(PRINT) "pdf done."
@@ -177,6 +177,10 @@ html: $(SRC) $(INCLUDED_TEX)
 	@$(DEBUG_PRINT) "- building $@" ; \
 	$(L2H) $(SRC) ; \
 	$(PRINT) "html done."
+	
+pages:
+	@$(PRINT) "Page count"
+	./scripts/count_pages.sh
 
 JUNK = *.aux *.log *.bbl *.blg *.brf *.cb *.ind *.idx *.ilg *.inx *.dvi *.toc *.out *~ ~* spellTmp *.lot *.lof *.ps *.d
 

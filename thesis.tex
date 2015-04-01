@@ -14,6 +14,7 @@
 %\usepackage{multicol}
 %\usepackage{rotating}
 %\usepackage{morefloats}
+\usepackage{placeins}
 
 %% personal style files
 %\usepackage{atlas_tau_vars}
@@ -66,20 +67,18 @@
 %%--------------------------------------------------------------------
 \mainmatter
 \include{tex/introduction}
-%\include{tex/theory}
-%\include{tex/detector}
-%\include{tex/trt}
-%\include{tex/tau}
-%\include{tex/Ztautau}
-%\include{tex/Zprime}
-%\include{tex/conclusion}
+\include{tex/theory}
+\include{tex/lhc}
+\include{tex/trt}
+\include{tex/mc}
+\include{tex/blstop}
+\include{tex/conclusion}
 
 %%--------------------------------------------------------------------
 %% appendix
 %%--------------------------------------------------------------------
-%\appendix
-%\include{tex/apx-analysis-model}
-%\include{tex/apx-tau-vars}
+\appendix
+\include{tex/apx_statistics}
 \end{Spacing}
 
 %%--------------------------------------------------------------------
