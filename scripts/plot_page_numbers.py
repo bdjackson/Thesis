@@ -1,4 +1,3 @@
-# import matplotlib as mp
 import matplotlib.pyplot as plt
 import pandas
 import datetime
@@ -15,7 +14,6 @@ page_number_df['date-time'] = pandas.to_datetime(page_number_df['date-time'],
                                                  dayfirst=True)
 page_number_df['date'] = pandas.DatetimeIndex(
         page_number_df['date-time']).normalize()
-# page_number_df = page_number_df.drop('date-time', 1)
 
 # extract the first date in the data frame, and compute the day number
 first_date = page_number_df['date'].iloc[0]
@@ -56,7 +54,8 @@ def draw_annotation(label_text, date_string, offset_x, offset_y,
                        linewidth=line_width, arrowstyle=arrow_style,
                        connectionstyle=connection_style)
 
-    this_date=datetime.datetime.strptime(date_string, '%a %b %d %H:%M:%S %Z %Y')
+    this_date=datetime.datetime.strptime(date_string,
+                                         '%a %b %d %H:%M:%S %Z %Y')
 
     point_x = (this_date - first_date).days
     point_y = page_number_df[page_number_df['day_num'] == point_x
