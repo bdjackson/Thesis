@@ -62,7 +62,6 @@ DVI	:= $(SRC:%.tex=%.dvi)
 PSF	:= $(SRC:%.tex=%.ps)
 PDF	:= $(SRC:%.tex=%.pdf)
 BASENAME := $(SRC:%.tex=%)
-MFF := $(SRC:%.tex=%-feyn.mf)
 TOC := $(SRC:%.tex=%.toc)
 INCLUDED_TEX := $(shell $(PERL_GET_TEX) $(SRC))
 #alltex := $(wildcard *.tex tex/*.tex)
@@ -76,7 +75,6 @@ DVIPS	  = dvips
 DVIPDF    = dvipdft
 L2H       = latex2html
 GH        = gv
-MF        = mf '\mode=localfont; input $(MFF)'
 
 ## misc commands
 DATE = $(shell date +%Y-%m-%d)
@@ -94,7 +92,6 @@ PRINT_WARNINGS = $(PRINT) "warnings/errors   -----------------------------------
 
 ## checks to determine what to run
 CHECK_MAKEINDEX = egrep -c '^[^%]*\\\\makeindex' $(BASENAME).tex
-CHECK_MF        = egrep -c '^[^%]*\\\\begin\{fmffile\}' $(BASENAME).tex
 CHECK_BIBTEX    = egrep -c '(No file.*\\.bbl)|(Citation.*undefined)' $(BASENAME).log
 CHECK_LATEX     = egrep -c '(There were undefined)|(Rerun to get)' $(BASENAME).log
 CHECK_TOC       = if cmp -s $(BASENAME).toc $(BASENAME).toc.bak; then echo 'unchanged'; else echo 'needs re-run'; fi
@@ -104,8 +101,6 @@ RUN_MAKEINDEX   = $(PRINT) "- running makeindex (output in makeindex.log)" ; \
 	$(MAKEINDEX) $(<:%.tex=%) &> makeindex.log $(ALLOW_ERROR)
 RUN_BIBTEX      = $(PRINT) "- running bibtex (output in bibtex.log)" ; \
 	$(BIBTEX) $(<:%.tex=%) &> bibtex.log $(ALLOW_ERROR)
-RUN_MF          = $(PRINT) "- running metafont (output in mf.log)" ; \
-	$(MF) &> mf.log $(ALLOW_ERROR)
 RUN_LATEX_FIRST = $(PRINT) "- running latex (output in latex.log)" ; \
 	$(COPY_TOC) ; \
 	$(LATEX) -interaction=nonstopmode $< &> latex.log $(ALLOW_ERROR)
@@ -123,8 +118,6 @@ RUN_DVIPDF      = $(PRINT) "- running dvipdf (output in dvipdf.log)" ; \
 ## latex build routine
 define BUILD
 	$(PRINT_WELCOME)
-	$(DEBUG_PRINT) "step 1:  CHECK_MF = `$(CHECK_MF)`"
-	if (( `$(CHECK_MF)` > 0 )); then make mf; fi
 	$(DEBUG_PRINT) "step 2: latex that will halt on error"
 	$(RUN_LATEX_HALT)
 	$(DEBUG_PRINT) "step 3:  CHECK_MAKEINDEX = `$(CHECK_MAKEINDEX)`"
@@ -169,9 +162,6 @@ dvi: $(DVI)
 dvipdf: $(PDF)
 	@$(PRINT) "dvipdf done."
 
-mf: $(MFF)
-	@$(PRINT) "mf done."
-
 # TODO: This probably needs fixing
 html: $(SRC) $(INCLUDED_TEX)
 	@$(DEBUG_PRINT) "- building $@" ; \
@@ -189,17 +179,13 @@ clean:
 	rm -f $(JUNK) ; \
 	if [ -d tex ] ; then cd tex && rm -f $(JUNK) && cd ../ ; fi
 
-mfclean:
-	@$(DEBUG_PRINT) "- mfclean" ; \
-	rm -f $(BASENAME)-feyn.*
-
 binclean:
 	@$(DEBUG_PRINT) "- binclean" ; \
 	rm -f $(BASENAME).pdf
 
 distclean: clean
 
-realclean: clean mfclean binclean
+realclean: clean binclean
 
 over: realclean default
 all: over
@@ -212,7 +198,6 @@ showps: $(PSF)
 
 manual: $(SRC) $(INCLUDED_TEX)
 	$(RUN_LATEX_FIRST)
-	$(RUN_MF)
 	$(RUN_LATEX_HALT)
 	$(RUN_BIBTEX)
 	$(RUN_LATEX)
@@ -226,7 +211,7 @@ test:
 	echo $@ ; \
 	echo $(LATEX)
 
-.PHONY : default all mf ps dvipdf pdf pdf-imp html show showps info test clean depclean mfclean binclean distclean realclean over
+.PHONY : default all ps dvipdf pdf pdf-imp html show showps info test clean depclean binclean distclean realclean over
 
 
 #------------------------------------------------------------------------------
@@ -268,16 +253,5 @@ $(DVI): $(SRC) $(INCLUDED_TEX)
 %.ps: %.dvi
 	@$(DEBUG_PRINT) "- building $@" ; \
 	$(RUN_DVIPS)
-
-## builds the mf file
-##   because one doesn't expect you to change these figures often,
-##   MFF isn't set to depend INCLUDED_TEX, and will only be built
-##   when it doesn't already exist.  if you need to remake it, run
-##   make mfclean first.
-$(MFF): $(SRC)
-	@$(DEBUG_PRINT) "- building $@" ; \
-	$(PRINT) "it looks like you have some metafont figures." ; \
-	$(RUN_LATEX_FIRST); \
-	$(RUN_MF)
 
 # EOF

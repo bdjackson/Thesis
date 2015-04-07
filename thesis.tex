@@ -5,8 +5,6 @@
 %%--------------------------------------------------------------------
 \include{tex/docdefs}
 
-%% feynmf for feynman diagrams
-\usepackage{feynmf}
 \setlength{\unitlength}{1mm}
 
 %% other std packages
@@ -18,17 +16,12 @@
 \usepackage{tikz}
 
 %% personal style files
-%\usepackage{atlas_tau_vars}
 \usepackage{brett_latex_commands}
-
-%% to temporarily include only a single chapter
-%\includeonly{tex/tau}
 
 %%--------------------------------------------------------------------
 %% begin the document
 %%--------------------------------------------------------------------
 \begin{document}
-\begin{fmffile}{thesis-feyn}
 
 %%--------------------------------------------------------------------
 %% title page
@@ -87,11 +80,8 @@
 %%--------------------------------------------------------------------
 \backmatter
 \bibliographystyle{style/atlasnote}
-\bibliography{bibs/atlas,bibs/atlas_egamma,bibs/atlas_jets,bibs/atlas_lumi,bibs/atlas_met,bibs/atlas_muons,bibs/jets,bibs/leptoquark,bibs/mc_generators,bibs/single_top,bibs/susy,bibs/susy_bl,bibs/susy_cross_section,bibs/susy_light_stop_mass,bibs/susy_rpc,bibs/susy_signatures,bibs/susy_top_down,bibs/ttbar}
-%% Add bib files like this:
-%% \bibliography{bibs/theory,bibs/atlas}
+\bibliography{bibs/atlas,bibs/atlas_egamma,bibs/atlas_jets,bibs/atlas_lumi,bibs/atlas_met,bibs/atlas_muons,bibs/jets,bibs/leptoquark,bibs/mc_generators,bibs/single_top,bibs/susy,bibs/susy_bl,bibs/susy_cross_section,bibs/susy_light_stop_mass,bibs/susy_rpc,bibs/susy_signatures,bibs/susy_top_down,bibs/ttbar,bibs/statistics}
 
 %%--------------------------------------------------------------------
-\end{fmffile}
 \end{document}
 
