@@ -7,13 +7,147 @@
   and then expanded upon. The section headings are mostly the same}
 
 %% -----------------------------------------------------------------------------
-\section{Event selection}
-\label{sec:event_selection}
+\section{Object selection}
+\label{sec:object_selection}
 
-Events are required to have at least two reconstructed leptons and two $b$-tagged
-jets. If more than two leptons or two $b$-jets are found, the
-objects with the highest \pt are selected. The leptons
-are required to have opposite charge.
+Events are required to have at least two leptons with opposite charge, and two
+$b$-tagged jets.
+The object selection is performed in multiple steps. First, lepton and jet
+objects are reconstructed using detector signatures as described in
+Sections~\ref{sec:elctrons},~\ref{sec:muons},~and~\ref{sec:jets}.
+Baseline requirements are applied to remove poorly reconstructed objects.
+Also, all baseline objects are required to have $\pt \geq 40 \GeV$ since the
+stop signatures of interest tend to produce high momentum decay products.
+
+Baseline electrons must satisfy the \texttt{Medium++} identification
+requirement and have $|\eta| \leq 2.47$.
+In order to ensure the electron is prompt, requirements of 
+$d_0/\sigma(d_0) \leq 3$ and $z_0\,sin(\theta) \leq 0.4$ mm was placed on the
+impact parameter. The baseline electron requirements are outlined in
+Table~\ref{tab:baseline_el_def}.
+
+\begin{table}[ht]
+\caption{Baseline electron requirements.}
+\label{tab:baseline_el_def}
+\centering{
+  \begin{tabular}{cc}
+  \toprule
+    Quality            & \texttt{Medium++} \\
+    $p_T$              & $\geq 40$ GeV      \\
+    $|\eta|$           & $\leq 2.47$        \\
+    $d_0/\sigma(d_0)$  & $\leq 3$           \\
+    $z_0\,sin(\theta)$ & $\leq 0.4$ mm      \\
+    \bottomrule
+    \end{tabular}
+}
+\end{table}
+
+\begin{table}[ht]
+    \caption{Baseline muon requirements.}
+    \label{tab:baseline_mu_def}
+  \centering{
+    \begin{tabular}{cc}
+      \toprule
+      Quality              & \texttt{Loose} \\
+      $p_T$                & $\ge 40$ GeV   \\
+      $|\eta|$             & $\le 2.5$      \\
+      Number B layer hits  & $\ge 1$        \\
+      Number Pixel hits    & $\ge 1$        \\
+      Number SCT hits      & $\ge 5$        \\
+      Number Silicon holes & $\le 2$        \\
+      TRT hits             & See text       \\
+      $d_0/\sigma(d_0)$    & $\le 3$        \\
+      $z_0\,\sin(\theta)$  & $\le 1$ mm     \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
+
+\begin{table}[ht]
+    \caption{Baseline jet requirements.}
+    \label{tab:baseline_jet_def}
+  \centering{
+    \begin{tabular}{cc}
+      \toprule
+      $p_T$    & $\ge 40$ GeV \\
+      $|\eta|$ & $\le 4.9$    \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
+
+\begin{enumerate}
+  \item $\Delta R(e,e) \le 0.05$: If two baseline electrons fall
+    within a cone of $\Delta R(e,e) \le 0.05$, the electron with the
+    lower transverse energy ($E_T$) is removed from the event.
+  \item $\Delta R(e,\mathrm{jet}) \le 0.20$: If an electron and a jet
+    are within a cone of $\Delta R(e,\mathrm{jet}) \le 0.20$, it is
+    assumed that the electron is also reconstructed as a jet, and the
+    jet is removed from the event.
+  \item $\Delta R(e,\mathrm{jet}) \le 0.40$: If an electron an a jet
+    are within a cone of $\Delta R(e,\mathrm{jet}) \le 0.40$ after the
+    previous step, the reconstructed electron is assumed to be a
+    constituent of the jet, and is removed from the event.
+  \item $\Delta R(\mu,\mathrm{jet}) \le 0.40$: If a muon and a jet are
+    within a cone of $\Delta R(\mu,\mathrm{jet}) \le 0.40$, the muon
+    is assumed to be a constituent of the jet, and is removed from the
+    event.
+  \item $\Delta R(e,\mu) \le 0.01$: If an electron and a muon are
+    within $\Delta R(e,\mu) \le 0.01$, both are removed from the
+    event.
+  \item $\Delta R(\mu,\mu) \le 0.05$: If two muons are within $\Delta
+    R(\mu,\mu) \le 0.05$, both are removed from the event.
+\end{enumerate}
+
+If more than two signal leptons or two $b$-tagged jets are found, the event is
+kept, but only the two signal leptons and two $b$-tagged jets with the highest
+\pt\ are selected.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% Define some colors for this section to make changing colors easier
+\colorlet{pairing_l_0}{green!50!white}
+\colorlet{pairing_l_1}{green!20!white}
+\colorlet{pairing_b_0}{red!50!white}
+\colorlet{pairing_b_1}{red!20!white}
+%
+\begin{center}
+  \begin{tikzpicture}
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_0, text=black] (b0) at (-3,0) {$b_0$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black] (b1) at (-1,0) {$b_1$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_0, text=black] (l0) at (+1,0) {$\ell_0$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black] (l1) at (+3,0) {$\ell_1$};
+  \end{tikzpicture}
+\end{center}
+%
+There are two possible choices of pairings for these four objects.
+%
+\begin{center}
+  \begin{tikzpicture}
+    \node[rectangle, text=black] (sel1) at (-5.0,+0.5) {Selection 1:};
+    \node[rectangle, text=black] (sel2) at (-5.0,-0.5) {Selection 2:};
+
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_0, text=black] (b1) at (-3.25,+0.5) {$b_0$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_0, text=black] (l0) at (-2.50,+0.5) {$\ell_0$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black] (b1) at (+1.25,+0.5) {$b_1$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black] (l1) at (+2.00,+0.5) {$\ell_1$};
+    \node[rectangle, text=black] (m00) at (-1.0,+0.5) {$\Rightarrow m_{b_0\ell_0} = m_{b\ell}^\mathrm{a}$};
+    \node[rectangle, text=black] (m11) at (+3.5,+0.5) {$\Rightarrow m_{b_1\ell_1} = m_{b\ell}^\mathrm{b}$};
+
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_0, text=black] (b0) at (-3.25,-0.5) {$b_0$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black] (l1) at (-2.50,-0.5) {$\ell_1$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black] (b1) at (+1.25,-0.5) {$b_1$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_0, text=black] (l0) at (+2.00,-0.5) {$\ell_0$};
+    \node[rectangle, text=black] (m01) at (-1.0,-0.5) {$\Rightarrow m_{b_0\ell_1} = m_{b\ell}^\mathrm{a} $};
+    \node[rectangle, text=black] (m10) at (+3.5,-0.5) {$\Rightarrow m_{b_1\ell_0} = m_{b\ell}^\mathrm{b} $};
+  \end{tikzpicture}
+\end{center}
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\section{Trigger selection}
+\label{sec:trigger_selection}
+
+{\color{red} Expand on this a lot}
+
 Single-electron and single-muon triggers are used to select events. 
 Di-electron and di-muon events are required to pass a single-electron and
 single-muon trigger respectively, while electron-muon events are selected if
@@ -22,6 +156,88 @@ At least one of the reconstructed leptons is required to be
 within $\Delta R \leq 0.15$ of the detector signature found by the trigger.
 This trigger requirement is highly efficient for signal events; between 93\%
 and 98\% of events depending on the flavor channel.
+
+\begin{table}[ht]
+    \caption{Requirements for the triggers used in this analysis.  }
+    \label{tab:trigger_defs}
+  \centering{
+    \begin{tabular}{c|cc}
+      \toprule
+      Trigger & $p_\mathrm{T}$ threshold & Other requirements \\
+      \midrule
+      \multirow{2}{*}{\texttt{EF\_e24vhi\_medium1}}
+      & \multirow{2}{*}{$p_\mathrm{T}^{e} \ge 24$ GeV}
+      & hadronic core isolation $\le 1$ GeV \\
+      & & $p_\mathrm{T}^\mathrm{cone20}/p\mathrm{T} < 0.1$ \\
+      \texttt{EF\_e60\_medium1} & $p_\mathrm{T}^{e} \ge 60$ GeV & -- \\
+      \texttt{EF\_mu24i\_tight}
+      & $p_\mathrm{T}^{e} \ge 24$ GeV
+      & $p_\mathrm{T}^\mathrm{cone20}/p\mathrm{T} < 0.12$ \\
+      \texttt{EF\_mu36\_tight}  & $p_\mathrm{T}^{e} \ge 36$ GeV & -- \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
+
+\begin{figure}[ht]
+  \centering
+  \subbottom[\texttt{EF\_e24vhi\_medium1}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e24vhi_medium1.pdf}
+  }
+  \subbottom[\texttt{EF\_e60\_medium1}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e60_medium1.pdf}
+  }
+  \subbottom[\texttt{EF\_mu24i\_tight trigger}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_mu24i_tight.pdf}
+  }
+  \subbottom[\texttt{EF\_mu36\_tight}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_mu36_tight.pdf}
+  }
+  \caption{Efficiency of passing each trigger broken down by flavor channel.}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \subbottom[\texttt{EF\_e24vhi\_medium1}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e24vhi_medium1__el_pt.pdf}
+  }
+  \subbottom[\texttt{EF\_e60\_medium1}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e60_medium1__el_pt.pdf}
+  }
+  \caption{Efficiency of passing the single electron triggers for several
+    ranges of electron transverse momentum. Only flavor\_em events are shown.
+  }
+\end{figure}
+
+\begin{table}[ht]
+  \caption{Trigger selection for each final state. If the event passes any of
+    the triggers for the given final state, the event is accepted.
+  }
+  \label{tab:triggers}
+  \centering{
+    \begin{tabular}{cc}
+      \toprule
+      Final state & Trigger \\
+      \midrule
+      \multirow{2}{*}{$ee$bb}     &  \texttt{EF\_e24vhi\_medium1} \\
+                                  &  \texttt{EF\_e60\_medium1}    \\
+      \midrule
+      $\mu\mu$bb                  &  \texttt{EF\_mu24i\_tight}    \\
+      $\mu\mu$bb                  &  \texttt{EF\_mu36\_tight}     \\
+      \midrule
+      \multirow{3}{*}{$e\mu$bb}   &  \texttt{EF\_e24vhi\_medium1} \\
+                                  &  \texttt{EF\_e60\_medium1}    \\
+                                  &  \texttt{EF\_mu24i\_tight}    \\
+                                  &  \texttt{EF\_mu36\_tight}     \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
+
+\section{Signal regions}
+\label{sec:signal_regions}
+
+{\color{red} Expand on this, and talk about optimization process}
 
 Two overlapping signal regions (SRs) are defined to search for an excess of
 signal-like events, which are inconsistent with the prediction from the
