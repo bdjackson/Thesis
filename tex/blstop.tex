@@ -21,9 +21,10 @@ stop signatures of interest tend to produce high momentum decay products.
 
 Baseline electrons must satisfy the \texttt{Medium++} identification
 requirement and have $|\eta| \leq 2.47$.
-In order to ensure the electron is prompt, requirements of 
-$d_0/\sigma(d_0) \leq 3$ and $z_0\,sin(\theta) \leq 0.4$ mm was placed on the
-impact parameter. The baseline electron requirements are outlined in
+A requirement of $d_0/\sigma(d_0) \leq 3$ and $z_0\,sin(\theta) \leq 0.4$ mm
+was placed on the impact parameter to reject electrons coming from secondary
+vertices.
+The baseline electron requirements are outlined in
 Table~\ref{tab:baseline_el_def}.
 
 \begin{table}[ht]
@@ -31,37 +32,58 @@ Table~\ref{tab:baseline_el_def}.
 \label{tab:baseline_el_def}
 \centering{
   \begin{tabular}{cc}
-  \toprule
+    \toprule
     Quality            & \texttt{Medium++} \\
-    $p_T$              & $\geq 40$ GeV      \\
-    $|\eta|$           & $\leq 2.47$        \\
-    $d_0/\sigma(d_0)$  & $\leq 3$           \\
-    $z_0\,sin(\theta)$ & $\leq 0.4$ mm      \\
+    $p_T$              & $\geq 40$ GeV     \\
+    $|\eta|$           & $\leq 2.47$       \\
+    $d_0/\sigma(d_0)$  & $\leq 3$          \\
+    $z_0\,sin(\theta)$ & $\leq 0.4$ mm     \\
     \bottomrule
-    \end{tabular}
+  \end{tabular}
 }
 \end{table}
 
+Baseline muons are selected from the \texttt{STACO} muon collection, and
+required to pass the \texttt{Loose} identification requirement. The baseline
+muons must also have $|\eta| \leq 2.5$ 
+Impact parameter requirements of $d_0/\sigma(d_0) \leq 3$ and
+$z_0\,sin(\theta) \leq 1$ mm are applied to reduce the contamination of muons
+from secondary vertices and cosmic rays.
+Additional requirements are applied on the number of hits in the ID to ensure
+high quality tracks.
+These include at least one hit on track in both the B layer and the Pixel
+detector.
+The ID track must also have at least 5 hits in the SCT, at most 2 holes
+in both the Pixel detector and the SCT. 
+If the muon has $|\eta| \leq 1.9$, there must additionally be at least 6 TRT
+hits, of which no more than 90\% are outliers.
+Otherwise, no requirement is placed on the number of TRT hits.
+The baseline muon requirements are outlined in Table~\ref{tab:baseline_mu_def}.
+
 \begin{table}[ht]
-    \caption{Baseline muon requirements.}
-    \label{tab:baseline_mu_def}
+  \caption{Baseline muon requirements.}
+  \label{tab:baseline_mu_def}
   \centering{
     \begin{tabular}{cc}
       \toprule
       Quality              & \texttt{Loose} \\
-      $p_T$                & $\ge 40$ GeV   \\
-      $|\eta|$             & $\le 2.5$      \\
-      Number B layer hits  & $\ge 1$        \\
-      Number Pixel hits    & $\ge 1$        \\
-      Number SCT hits      & $\ge 5$        \\
-      Number Silicon holes & $\le 2$        \\
+      $p_T$                & $\geq 40$ GeV   \\
+      $|\eta|$             & $\leq 2.5$      \\
+      Number B layer hits  & $\geq 1$        \\
+      Number Pixel hits    & $\geq 1$        \\
+      Number SCT hits      & $\geq 5$        \\
+      Number Silicon holes & $\leq 2$        \\
       TRT hits             & See text       \\
-      $d_0/\sigma(d_0)$    & $\le 3$        \\
-      $z_0\,\sin(\theta)$  & $\le 1$ mm     \\
+      $d_0/\sigma(d_0)$    & $\leq 3$        \\
+      $z_0\,\sin(\theta)$  & $\leq 1$ mm     \\
       \bottomrule
     \end{tabular}
   }
 \end{table}
+
+Baseline jets are selected from the AntiKt4LCTopo jet collection, and required
+to have $|\eta| \leq 4.9$.
+The baseline jet requirements are outlined in Table~\ref{tab:baseline_jet_def}.
 
 \begin{table}[ht]
     \caption{Baseline jet requirements.}
@@ -69,8 +91,8 @@ Table~\ref{tab:baseline_el_def}.
   \centering{
     \begin{tabular}{cc}
       \toprule
-      $p_T$    & $\ge 40$ GeV \\
-      $|\eta|$ & $\le 4.9$    \\
+      $p_T$    & $\geq 40$ GeV \\
+      $|\eta|$ & $\leq 4.9$    \\
       \bottomrule
     \end{tabular}
   }
