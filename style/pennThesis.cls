@@ -22,6 +22,7 @@
 \RequirePackage{amsmath,amssymb,bm}
 \RequirePackage{atlasphysics}
 \RequirePackage{calc}
+\RequirePackage{nicefrac}
 
 % Note: not subfigure
 % \RequirePackage{subfig}

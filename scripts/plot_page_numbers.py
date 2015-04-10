@@ -11,9 +11,11 @@ page_number_df = pandas.DataFrame.from_csv(page_number_file_name,
 
 # convert the date/time column to a date, then normalize to only the date
 page_number_df['date-time'] = pandas.to_datetime(page_number_df['date-time'],
-                                                 dayfirst=True)
-page_number_df['date'] = pandas.DatetimeIndex(
-        page_number_df['date-time']).normalize()
+                                                 dayfirst=True,
+                                                 utc=False)
+# page_number_df['date'] = pandas.DatetimeIndex(
+#         page_number_df['date-time']).normalize()
+page_number_df['date'] = pandas.DatetimeIndex(page_number_df['date-time'])
 
 # extract the first date in the data frame, and compute the day number
 first_date = page_number_df['date'].iloc[0]
@@ -57,8 +59,9 @@ def draw_annotation(label_text, date_string, offset_x, offset_y,
     this_date=datetime.datetime.strptime(date_string,
                                          '%a %b %d %H:%M:%S %Z %Y')
 
+    # point_x = (this_date - first_date).days
     point_x = (this_date - first_date).days
-    point_y = page_number_df[page_number_df['day_num'] == point_x
+    point_y = page_number_df[page_number_df['day_num'] >= point_x
                             ]['pages'].iloc[0]
 
     text_x = point_x + offset_x

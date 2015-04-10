@@ -19,9 +19,13 @@ Baseline requirements are applied to remove poorly reconstructed objects.
 Also, all baseline objects are required to have $\pt \geq 40 \GeV$ since the
 stop signatures of interest tend to produce high momentum decay products.
 
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%% baseline electrons
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Baseline electrons must satisfy the \texttt{Medium++} identification
 requirement and have $|\eta| \leq 2.47$.
-A requirement of $d_0/\sigma(d_0) \leq 3$ and $z_0\,sin(\theta) \leq 0.4$ mm
+A requirement of $\DZEROSIG \leq 3$ and
+$ZZEROSINTHETA \leq 0.4$ mm
 was placed on the impact parameter to reject electrons coming from secondary
 vertices.
 The baseline electron requirements are outlined in
@@ -33,21 +37,24 @@ Table~\ref{tab:baseline_el_def}.
 \centering{
   \begin{tabular}{cc}
     \toprule
-    Quality            & \texttt{Medium++} \\
-    $p_T$              & $\geq 40$ GeV     \\
-    $|\eta|$           & $\leq 2.47$       \\
-    $d_0/\sigma(d_0)$  & $\leq 3$          \\
-    $z_0\,sin(\theta)$ & $\leq 0.4$ mm     \\
+    Quality        & \texttt{Medium++} \\
+    $p_T$          & $\geq 40$ GeV     \\
+    $|\eta|$       & $\leq 2.47$       \\
+    \DZEROSIG      & $\leq 3$          \\
+    \ZZEROSINTHETA & $\leq 0.4$ mm     \\
     \bottomrule
   \end{tabular}
 }
 \end{table}
 
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%% baseline muons
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Baseline muons are selected from the \texttt{STACO} muon collection, and
 required to pass the \texttt{Loose} identification requirement. The baseline
 muons must also have $|\eta| \leq 2.5$ 
-Impact parameter requirements of $d_0/\sigma(d_0) \leq 3$ and
-$z_0\,sin(\theta) \leq 1$ mm are applied to reduce the contamination of muons
+Impact parameter requirements of $\DZEROSIG \leq 3$ and
+$\ZZEROSINTHETA \leq 1$ mm are applied to reduce the contamination of muons
 from secondary vertices and cosmic rays.
 Additional requirements are applied on the number of hits in the ID to ensure
 high quality tracks.
@@ -67,20 +74,23 @@ The baseline muon requirements are outlined in Table~\ref{tab:baseline_mu_def}.
     \begin{tabular}{cc}
       \toprule
       Quality              & \texttt{Loose} \\
-      $p_T$                & $\geq 40$ GeV   \\
-      $|\eta|$             & $\leq 2.5$      \\
-      Number B layer hits  & $\geq 1$        \\
-      Number Pixel hits    & $\geq 1$        \\
-      Number SCT hits      & $\geq 5$        \\
-      Number Silicon holes & $\leq 2$        \\
+      $p_T$                & $\geq 40$ GeV  \\
+      $|\eta|$             & $\leq 2.5$     \\
+      Number B layer hits  & $\geq 1$       \\
+      Number Pixel hits    & $\geq 1$       \\
+      Number SCT hits      & $\geq 5$       \\
+      Number Silicon holes & $\leq 2$       \\
       TRT hits             & See text       \\
-      $d_0/\sigma(d_0)$    & $\leq 3$        \\
-      $z_0\,\sin(\theta)$  & $\leq 1$ mm     \\
+      \DZEROSIG            & $\leq 3$       \\
+      \ZZEROSINTHETA       & $\leq 1$ mm    \\
       \bottomrule
     \end{tabular}
   }
 \end{table}
 
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%% baseline jets
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Baseline jets are selected from the AntiKt4LCTopo jet collection, and required
 to have $|\eta| \leq 4.9$.
 The baseline jet requirements are outlined in Table~\ref{tab:baseline_jet_def}.
@@ -98,34 +108,69 @@ The baseline jet requirements are outlined in Table~\ref{tab:baseline_jet_def}.
   }
 \end{table}
 
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%% overlap removal
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+After selecting baseline leptons and jets, overlap between baseline objects are
+is removed to prevent a single detector signature from being included in
+multiple particle collections. 
+
 \begin{enumerate}
   \item $\Delta R(e,e) \le 0.05$: If two baseline electrons fall
     within a cone of $\Delta R(e,e) \le 0.05$, the electron with the
     lower transverse energy ($E_T$) is removed from the event.
-  \item $\Delta R(e,\mathrm{jet}) \le 0.20$: If an electron and a jet
+  \item $\Delta R(e,\mathrm{jet}) \le 0.20$: If a remaining electron and a jet
     are within a cone of $\Delta R(e,\mathrm{jet}) \le 0.20$, it is
     assumed that the electron is also reconstructed as a jet, and the
     jet is removed from the event.
-  \item $\Delta R(e,\mathrm{jet}) \le 0.40$: If an electron an a jet
-    are within a cone of $\Delta R(e,\mathrm{jet}) \le 0.40$ after the
-    previous step, the reconstructed electron is assumed to be a
-    constituent of the jet, and is removed from the event.
-  \item $\Delta R(\mu,\mathrm{jet}) \le 0.40$: If a muon and a jet are
-    within a cone of $\Delta R(\mu,\mathrm{jet}) \le 0.40$, the muon
-    is assumed to be a constituent of the jet, and is removed from the
-    event.
-  \item $\Delta R(e,\mu) \le 0.01$: If an electron and a muon are
-    within $\Delta R(e,\mu) \le 0.01$, both are removed from the
-    event.
-  \item $\Delta R(\mu,\mu) \le 0.05$: If two muons are within $\Delta
-    R(\mu,\mu) \le 0.05$, both are removed from the event.
+  \item $\Delta R(\ell,\mathrm{jet}) \le 0.40$: If remaining lepton (electron
+    or muon) and a remaining jet are within a cone of
+    $\Delta R(\ell,\mathrm{jet}) \le 0.40$, the reconstructed lepton is assumed
+    to be a constituent of the jet, and is removed from the event.
+  \item $\Delta R(e,\mu) \le 0.01$: If a remaining electron and a remaining muon
+    are within $\Delta R(e,\mu) \le 0.01$, both are removed from the event.
+  \item $\Delta R(\mu,\mu) \le 0.05$: If two remaining muons are within
+    $\Delta R(\mu,\mu) \le 0.05$, both are removed from the event.
 \end{enumerate}
 
-If more than two signal leptons or two $b$-tagged jets are found, the event is
-kept, but only the two signal leptons and two $b$-tagged jets with the highest
-\pt\ are selected.
+To reject leptons coming from low mass resonances, the invariant mass of any
+remaining same-flavor lepton pairs with opposite charge is computed.
+If the invariant mass of any of these pairs is less than 12 GeV, both leptons
+are removed from the event.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%% signal object definitions
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Additional requirements are placed on the leptons and jets after overlap
+removal to select the final ``signal'' objects.
+The scalar sum of the momentum of all tracks with $\pt \geq 400 \GeV$
+within a cone of $\Delta R \leq 0.30$ of a lepton ($\pt^\mathrm{cone30}$) is
+used to determine if the lepton is isolated.
+Both electrons and muons require
+$\nicefrac{\pT^{\mathrm{cone30}}}{\min(p_T, 60 \GeV)} \leq 0.1$ in order
+to be declared ``signal'' leptons.
+Jets must pass a tighter cut of $|\eta| \leq 2.4$, and be tagged as a $b$-jet
+using the 80\% working point of $\mathrm{MV1} \geq 0.3511$
+
+Events are required to have at least two signal leptons and two $b$-tagged jets.
+If more are found, the event is kept, but only the two signal leptons and two
+$b$-tagged jets with the highest \pt\ are selected.
+Furthermore, the two highest \pt\ leptons are required to have opposite charge.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%% pairing
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+To construct the mass of each of the $b\ell$ pairs, the leptons and $b$-tagged
+jets must be paired.
+It is possible to exploit the fact that in the target signal model, each
+$b\ell$ pair comes from a resonant decay of a stop particle, and should
+reconstruct the same invariant mass.
+Therefore, the pairing which minimizes the difference in mass between the two
+$b\ell$ pairs is selected as follows.
+
+The two signal leptons and two $b$-jets are labeled $\ell_0$, $\ell_1$, $b_0$,
+and $b_1$.
+
 % Define some colors for this section to make changing colors easier
 \colorlet{pairing_l_0}{green!50!white}
 \colorlet{pairing_l_1}{green!20!white}
@@ -163,6 +208,37 @@ There are two possible choices of pairings for these four objects.
     \node[rectangle, text=black] (m10) at (+3.5,-0.5) {$\Rightarrow m_{b_1\ell_0} = m_{b\ell}^\mathrm{b} $};
   \end{tikzpicture}
 \end{center}
+
+The masses of all pairings are calculated, and the pairing which gives the 
+smallest difference in the mass $|\MBL^\mathrm{a} - \MBL^\mathrm{b}|$
+is chosen.
+The pairs are then ordered, and relabeled such that the higher mass pair has a
+mass of $\MBL^{0}$, and the lower mass pair has a mass of $\MBL^{1}$.
+This means $\MBL^{0} \geq \MBL^{1}$ by definition.
+
+This heuristic correctly identifies at least one correct pairing of $b$-tagged
+jets and leptons in roughly 65-90\% of events in the simulated signal samples
+depending on the mass of the simulated stop. This pairing efficiency, shown in
+Figure~\ref{fig:pairing_eff}, improves once a cut is applied on the mass
+asymmetry of the two $b\ell$ pairs as described in Section
+\ref{sec:signal_regions}.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.60\textwidth]{figs/blstop/PairingEfficiencies/pairing_eff__inclusive.pdf}
+  \caption{The efficiency of correctly pairing $b$-tagged jets and leptons
+    using the pairing heuristic described in Section~\ref{sec:object_selection}
+    for the different stop masses which were considered.
+    The different lines show the fraction of events where zero, one, or two
+    pairs were grouped correctly.
+    The scenario where one pair is identified correctly corresponds to events
+    where one of the $b$-tagged jets or the leptons were not matched to the
+    stop, but the other pair was grouped correctly.
+    {\color{red} TODO remake this plot with 1.1 TeV mass point}
+  }
+  \label{fig:pairing_eff}
+\end{figure}
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \section{Trigger selection}
@@ -185,17 +261,17 @@ and 98\% of events depending on the flavor channel.
   \centering{
     \begin{tabular}{c|cc}
       \toprule
-      Trigger & $p_\mathrm{T}$ threshold & Other requirements \\
+      Trigger & \pt\ threshold & Other requirements \\
       \midrule
       \multirow{2}{*}{\texttt{EF\_e24vhi\_medium1}}
-      & \multirow{2}{*}{$p_\mathrm{T}^{e} \ge 24$ GeV}
-      & hadronic core isolation $\le 1$ GeV \\
-      & & $p_\mathrm{T}^\mathrm{cone20}/p\mathrm{T} < 0.1$ \\
-      \texttt{EF\_e60\_medium1} & $p_\mathrm{T}^{e} \ge 60$ GeV & -- \\
+      & \multirow{2}{*}{$\pt^{e} \geq 24$ GeV}
+      & hadronic core isolation $\leq 1$ GeV \\
+      & & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.1$ \\
+      \texttt{EF\_e60\_medium1} & $\pt^{e} \geq 60$ GeV & -- \\
       \texttt{EF\_mu24i\_tight}
-      & $p_\mathrm{T}^{e} \ge 24$ GeV
-      & $p_\mathrm{T}^\mathrm{cone20}/p\mathrm{T} < 0.12$ \\
-      \texttt{EF\_mu36\_tight}  & $p_\mathrm{T}^{e} \ge 36$ GeV & -- \\
+      & $\pt^{e} \geq 24$ GeV
+      & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.12$ \\
+      \texttt{EF\_mu36\_tight}  & $\pt^{e} \geq 36$ GeV & -- \\
       \bottomrule
     \end{tabular}
   }
@@ -437,13 +513,12 @@ yields are normalized to 20.3 \ifb.
 \section{Background estimate}
 \label{sec:bkg}
 
-The background estimates of the $t\bar{t}$ and the $Z/\gamma^{*}$+jets
-backgrounds use MC simulation normalized in dedicated data
-control regions (CRs), the top control region (Top CR) and $Z$ control
-region ($Z$ CR) respectively.  The remaining backgrounds are estimated using
-simulation. Several validation regions (VRs) are
-defined to validate the extrapolation from the CRs to regions with different
-kinematics.
+The background estimates of the \TTBAR\ and the \ZGAMMAJETS\ backgrounds use
+MC simulation normalized in dedicated data control regions (CRs), the top
+control region (Top CR) and $Z$ control region ($Z$ CR) respectively.
+The remaining backgrounds are estimated using simulation.
+Several validation regions (VRs) are defined to validate the extrapolation from
+the CRs to regions with different kinematics.
 
 Both the Top CR and $Z$ CR require \HT\ to be less than or equal to
 500~\GeV\ to reduce the amount of
@@ -452,19 +527,19 @@ match the signal regions, and $\MBL^0$ is required to be above 200 \GeV. No
 requirement is made on the invariant mass of the second pair.
 
 The \METSIG\ variable is used to define CRs that are relatively pure 
-in $t\bar{t}$ or $Z/\gamma^{*}$+jets, where
+in \TTBAR\ or \ZGAMMAJETS, where
 \begin{equation}
   \METSIG = \frac{\MET}{\sqrt{\HT}}.
 \end{equation}
-Processes like $t\bar{t}$, with real \MET, tend to have large \METSIG, while
-$Z/\gamma^{*}$+jets, where the \MET\ is from mismeasurement, tend to
+Processes like \TTBAR, with real \MET, tend to have large \METSIG, while
+\ZGAMMAJETS, where the \MET\ is from mismeasurement, tend to
 have low \METSIG. For this reason, the Top CR requires 
 $\METSIG \geq 4 \GeV^{1/2}$ and the $Z$ CR requires
 $\METSIG \leq 4 \GeV^{1/2}$.  
 The definitions of the CRs, and VRs are summarized in
 Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
 
-The normalization of the $t\bar{t}$ and the $Z/\gamma^{*}$+jets backgrounds are
+The normalization of the \TTBAR\ and the \ZGAMMAJETS\ backgrounds are
 determined using a simultaneous fit, which takes into account
 cross-contamination of the different background processes between the
 CRs as well as the statistical and systematic
@@ -477,10 +552,10 @@ Table \ref{tab:bkg_only_fit_results}.
 The agreement between the observed number of events and the fitted event
 yields in the VRs is summarized in Figure \ref{fig:pull_dist_vr}.
 Using the fitted backgrounds, the dominant process in the same-flavor
-channels of the SRs is $Z/\gamma^{*}$+jets followed by single top and
-$t\bar{t}$. In the $e\mu$ channel, the $Z/\gamma^{*}$+jets background does
-not contribute, thus, the largest backgrounds are single top and $t\bar{t}$.
-As a result of the fit, the $Z/\gamma^{*}$+jets background is scaled up by
+channels of the SRs is \ZGAMMAJETS\ followed by single top and
+\TTBAR. In the $e\mu$ channel, the \ZGAMMAJETS\ background does
+not contribute, thus, the largest backgrounds are single top and \TTBAR.
+As a result of the fit, the \ZGAMMAJETS\ background is scaled up by
 approximately 40\%. Due to this large normalization factor, the background is
 over-predicted in the $Z$ VR. This over-prediction is taken as an additional
 systematic uncertainty, described in Section~\ref{sec:systematics}.
@@ -497,23 +572,23 @@ systematic uncertainty, described in Section~\ref{sec:systematics}.
   \begin{center}
     \begin{tabular}{lrrrrrr}
       \toprule
-                                  & Top CR           & Z CR            & Top VR 1       & Top VR 2      & Top VR 3        & Z VR            \\
+                         & Top CR           & Z CR            & Top VR 1       & Top VR 2      & Top VR 3        & Z VR            \\
       \midrule
-      Observed                    & $369$            & $327$           & $645$          & $606$         & $67$            & $101$           \\
+      Observed           & $369$            & $327$           & $645$          & $606$         & $67$            & $101$           \\
       \midrule
-      Fitted background           & $369   \pm 19$   & $327  \pm 18$   & $690  \pm 50$  & $630 \pm 40$  & $72   \pm 5$    & $130  \pm 60$   \\
+      Fitted background  & $369   \pm 19$   & $327  \pm 18$   & $690  \pm 50$  & $630 \pm 40$  & $72   \pm 5$    & $130  \pm 60$   \\
       \midrule
-      Fitted $t\bar{t}$           & $346   \pm 19$   & $9.1  \pm 0.7$  & $600  \pm 40$  & $497 \pm 35$  & $54   \pm 5$    & $2.99 \pm 0.24$ \\
-      Fitted $Z/\gamma^{*}$+jets  & $3.2   \pm 0.5$  & $309  \pm 18$   & $63   \pm 5$   & $64  \pm 5$   & $1.5  \pm 0.8$  & $120  \pm 60$   \\
-      Single top                  & $16.7  \pm 2.0$  & $0.83 \pm 0.09$ & $23.0 \pm 2.6$ & $56  \pm 6$   & $14.1 \pm 1.9$  & $0.32 \pm 0.04$ \\
-      Other                       & $2.83  \pm 0.27$ & $8.64 \pm 1.0$  & $4.7  \pm 0.4$ & $8.2 \pm 0.8$ & $2.03 \pm 0.27$ & $6.4  \pm 0.7$  \\
+      Fitted \TTBAR      & $346   \pm 19$   & $9.1  \pm 0.7$  & $600  \pm 40$  & $497 \pm 35$  & $54   \pm 5$    & $2.99 \pm 0.24$ \\
+      Fitted \ZGAMMAJETS & $3.2   \pm 0.5$  & $309  \pm 18$   & $63   \pm 5$   & $64  \pm 5$   & $1.5  \pm 0.8$  & $120  \pm 60$   \\
+      Single top         & $16.7  \pm 2.0$  & $0.83 \pm 0.09$ & $23.0 \pm 2.6$ & $56  \pm 6$   & $14.1 \pm 1.9$  & $0.32 \pm 0.04$ \\
+      Other              & $2.83  \pm 0.27$ & $8.64 \pm 1.0$  & $4.7  \pm 0.4$ & $8.2 \pm 0.8$ & $2.03 \pm 0.27$ & $6.4  \pm 0.7$  \\
       \midrule
-      Input SM                  & $330$            & $230$           & $614$          & $557$         & $66$            & $93$            \\
+      Input SM           & $330$            & $230$           & $614$          & $557$         & $66$            & $93$            \\
       \midrule
-      Input $t\bar{t}$          & $310$            & $8.2$           & $543$          & $447$         & $49$            & $2.7$           \\
-      Input $Z/\gamma^{*}$+jets & $2.2$            & $220$           & $44$           & $45$          & $1.1$           & $83$            \\
-      Input single top          & $17$             & $0.8$           & $23$           & $57$          & $14$            & $0.30$          \\
-      Input other               & $2.8$            & $8.6$           & $4.7$          & $8.2$         & $2.0$           & $6.40$          \\
+      Input \TTBAR       & $310$            & $8.2$           & $543$          & $447$         & $49$            & $2.7$           \\
+      Input \ZGAMMAJETS  & $2.2$            & $220$           & $44$           & $45$          & $1.1$           & $83$            \\
+      Input single top   & $17$             & $0.8$           & $23$           & $57$          & $14$            & $0.30$          \\
+      Input other        & $2.8$            & $8.6$           & $4.7$          & $8.2$         & $2.0$           & $6.40$          \\
       \bottomrule
     \end{tabular}
   \end{center}
@@ -530,7 +605,7 @@ systematic uncertainty, described in Section~\ref{sec:systematics}.
   bottom of the plot shows the deviation of that channel's prediction
   from the observed number of events divided by the uncertainty on the
   prediction. The normalization of the background yields are determined
-  by fitting the $t\bar{t}$ and $Z/\gamma^{*}$+jets backgrounds to the observed
+  by fitting the \TTBAR\ and \ZGAMMAJETS\ backgrounds to the observed
   data in the two CRs.
 }
 \label{fig:pull_dist_vr}
@@ -547,12 +622,12 @@ Figures \ref{fig:mbl_vr} and \ref{fig:ht_vr}.
   \centering
   \includegraphics[width=0.48\textwidth]{figs/blstop/vr_top_3_mbl_0.pdf}
   \includegraphics[width=0.48\textwidth]{figs/blstop/vr_Z_mbl_0.pdf}
-  \caption{The $\MBL^0$ distribution in Top VR 3 (left)
-    and $Z$ VR (right). The Standard Model background prediction is shown
-    after setting the normalization of the $t\bar{t}$ and $Z/\gamma^{*}$+jets
-    backgrounds based on the observed data in the CRs. The hashed bands show
-    the uncertainty on the fitted background prediction including
-    all statistical and systematics uncertainties.
+  \caption{The $\MBL^0$ distribution in Top VR 3 (left) and $Z$ VR (right).
+    The Standard Model background prediction is shown after setting the
+    normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds based on the
+    observed data in the CRs. The hashed bands show the uncertainty on the
+    fitted background prediction including all statistical and systematics
+    uncertainties.
     The bottom of each plot shows the ratio of the observed data to the
     Standard Model background prediction.
   }
@@ -563,12 +638,12 @@ Figures \ref{fig:mbl_vr} and \ref{fig:ht_vr}.
   \centering
   \includegraphics[width=0.48\textwidth]{figs/blstop/vr_top_3_ht_signal.pdf}
   \includegraphics[width=0.48\textwidth]{figs/blstop/vr_Z_ht_signal.pdf}
-  \caption{The \HT\ distribution in Top VR 3 (left)
-    and $Z$ VR (right). The Standard Model background prediction is shown
-    after setting the normalization of the $t\bar{t}$ and $Z/\gamma^{*}$+jets
-    backgrounds based on the observed data in the CRs. The hashed bands show
-    the uncertainty on the fitted background prediction including
-    all statistical and systematics uncertainties.
+  \caption{The \HT\ distribution in Top VR 3 (left) and $Z$ VR (right).
+    The Standard Model background prediction is shown after setting the
+    normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds based on the
+    observed data in the CRs.
+    The hashed bands show the uncertainty on the fitted background prediction
+    including all statistical and systematics uncertainties.
     The bottom of each plot shows the ratio of the observed data to the
     Standard Model background prediction.
   }
@@ -583,7 +658,7 @@ Several sources of systematic uncertainty are considered when determining
 the estimated signal and background contributions.
 The largest sources of systematic uncertainty are those related to the
 MC statistical uncertainty in the SRs, the JES, the $b$-tagging efficiency
-and the extrapolation of the $Z/\gamma^{*}$+jets background to high \HT. 
+and the extrapolation of the \ZGAMMAJETS\ background to high \HT. 
 The uncertainty on the lepton energy scale and resolution was considered,
 but shown to be negligible.
 
@@ -608,11 +683,10 @@ jet flavor.
   simulation. This smearing is then propagated to the expected event yield.
 %%
 \item \textbf{\HT\ extrapolation}:
-An \HT\ extrapolation uncertainty of 50\% is applied to $Z/\gamma^{*}$+jets
-events with $\HT \geq 500$~\GeV. This is assigned to account for
-uncertainty on the $Z/\gamma^{*}$+jets \HT\ spectrum. This uncertainty
-is derived from the disagreement observed in
-Figures~\ref{fig:pull_dist_vr}-\ref{fig:ht_vr}.
+An \HT\ extrapolation uncertainty of 50\% is applied to \ZGAMMAJETS\ events
+with $\HT \geq 500$~\GeV. This is assigned to account for uncertainty on
+the \ZGAMMAJETS\ \HT\ spectrum. This uncertainty is derived from the
+disagreement observed in Figures~\ref{fig:pull_dist_vr}-\ref{fig:ht_vr}.
 %%
 \end{itemize}
 
@@ -623,7 +697,7 @@ and factorization scales, parton shower, and the limited number of partons
 included in the matrix element calculation. These theoretical uncertainties
 are on the order of a few percent of the total background prediction. The
 uncertainty on the luminosity is assessed for the signal processes, and all
-background processes apart from $t\bar{t}$ and $Z/\gamma^{*}$+jets, whose
+background processes apart from \TTBAR\ and \ZGAMMAJETS, whose
 normalizations are determined using data.
 The relative systematic uncertainty on the total background estimate in the
 SRs is shown in Table \ref{tab:systematic_breakdown}
@@ -669,12 +743,12 @@ and 28\%.
 \section{Results}
 \label{sec:results}
 
-The background yields in these signal regions are determined by a
-maximum likelihood fit~\cite{Baak:2014wma} for the $t\bar{t}$ and
-$Z/\gamma^{*}$+jets
-normalizations, which are constrained by the observed data in the Top
-and $Z$ control regions.  The systematic uncertainties described
-previously are included as Gaussian-distributed nuisance parameters.
+The background yields in these signal regions are determined by a maximum
+likelihood fit~\cite{Baak:2014wma} for the \TTBAR\ and
+\ZGAMMAJETS\ normalizations, which are constrained by the observed data in the
+Top and $Z$ CRs.
+The systematic uncertainties described previously are included as
+Gaussian-distributed nuisance parameters.
 The fitted background yields and the observed number of events in each
 signal region are shown in Tables~\ref{tab:event_yields_sr_400} and
 \ref{tab:event_yields_sr_600}. Two events are observed, in agreement with
@@ -695,27 +769,27 @@ are shown in Table~\ref{tab:sr_event_kinematics}, the $\MBL^0$ and
   \begin{center}
     \begin{tabular}{lrrrr}
       \toprule
-                                    & SR~400                & SR~400 $ee$           & SR~400 $\mu\mu$       & SR~400 $e\mu$  \\
+                                     & SR~400                & SR~400 $ee$           & SR~400 $\mu\mu$       & SR~400 $e\mu$  \\
       \midrule
-      Observed                      & $2$                   & $0$                   & $2$                   & $0$                \\
+      Observed                       & $2$                   & $0$                   & $2$                   & $0$                \\
       \midrule
-      Fitted background             & $1.39 \pm 0.35$       & $0.36 \pm 0.15$       & $0.57 \pm 0.20$       & $0.45 \pm 0.11$    \\
+      Fitted background              & $1.39 \pm 0.35$       & $0.36 \pm 0.15$       & $0.57 \pm 0.20$       & $0.45 \pm 0.11$    \\
       \midrule
-      Fitted $t\bar{t}$             & $0.33 \pm 0.09$       & $0.07 \pm 0.08$       & $0.07 \pm 0.02$       & $0.19 \pm 0.05$    \\
-      Fitted $Z/\gamma^{*}$+jets    & $0.54 \pm 0.28$       & $0.20 \pm 0.10$       & $0.35 \pm 0.18$       & $\leq 0.01$    \\
-      Single Top                    & $0.44 \pm 0.08$       & $0.10 \pm 0.03$       & $0.11 \pm 0.03$       & $0.23 \pm 0.05$    \\
-      Other                         & $0.07 \pm 0.04$       & $\leq 0.01$           & $0.04 \pm 0.02$       & $0.03 \pm 0.03$    \\
+      Fitted \TTBAR                  & $0.33 \pm 0.09$       & $0.07 \pm 0.08$       & $0.07 \pm 0.02$       & $0.19 \pm 0.05$    \\
+      Fitted \ZGAMMAJETS             & $0.54 \pm 0.28$       & $0.20 \pm 0.10$       & $0.35 \pm 0.18$       & $\leq 0.01$    \\
+      Single Top                     & $0.44 \pm 0.08$       & $0.10 \pm 0.03$       & $0.11 \pm 0.03$       & $0.23 \pm 0.05$    \\
+      Other                          & $0.07 \pm 0.04$       & $\leq 0.01$           & $0.04 \pm 0.02$       & $0.03 \pm 0.03$    \\
       \midrule
-      Input SM                      & $1.2$                 & $0.30$                & $0.46$                & $0.43$             \\
+      Input SM                       & $1.2$                 & $0.30$                & $0.46$                & $0.43$             \\
       \midrule
-      Input $t\bar{t}$              & $0.30$                & $0.06$                & $0.06$                & $0.17$             \\
-      Input $Z/\gamma^{*}$+jets     & $0.38$                & $0.14$                & $0.24$                & $0.00$             \\
-      Input single Top              & $0.44$                & $0.10$                & $0.11$                & $0.23$             \\
-      Input other                   & $0.07$                & $0.00$                & $0.04$                & $0.03$             \\
+      Input \TTBAR                   & $0.30$                & $0.06$                & $0.06$                & $0.17$             \\
+      Input \ZGAMMAJETS              & $0.38$                & $0.14$                & $0.24$                & $0.00$             \\
+      Input single Top               & $0.44$                & $0.10$                & $0.11$                & $0.23$             \\
+      Input other                    & $0.07$                & $0.00$                & $0.04$                & $0.03$             \\
       \midrule
-      $\sigma_\mathrm{vis}$~[fb]    & $0.23$                & $0.11$                & $0.26$                & $0.11$                \\
-      Observed $N_\mathrm{non-SM}$  & $4.8$                 & $2.2$                 & $5.4$                 & $2.3$                 \\
-      Expected $N_\mathrm{non-SM}$  & ${4.0}^{+2.2}_{-1.1}$ & ${3.2}^{+1.7}_{-1.1}$ & ${3.6}^{+1.9}_{-1.5}$ & ${3.3}^{+1.8}_{-1.3}$ \\
+      $\sigma_\mathrm{vis}$~[fb]     & $0.23$                & $0.11$                & $0.26$                & $0.11$                \\
+      Observed $N_\mathrm{non-SM}$   & $4.8$                 & $2.2$                 & $5.4$                 & $2.3$                 \\
+      Expected $N_\mathrm{non-SM}$   & ${4.0}^{+2.2}_{-1.1}$ & ${3.2}^{+1.7}_{-1.1}$ & ${3.6}^{+1.9}_{-1.5}$ & ${3.3}^{+1.8}_{-1.3}$ \\
       \bottomrule
     \end{tabular}
   \end{center}
@@ -733,27 +807,27 @@ are shown in Table~\ref{tab:sr_event_kinematics}, the $\MBL^0$ and
   \begin{center}
     \begin{tabular}{lrrrr}
       \toprule
-                                     & SR~600                & SR~600 $ee$           & SR~600 $\mu\mu$       & SR~600 $e\mu$   \\
+                                      & SR~600                & SR~600 $ee$           & SR~600 $\mu\mu$       & SR~600 $e\mu$   \\
       \midrule
-      Observed                       & $1$                   & $0$                   & $1$                   & $0$              \\
+      Observed                        & $1$                   & $0$                   & $1$                   & $0$              \\
       \midrule
-      Fitted background              & $0.55 \pm 0.15$       & $0.15 \pm 0.06$       & $0.24 \pm 0.10$       & $0.16 \pm 0.06$  \\
+      Fitted background               & $0.55 \pm 0.15$       & $0.15 \pm 0.06$       & $0.24 \pm 0.10$       & $0.16 \pm 0.06$  \\
       \midrule
-      Fitted $t\bar{t}$              & $0.10 \pm 0.02$       & $0.03 \pm 0.01$       & $\leq 0.01$           & $0.07 \pm 0.03$  \\
-      Fitted $Z/\gamma^{*}$+jets     & $0.23 \pm 0.12$       & $0.08 \pm 0.05$       & $0.15 \pm 0.08$       & $\leq 0.01$  \\
-      Single Top                     & $0.18 \pm 0.04$       & $0.03 \pm 0.01$       & $0.05 \pm 0.02$       & $0.09 \pm 0.03$  \\
-      Other                          & $0.04 \pm 0.01$       & $\leq 0.01$           & $0.04 \pm 0.02$       & $\leq 0.01$  \\
+      Fitted \TTBAR                   & $0.10 \pm 0.02$       & $0.03 \pm 0.01$       & $\leq 0.01$           & $0.07 \pm 0.03$  \\
+      Fitted \ZGAMMAJETS              & $0.23 \pm 0.12$       & $0.08 \pm 0.05$       & $0.15 \pm 0.08$       & $\leq 0.01$  \\
+      Single Top                      & $0.18 \pm 0.04$       & $0.03 \pm 0.01$       & $0.05 \pm 0.02$       & $0.09 \pm 0.03$  \\
+      Other                           & $0.04 \pm 0.01$       & $\leq 0.01$           & $0.04 \pm 0.02$       & $\leq 0.01$  \\
       \midrule
-      Input SM                       & $0.47$                & $0.12$                & $0.20$                & $0.16$           \\
+      Input SM                        & $0.47$                & $0.12$                & $0.20$                & $0.16$           \\
       \midrule
-      Input $t\bar{t}$               & $0.09$                & $0.03$                & $0.00$                & $0.06$           \\
-      Input $Z/\gamma^{*}$+jets      & $0.16$                & $0.06$                & $0.10$                & $0.00$           \\
-      Input single Top               & $0.18$                & $0.03$                & $0.05$                & $0.09$           \\
-      Input other                    & $0.04$                & $0.00$                & $0.04$                & $0.00$           \\
+      Input \TTBAR                    & $0.09$                & $0.03$                & $0.00$                & $0.06$           \\
+      Input \ZGAMMAJETS               & $0.16$                & $0.06$                & $0.10$                & $0.00$           \\
+      Input single Top                & $0.18$                & $0.03$                & $0.05$                & $0.09$           \\
+      Input other                     & $0.04$                & $0.00$                & $0.04$                & $0.00$           \\
       \midrule
-      $\sigma_\mathrm{vis}$~[fb]     & $0.19$                & $0.10$                & $0.20$                & $0.10$                \\
-      Observed $N_\mathrm{non-SM}$   & $3.9$                 & $2.1$                 & $4.0$                 & $2.1$                 \\
-      Expected $N_\mathrm{non-SM}$   & ${3.5}^{+1.9}_{-1.4}$ & ${2.6}^{+1.6}_{-0.6}$ & ${3.0}^{+1.7}_{-1.0}$ & ${2.7}^{+1.6}_{-0.7}$ \\
+      $\sigma_\mathrm{vis}$~[fb]      & $0.19$                & $0.10$                & $0.20$                & $0.10$                \\
+      Observed $N_\mathrm{non-SM}$    & $3.9$                 & $2.1$                 & $4.0$                 & $2.1$                 \\
+      Expected $N_\mathrm{non-SM}$    & ${3.5}^{+1.9}_{-1.4}$ & ${2.6}^{+1.6}_{-0.6}$ & ${3.0}^{+1.7}_{-1.0}$ & ${2.7}^{+1.6}_{-0.7}$ \\
       \bottomrule
     \end{tabular}
   \end{center}
@@ -769,44 +843,44 @@ are shown in Table~\ref{tab:sr_event_kinematics}, the $\MBL^0$ and
   \begin{center}
     \begin{tabular}{lcc}
       \toprule
-      Run number                   & 214216    & 210302  \\
-      Event number                 & 121272046 & 2292645861 \\
+      Run number              & 214216    & 210302  \\
+      Event number            & 121272046 & 2292645861 \\
       \midrule
-      $\MBL^0$ [\GeV]               & 558       & 686   \\
+      $\MBL^0$ [\GeV]         & 558       & 686   \\
       %
-      $\ell_0$ flavor              & $\mu$     & $\mu$ \\
-      $\ell_0$ charge              & $-$       & $-$   \\
+      $\ell_0$ flavor         & $\mu$     & $\mu$ \\
+      $\ell_0$ charge         & $-$       & $-$   \\
       %
-      $\ell_0\ p_\mathrm{T}$ [\GeV] & 375       & 272   \\
-      $b_0\ p_\mathrm{T}$    [\GeV] & 330       & 460   \\
+      $\ell_0\ \pt$ [\GeV]    & 375       & 272   \\
+      $b_0\ \pt$ [\GeV]       & 330       & 460   \\
       %
-      $\ell_0\ \eta$               & $-0.11$   & 1.22  \\
-      $b_0\ \eta$                  & 0.56      & 0.95  \\
+      $\ell_0\ \eta$          & $-0.11$   & 1.22  \\
+      $b_0\ \eta$             & 0.56      & 0.95  \\
       %
-      $\ell_0\ \phi$               & 2.0       & $-1.3$  \\
-      $b_0\ \phi$                  & $-2.7$    & 2.5   \\
-      %
-      \midrule
-      $\MBL^1$ [\GeV]               & 526       & 528   \\
-      %
-      $\ell_1$ flavor              & $\mu$     & $\mu$ \\
-      $\ell_1$ charge              & $+$       & $+$     \\
-      %
-      $\ell_1\ p_\mathrm{T}$ [GeV] & 88        & 96    \\
-      $b_1\ p_\mathrm{T}$    [GeV] & 542       & 374   \\
-      %
-      $\ell_1\ \eta$               & 0.45      & 1.43  \\
-      $b_1\ \eta$                  & $-1.1$    & $-0.26$ \\
-      %
-      $\ell_1\ \phi$               & $-2.3$    & $-0.91$ \\
-      $b_1\ \phi$                  & $-0.21$   & 2.3   \\
+      $\ell_0\ \phi$          & 2.0       & $-1.3$  \\
+      $b_0\ \phi$             & $-2.7$    & 2.5   \\
       %
       \midrule
-      \MBLASYM                     & 0.03      & 0.13  \\
-      \HT\ [\GeV]                   & 1335      & 1203  \\
-      \METSIG\ $[\GeV^{1/2}]$       & 2.9       & 6.4   \\
-      \MET\ [\GeV]                  & 107       & 223   \\
-      $m_{\ell\ell}$ [\GeV]         & 324       & 71    \\
+      $\MBL^1$ [\GeV]         & 526       & 528   \\
+      %
+      $\ell_1$ flavor         & $\mu$     & $\mu$ \\
+      $\ell_1$ charge         & $+$       & $+$     \\
+      %
+      $\ell_1\ \pt$ [\GeV]    & 88        & 96    \\
+      $b_1\ \pt$ [\GeV]       & 542       & 374   \\
+      %
+      $\ell_1\ \eta$          & 0.45      & 1.43  \\
+      $b_1\ \eta$             & $-1.1$    & $-0.26$ \\
+      %
+      $\ell_1\ \phi$          & $-2.3$    & $-0.91$ \\
+      $b_1\ \phi$             & $-0.21$   & 2.3   \\
+      %
+      \midrule
+      \MBLASYM                & 0.03      & 0.13  \\
+      \HT\ [\GeV]             & 1335      & 1203  \\
+      \METSIG\ $[\GeV^{1/2}]$ & 2.9       & 6.4   \\
+      \MET\ [\GeV]            & 107       & 223   \\
+      $m_{\ell\ell}$ [\GeV]   & 324       & 71    \\
       \bottomrule
     \end{tabular}
   \end{center}
