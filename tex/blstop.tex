@@ -10,13 +10,13 @@
 \section{Object selection}
 \label{sec:object_selection}
 
-Events are required to have at least two leptons with opposite charge, and two
-$b$-tagged jets.
+Events are required to have at least two light leptons (electrons or muons)
+with opposite charge, and two $b$-tagged jets.
 The object selection is performed in multiple steps. First, lepton and jet
 objects are reconstructed using detector signatures as described in
 Sections~\ref{sec:elctrons},~\ref{sec:muons},~and~\ref{sec:jets}.
 Baseline requirements are applied to remove poorly reconstructed objects.
-Also, all baseline objects are required to have $\pt \geq 40 \GeV$ since the
+Also, all baseline objects are required to have $\ET(\pt) \geq 40 \GeV$ since the
 stop signatures of interest tend to produce high momentum decay products.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -25,7 +25,7 @@ stop signatures of interest tend to produce high momentum decay products.
 Baseline electrons must satisfy the \texttt{Medium++} identification
 requirement and have $|\eta| \leq 2.47$.
 A requirement of $\DZEROSIG \leq 3$ and
-$ZZEROSINTHETA \leq 0.4$ mm
+$\ZZEROSINTHETA \leq 0.4$ mm
 was placed on the impact parameter to reject electrons coming from secondary
 vertices.
 The baseline electron requirements are outlined in
@@ -38,7 +38,7 @@ Table~\ref{tab:baseline_el_def}.
   \begin{tabular}{cc}
     \toprule
     Quality        & \texttt{Medium++} \\
-    $p_T$          & $\geq 40$ GeV     \\
+    $p_T$          & $\geq 40 \GeV$    \\
     $|\eta|$       & $\leq 2.47$       \\
     \DZEROSIG      & $\leq 3$          \\
     \ZZEROSINTHETA & $\leq 0.4$ mm     \\
@@ -58,10 +58,10 @@ $\ZZEROSINTHETA \leq 1$ mm are applied to reduce the contamination of muons
 from secondary vertices and cosmic rays.
 Additional requirements are applied on the number of hits in the ID to ensure
 high quality tracks.
-These include at least one hit on track in both the B layer and the Pixel
-detector.
-The ID track must also have at least 5 hits in the SCT, at most 2 holes
-in both the Pixel detector and the SCT. 
+These  hit requirements include at least one hit on track in both the B layer
+and the Pixel detector.
+The ID track must also have at least 5 hits in the SCT, at most 2 missing 
+hits-on-track (holes) in both the Pixel detector and the SCT. 
 If the muon has $|\eta| \leq 1.9$, there must additionally be at least 6 TRT
 hits, of which no more than 90\% are outliers.
 Otherwise, no requirement is placed on the number of TRT hits.
@@ -74,7 +74,7 @@ The baseline muon requirements are outlined in Table~\ref{tab:baseline_mu_def}.
     \begin{tabular}{cc}
       \toprule
       Quality              & \texttt{Loose} \\
-      $p_T$                & $\geq 40$ GeV  \\
+      $p_T$                & $\geq 40 \GeV$ \\
       $|\eta|$             & $\leq 2.5$     \\
       Number B layer hits  & $\geq 1$       \\
       Number Pixel hits    & $\geq 1$       \\
@@ -101,8 +101,8 @@ The baseline jet requirements are outlined in Table~\ref{tab:baseline_jet_def}.
   \centering{
     \begin{tabular}{cc}
       \toprule
-      $p_T$    & $\geq 40$ GeV \\
-      $|\eta|$ & $\leq 4.9$    \\
+      $p_T$    & $\geq 40 \GeV$ \\
+      $|\eta|$ & $\leq 4.9$     \\
       \bottomrule
     \end{tabular}
   }
@@ -118,7 +118,7 @@ multiple particle collections.
 \begin{enumerate}
   \item $\Delta R(e,e) \le 0.05$: If two baseline electrons fall
     within a cone of $\Delta R(e,e) \le 0.05$, the electron with the
-    lower transverse energy ($E_T$) is removed from the event.
+    lower \ET\ is removed from the event.
   \item $\Delta R(e,\mathrm{jet}) \le 0.20$: If a remaining electron and a jet
     are within a cone of $\Delta R(e,\mathrm{jet}) \le 0.20$, it is
     assumed that the electron is also reconstructed as a jet, and the
@@ -135,7 +135,7 @@ multiple particle collections.
 
 To reject leptons coming from low mass resonances, the invariant mass of any
 remaining same-flavor lepton pairs with opposite charge is computed.
-If the invariant mass of any of these pairs is less than 12 GeV, both leptons
+If the invariant mass of any of these pairs is less than 12~\GeV, both leptons
 are removed from the event.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -148,7 +148,7 @@ within a cone of $\Delta R \leq 0.30$ of a lepton ($\pt^\mathrm{cone30}$) is
 used to determine if the lepton is isolated.
 Both electrons and muons require
 $\nicefrac{\pT^{\mathrm{cone30}}}{\min(p_T, 60 \GeV)} \leq 0.1$ in order
-to be declared ``signal'' leptons.
+to be declared signa leptons.
 Jets must pass a tighter cut of $|\eta| \leq 2.4$, and be tagged as a $b$-jet
 using the 80\% working point of $\mathrm{MV1} \geq 0.3511$
 
@@ -214,11 +214,11 @@ smallest difference in the mass $|\MBL^\mathrm{a} - \MBL^\mathrm{b}|$
 is chosen.
 The pairs are then ordered, and relabeled such that the higher mass pair has a
 mass of $\MBL^{0}$, and the lower mass pair has a mass of $\MBL^{1}$.
-This means $\MBL^{0} \geq \MBL^{1}$ by definition.
+This ensures $\MBL^{0} \geq \MBL^{1}$ by definition.
 
 This heuristic correctly identifies at least one correct pairing of $b$-tagged
 jets and leptons in roughly 65-90\% of events in the simulated signal samples
-depending on the mass of the simulated stop. This pairing efficiency, shown in
+depending on the mass of the simulated stop. The efficiency, shown in
 Figure~\ref{fig:pairing_eff}, improves once a cut is applied on the mass
 asymmetry of the two $b\ell$ pairs as described in Section
 \ref{sec:signal_regions}.
@@ -232,19 +232,53 @@ asymmetry of the two $b\ell$ pairs as described in Section
     The different lines show the fraction of events where zero, one, or two
     pairs were grouped correctly.
     The scenario where one pair is identified correctly corresponds to events
-    where one of the $b$-tagged jets or the leptons were not matched to the
-    stop, but the other pair was grouped correctly.
-    {\color{red} TODO remake this plot with 1.1 TeV mass point}
+    where one pair is grouped correctly, but at least of of the $b$-tagged jets
+    or one of the leptons was not matched to a stop parent.
+    {\color{red} TODO remake this plot with 1.1~\TeV\ mass point}
   }
   \label{fig:pairing_eff}
 \end{figure}
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+\section{Event cleaning}
+\label{sec:event_cleaning}
+
+{\color{red} TODO fill in this section}
+
+{\color{red} GRL }
+
+{\color{red} incomplete event }
+
+{\color{red} LAr error }
+
+{\color{red} tile error }
+
+{\color{red} tile hot spot }
+
+{\color{red} tile trip }
+
+{\color{red} bad jet }
+
+{\color{red} calo problem jet }
+
+{\color{red} primary vertex }
+
+{\color{red} bad muon cut }
+
+{\color{red} cosmic muon cut }
+
+{\color{red} HFOR cut }
+
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 \section{Trigger selection}
 \label{sec:trigger_selection}
 
-{\color{red} Expand on this a lot}
+{\color{red} TODO Expand on this a lot}
+
+A combination of four single-lepton triggers are used to select events.
 
 Single-electron and single-muon triggers are used to select events. 
 Di-electron and di-muon events are required to pass a single-electron and
@@ -264,14 +298,14 @@ and 98\% of events depending on the flavor channel.
       Trigger & \pt\ threshold & Other requirements \\
       \midrule
       \multirow{2}{*}{\texttt{EF\_e24vhi\_medium1}}
-      & \multirow{2}{*}{$\pt^{e} \geq 24$ GeV}
-      & hadronic core isolation $\leq 1$ GeV \\
+      & \multirow{2}{*}{$\pt^{e} \geq 24 \GeV$}
+      & hadronic core isolation $\leq 1 \GeV$ \\
       & & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.1$ \\
-      \texttt{EF\_e60\_medium1} & $\pt^{e} \geq 60$ GeV & -- \\
+      \texttt{EF\_e60\_medium1} & $\pt^{e} \geq 60 \GeV$ & -- \\
       \texttt{EF\_mu24i\_tight}
-      & $\pt^{e} \geq 24$ GeV
+      & $\pt^{e} \geq 24 \GeV$
       & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.12$ \\
-      \texttt{EF\_mu36\_tight}  & $\pt^{e} \geq 36$ GeV & -- \\
+      \texttt{EF\_mu36\_tight}  & $\pt^{e} \geq 36 \GeV$ & -- \\
       \bottomrule
     \end{tabular}
   }
@@ -335,7 +369,7 @@ and 98\% of events depending on the flavor channel.
 \section{Signal regions}
 \label{sec:signal_regions}
 
-{\color{red} Expand on this, and talk about optimization process}
+{\color{red} TODO Expand on this, and talk about optimization process}
 
 Two overlapping signal regions (SRs) are defined to search for an excess of
 signal-like events, which are inconsistent with the prediction from the
@@ -347,7 +381,7 @@ The scalar sum of the \pt\ of the two $b$-tagged jets and two leptons (\HT)
 effectively separates the signal processes from the major sources of
 Standard Model background.
 Events in the SRs are required to have \HT\ above 1100~\GeV.
-Events with two same-flavor leptons with invariant mass within 10 GeV of the
+Events with two same-flavor leptons with invariant mass within 10~\GeV\ of the
 $Z$-boson mass are vetoed to reduce the backgrounds from $Z$-boson production.
 
 For the signal model, the invariant masses of the two pairs of a lepton and
@@ -381,7 +415,7 @@ Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
     The control and validation regions are explained in Section~\ref{sec:bkg}.
     All regions require two $b$-tagged jets and two oppositely charged
     leptons. An event is in the $Z$ window if it contains two same-flavored
-    leptons with an invariant mass within 10~\GeV of the mass of the $Z$ boson.
+    leptons with an invariant mass within 10~\GeV\ of the mass of the $Z$ boson.
   }
   \label{tab:regions}
   %
@@ -422,7 +456,7 @@ Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
     two leptons is consistent with the Z boson, and the leptons are of the
     same flavor. The two SRs apply a different requirement on the
     invariant mass of the higher-mass $b\ell$ pair. SR~400 requires
-    $\MBL^{0} \geq 400$ \GeV, and SR~600 requires $\MBL^{0} \geq 600$ \GeV.
+    $\MBL^{0} \geq 400 \GeV$, and SR~600 requires $\MBL^{0} \geq 600 \GeV$.
   }
   \label{fig:region_coverage}
 \end{figure}
@@ -493,17 +527,17 @@ yields are normalized to 20.3 \ifb.
   \centering{
     \begin{tabular}{l|ccc}
       \toprule
-      Selection                       & $m_{\tilde{t}} = 500~\GeV$ & $m_{\tilde{t}} = 800~\GeV$ & $m_{\tilde{t}} = 1000~\GeV$ \\
+      Selection                        & $m_{\tilde{t}} = 500 \GeV$ & $m_{\tilde{t}} = 800 \GeV$ & $m_{\tilde{t}} = 1000 \GeV$ \\
       \midrule
-      $\sigma \cdot L$                & $1750 \pm 260$             & $59 \pm 12$                & $8.9 \pm 2.5$ \\
+      $\sigma \cdot L$                 & $1750 \pm 260$             & $59 \pm 12$                & $8.9 \pm 2.5$ \\
       \midrule
-      $bb\ell\ell$                    & $624 \pm 4$                & $19.65 \pm 0.18$           & $2.68 \pm 0.05$   \\
-      $Z$ veto                        & $619 \pm 4$                & $19.62 \pm 0.18$           & $2.68 \pm 0.05$   \\
-      $H_{T} \ge$~1100 \GeV           & $122.9 \pm 1.8$            & $16.01 \pm 0.17$           & $2.50 \pm 0.04$   \\
+      $bb\ell\ell$                     & $624 \pm 4$                & $19.65 \pm 0.18$           & $2.68 \pm 0.05$   \\
+      $Z$ veto                         & $619 \pm 4$                & $19.62 \pm 0.18$           & $2.68 \pm 0.05$   \\
+      $H_{T} \ge 1100 \GeV$            & $122.9 \pm 1.8$            & $16.01 \pm 0.17$           & $2.50 \pm 0.04$   \\
       $m_{b\ell}$ asymmetry $\leq 0.2$ & $112.8 \pm 1.7$            & $14.00 \pm 0.15$           & $2.11 \pm 0.04$   \\
       \midrule
-      $m_{b\ell} \geq 400$ \GeV        & $110.3 \pm 1.7$            & $13.74 \pm 0.15$           & $2.09 \pm 0.04$   \\
-      $m_{b\ell} \geq 600$ \GeV        & $7.7 \pm 0.4$              & $12.86 \pm 0.15$           & $1.99 \pm 0.04$   \\
+      $m_{b\ell} \geq 400 \GeV$        & $110.3 \pm 1.7$            & $13.74 \pm 0.15$           & $2.09 \pm 0.04$   \\
+      $m_{b\ell} \geq 600 \GeV$        & $7.7 \pm 0.4$              & $12.86 \pm 0.15$           & $1.99 \pm 0.04$   \\
       \bottomrule
     \end{tabular}
   }
@@ -946,7 +980,7 @@ are able to place experimental limits in this region \cite{ATLAS:2013oea}.
   \includegraphics[width=\textwidth]{figs/blstop/limit_contours.pdf}
   \caption{Expected and observed limit on the branching ratios for the stop
     decaying to different lepton flavors shown for different stop mass
-    hypotheses between 400 GeV and 1 TeV. The shaded area under the solid
+    hypotheses between 400~\GeV and 1~\TeV. The shaded area under the solid
     line represents the branching ratios which are excluded at 95\% CL
     for each stop mass.
     The dotted lines represent the uncertainty on the observed mass limit
@@ -965,7 +999,7 @@ are able to place experimental limits in this region \cite{ATLAS:2013oea}.
   \includegraphics[width=0.6\textwidth]{figs/blstop/mass_limit_contours_no_extras_obs.pdf}
   \caption{The observed mass limit on the stop at 95\% CL.
     This limit is obtained using the nominal stop cross section.
-    Stop masses between 400 \GeV\ and 1100 \GeV, in steps of 100 \GeV, were
+    Stop masses between 400~\GeV\ and 1100~\GeV, in steps of 100~\GeV, were
     tested. The mass limit shown corresponds to the highest-mass stop sample
     which was excluded.
     As the branching ratio of $\tilde{t} \rightarrow b\tau$ increases, the
