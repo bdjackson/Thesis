@@ -225,7 +225,8 @@ asymmetry of the two $b\ell$ pairs as described in Section
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.60\textwidth]{figs/blstop/PairingEfficiencies/pairing_eff__inclusive.pdf}
+  \includegraphics[width=0.60\textwidth]
+    {figs/blstop/PairingEfficiencies/pairing_eff__inclusive.pdf}
   \caption{The efficiency of correctly pairing $b$-tagged jets and leptons
     using the pairing heuristic described in Section~\ref{sec:object_selection}
     for the different stop masses which were considered.
@@ -234,7 +235,8 @@ asymmetry of the two $b\ell$ pairs as described in Section
     The scenario where one pair is identified correctly corresponds to events
     where one pair is grouped correctly, but at least of of the $b$-tagged jets
     or one of the leptons was not matched to a stop parent.
-    {\color{red} TODO remake this plot with 1.1~\TeV\ mass point}
+    {\color{red} TODO remake this plot with 1.1~\TeV\ mass point. Add data
+    points to plot}
   }
   \label{fig:pairing_eff}
 \end{figure}
@@ -244,102 +246,81 @@ asymmetry of the two $b\ell$ pairs as described in Section
 \section{Event cleaning}
 \label{sec:event_cleaning}
 
-{\color{red} TODO fill in this section}
+All sub-systems of the ATLAS detector are required to be operating acceptably
+during data-taking. 
+This data quality requirement is implemented using a good runs list (GRL)
+provided by the Data Preparation group.\footnote{The GRL version
+\texttt{data12\_8TeV.periodAllYear\_DetStatus-v61-pro14-02\_DQDefects-00-01-00\_PHYS\_StandardGRL\_All\_Good}
+is used.}
+By applying the GRL requirement, the total integrated luminosity is reduced
+from 21.4~\ifb\ to 20.3~\ifb.
+The uncertainty on the luminosity is $\pm 2.8$\%.
+It is derived following the same methodology as that detailed
+in Ref.~\cite{Lumi}.
+The GRL requirement was applied to data events only; the MC simulation samples
+were scaled to match the target luminosity.
 
-{\color{red} GRL }
+% Several other detector errors can lead to an event being rejected.
+In the event of a certain detector busy condition, the TTC may be restarted in
+order to recover the detector without a full run-restart. In the lumi-block
+after a TTC restart, it is possible for stored events to be incomplete.
+For this reason, events stored immediately after a TTC restart are rejected.
+Furthermore, events are rejected if either the LAr or tile calorimeter is
+flagged as having an error.
+During periods G-J several events were corrupt in a single channel of the tile
+calorimeter, but not flagged as having a tile calorimeter error.
+These events were also rejected using the \texttt{TileTripTool}.
+During period B a hot spot developed in the tile calorimeter.
+As this can negatively impact the jet calibration and the \met calculations,
+events with a jet pointing toward this hot spot in the tile calorimeter were
+rejected.
 
-{\color{red} incomplete event }
+Jet cleaning was performed to flag jets which are formed from various sources
+such as hardware problems, LHC beam conditions, or cosmic ray showers rather
+than real energy deposits in the calorimeter.
+If any of these bad jets remain after the overlap removal procedure, the event
+is rejected.
+Additionally, during periods E-H, a region of the LAr
+calorimeter ($-0.1\le\eta\le1.5$ and $-0.9\le\phi\le-0.5$) malfunctioned
+resulting in a hole in the sub-detector.
+This resulted in energy not being collected from electrons and jets close to
+this hole, and indirectly changing the \met\ measurement.
+A correction was applied to jets to account for the energy loss in the hole,
+however, if the correction is too large (greater than 0.05) and the \met\ is
+close to the jet ($\Delta\phi(\met, \text{jet}) \le 0.3$), it is assumed the
+\met\ is mismeasured, and the event is rejected.
 
-{\color{red} LAr error }
+In addition to the impact parameter requirement on muons discussed in
+Section~\ref{sec:object_selection}, an additional requirement of
+$|d_0| \leq 0.2$~mm is applied to muons passing the overlap removal to reject
+muons from cosmic rays. Any event failing this selection requirement is
+rejected.
+In order to ensure muons are well measured, any event containing a muon after
+overlap removal with $\sigma_{q/p}/|q/p| > 0.2$ is rejected.
+These poorly measured muons can arise from the MS and ID reconstructing
+different momenta for the same muon.
 
-{\color{red} tile error }
+Each event is also required to have at least one primary vertex with at least
+5 associated tracks.
 
-{\color{red} tile hot spot }
-
-{\color{red} tile trip }
-
-{\color{red} bad jet }
-
-{\color{red} calo problem jet }
-
-{\color{red} primary vertex }
-
-{\color{red} bad muon cut }
-
-{\color{red} cosmic muon cut }
-
-{\color{red} HFOR cut }
-
+An additional requirement was applied to MC simulation events to avoid double
+counting backgrounds with heavy flavor quarks in the final state, the heavy
+flavor overlap removal procedure, described in Section~\ref{sec:jet_matching},
+was applied.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \section{Trigger selection}
 \label{sec:trigger_selection}
 
-{\color{red} TODO Expand on this a lot}
-
 A combination of four single-lepton triggers are used to select events.
-
-Single-electron and single-muon triggers are used to select events. 
-Di-electron and di-muon events are required to pass a single-electron and
-single-muon trigger respectively, while electron-muon events are selected if
-either or both of the single-lepton triggers are passed.
-At least one of the reconstructed leptons is required to be
-within $\Delta R \leq 0.15$ of the detector signature found by the trigger.
-This trigger requirement is highly efficient for signal events; between 93\%
-and 98\% of events depending on the flavor channel.
-
-\begin{table}[ht]
-    \caption{Requirements for the triggers used in this analysis.  }
-    \label{tab:trigger_defs}
-  \centering{
-    \begin{tabular}{c|cc}
-      \toprule
-      Trigger & \pt\ threshold & Other requirements \\
-      \midrule
-      \multirow{2}{*}{\texttt{EF\_e24vhi\_medium1}}
-      & \multirow{2}{*}{$\pt^{e} \geq 24 \GeV$}
-      & hadronic core isolation $\leq 1 \GeV$ \\
-      & & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.1$ \\
-      \texttt{EF\_e60\_medium1} & $\pt^{e} \geq 60 \GeV$ & -- \\
-      \texttt{EF\_mu24i\_tight}
-      & $\pt^{e} \geq 24 \GeV$
-      & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.12$ \\
-      \texttt{EF\_mu36\_tight}  & $\pt^{e} \geq 36 \GeV$ & -- \\
-      \bottomrule
-    \end{tabular}
-  }
-\end{table}
-
-\begin{figure}[ht]
-  \centering
-  \subbottom[\texttt{EF\_e24vhi\_medium1}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e24vhi_medium1.pdf}
-  }
-  \subbottom[\texttt{EF\_e60\_medium1}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e60_medium1.pdf}
-  }
-  \subbottom[\texttt{EF\_mu24i\_tight trigger}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_mu24i_tight.pdf}
-  }
-  \subbottom[\texttt{EF\_mu36\_tight}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_mu36_tight.pdf}
-  }
-  \caption{Efficiency of passing each trigger broken down by flavor channel.}
-\end{figure}
-
-\begin{figure}[ht]
-  \centering
-  \subbottom[\texttt{EF\_e24vhi\_medium1}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e24vhi_medium1__el_pt.pdf}
-  }
-  \subbottom[\texttt{EF\_e60\_medium1}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e60_medium1__el_pt.pdf}
-  }
-  \caption{Efficiency of passing the single electron triggers for several
-    ranges of electron transverse momentum. Only flavor\_em events are shown.
-  }
-\end{figure}
+The specific triggers used depend on the flavor channel of the event.
+Di-electron(muon) events are required to pass at least one of the two single
+electron (muon) triggers, while electron-muon events may pass any one of the
+four triggers.
+The specific triggers used for each flavor channel are outlined in
+Table~\ref{tab:triggers}, and the trigger requirements are described in
+Table~\ref{tab:trigger_defs}.
 
 \begin{table}[ht]
   \caption{Trigger selection for each final state. If the event passes any of
@@ -365,6 +346,134 @@ and 98\% of events depending on the flavor channel.
     \end{tabular}
   }
 \end{table}
+
+\begin{table}[ht]
+    \caption{Requirements for the triggers used in this analysis.  }
+    \label{tab:trigger_defs}
+  \centering{
+    \begin{tabular}{c|cc}
+      \toprule
+      Trigger & \pt\ threshold & Other requirements \\
+      \midrule
+      \multirow{2}{*}{\texttt{EF\_e24vhi\_medium1}}
+      & \multirow{2}{*}{$\pt^{e} \geq 24 \GeV$}
+      & hadronic core isolation $\leq 1 \GeV$ \\
+      & & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.1$ \\
+      \texttt{EF\_e60\_medium1} & $\pt^{e} \geq 60 \GeV$ & -- \\
+      \texttt{EF\_mu24i\_tight}
+      & $\pt^{e} \geq 24 \GeV$
+      & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.12$ \\
+      \texttt{EF\_mu36\_tight}  & $\pt^{e} \geq 36 \GeV$ & -- \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
+
+At least one of the reconstructed leptons is required to be within 
+$\Delta R \leq 0.15$ of the detector signature found by the trigger.
+The expected trigger efficiencies for simulated stop events are shown
+for each trigger individually in Figure~\ref{fig:single_trigger_efficiency}.
+The two muon triggers have roughly the same trigger efficiency, of about 93\% 
+for $\mu\mu$ events and 75\% for $e\mu$ events, for all stop masses.
+The two electron triggers, however, have dramatically different shapes, with
+the \texttt{EF\_e24vhi\_medium1} trigger being highly efficient for $ee$ and
+$e\mu$ events low mass from low mass stop, which decrease for higher
+stop masses. 
+The \texttt{EF\_e60\_medium1} trigger is not efficient for lower stop
+masses, but quickly reaches approximately efficiencies above 95\% efficiency for
+$ee$ and $e\mu$ events.
+
+The dependence on the stop mass is a result of the \ET\ dependence of the
+electron triggers.
+The decay products of lighter stops tend to have lower momentum.
+As a result, the electrons from the very light stops ($\leq 300~\GeV$) do not 
+are more likely have \ET\ less than the threshold for the
+\texttt{EF\_e60\_medium1} trigger.
+Similarly, high-\HT\ electrons will deposit more energy into the calorimeter,
+and some of this energy will reach the hadronic calorimeter.
+As the electron \HT\ increases, the probability that the energy deposition into
+the hadronic calorimeter is enough to fail hadronic core isolation requirement
+of the \texttt{EF\_e24vhi\_medium1} trigger increases.
+The \ET\ dependence of the two electron triggers, shown in
+Figure~\ref{fig:electron_trigger_pt_dependence}, is consistent with the expected
+dependence.
+
+\begin{figure}[ht]
+  \centering
+  \subbottom[\texttt{EF\_e24vhi\_medium1}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e24vhi_medium1.pdf}
+  }
+  \subbottom[\texttt{EF\_e60\_medium1}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e60_medium1.pdf}
+  }
+  \subbottom[\texttt{EF\_mu24i\_tight trigger}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_mu24i_tight.pdf}
+  }
+  \subbottom[\texttt{EF\_mu36\_tight}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_mu36_tight.pdf}
+  }
+  \caption{Efficiency of simulated stop events passing each single lepton
+    trigger broken down by flavor channel.
+    The two single electron triggers have different shapes, which the 
+    \texttt{EF\_e24vhi\_medium1} trigger being more efficient for low stop
+    masses and the \texttt{EF\_e60\_medium1} trigger more efficient for
+    higher stop masses.
+    The two single muon triggers have roughly equal efficiency for all stop
+    masses.
+    Due to the trigger requirement, and the overlap removal procedure, $ee$
+    events do not pass the single muon triggers, and $\mu\mu$ events do not
+    pass the single electron triggers.
+    {\color{red} TODO re-make these plots with overlap removal turned on and
+    the 1100 \GeV\ point added}
+  }
+  \label{fig:single_trigger_efficiency}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \subbottom[\texttt{EF\_e24vhi\_medium1}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e24vhi_medium1__el_pt.pdf}
+  }
+  \subbottom[\texttt{EF\_e60\_medium1}]{
+    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e60_medium1__el_pt.pdf}
+  }
+  \caption{Efficiency of simulated stop events passing each of the single
+    electron triggers for several ranges of electron \ET.
+    Only $e\mu$ events are shown in order to show to isolate the effect of
+    the electron \ET\ on the single electron trigger efficiency.
+    These plots show the trigger efficiency dependence on the stop mass,
+    observed in Figure~\ref{fig:single_trigger_efficiency} is due to a
+    dependence on the electron \HT.
+    The \texttt{EF\_e24vhi\_medium1} trigger has the high efficiency for low
+    \HT\ electrons, while the \texttt{EF\_e60\_medium1} trigger is more
+    efficient for high \HT\ electrons.
+    {\color{red} TODO re-make these plots with overlap removal turned on and
+    the 1100 \GeV\ point added}
+  }
+  \label{fig:electron_trigger_pt_dependence}
+\end{figure}
+
+The full trigger requirement is highly efficient for signal-like events; between
+93\% and 98\% of simulated signal events pass the trigger selection depending
+on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.45\textwidth]
+    {figs/trigger/EF_e24vhi_medium1_OR_EF_e60_medium1_OR_EF_mu36_tight.pdf}
+  \caption{Efficiency of simulated stop events passing the full trigger
+    selection broken down by flavor channel.
+    When the full trigger selection is considered, the trigger efficiency does
+    not depend on the stop mass.
+    {\color{red} TODO remake this plot using or of all four triggers (currently
+      only shows the two electron triggers and the mu36 trigger). Also, include
+      the 1100 GeV mass point.
+    }
+  }
+  \label{fig:full_trigger_efficiency}
+\end{figure}
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \section{Signal regions}
 \label{sec:signal_regions}
