@@ -480,35 +480,89 @@ on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
 
 {\color{red} TODO Expand on this, and talk about optimization process}
 
-Two overlapping signal regions (SRs) are defined to search for an excess of
-signal-like events, which are inconsistent with the prediction from the
-Standard Model alone.
+This analysis targets a wide range of stop masses, which differ greatly in the
+expected cross sections and the expected event kinematics.
+For this reason, two overlapping signal regions (SRs) are defined to search for
+an excess of signal-like events, which are inconsistent with the prediction from
+the SM alone.
+The two signal regions target the low stop mass and high stop mass regions
+separately.
 In order to achieve a large expected signal to background ratio in the signal
 regions, MC simulation is used to optimize the selection requirements.
+
+One of the major sources of SM background come from \ZGAMMAJETS.
+To reduce this background, events where the two leptons have the same
+flavor, and reconstruct an invariant mass consistent with the mass of the $Z$
+boson ($|m_{\ell\ell} - m_{Z}| \leq 10 \GeV$) are rejected.
 
 The scalar sum of the \pt\ of the two $b$-tagged jets and two leptons (\HT) 
 effectively separates the signal processes from the major sources of
 Standard Model background.
-Events in the SRs are required to have \HT\ above 1100~\GeV.
-Events with two same-flavor leptons with invariant mass within 10~\GeV\ of the
-$Z$-boson mass are vetoed to reduce the backgrounds from $Z$-boson production.
+The stops of interest are extremely massive, so all the decay products tend to
+have a large amount of energy, resulting in a high \HT.
+SM processes, such as \TTBAR\ and \ZGAMMAJETS, do not have as large \HT.
 
-For the signal model, the invariant masses of the two pairs of a lepton and
-$b$-tagged jet should be equal since they are decay products of the
-stop/anti-stop. Therefore, for each of the two possible ways to group
-two leptons and two $b$-tagged jets into two pairs of a lepton and a
-$b$-tagged jet, the difference in the invariant masses is calculated,
-($\MBL^0-\MBL^1$), where $\MBL^0$($\MBL^1$) denotes the mass of the
-higher (lower)-mass pair. The grouping with the smallest difference
-is selected.  The mass asymmetry is defined as
+For the signal model, the two $b\ell$ pairs making up the final state are the
+decay products of the stop/anti-stop, and therefore have the same mass.
+The mass asymmetry variable is defined as
 \begin{equation}
   \MBLASYM = 
   \frac{\MBL^0-\MBL^1}{\MBL^0+\MBL^1}.
 \end{equation}
-The asymmetry should be
-close to zero for signal.  Standard Model processes, however, have no
-preference for the mass asymmetry.  The SRs require a mass
-asymmetry of less than or equal to 0.2.
+Events from stop decays are expected to have low \MBLASYM\ as the mass
+difference in the two pairs is expected to be small, while the masses of the
+$b\ell$ pairs coming from SM processes are roughly uncorrelated, and there is
+no preference for \MBLASYM.
+The asymmetry is used rather than the simple difference in the masses so a
+single cut value can be used for all stop masses which are considered.
+Furthermore, events from SM background processes tend to have low \MBL\ for
+both pairs.
+The $\MBL^0$ variable can also provide additional discrimination power.
+The expected \MLL, \HT, \MBLASYM\, and $\MBL^{0}$ distributions for SM
+background processes and three signal models is shown in an inclusive region
+after event cleaning and selecting two $b$-tagged jets and two leptons in
+Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists}.
+
+\begin{figure}
+  \centering
+  \subbottom[\MLL]{
+    \includegraphics[width=0.45\textwidth]
+    {figs/blstop/no_data__no_k_factor__dists/flavor_all__mll__BMINUSL_BL_PAIRING__log.pdf}
+  }
+  \subbottom[\HT]{
+    \includegraphics[width=0.45\textwidth]
+    {figs/blstop/no_data__no_k_factor__dists/flavor_all__ht_signal__BMINUSL_BL_PAIRING__log.pdf}
+  }
+  \subbottom[\MBLASYM]{
+    \includegraphics[width=0.45\textwidth]
+    {figs/blstop/no_data__no_k_factor__dists/flavor_all__mbl_asym__BMINUSL_BL_PAIRING__log.pdf}
+  }
+  \subbottom[$\MBL^0$]{
+    \includegraphics[width=0.45\textwidth]
+    {figs/blstop/no_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_BL_PAIRING__log.pdf}
+  }
+  \caption{Expected \MLL, \HT, \MBLASYM, and $\MBL^0$ distributions for SM
+    background processes and three simulated stop samples with different masses.
+    Basic event cleaning is applied and the events are required to pass the
+    trigger selection, as described in
+    Sections~\ref{sec:event_cleaning}~and~\ref{sec:trigger_selection}, and the
+    events are required to have at least two $b$-tagged jets and two light
+    leptons (electrons or muons).
+    In each plot, the last bin includes the overflow for values beyond the
+    maximum shown. The hashed error bands show only the statistical
+    uncertainty on the background MC simulation samples. The signal
+    models have an assumed
+    $Br(\STOP\rightarrow~be)~=~Br(\STOP\rightarrow~b\mu)~=~0.5$.
+  }
+  \label{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists}
+  %%
+\end{figure}
+
+
+Events in the SRs are required to have \HT\ above 1100~\GeV.
+Events with two same-flavor leptons with invariant mass within 10~\GeV\ of the
+$Z$-boson mass are vetoed to reduce the backgrounds from $Z$-boson production.
+The SRs require a mass asymmetry of less than or equal to 0.2.
 Finally, $\MBL^0$ is used to define the two SRs.
 SR~400 has a requirement of $\MBL^0 \geq 400 \GeV$, and is optimal for lower
 stop masses, while SR~600 has a requirement of $\MBL^0 \geq 600 \GeV$, and is
