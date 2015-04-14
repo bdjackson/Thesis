@@ -487,8 +487,6 @@ an excess of signal-like events, which are inconsistent with the prediction from
 the SM alone.
 The two signal regions target the low stop mass and high stop mass regions
 separately.
-In order to achieve a large expected signal to background ratio in the signal
-regions, MC simulation is used to optimize the selection requirements.
 
 One of the major sources of SM background come from \ZGAMMAJETS.
 To reduce this background, events where the two leptons have the same
@@ -558,6 +556,18 @@ Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists}.
   %%
 \end{figure}
 
+In order to achieve a large expected signal to background ratio in the signal
+regions, MC simulation is used to optimize the selection requirements.
+The optimization is performed assuming a stop branching fraction of
+$Br(\STOP\rightarrow~be)~=~Br(\STOP\rightarrow~b\mu)~=~0.5$.
+A single SR selection criteria was obtained for both the \HT\ and
+\MBLASYM\ variables which perform reasonably well for all mass above 500 \GeV.
+Events in both SRs are required to have $\HT \geq 1100~\GeV$ and
+$\MBLASYM \leq 0.2$.
+$\MBL^0$ is used to define the two SRs.
+SR~400 has a requirement of $\MBL^0 \geq 400 \GeV$, and is optimal for lower
+stop masses, while SR~600, with a requirement of $\MBL^0 \geq 600 \GeV$, is
+optimal for higher stop masses.
 
 Events in the SRs are required to have \HT\ above 1100~\GeV.
 Events with two same-flavor leptons with invariant mass within 10~\GeV\ of the
@@ -567,8 +577,8 @@ Finally, $\MBL^0$ is used to define the two SRs.
 SR~400 has a requirement of $\MBL^0 \geq 400 \GeV$, and is optimal for lower
 stop masses, while SR~600 has a requirement of $\MBL^0 \geq 600 \GeV$, and is
 optimal for higher stop masses.
-
-The full selection criteria for the analysis regions is outlined in
+The full selection criteria for the analysis regions, including the Control and
+Validation regions, described in Section~\ref{sec:bkg}, is outlined in
 Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -611,78 +621,66 @@ Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.6\textwidth]{figs/blstop/regions__met_sig__ht_plane.pdf}
-  \caption{Position of the regions in the \METSIG\ versus \HT\ space. The two
-    left plots show the \METSIG-\HT~plane after requiring the invariant mass
-    of the two leptons is not consistent with the Z boson, with the top plot
-    requiring $\MBLASYM \geq 0.2$ and the bottom requiring $\MBLASYM \leq 0.2$.
-    The right plot shows the plane when requiring the invariant mass of the
-    two leptons is consistent with the Z boson, and the leptons are of the
-    same flavor. The two SRs apply a different requirement on the
+  \caption{Position of the regions in the \METSIG\ versus \HT\ space.
+    The two left plots show the \METSIG-\HT~plane after vetoing events within
+    the $Z$ window, with the top plot requiring $\MBLASYM \geq 0.2$ and the
+    bottom requiring $\MBLASYM \leq 0.2$.
+    The right plot shows the plane when requiring events be within the $Z$
+    window.
+    The two SRs apply a different requirement on the
     invariant mass of the higher-mass $b\ell$ pair. SR~400 requires
     $\MBL^{0} \geq 400 \GeV$, and SR~600 requires $\MBL^{0} \geq 600 \GeV$.
   }
   \label{fig:region_coverage}
 \end{figure}
 
-The \HT, \MBLASYM, and $\MBL^0$ distributions are shown in
-Figure~\ref{fig:n_minus_one_sr} for the simulated background processes
-and three signal models.  In this figure, all the SR
-selections apart from that on the variable being shown are applied.
+Figure~\ref{fig:n_minus_one_sr} shows the expected \HT, \MBLASYM, and $\MBL^0$
+distributions after applying all the SR selection criteria except that on the
+variable being shown.
+This figure includes the simulated background processes and three signal models.
 The number of expected signal events (for the same three signal models)
 passing each selection requirement is shown in Table~\ref{tab:sr_cutflow}.
-The estimates shown in Figure \ref{fig:n_minus_one_sr} and
+The estimates shown in Figure~\ref{fig:n_minus_one_sr} and
 Table~\ref{tab:sr_cutflow} are taken from MC simulation, and the event
 yields are normalized to 20.3 \ifb.
 
 \begin{figure}
-\centering
-\resizebox{0.48\linewidth}{!}{
-  \begin{tikzpicture}
-  \node[anchor=south west, inner sep=0] (image) at (0,0) {
-    \includegraphics[width=0.48\textwidth]{figs/blstop/ht_sr_400_minus_ht.pdf}
-  };
-  \end{tikzpicture}
-}
-%%
-\resizebox{0.48\linewidth}{!}{
-  \begin{tikzpicture}
-  \node[anchor=south west, inner sep=0] (image) at (0,0) {
-    \includegraphics[width=0.48\textwidth]{figs/blstop/mbl_asym_sr_400_minus_mbl_asym.pdf}
-  };
-  \end{tikzpicture}
-}
-%%
-\resizebox{0.48\linewidth}{!}{
-  \begin{tikzpicture}
-  \node[anchor=south west, inner sep=0] (image) at (0,0) {
-    \includegraphics[width=0.48\textwidth]{figs/blstop/mbl_0_sr_minus_mbl.pdf}
-  };
-  \end{tikzpicture}
-}
-\caption{Distributions of the variables which are used to define the
-  SRs. These plots show the MC simulated background samples and
-  three signal models, and are made after applying all the SR
-  selection criteria except for that on the variable shown. The top
-  two plots show the \HT\ and \MBLASYM\ variables, and the bottom plot shows
-  the $\MBL^0$ distribution.
-  The arrows show the SR requirement on the variable being shown.
-  In each plot, the last bin includes the overflow for values beyond the
-  maximum shown. The hashed error bands show only the statistical
-  uncertainty on the background MC simulation samples. The signal
-  models have an assumed
-  $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
-}
-\label{fig:n_minus_one_sr}
-%%
+  \centering
+  \subbottom[\HT]{
+    \includegraphics[width=0.45\textwidth]{figs/blstop/ht_sr_400_minus_ht.pdf}
+  }
+  \subbottom[\MBLASYM]{
+    \includegraphics[width=0.45\textwidth]{figs/blstop/mbl_asym_sr_400_minus_mbl_asym.pdf}
+  }
+  \subbottom[$\MBL^0$]{
+    \includegraphics[width=0.45\textwidth]{figs/blstop/mbl_0_sr_minus_mbl.pdf}
+  }
+  \caption{Distributions of the variables which are used to define the
+    SRs.
+    These plots show the MC simulated background samples and three signal
+    models, and are made after applying all the SR selection criteria except for
+    that on the variable shown.
+    The top two plots show the \HT\ and \MBLASYM\ variables, and the bottom
+    plot shows the $\MBL^0$ distribution.
+    The arrows show the SR requirement on the variable being shown.
+    In each plot, the last bin includes the overflow for values beyond the
+    maximum shown.
+    The hashed error bands show only the statistical uncertainty on the
+    background MC simulation samples.
+    The signal models have an assumed
+    $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
+  }
+  \label{fig:n_minus_one_sr}
+  %%
 \end{figure}
 
 \begin{table}[ht]
   \caption{The number of expected signal events pasing each of the signal
-    region cuts. This is shown for stop masses of 500~\GeV, 800~\GeV, and
-    1000~\GeV.  The estimated yields are taken from MC simulation,
-    and are normalized to 20.3~\ifb, and the uncertainty given is the
-    MC statistical uncertainty. The signal models have an assumed
-    branching fraction of
+    region cuts.
+    This is shown for stop masses of 500~\GeV, 800~\GeV, and 1000~\GeV.
+    The estimated yields are taken from MC simulation, and are normalized
+    to 20.3~\ifb, and the uncertainty given is the MC statistical uncertainty.
+    The signal models have an assumed branching fraction of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
   }
   \label{tab:sr_cutflow}
