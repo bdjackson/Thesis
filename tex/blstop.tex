@@ -6,6 +6,8 @@
 {\color{red}A lot of this chapter is just going to be lifted from the CONF note
   and then expanded upon. The section headings are mostly the same}
 
+{\color{red} TODO add brief overview to the beginning of the chapter}
+
 %% -----------------------------------------------------------------------------
 \section{Object selection}
 \label{sec:object_selection}
@@ -241,8 +243,7 @@ asymmetry of the two $b\ell$ pairs as described in Section
   \label{fig:pairing_eff}
 \end{figure}
 
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+%% -----------------------------------------------------------------------------
 \section{Event cleaning}
 \label{sec:event_cleaning}
 
@@ -308,8 +309,7 @@ counting backgrounds with heavy flavor quarks in the final state, the heavy
 flavor overlap removal procedure, described in Section~\ref{sec:jet_matching},
 was applied.
 
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+%% -----------------------------------------------------------------------------
 \section{Trigger selection}
 \label{sec:trigger_selection}
 
@@ -473,12 +473,9 @@ on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
   \label{fig:full_trigger_efficiency}
 \end{figure}
 
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+%% -----------------------------------------------------------------------------
 \section{Signal regions}
 \label{sec:signal_regions}
-
-{\color{red} TODO Expand on this, and talk about optimization process}
 
 This analysis targets a wide range of stop masses, which differ greatly in the
 expected cross sections and the expected event kinematics.
@@ -708,145 +705,110 @@ yields are normalized to 20.3 \ifb.
 \section{Background estimate}
 \label{sec:bkg}
 
-The background estimates of the \TTBAR\ and the \ZGAMMAJETS\ backgrounds use
-MC simulation normalized in dedicated data control regions (CRs), the top
-control region (Top CR) and $Z$ control region ($Z$ CR) respectively.
-The remaining backgrounds are estimated using simulation.
-Several validation regions (VRs) are defined to validate the extrapolation from
-the CRs to regions with different kinematics.
+The three largest sources of SM background are \TTBAR, \ZGAMMAJETS, and single
+top production.
+Other sources, such as di-boson and Higgs boson production, contribute as
+background events as well, however in much smaller amounts.
+The background estimates for the \TTBAR\ and the \ZGAMMAJETS\ backgrounds use
+MC simulation normalized in dedicated data control regions (CRs).
+Several validation regions (VRs) are defined to validate the extrapolation of
+the fitted background estimate in the CRs to regions with different kinematics.
+The remaining backgrounds are estimated using MC simulation only, and the
+normalization is scaled based on the cross section of the production process and
+the integrated luminosity collected in data.
+The CRs and VRs are described in more detail in
+Sections~\ref{sec:cr}~and~\ref{sec:vr} respectively.
 
-Both the Top CR and $Z$ CR require \HT\ to be less than or equal to
-500~\GeV\ to reduce the amount of
-signal contamination in the regions. A cut of $\MBLASYM \leq 0.2$ is applied to
-match the signal regions, and $\MBL^0$ is required to be above 200 \GeV. No
-requirement is made on the invariant mass of the second pair.
+The \TTBAR\ and \ZGAMMAJETS\ normalization factors are determined using a
+simultaneous fit to the data in th CRs, allowing the normalization of each
+background to float independent of one another to obtain the best agreement
+between the prediction and observation in the CRs.
+The background fit procedure and results are described in
+Section~\ref{sec:bkg_fit}.
+In addition to the statistical uncertainty, several sources of systematic
+uncertainty, described in Section~\ref{sec:systematics}, are considered when
+performing the simultaneous fit.
 
-The \METSIG\ variable is used to define CRs that are relatively pure 
-in \TTBAR\ or \ZGAMMAJETS, where
+%% -----------------------------------------------------------------------------
+\subsection{Control regions}
+\label{sec:cr}
+
+The normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds are determined
+using the observed data in two dedicated CRs, labeled the top control region
+(Top CR) and $Z$ control region ($Z$ CR) respectively.
+To reduce the uncertainty on the \TTBAR\ and \ZGAMMAJETS\ normalization factors,
+the CRs were defined to contain a fairly pure in events coming from a single
+background process of interest.
+The Top ($Z$) CR is defined to be pure in events from \TTBAR (\ZGAMMAJETS).
+There is also little signal contamination in the CRs to prevent any potential
+signal events from influencing the background normalization.
+
+To reduce signal contamination, the Top and $Z$ CRs require $\HT \leq 500~\GeV$.
+In addition to reducing the amount of signal contamination, the CRs should have
+kinematics as similar as possible to the SRs to make the extrapolation from the
+CRs to SRs more reliable.
+For this reason, a requirement of $\MBLASYM \leq 0.2$ is applied to both the
+Top and $Z$ CRs to match the \MBLASYM\ requirement in the SRs.
+A requirement of $\MBL^0 \geq 200 \GeV$ is applied so the background
+normalization is taken from a region of $\MBL^0$ which is more similar to that
+of the SRs.
+Imposing a stricter requirement on $\MBL^0$ reduces the expected and observed
+number of events in both CRs, and a reliable estimate of the \TTBAR\ and
+\ZGAMMAJETS\ normalizations cannot be obtained due to statistical uncertainties.
+No requirement is made on the $\MBL^1$.
+
+To ensure the CRs are relative in \TTBAR\ or \ZGAMMAJETS, the \MET\ information
+was used.
+Rather than select on the \MET\ alone, \METSIG\ is defined as
 \begin{equation}
   \METSIG = \frac{\MET}{\sqrt{\HT}}.
 \end{equation}
-Processes like \TTBAR, with real \MET, tend to have large \METSIG, while
-\ZGAMMAJETS, where the \MET\ is from mismeasurement, tend to
-have low \METSIG. For this reason, the Top CR requires 
-$\METSIG \geq 4 \GeV^{1/2}$ and the $Z$ CR requires
-$\METSIG \leq 4 \GeV^{1/2}$.  
-The definitions of the CRs, and VRs are summarized in
-Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
+By scaling the \MET\ by the total amount of energy in the event, the
+\METSIG\ is less susceptible to the effects of fake \MET\ from of mismeasurement
+of objects in an event.
+Processes like \TTBAR\ and single top, with real \MET\ in the final state, tend
+to have large \METSIG, while processes with \MET coming entirely from
+mismeasurement, such as \ZGAMMAJETS, tend to have low values for \METSIG.
+For this reason, the Top CR requires $\METSIG \geq 4 \GeV^{1/2}$
+and the $Z$ CR requires $\METSIG \leq 4 \GeV^{1/2}$.
 
-The normalization of the \TTBAR\ and the \ZGAMMAJETS\ backgrounds are
-determined using a simultaneous fit, which takes into account
-cross-contamination of the different background processes between the
-CRs as well as the statistical and systematic
-uncertainties (described in Section~\ref{sec:systematics})~\cite{Baak:2014wma}.
-The remaining background estimates, due to  single top and other SM processes,
-are taken from the MC simulation.
-The number of observed events as well as the expected number
-of events in each of the CRs and VRs are shown in
-Table \ref{tab:bkg_only_fit_results}.
-The agreement between the observed number of events and the fitted event
-yields in the VRs is summarized in Figure \ref{fig:pull_dist_vr}.
-Using the fitted backgrounds, the dominant process in the same-flavor
-channels of the SRs is \ZGAMMAJETS\ followed by single top and
-\TTBAR. In the $e\mu$ channel, the \ZGAMMAJETS\ background does
-not contribute, thus, the largest backgrounds are single top and \TTBAR.
-As a result of the fit, the \ZGAMMAJETS\ background is scaled up by
-approximately 40\%. Due to this large normalization factor, the background is
-over-predicted in the $Z$ VR. This over-prediction is taken as an additional
-systematic uncertainty, described in Section~\ref{sec:systematics}.
+Lastly, events containing like-flavor leptons, with a reconstructed invariant
+mass within 10~\GeV of the $Z$~boson mass are rejected from the Top CR.
+The $Z$ CR, requires events be within this $Z$ region.
+The definitions of the CRs are summarized in Table~\ref{tab:regions} and
+Figure~\ref{fig:region_coverage}.
 
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\begin{table}[ht]
-  \caption{The observed and expected event yields in the CRs and VRs. The
-    expected event yields are shown before and after a fit to the data in
-    the CRs. The fitted background yields in the CRs match the observed
-    number of events in data by construction.
-  }
-  \label{tab:bkg_only_fit_results}
-  %
-  \begin{center}
-    \begin{tabular}{lrrrrrr}
-      \toprule
-                         & Top CR           & Z CR            & Top VR 1       & Top VR 2      & Top VR 3        & Z VR            \\
-      \midrule
-      Observed           & $369$            & $327$           & $645$          & $606$         & $67$            & $101$           \\
-      \midrule
-      Fitted background  & $369   \pm 19$   & $327  \pm 18$   & $690  \pm 50$  & $630 \pm 40$  & $72   \pm 5$    & $130  \pm 60$   \\
-      \midrule
-      Fitted \TTBAR      & $346   \pm 19$   & $9.1  \pm 0.7$  & $600  \pm 40$  & $497 \pm 35$  & $54   \pm 5$    & $2.99 \pm 0.24$ \\
-      Fitted \ZGAMMAJETS & $3.2   \pm 0.5$  & $309  \pm 18$   & $63   \pm 5$   & $64  \pm 5$   & $1.5  \pm 0.8$  & $120  \pm 60$   \\
-      Single top         & $16.7  \pm 2.0$  & $0.83 \pm 0.09$ & $23.0 \pm 2.6$ & $56  \pm 6$   & $14.1 \pm 1.9$  & $0.32 \pm 0.04$ \\
-      Other              & $2.83  \pm 0.27$ & $8.64 \pm 1.0$  & $4.7  \pm 0.4$ & $8.2 \pm 0.8$ & $2.03 \pm 0.27$ & $6.4  \pm 0.7$  \\
-      \midrule
-      Input SM           & $330$            & $230$           & $614$          & $557$         & $66$            & $93$            \\
-      \midrule
-      Input \TTBAR       & $310$            & $8.2$           & $543$          & $447$         & $49$            & $2.7$           \\
-      Input \ZGAMMAJETS  & $2.2$            & $220$           & $44$           & $45$          & $1.1$           & $83$            \\
-      Input single top   & $17$             & $0.8$           & $23$           & $57$          & $14$            & $0.30$          \\
-      Input other        & $2.8$            & $8.6$           & $4.7$          & $8.2$         & $2.0$           & $6.40$          \\
-      \bottomrule
-    \end{tabular}
-  \end{center}
-\end{table}
-
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=\textwidth]{figs/blstop/histpull_VR_detailed.pdf}
-\caption{The top of this plot shows the number of observed and expected
-  events in the validation regions, and broken down by flavor channel.
-  The uncertainty band includes the statistical uncertainty as well as the
-  systematic uncertainty (described in Section~\ref{sec:systematics}). The
-  bottom of the plot shows the deviation of that channel's prediction
-  from the observed number of events divided by the uncertainty on the
-  prediction. The normalization of the background yields are determined
-  by fitting the \TTBAR\ and \ZGAMMAJETS\ backgrounds to the observed
-  data in the two CRs.
-}
-\label{fig:pull_dist_vr}
-\end{figure}
-
-The extrapolation from low \HT\ CRs to the high \HT\ region
-where the SRs are located is validated using the Top VR 3
-and $Z$ VR. These validation regions show fair
-agreement between the observed and predicted event yields as well as
-for the shape of the $\MBL^{0}$ and \HT\ distributions as shown in
-Figures \ref{fig:mbl_vr} and \ref{fig:ht_vr}.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.48\textwidth]{figs/blstop/vr_top_3_mbl_0.pdf}
-  \includegraphics[width=0.48\textwidth]{figs/blstop/vr_Z_mbl_0.pdf}
-  \caption{The $\MBL^0$ distribution in Top VR 3 (left) and $Z$ VR (right).
-    The Standard Model background prediction is shown after setting the
-    normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds based on the
-    observed data in the CRs. The hashed bands show the uncertainty on the
-    fitted background prediction including all statistical and systematics
-    uncertainties.
-    The bottom of each plot shows the ratio of the observed data to the
-    Standard Model background prediction.
-  }
-  \label{fig:mbl_vr}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.48\textwidth]{figs/blstop/vr_top_3_ht_signal.pdf}
-  \includegraphics[width=0.48\textwidth]{figs/blstop/vr_Z_ht_signal.pdf}
-  \caption{The \HT\ distribution in Top VR 3 (left) and $Z$ VR (right).
-    The Standard Model background prediction is shown after setting the
-    normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds based on the
-    observed data in the CRs.
-    The hashed bands show the uncertainty on the fitted background prediction
-    including all statistical and systematics uncertainties.
-    The bottom of each plot shows the ratio of the observed data to the
-    Standard Model background prediction.
-  }
-  \label{fig:ht_vr}
-\end{figure}
+{\color{red} TODO add plots showing pre-fit agreement in CRs}
+{\color{red} TODO Describe the $Z$ norm factor}
 
 %% -----------------------------------------------------------------------------
-\section{Systematic uncertainties}
+\subsection{Validation regions}
+\label{sec:vr}
+
+The normalization factors for the \TTBAR\ and \ZGAMMAJETS\ background processes
+are determined using the observed data in the CRs, then used to estimate the
+background contribution in the SRs.
+To show these normalization factors are valid in regions of kinematic space away
+from the CRs, Validation regions (VRs), which are orthogonal to the CRs and SRs
+are defined, where the background prediction can be compared with the
+observation.
+These VRs have low expected signal contamination, but do not need to be pure in
+any particular background process, as was required of the CRs.
+Since this analysis targets stops with reasonably high mass, all VRs require
+$\MBL^0 \geq 200 \GeV$ as is required in the CRs.
+
+Three orthogonal VRs were defined to validate the \TTBAR\ background estimate,
+labeled Top VR 1, Top VR 2, and Top VR 3.
+Top VR 1 is constructed by reversing the cut on \METSIG\ in the Top CR.
+That is, Top VR 1 requires events have $\METSIG < 4 \GeV^{1/2}$, and is
+otherwise identical to the Top CR.
+Top VR 2 is obtained by reversing the \MBLASYM\ requirement in the Top CR and
+relaxing the \METSIG\ requirement.
+Top VR 3 is intended to validation the extrapolation from the low \HT\ Top CR
+to the high \HT\ region of the SR.
+
+%% -----------------------------------------------------------------------------
+\subsection{Systematic uncertainties}
 \label{sec:systematics}
 
 Several sources of systematic uncertainty are considered when determining
@@ -933,6 +895,120 @@ For each of the signal models, the effects of uncertainty on the JES,
 $b$-tagging efficiency, JER, and luminosity are considered as well as the
 uncertainty on the signal model cross section which ranges between 14\%
 and 28\%.
+
+%% -----------------------------------------------------------------------------
+\subsection{Background fit}
+\label{sec:bkg_fit}
+
+The normalization of the \TTBAR\ and the \ZGAMMAJETS\ backgrounds are
+determined using a simultaneous fit, which takes into account
+cross-contamination of the different background processes between the
+CRs as well as the statistical and systematic
+uncertainties (described in Section~\ref{sec:systematics})~\cite{Baak:2014wma}.
+The remaining background estimates, due to  single top and other SM processes,
+are taken from the MC simulation.
+The number of observed events as well as the expected number
+of events in each of the CRs and VRs are shown in
+Table \ref{tab:bkg_only_fit_results}.
+The agreement between the observed number of events and the fitted event
+yields in the VRs is summarized in Figure \ref{fig:pull_dist_vr}.
+Using the fitted backgrounds, the dominant process in the same-flavor
+channels of the SRs is \ZGAMMAJETS\ followed by single top and
+\TTBAR. In the $e\mu$ channel, the \ZGAMMAJETS\ background does
+not contribute, thus, the largest backgrounds are single top and \TTBAR.
+As a result of the fit, the \ZGAMMAJETS\ background is scaled up by
+approximately 40\%. Due to this large normalization factor, the background is
+over-predicted in the $Z$ VR. This over-prediction is taken as an additional
+systematic uncertainty, described in Section~\ref{sec:systematics}.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\begin{table}[ht]
+  \caption{The observed and expected event yields in the CRs and VRs. The
+    expected event yields are shown before and after a fit to the data in
+    the CRs. The fitted background yields in the CRs match the observed
+    number of events in data by construction.
+  }
+  \label{tab:bkg_only_fit_results}
+  %
+  \begin{center}
+    \begin{tabular}{lrrrrrr}
+      \toprule
+                         & Top CR           & Z CR            & Top VR 1       & Top VR 2      & Top VR 3        & Z VR            \\
+      \midrule
+      Observed           & $369$            & $327$           & $645$          & $606$         & $67$            & $101$           \\
+      \midrule
+      Fitted background  & $369   \pm 19$   & $327  \pm 18$   & $690  \pm 50$  & $630 \pm 40$  & $72   \pm 5$    & $130  \pm 60$   \\
+      \midrule
+      Fitted \TTBAR      & $346   \pm 19$   & $9.1  \pm 0.7$  & $600  \pm 40$  & $497 \pm 35$  & $54   \pm 5$    & $2.99 \pm 0.24$ \\
+      Fitted \ZGAMMAJETS & $3.2   \pm 0.5$  & $309  \pm 18$   & $63   \pm 5$   & $64  \pm 5$   & $1.5  \pm 0.8$  & $120  \pm 60$   \\
+      Single top         & $16.7  \pm 2.0$  & $0.83 \pm 0.09$ & $23.0 \pm 2.6$ & $56  \pm 6$   & $14.1 \pm 1.9$  & $0.32 \pm 0.04$ \\
+      Other              & $2.83  \pm 0.27$ & $8.64 \pm 1.0$  & $4.7  \pm 0.4$ & $8.2 \pm 0.8$ & $2.03 \pm 0.27$ & $6.4  \pm 0.7$  \\
+      \midrule
+      Input SM           & $330$            & $230$           & $614$          & $557$         & $66$            & $93$            \\
+      \midrule
+      Input \TTBAR       & $310$            & $8.2$           & $543$          & $447$         & $49$            & $2.7$           \\
+      Input \ZGAMMAJETS  & $2.2$            & $220$           & $44$           & $45$          & $1.1$           & $83$            \\
+      Input single top   & $17$             & $0.8$           & $23$           & $57$          & $14$            & $0.30$          \\
+      Input other        & $2.8$            & $8.6$           & $4.7$          & $8.2$         & $2.0$           & $6.40$          \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\textwidth]{figs/blstop/histpull_VR_detailed.pdf}
+\caption{The top of this plot shows the number of observed and expected
+  events in the validation regions, and broken down by flavor channel.
+  The uncertainty band includes the statistical uncertainty as well as the
+  systematic uncertainty (described in Section~\ref{sec:systematics}). The
+  bottom of the plot shows the deviation of that channel's prediction
+  from the observed number of events divided by the uncertainty on the
+  prediction. The normalization of the background yields are determined
+  by fitting the \TTBAR\ and \ZGAMMAJETS\ backgrounds to the observed
+  data in the two CRs.
+}
+\label{fig:pull_dist_vr}
+\end{figure}
+
+The extrapolation from low \HT\ CRs to the high \HT\ region
+where the SRs are located is validated using the Top VR 3
+and $Z$ VR. These validation regions show fair
+agreement between the observed and predicted event yields as well as
+for the shape of the $\MBL^{0}$ and \HT\ distributions as shown in
+Figures \ref{fig:mbl_vr} and \ref{fig:ht_vr}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.48\textwidth]{figs/blstop/vr_top_3_mbl_0.pdf}
+  \includegraphics[width=0.48\textwidth]{figs/blstop/vr_Z_mbl_0.pdf}
+  \caption{The $\MBL^0$ distribution in Top VR 3 (left) and $Z$ VR (right).
+    The Standard Model background prediction is shown after setting the
+    normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds based on the
+    observed data in the CRs. The hashed bands show the uncertainty on the
+    fitted background prediction including all statistical and systematics
+    uncertainties.
+    The bottom of each plot shows the ratio of the observed data to the
+    Standard Model background prediction.
+  }
+  \label{fig:mbl_vr}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.48\textwidth]{figs/blstop/vr_top_3_ht_signal.pdf}
+  \includegraphics[width=0.48\textwidth]{figs/blstop/vr_Z_ht_signal.pdf}
+  \caption{The \HT\ distribution in Top VR 3 (left) and $Z$ VR (right).
+    The Standard Model background prediction is shown after setting the
+    normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds based on the
+    observed data in the CRs.
+    The hashed bands show the uncertainty on the fitted background prediction
+    including all statistical and systematics uncertainties.
+    The bottom of each plot shows the ratio of the observed data to the
+    Standard Model background prediction.
+  }
+  \label{fig:ht_vr}
+\end{figure}
 
 %% -----------------------------------------------------------------------------
 \section{Results}

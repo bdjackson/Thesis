@@ -34,7 +34,7 @@ ax.fill_between(page_number_df['day_num'], 0, page_number_df['pages'],
 ax.set_xlabel('Days since %s' % first_date.date())
 ax.set_ylabel('Pages')
 ax.set_ylim([0, 1.05*page_number_df['pages'].max()])
-ax.set_xlim([0, page_number_df['day_num'].max()+1])
+ax.set_xlim([-1, page_number_df['day_num'].max()+1])
 plt.grid(None)
 
 # text box with current page count
