@@ -778,8 +778,83 @@ The $Z$ CR, requires events be within this $Z$ region.
 The definitions of the CRs are summarized in Table~\ref{tab:regions} and
 Figure~\ref{fig:region_coverage}.
 
+The expected and observed $\MBL^{0}$ distributions in the Top CR and $Z$ CR,
+shown in Figure~\ref{fig:cr_mbl_0__no_norm_factor} shows reasonable agreement
+between the predicted and observed data in the Top CR, however, the
+normalization is underpredicted in the $Z$ CR.
+This disagreement seems to be caused by a poor modeling of the
+\ZGAMMAJETS\ background process when heavy flavor jets are required in the
+final state.
+For the final result, the fit procedure is used to determine the normalization
+of the \ZGAMMAJETS\ background; however, due to the large disagreement, it is
+useful to scale the \ZGAMMAJETS\ background based on this disagreement for
+exploratory plots and tables to obtain a more realistic estimate of the expected
+backgrounds in each region.
+This scaling factor is determined to be $k_Z = 1.39$, and will be applied to
+many of the plots in this section.
+This normalization factor is not included in the final fit to data, and any plot
+or figure which is produced using this normalization factor will explicitly
+states this in the description.
+
+\begin{figure}
+  \centering
+  \subbottom[Top CR]{
+    \includegraphics[width=0.45\textwidth]
+      {figs/blstop/w_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_TOP_MBL_200__log.pdf}
+  }
+  \subbottom[$Z$ CR]{
+    \includegraphics[width=0.45\textwidth]
+      {figs/blstop/w_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_Z_MBL_200__log.pdf}
+  }
+  \caption{Expected and observed $\MBL^0$ distribution in the Top CR and
+    $Z$ CR when all flavor channels are combined.
+    The prediction in the Top CR shows reasonable agreement with the observed
+    data.
+    The background is underpredicted in the $Z$ CR.
+    In each plot, the last bin includes the overflow for values beyond the
+    maximum shown.
+    The hashed error bands show only the statistical uncertainty on the
+    background MC simulation samples.
+    The signal models have an assumed
+    $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
+  }
+  \label{fig:cr_mbl_0__no_norm_factor}
+  %%
+\end{figure}
+
+After applying the $k_Z$ normalization factor the $\MBL^0$ distributions in
+the Top CR and $Z$ CR are shown in Figure~\ref{fig:cr_mbl_0__w_norm_factor}.
+While the prediction is roughly unchanged in the Top CR, the prediction in the
+$Z$ CR shows much better agreement with the data.
+
+\begin{figure}
+  \centering
+  \subbottom[Top CR]{
+    \includegraphics[width=0.45\textwidth]
+      {figs/blstop/w_data__w_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_TOP_MBL_200__log.pdf}
+  }
+  \subbottom[$Z$ CR]{
+    \includegraphics[width=0.45\textwidth]
+      {figs/blstop/w_data__w_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_Z_MBL_200__log.pdf}
+  }
+  \caption{Expected and observed $\MBL^0$ distribution in the Top CR and
+    $Z$ CR when all flavor channels are combined after applying the $k_Z$
+    normalization factor derived in the $Z$ CR.
+    After applying the $k_Z$ normalization factor, both CRs show reasonable
+    agreement between the predicted and observed distributions.
+    In each plot, the last bin includes the overflow for values beyond the
+    maximum shown.
+    The hashed error bands show only the statistical uncertainty on the
+    background MC simulation samples.
+    The signal models have an assumed
+    $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
+  }
+  \label{fig:cr_mbl_0__w_norm_factor}
+  %%
+\end{figure}
+
+
 {\color{red} TODO add plots showing pre-fit agreement in CRs}
-{\color{red} TODO Describe the $Z$ norm factor}
 
 %% -----------------------------------------------------------------------------
 \subsection{Validation regions}
@@ -816,7 +891,7 @@ $Z$ CR, and relaxing the \METSIG\ requirement.
 The full VR selection criteria are outlined along with the other analysis
 regions in Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
 
-{\color{red} TODO add plots showing pre-fit agreement in CRs}
+{\color{red} TODO add plots showing pre-fit agreement in VRs}
 
 %% -----------------------------------------------------------------------------
 \subsection{Systematic uncertainties}
