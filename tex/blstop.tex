@@ -7,6 +7,16 @@
   and then expanded upon. The section headings are mostly the same}
 
 {\color{red} TODO add brief overview to the beginning of the chapter}
+{\color{red} TODO the weights and scale factors have not been described yet!!!}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.60\textwidth]{figs/blstop/b_minus_l_stop_stop.pdf}
+  \caption{Simplified model of pair production of stop quarks, with decay to a
+    charged lepton and $b$-quark.
+  }
+  \label{fig:blstop_diagram}
+\end{figure}
 
 %% -----------------------------------------------------------------------------
 \section{Object selection}
@@ -26,9 +36,8 @@ stop signatures of interest tend to produce high momentum decay products.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Baseline electrons must satisfy the \texttt{Medium++} identification
 requirement and have $|\eta| \leq 2.47$.
-A requirement of $\DZEROSIG \leq 3$ and
-$\ZZEROSINTHETA \leq 0.4$ mm
-was placed on the impact parameter to reject electrons coming from secondary
+A requirement of $\DZEROSIG \leq 3$ and $\ZZEROSINTHETA \leq 0.4$ mm
+is placed on the impact parameter to reject electrons coming from secondary
 vertices.
 The baseline electron requirements are outlined in
 Table~\ref{tab:baseline_el_def}.
@@ -231,12 +240,12 @@ asymmetry of the two $b\ell$ pairs as described in Section
     {figs/blstop/PairingEfficiencies/pairing_eff__inclusive.pdf}
   \caption{The efficiency of correctly pairing $b$-tagged jets and leptons
     using the pairing heuristic described in Section~\ref{sec:object_selection}
-    for the different stop masses which were considered.
+    for the different stop masses which are considered.
     The different lines show the fraction of events where zero, one, or two
-    pairs were grouped correctly.
+    pairs are grouped correctly.
     The scenario where one pair is identified correctly corresponds to events
     where one pair is grouped correctly, but at least of of the $b$-tagged jets
-    or one of the leptons was not matched to a stop parent.
+    or one of the leptons is not matched to a stop parent.
     {\color{red} TODO remake this plot with 1.1~\TeV\ mass point. Add data
     points to plot}
   }
@@ -258,8 +267,8 @@ from 21.4~\ifb\ to 20.3~\ifb.
 The uncertainty on the luminosity is $\pm 2.8$\%.
 It is derived following the same methodology as that detailed
 in Ref.~\cite{Lumi}.
-The GRL requirement was applied to data events only; the MC simulation samples
-were scaled to match the target luminosity.
+The GRL requirement is applied to data events only; the MC simulation samples
+are scaled to match the target luminosity.
 
 % Several other detector errors can lead to an event being rejected.
 In the event of a certain detector busy condition, the TTC may be restarted in
@@ -268,15 +277,15 @@ after a TTC restart, it is possible for stored events to be incomplete.
 For this reason, events stored immediately after a TTC restart are rejected.
 Furthermore, events are rejected if either the LAr or tile calorimeter is
 flagged as having an error.
-During periods G-J several events were corrupt in a single channel of the tile
+During periods G-J several events are corrupt in a single channel of the tile
 calorimeter, but not flagged as having a tile calorimeter error.
-These events were also rejected using the \texttt{TileTripTool}.
+These events are also rejected using the \texttt{TileTripTool}.
 During period B a hot spot developed in the tile calorimeter.
 As this can negatively impact the jet calibration and the \met calculations,
-events with a jet pointing toward this hot spot in the tile calorimeter were
+events with a jet pointing toward this hot spot in the tile calorimeter are
 rejected.
 
-Jet cleaning was performed to flag jets which are formed from various sources
+Jet cleaning is performed to flag jets which are formed from various sources
 such as hardware problems, LHC beam conditions, or cosmic ray showers rather
 than real energy deposits in the calorimeter.
 If any of these bad jets remain after the overlap removal procedure, the event
@@ -286,7 +295,7 @@ calorimeter ($-0.1\le\eta\le1.5$ and $-0.9\le\phi\le-0.5$) malfunctioned
 resulting in a hole in the sub-detector.
 This resulted in energy not being collected from electrons and jets close to
 this hole, and indirectly changing the \met\ measurement.
-A correction was applied to jets to account for the energy loss in the hole,
+A correction is applied to jets to account for the energy loss in the hole,
 however, if the correction is too large (greater than 0.05) and the \met\ is
 close to the jet ($\Delta\phi(\met, \text{jet}) \le 0.3$), it is assumed the
 \met\ is mismeasured, and the event is rejected.
@@ -304,10 +313,10 @@ different momenta for the same muon.
 Each event is also required to have at least one primary vertex with at least
 5 associated tracks.
 
-An additional requirement was applied to MC simulation events to avoid double
+An additional requirement is applied to MC simulation events to avoid double
 counting backgrounds with heavy flavor quarks in the final state, the heavy
 flavor overlap removal procedure, described in Section~\ref{sec:jet_matching},
-was applied.
+is applied.
 
 %% -----------------------------------------------------------------------------
 \section{Trigger selection}
@@ -557,7 +566,7 @@ In order to achieve a large expected signal to background ratio in the signal
 regions, MC simulation is used to optimize the selection requirements.
 The optimization is performed assuming a stop branching fraction of
 $Br(\STOP\rightarrow~be)~=~Br(\STOP\rightarrow~b\mu)~=~0.5$.
-A single SR selection criteria was obtained for both the \HT\ and
+A single SR selection criteria is obtained for both the \HT\ and
 \MBLASYM\ variables which perform reasonably well for all mass above 500 \GeV.
 Events in both SRs are required to have $\HT \geq 1100~\GeV$ and
 $\MBLASYM \leq 0.2$.
@@ -705,10 +714,14 @@ yields are normalized to 20.3 \ifb.
 \section{Background estimate}
 \label{sec:bkg}
 
-The three largest sources of SM background are \TTBAR, \ZGAMMAJETS, and single
-top production.
+The final state targeted by this analysis is two $b$-tagged jets and two light
+leptons.
+The three largest sources of SM background which contribute to this final state
+are \TTBAR, \ZGAMMAJETS, and single top production.
 Other sources, such as di-boson and Higgs boson production, contribute as
 background events as well, however in much smaller amounts.
+The list of MC simulation samples used to estimate the background contribution
+from SM processes is given in Section~\ref{sec:mc_samples}.
 The background estimates for the \TTBAR\ and the \ZGAMMAJETS\ backgrounds use
 MC simulation normalized in dedicated data control regions (CRs).
 Several validation regions (VRs) are defined to validate the extrapolation of
@@ -730,6 +743,172 @@ uncertainty, described in Section~\ref{sec:systematics}, are considered when
 performing the simultaneous fit.
 
 %% -----------------------------------------------------------------------------
+\subsection{Monte Carlo simulation samples}
+\label{sec:mc_samples}
+
+\begin{table}[ht]
+  \caption{Partial summary of background samples and their cross sections used in this
+    analysis except for the \ZGAMMAJETS\ background (summarized in Tab.
+    \ref{tab:background_grouping_z}) and the "other" category (summarized in
+    Tab. \ref{tab:background_grouping_other}))
+  }
+  \label{tab:background_grouping}
+  \centering{
+    \begin{tabular}{c|cccc}
+      \toprule
+      Grouping &
+      Process &
+      Cross-section [pb] &
+      Luminosity [$\mathrm{fb}^{-1}$] &
+      Generator \\
+      \midrule
+      \TTBAR                       & \TTBAR                    & 253  & 727.4 & \powheg+\pythia \\
+      \midrule
+      \multirow{3}{*}{Single top}  & Single top ($t$-channel)  & 25.8 & 320   & \acermc+\pythia \\
+                                   & Single top ($s$-channel)  & 1.64 & 330   & \powheg+\pythia \\
+                                   & Single top ($Wt$-channel) & 2.15 & 4200  & \powheg+\pythia \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
+
+
+\begin{table}[ht]
+\caption{Summary of the \ZGAMMAJETS\ background samples and their cross sections used
+  in this analysis. The \ZGAMMAJETS\ samples are sliced by the \pt\ of the $Z$
+  boson. For the inclusive sample, only events with $\pt^{Z} \le 40 \GeV$ were
+  used. For each \pt\ slice, three samples were generated, with different
+  filters applied on the jet flavor. The three samples are generated with
+  approximately the same cross section, but the different filter efficiencies
+  lead to different effective luminosities. The three columns under the
+  effective luminosity represent the three samples. The left column shows the
+  effective luminosity for the sample generated with a $b$-filter. The middle
+  column represents the sample with a $c$-filter and $b$-veto. The right column
+  shows the effective luminosity of the sample generated with a veto on both
+  $b$ and $c$ quarks.
+}
+\label{tab:background_grouping_z}
+\centering{
+  \resizebox{0.90\linewidth}{!}{
+    \begin{tabular}{c|cccccc}
+    \toprule
+      Grouping &
+      Process &
+      Cross-section [pb] &
+      \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} &
+      Generator \\
+      \midrule
+      \multirow{24}{*}{\ZGAMMAJETS} & $Z \rightarrow ee$                                              & 1110                 & 110                    & 9         & 6    & \sherpa \\
+                                    & $Z \rightarrow \mu\mu$                                          & 1110                 & 110                    & 9         & 6    & \sherpa \\
+                                    & $Z \rightarrow \tau\tau$                                        & 1110                 & 110                    & 9         & 6    & \sherpa \\
+                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                    & 22        & 30   & \sherpa \\
+                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                    & 22        & 30   & \sherpa \\
+                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                    & 22        & 30   & \sherpa \\
+                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                    & 90        & 110  & \sherpa \\
+                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                    & 90        & 110  & \sherpa \\
+                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                    & 90        & 110  & \sherpa \\
+                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                    & 240       & 250  & \sherpa \\
+                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                    & 240       & 250  & \sherpa \\
+                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                    & 240       & 250  & \sherpa \\
+                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                    & 480       & 360  & \sherpa \\
+                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                    & 480       & 360  & \sherpa \\
+                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                    & 480       & 360  & \sherpa \\
+                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                   & 1700      & 7000 & \sherpa \\
+                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                   & 1700      & 7000 & \sherpa \\
+                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                   & 1700      & 7000 & \sherpa \\
+                                    & DY $\rightarrow ee$       ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                    & \sherpa \\
+                                    & DY $\rightarrow \mu\mu$   ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                    & \sherpa \\
+                                    & DY $\rightarrow \tau\tau$ ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                    & \sherpa \\
+                                    & DY $\rightarrow ee$       ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                    & \sherpa \\
+                                    & DY $\rightarrow \mu\mu$   ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                    & \sherpa \\
+                                    & DY $\rightarrow \tau\tau$ ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                    & \sherpa \\
+      \bottomrule
+      \end{tabular}
+  }
+}
+\end{table}
+
+\begin{table}[ht]
+  \caption{Summary of other background samples and their cross sections used in this
+    analysis. The $W$ samples are generated with filters on the the jet flavor.
+    As in Tab. \ref{tab:background_grouping_z},  The three columns under the
+    effective luminosity represent the three samples (b-filter, c-filter and
+    b veto, veto on both b and c quarks).
+  }
+  \label{tab:background_grouping_other}
+  \centering{
+  \resizebox{0.90\linewidth}{!}{
+    \begin{tabular}{c|cccccc}
+      \toprule
+      Grouping &
+      Process &
+      Cross-section [pb] &
+      \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} &
+      Generator \\
+      \midrule
+      \multirow{50}{*}{Other}  & $\TTBAR\,W$                                                     & 0.10                 & \multicolumn{3}{c}{3300 }              & \madgraph+\pythia \\
+                               & $\TTBAR\,Wj$                                                    & $9.3 \times 10^{-2}$ & \multicolumn{3}{c}{3600 }              & \madgraph+\pythia \\
+                               & $\TTBAR\,Z$                                                     & $6.8 \times 10^{-2}$ & \multicolumn{3}{c}{4400 }              & \madgraph+\pythia \\
+                               & $\TTBAR\,Zj$                                                    & $8.7 \times 10^{-2}$ & \multicolumn{3}{c}{3400 }              & \madgraph+\pythia \\
+                               & $\TTBAR\,WW$                                                    & $9.2 \times 10^{-4}$ & \multicolumn{3}{c}{11000}              & \madgraph+\pythia \\
+                               & $WW \rightarrow \ell\ell\nu\nu$                                 & 5.30                 & \multicolumn{3}{c}{1400 }              & \sherpa           \\
+                               & $WW \rightarrow e\nu qq$                                        & 7.29                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
+                               & $WW \rightarrow \mu\nu qq$                                      & 7.30                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
+                               & $WW \rightarrow \tau\nu qq$                                     & 7.27                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
+                               & $WZ \rightarrow \ell\ell\ell\nu$                                & 9.74                 & \multicolumn{3}{c}{260  }              & \sherpa           \\
+                               & $WZ \rightarrow \ell\nu\nu\nu$                                  & 1.40                 & \multicolumn{3}{c}{270  }              & \sherpa           \\
+                               & $WZ \rightarrow e\nu qq$                                        & 1.90                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
+                               & $WZ \rightarrow \mu\nu qq$                                      & 1.91                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
+                               & $WZ \rightarrow \tau\nu qq$                                     & 1.92                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
+                               & $WZ \rightarrow ee qq$                                          & 1.46                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
+                               & $WZ \rightarrow \mu\mu qq$                                      & 1.46                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
+                               & $WZ \rightarrow \tau\tau qq$                                    & 1.45                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
+                               & $WZ \rightarrow \nu\nu qq$                                      & 2.70                 & \multicolumn{3}{c}{64   }              & \sherpa           \\
+                               & $ZZ \rightarrow \ell\ell\nu\nu$                                 & 0.49                 & \multicolumn{3}{c}{1700 }              & \sherpa           \\
+                               & $ZZ \rightarrow ee qq$                                          & 0.25                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
+                               & $ZZ \rightarrow \mu\mu qq$                                      & 0.25                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
+                               & $ZZ \rightarrow \tau\tau qq$                                    & 0.24                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
+                               & $ZZ \rightarrow \nu\nu qq$                                      & 1.74                 & \multicolumn{3}{c}{69   }              & \sherpa           \\
+                               & ggf $H \rightarrow WW$                                          & 0.44                 & \multicolumn{3}{c}{2000 }              & \powheg+\pythia 8 \\
+                               & ggf $H \rightarrow ZZ$                                          & $4.7 \times 10^{-2}$ & \multicolumn{3}{c}{2000 }              & \powheg+\pythia 8 \\
+                               & VBF $H \rightarrow WW$                                          & $3.6 \times 10^{-2}$ & \multicolumn{3}{c}{17000}              & \powheg+\pythia 8 \\
+                               & VBF $H \rightarrow ZZ$                                          & $3.8 \times 10^{-3}$ & \multicolumn{3}{c}{18000}              & \powheg+\pythia 8 \\
+                               & $WH \rightarrow W\ell\nu\ell\nu$                                & 0.15                 & \multicolumn{3}{c}{1000 }              & \pythia 8         \\
+                               & $WH \rightarrow W\ell\ell\nu\nu$                                & $1.7 \times 10^{-3}$ & \multicolumn{3}{c}{27000}              & \pythia 8         \\
+                               & $ZH \rightarrow Z\ell\nu\ell\nu$                                & $8.9 \times 10^{-3}$ & \multicolumn{3}{c}{2000 }              & \pythia 8         \\
+                               & $ZH \rightarrow Z\ell\ell\nu\nu$                                & $1.0 \times 10^{-2}$ & \multicolumn{3}{c}{48000}              & \pythia 8         \\
+                               & $\TTBAR H \rightarrow \TTBAR WW$                                & $2.8 \times 10^{-2}$ & \multicolumn{3}{c}{7000 }              & \pythia 8         \\
+                               & $W \rightarrow e\nu$                                            & 11000                & 100                       & 17   & 4   & \sherpa           \\
+                               & $W \rightarrow \mu\nu$                                          & 11000                & 100                       & 17   & 4   & \sherpa           \\
+                               & $W \rightarrow \tau\nu$                                         & 11000                & 100                       & 17   & 4   & \sherpa           \\
+                               & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
+                               & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
+                               & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
+                               & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
+                               & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
+                               & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
+                               & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
+                               & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
+                               & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
+                               & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
+                               & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
+                               & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
+                               & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 140 & \sherpa           \\
+                               & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 670 & \sherpa           \\
+                               & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 670 & \sherpa           \\
+      
+
+
+      \bottomrule
+    \end{tabular}
+  }
+}
+\end{table}
+
+\FloatBarrier
+
+
+%% -----------------------------------------------------------------------------
 \subsection{Control regions}
 \label{sec:cr}
 
@@ -737,7 +916,7 @@ The normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds are determined
 using the observed data in two dedicated CRs, labeled the top control region
 (Top CR) and $Z$ control region ($Z$ CR) respectively.
 To reduce the uncertainty on the \TTBAR\ and \ZGAMMAJETS\ normalization factors,
-the CRs were defined to contain a fairly pure in events coming from a single
+the CRs are defined to contain a fairly pure in events coming from a single
 background process of interest.
 The Top ($Z$) CR is defined to be pure in events from \TTBAR (\ZGAMMAJETS).
 There is also little signal contamination in the CRs to prevent any potential
@@ -758,7 +937,7 @@ number of events in both CRs, and a reliable estimate of the \TTBAR\ and
 No requirement is made on the $\MBL^1$.
 
 To ensure the CRs are relative in \TTBAR\ or \ZGAMMAJETS, the \MET\ information
-was used.
+is used.
 Rather than select on the \MET\ alone, \METSIG\ is defined as
 \begin{equation}
   \METSIG = \frac{\MET}{\sqrt{\HT}}.
@@ -859,7 +1038,7 @@ production process, are shown in Table~\ref{tab:region_contributions_cr}.
   \caption{Number of expected events in each of the CRs broken down by process.
     The uncertainty on the total background prediction is the MC statistical
     uncertainty only for each background process.
-    The total uncertainty was obtained by summing the uncertainty on each
+    The total uncertainty is obtained by summing the uncertainty on each
     background process in quadrature.
     The $k_Z$ normalization factor is applied to the \ZGAMMAJETS\ background
     yield estimate.
@@ -908,11 +1087,11 @@ from the CRs, Validation regions (VRs), which are orthogonal to the CRs and SRs
 are defined, where the background prediction can be compared with the
 observation.
 These VRs have low expected signal contamination, but do not need to be pure in
-any particular background process, as was required of the CRs.
+any particular background process, as is required of the CRs.
 Since this analysis targets stops with reasonably high mass, all VRs require
 $\MBL^0 \geq 200 \GeV$ as is required in the CRs.
 
-Three orthogonal VRs were defined to validate the \TTBAR\ background estimate,
+Three orthogonal VRs are defined to validate the \TTBAR\ background estimate,
 labeled Top VR 1, Top VR 2, and Top VR 3.
 Top VR 1 is constructed by reversing the cut on \METSIG\ in the Top CR.
 That is, Top VR 1 requires events have $\METSIG < 4 \GeV^{1/2}$, and is
@@ -939,7 +1118,7 @@ VRs are explored in more detail in Section~\ref{sec:bkg_fit}.
   \caption{Number of expected events in each of the VRs broken down by process.
     The uncertainty on the total background prediction is the MC statistical
     uncertainty only for each background process.
-    The total uncertainty was obtained by summing the uncertainty on each
+    The total uncertainty is obtained by summing the uncertainty on each
     background process in quadrature.
     The $k_Z$ normalization factor is applied to the \ZGAMMAJETS\ background
     yield estimate.
@@ -975,130 +1154,6 @@ VRs are explored in more detail in Section~\ref{sec:bkg_fit}.
 
   }
 \end{table}
-
-%% -----------------------------------------------------------------------------
-\subsection{Systematic uncertainties}
-\label{sec:systematics}
-
-In addition to the statistical uncertainty, several sources of systematic
-uncertainty are considered when determining the estimated signal and background
-contributions.
-The largest sources of systematic uncertainty are those related to the
-MC statistical uncertainty in the SRs, the JES, the $b$-tagging efficiency
-The uncertainty on the lepton energy scale and resolution was considered,
-but shown to be negligible.
-
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-The uncertainty on the JES has an impact on both the jet selection criteria
-and the kinematics of the event, such as the \HT\ and the \MET\ measurements.
-The JES uncertainty is evaluated using the EM+JES scheme as described
-in~\cite{JES}, and the scaling is provided by the
-\texttt{MultijetJESUncertaintyProvider} tool.
-The uncertainty on the JES is composed of 16 parameters, and takes into account
-the dependence on \pt, $\eta$, jet flavor, and the number of primary vertices.
-The effect of each component on the event yield is estimated by varying the
-component by $\pm 1 \sigma$ in the MC simulation and re-running the full event
-selection, propagating the variation in the JES to the jet selection and related
-kinematic quantities.
-
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-The uncertainty on the JER is evaluated by applying an additional smearing to
-the \pt\ measurement of each of the jets in the MC simulation.
-The size of the smearing is determined in dijet events as described
-in~\cite{JER}.
-The smearing is provided by the \texttt{JetSmearingTool} tool, and depends on
-the \pt\ and \eta\ of the jets within an event.
-The JER smearing alters the \pt\ of the jets within the event, and therefore
-the event selection.
-As with the JES, the JER uncertainty is evaluated by re-running the full event
-selection on MC simulation, applying the smearing, then propagating the
-variations to the event kinematic variables and yields.
-
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-As flavor tagging is used in this analysis, the efficiency of the $b$-tagging
-algorithms affects the overall yields in each of the analysis regions.
-This includes the possibility of a light flavor jet being incorrectly tagged
-as a $b$-jet, or a jet which initiated by a $b$-quark failing the $b$-tagging
-requirement.
-The $b$-tagging efficiency uncertainty is broken into three components,
-corresponding to the tagging (rejection) efficiency of the different jet
-flavors, $b$-jets, $c$-jets, and light flavor jets (light quarks and gluons).
-These uncertainties take into account the dependence on \pt\ and jet flavor.
-For the MC simulation, the $b$-tagging efficiency is implemented as a scale
-factor, so the $b$-tagging uncertainty can be evaluated without running the
-full event selection multiple times.
-Rather, the $b$-tagging scale factor is varied up or down based on the specific
-parameter of interest, and used to determine the uncertainty on the event yield.
-
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-The backgrounds are constrained in the CRs which are regions with low \HT,
-while the SRs require high \HT.
-Top VR 3 and $Z$ VR are used to assess any uncertainty associated with the
-extrapolation from low \HT\ to high \HT.
-The \TTBAR\ background extrapolation is assessed using Top VR 3. It can be seen
-from Table \ref{tab:bkg_only_fit_results} that the post-fit background estimate
-in Top VR 3 is in reasonably agreement with the observed data, so no additional
-uncertainty is applied to the \TTBAR\ backgrounds due to the \HT\ extrapolation.
-The \ZGAMMAJETS\ background extrapolation is assessed using the $Z$ VR.
-The background is overpredicted in this region by 29\%.
-An additional uncertainty of 50\% is applied to the \ZGAMMAJETS\ background
-for events with $\HT > 500 GeV$.
-% An \HT\ extrapolation uncertainty of 50\% is applied to \ZGAMMAJETS\ events
-% with $\HT \geq 500$~\GeV. This is assigned to account for uncertainty on
-% the \ZGAMMAJETS\ \HT\ spectrum. This uncertainty is derived from the
-% disagreement observed in Figures~\ref{fig:pull_dist_vr}-\ref{fig:ht_vr}.
-%%
-
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Several theoretical uncertainties are considered in the modeling of the major
-background processes in MC simulation. These include the uncertainty on the
-single top ($Wt$) cross section, the uncertainty related to the renormalization
-and factorization scales, parton shower, and the limited number of partons
-included in the matrix element calculation. These theoretical uncertainties
-are on the order of a few percent of the total background prediction. The
-uncertainty on the luminosity is assessed for the signal processes, and all
-background processes apart from \TTBAR\ and \ZGAMMAJETS, whose
-normalizations are determined using data.
-The relative systematic uncertainty on the total background estimate in the
-SRs is shown in Table \ref{tab:systematic_breakdown}
-
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\begin{table}[ht]
-\caption{Summary of the effect of each considered sources of systematic
-  uncertainty on the background estimate in SR~400 and SR~600. Several
-  sources of theoretical systematic uncertainty which have a small
-  effect on the total background estimate are grouped into the
-  ``Other theory'' category.
-}
-\label{tab:systematic_breakdown}
-%
-\centering{
-  \begin{tabular}{lcc}
-  \toprule
-    Systematic &
-    \multirow{2}{*}{SR~400} &
-    \multirow{2}{*}{SR~600} \\
-    Uncertainty (\%) \\
-    \midrule
-    JES                          & 15     & 3  \\
-    $b$-tagging                  & 13     & 12 \\
-    JER                          & 5      & 1  \\
-    Luminosity                   & 1      & 1  \\
-    \midrule                                   
-    \HT\ extrapolation           & 19     & 20 \\
-    MC statistical               & 13     & 23 \\
-    CR statistical               & 3      & 3 \\
-    $Wt$ cross section           & 2      & 2  \\
-    Other theory                 & 1      & 2  \\
-    \bottomrule
-    \end{tabular}
-}
-\end{table}
-
-For each of the signal models, the effects of uncertainty on the JES,
-$b$-tagging efficiency, JER, and luminosity are considered as well as the
-uncertainty on the signal model cross section which ranges between 14\%
-and 28\%.
 
 %% -----------------------------------------------------------------------------
 \subsection{Background fit}
@@ -1230,6 +1285,277 @@ Figures \ref{fig:mbl_vr} and \ref{fig:ht_vr}.
   }
   \label{fig:ht_vr}
 \end{figure}
+
+
+%% -----------------------------------------------------------------------------
+\section{Systematic uncertainties}
+\label{sec:systematics}
+
+In addition to the statistical uncertainty, several sources of systematic
+uncertainty are considered when determining the estimated signal and background
+contributions.
+The largest sources of systematic uncertainty are those related to the
+MC statistical uncertainty in the SRs, the JES, the $b$-tagging efficiency
+The uncertainty on the lepton energy scale and resolution was considered,
+but shown to be negligible.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The uncertainty on the jet energy scale (JES) has an impact on both the jet
+selection criteria and the kinematics of the event, such as the \HT\ and the
+\MET\ measurements.
+The JES uncertainty is evaluated using the EM+JES scheme as described
+in~\cite{JES}, and the scaling is provided by the
+\texttt{MultijetJESUncertaintyProvider} tool.
+The uncertainty on the JES is composed of 16 parameters, and takes into account
+the dependence on \pt, $\eta$, jet flavor, and the number of primary vertices.
+The effect of each component on the event yield is estimated by varying the
+component by $\pm 1 \sigma$ in the MC simulation and re-running the full event
+selection, propagating the variation in the JES to the jet selection and related
+kinematic quantities.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The uncertainty on the jet energy resolution (JER) is evaluated by applying an
+additional smearing to the \pt\ measurement of each of the jets in the MC
+simulation.
+The size of the smearing is determined in dijet events as described
+in~\cite{JER}.
+The smearing is provided by the \texttt{JetSmearingTool} tool, and depends on
+the \pt\ and \eta\ of the jets within an event.
+The JER smearing alters the \pt\ of the jets within the event, and therefore
+the event selection.
+As with the JES, the JER uncertainty is evaluated by re-running the full event
+selection on MC simulation, applying the smearing, then propagating the
+variations to the event kinematic variables and yields.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+As flavor tagging is used in this analysis, the efficiency of the $b$-tagging
+algorithms affects the overall yields in each of the analysis regions.
+This includes the possibility of a light flavor jet being incorrectly tagged
+as a $b$-jet, or a jet which initiated by a $b$-quark failing the $b$-tagging
+requirement.
+The $b$-tagging efficiency uncertainty is broken into three components,
+corresponding to the tagging and rejection efficiency of the different jet
+flavors, $b$-jets, $c$-jets, and light flavor jets (light quarks and gluons).
+These uncertainties take into account the dependence on \pt\ and jet flavor.
+For the MC simulation, the $b$-tagging efficiency is implemented as a scale
+factor, so the $b$-tagging uncertainty can be evaluated without running the
+full event selection multiple times.
+Rather, the $b$-tagging scale factor is varied up or down based on the specific
+parameter of interest, and used to determine the uncertainty on the event yield.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The backgrounds are constrained in the CRs which are regions with low \HT,
+while the SRs require high \HT.
+Top VR 3 and $Z$ VR are used to assess any uncertainty associated with the
+extrapolation from low \HT\ to high \HT.
+The \TTBAR\ background extrapolation is assessed using Top VR 3. It can be seen
+from Table \ref{tab:bkg_only_fit_results} that the post-fit background estimate
+in Top VR 3 is in reasonably agreement with the observed data, so no additional
+uncertainty is applied to the \TTBAR\ backgrounds due to the \HT\ extrapolation.
+The \ZGAMMAJETS\ background extrapolation is assessed using the $Z$ VR.
+The overall background is overpredicted in this region by 29\%, and the
+prediction is the worst in the highest \HT\ bins.
+An additional uncertainty of 50\% is applied to the \ZGAMMAJETS\ background
+for events with $\HT > 500 GeV$.
+% An \HT\ extrapolation uncertainty of 50\% is applied to \ZGAMMAJETS\ events
+% with $\HT \geq 500$~\GeV. This is assigned to account for uncertainty on
+% the \ZGAMMAJETS\ \HT\ spectrum. This uncertainty is derived from the
+% disagreement observed in Figures~\ref{fig:pull_dist_vr}-\ref{fig:ht_vr}.
+%%
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Several theoretical uncertainties are considered in the modeling of the major
+background processes in MC simulation.
+These include the uncertainty on the cross sections, scale variations, and
+generator uncertainties.
+These uncertainties are evaluated by performing the event selection using only
+the MC truth information, and comparing the expected event yields obtained
+from MC simulation samples produced using different generator configurations.
+An additional systematic uncertainty, due to the $\pm 2.8$\% uncertainty on the
+integrated luminosity is evaluated for all background processes except
+\TTBAR\ and \ZGAMMAJETS, because these backgrounds take the normalization from
+data control regions.
+A breakdown of the estimated effect of each source of systematic uncertainty
+(both experimental and theoretical) are outlined in
+Table~\ref{tab:systematic_breakdown}.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%% ttbar theory systematics
+The sources of systematic uncertainty specific to the \TTBAR\ background include
+the renormalization and factorization scale variations, MC generator
+uncertainties, parton shower, and the amount of initial or final state
+radiation (ISR or FSR) in the event.
+%%
+% scale variations
+The scale variations are evaluated by comparing the expected event yields at the
+truth level obtained using dedicated \TTBAR\ samples, each generated using
+\powheg\ and \pythia, where the factorization and renormalization
+scales are varied up and down by a factor of 2.
+This isolates the effect of each of the scale variations, and the difference in
+expected number of events in each region is taken to be the uncertainty on the
+\TTBAR\ background.
+The differences in the expected event yields for these samples is take to be
+the uncertainty due to the scale variations.
+%%
+% MC generator
+The MC generator uncertainty accounts for the difference in the MC predictions
+obtained using different generator programs.
+These are assessed by comparing the truth level event selection for a
+\TTBAR\ sample generated using \powheg\ and \jimmy\ with a sample
+generated using \mcnlo\ and \jimmy.
+Since \jimmy\ is used to perform the parton shower in both of these
+samples, the differences can be attributed to the differences in the
+generation rather than the parton shower step.
+
+%%
+% parton shower
+The uncertainty in the parton shower in \TTBAR\ samples is estimated by
+comparing the expected event yields using the truth level information for two
+\TTBAR\ samples each generated using \powheg.
+One sample uses \pythia\ for the parton shower step, while the other
+uses \jimmy.
+This isolates the parton shower part of the MC simulation, which is performed
+either using \pythia\ or \jimmy.
+%%
+% ISR/FSR
+The uncertainty on the ISR and FSR is evaluated by comparing the expected number
+of events in a truth level event selection found in two \TTBAR\ samples, each
+generated using \acermc\ and \pythia.
+The two samples differ in the amount of parton shower is included in the
+simulation.
+%%
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%% single top theory systematics
+The sources of systematic uncertainty specific to the single top background
+include the single top cross section, the MC generator uncertainties, the parton
+shower, ISR and FSR, and the interference with \TTBAR.
+%%
+% cross section
+Single top can be produced through three production channels, with production
+cross sections
+\begin{itemize}
+  \item $s$-channel: $5.61 \pm 0.22$ pb
+  \item $t$-channel: $87.76^{+3.44}_{-1.91}$ pb
+  \item $Wt$-channel: $22.37 \pm 1.52$ pb.
+\end{itemize}
+It was shown that the $Wt$-channel is dominant single top production channel for
+the regions of interest.
+For his reason, the uncertainty on the $Wt$-channel cross section is the only
+single top cross section uncertainty which is considered, and a systematic
+uncertainty of 7\% was applied to the single top background estimate in every
+analysis region.
+%%
+% MC gen uncertainty.
+The MC generator uncertainty on the single top background estimate is evaluated
+by comparing the predicted yields from two single top samples, one generated
+using \powheg, and the other generated using \mcnlo.
+Both MC samples use \herwig\ to calculate the parton shower.
+%%
+% parton shower
+The parton shower uncertainty is determined by comparing the truth level yields
+of two simulated $Wt$-channel samples, each generated using \herwig.
+The parton shower step was performed using \pythia\ and \herwig.
+%%
+% ISR/FSR
+Similar to the \TTBAR\ background, the uncertainty on the single top background
+estimate due to ISR and FSR uncertainties is determined by comparing two
+samples, each generated using \acermc\ and \pythia, where the two samples
+differ in the amount of parton shower is included in the simulation
+%%
+% ttbar interference
+There is some interference between the \TTBAR\ and the $Wt$-channel single top
+background processes.
+This interference is handled by applying an additional uncertainty to the single
+top background estimate by comparing the truth level event selection of two
+$Wt$-channel samples, each generated using \powheg, but one using the DS
+renormalization scheme, and the other using the DR renormalization scheme.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%% Z+jets theory systematics
+In addition to the \HT\ extrapolation uncertainty discussed previously, an
+additional uncertainty is applied to account for the finite number of partons in
+the \ZGAMMAJETS\ background MC samples.
+This uncertainty is evaluated by comparing the truth level event yields for two
+\ZGAMMAJETS\ samples, generated with different numbers of additional partons
+included in the matrix element calculation.
+The first sample has exactly four additional partons in the matrix element
+calculation, while the second set has four or five additional partons.
+Both samples are generated using \sherpa.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%% MC stat systematics
+In addition to the above sources of systematic uncertainty, the uncertainty
+on the background estimate due to limited MC statistics in the CRs and SRs is
+considered.
+The MC statistical uncertainty was evaluated for each background process
+independently in each analysis region as
+\begin{equation}
+  \sigma_{r,p}^\mathrm{MC~stat}
+  =
+  \sqrt{N_{r,p}^\mathrm{gen}},
+\end{equation}
+where $r$ and $p$ represent the region and background MC process respectively.
+$N_{r,p}^\mathrm{gen}$ is the number of MC simulated events from background
+process $p$ in region $r$.
+No weights or scale factors are applied to this number of simulated events.
+The total relative uncertainty in a region $r$ due to MC statistical
+limitations ($\sigma_{r}^\mathrm{MC~stat,relative}$) is obtained by summing the
+relative uncertainties for each process in region $r$ in quadrature, giving
+\begin{equation}
+  \sigma_{r}^\mathrm{MC~stat,relative}
+  =
+  \sqrt{ \sum_{p} \left(\frac{\sigma_{r,p}^\mathrm{MC~stat}}{N_{r,p}^\mathrm{gen}}\right)^2 }
+  =
+  \sqrt{ \sum_{p} \frac{1}{N_{r,p}^\mathrm{gen}} }.
+\end{equation}
+The total MC statistical uncertainty is evaluated in each region, and treated
+as a systematic uncertainty on the background estimate.
+The Top CR and $Z$ CR are used to constrain the \TTBAR\ and
+\ZGAMMAJETS\ background estimates, so the MC statistical uncertainty in the
+CRs results in additional uncertainty on the background estimate in the SRs.
+For this reason, the MC statistical uncertainty in the Top ($Z$) CR is applied
+as an additional systematic uncertainty on the \TTBAR\ (\ZGAMMAJETS) background
+estimate in the SRs.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\begin{table}[ht]
+\caption{Summary of the effect of each considered sources of systematic
+  uncertainty on the background estimate in SR~400 and SR~600. Several
+  sources of theoretical systematic uncertainty which have a small
+  effect on the total background estimate are grouped into the
+  ``Other theory'' category.
+  {\color{red} TODO update this table with broken down info and CRs.}
+}
+\label{tab:systematic_breakdown}
+%
+\centering{
+  \begin{tabular}{lcc}
+  \toprule
+    Systematic &
+    \multirow{2}{*}{SR~400} &
+    \multirow{2}{*}{SR~600} \\
+    Uncertainty (\%) \\
+    \midrule
+    JES                          & 15     & 3  \\
+    $b$-tagging                  & 13     & 12 \\
+    JER                          & 5      & 1  \\
+    Luminosity                   & 1      & 1  \\
+    \midrule                                   
+    \HT\ extrapolation           & 19     & 20 \\
+    MC statistical               & 13     & 23 \\
+    CR statistical               & 3      & 3 \\
+    $Wt$ cross section           & 2      & 2  \\
+    Other theory                 & 1      & 2  \\
+    \bottomrule
+    \end{tabular}
+}
+\end{table}
+
+When determining the expected contributions of each of the signal models,
+the effects of the JES, $b$-tagging efficiency, JER, and luminosity are
+considered as well as the uncertainty on the signal model cross section which
+ranges between 14\% and 28\%.
 
 %% -----------------------------------------------------------------------------
 \section{Results}
@@ -1457,7 +1783,7 @@ are able to place experimental limits in this region \cite{ATLAS:2013oea}.
   \includegraphics[width=0.6\textwidth]{figs/blstop/mass_limit_contours_no_extras_obs.pdf}
   \caption{The observed mass limit on the stop at 95\% CL.
     This limit is obtained using the nominal stop cross section.
-    Stop masses between 400~\GeV\ and 1100~\GeV, in steps of 100~\GeV, were
+    Stop masses between 400~\GeV\ and 1100~\GeV, in steps of 100~\GeV, are
     tested. The mass limit shown corresponds to the highest-mass stop sample
     which was excluded.
     As the branching ratio of $\tilde{t} \rightarrow b\tau$ increases, the

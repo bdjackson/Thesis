@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas
 import datetime
+import time
 
 ## -----------------------------------------------------------------------------
 # read the page numbers file into a data frame
@@ -19,6 +20,7 @@ page_number_df['date'] = pandas.DatetimeIndex(page_number_df['date-time'])
 
 # extract the first date in the data frame, and compute the day number
 first_date = page_number_df['date'].iloc[0]
+first_date = first_date.date()
 page_number_df['day_num'] = (page_number_df['date'] -
                              first_date)/pandas.offsets.Day(1)
 
@@ -31,7 +33,7 @@ ax.fill_between(page_number_df['day_num'], 0, page_number_df['pages'],
                 facecolor='steelblue', alpha=0.5)
 
 # plot styling
-ax.set_xlabel('Days since %s' % first_date.date())
+ax.set_xlabel('Days since %s' % first_date)
 ax.set_ylabel('Pages')
 ax.set_ylim([0, 1.05*page_number_df['pages'].max()])
 ax.set_xlim([-1, page_number_df['day_num'].max()+1])
@@ -59,10 +61,14 @@ def draw_annotation(label_text, date_string, offset_x, offset_y,
     this_date=datetime.datetime.strptime(date_string,
                                          '%a %b %d %H:%M:%S %Z %Y')
 
-    # point_x = (this_date - first_date).days
-    point_x = (this_date - first_date).days
-    point_y = page_number_df[page_number_df['day_num'] >= point_x
-                            ]['pages'].iloc[0]
+    point_x = (this_date.date() - first_date).days
+    point_x += (time.mktime(this_date.timetuple()) -
+                time.mktime(this_date.date().timetuple()))/(26*60*60)
+    # point_y = page_number_df[page_number_df['day_num'] >= point_x
+    # point_y = page_number_df[page_number_df['date-time'] >= this_date
+    #                         ]['pages'].iloc[0]
+    point_y = page_number_df[page_number_df['date-time'] < this_date
+                            ]['pages'].iloc[-1]
 
     text_x = point_x + offset_x
     text_y = point_y + offset_y
@@ -70,11 +76,17 @@ def draw_annotation(label_text, date_string, offset_x, offset_y,
     ax.annotate(label_text, color=text_color, xy=(point_x, point_y),
                 xytext=(text_x, text_y), arrowprops=arrow_props)
 
-draw_annotation('Begin\nThesis', date_string='Fri Mar 27 17:42:32 CET 2015',
-                offset_x=+1, offset_y=+5, angle_b=30)
+draw_annotation('Begin\nThesis',
+                date_string='Fri Mar 27 17:42:32 CET 2015',
+                offset_x=+1, offset_y=+10, angle_b=30)
 
-draw_annotation('Started\noutline', date_string='Wed Apr 01 17:52:19 CEST 2015',
-                offset_x=-2, offset_y=+2)
+draw_annotation('Started\noutline',
+                date_string='Wed Apr 01 17:52:19 CEST 2015',
+                offset_x=-2, offset_y=+10)
+
+draw_annotation('Started\nB-L stop\nsection',
+                date_string='Tue Apr 7 13:41:54 CEST 2015',
+                offset_x=-4, offset_y=+10)
 
 ## -----------------------------------------------------------------------------
 # save the figure to a pdf
