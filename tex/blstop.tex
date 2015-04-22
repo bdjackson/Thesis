@@ -747,26 +747,22 @@ performing the simultaneous fit.
 \label{sec:mc_samples}
 
 \begin{table}[ht]
-  \caption{Partial summary of background samples and their cross sections used in this
-    analysis except for the \ZGAMMAJETS\ background (summarized in Tab.
-    \ref{tab:background_grouping_z}) and the "other" category (summarized in
-    Tab. \ref{tab:background_grouping_other}))
+  \caption{Partial summary of background samples and their cross sections used
+    in this analysis except for the \ZGAMMAJETS\ background (summarized in
+    Table~\ref{tab:background_grouping_z}) and the "other" category (summarized
+    in Table~\ref{tab:background_grouping_other})
   }
   \label{tab:background_grouping}
   \centering{
     \begin{tabular}{c|cccc}
       \toprule
-      Grouping &
-      Process &
-      Cross-section [pb] &
-      Luminosity [$\mathrm{fb}^{-1}$] &
-      Generator \\
+      Grouping                    & Process      & Cross-section [pb] & Luminosity [$\mathrm{fb}^{-1}$] & Generator \\
       \midrule
-      \TTBAR                       & \TTBAR                    & 253  & 727.4 & \powheg+\pythia \\
+      \TTBAR                      & \TTBAR       & 253                & 727.4                           & \powheg+\pythia \\
       \midrule
-      \multirow{3}{*}{Single top}  & Single top ($t$-channel)  & 25.8 & 320   & \acermc+\pythia \\
-                                   & Single top ($s$-channel)  & 1.64 & 330   & \powheg+\pythia \\
-                                   & Single top ($Wt$-channel) & 2.15 & 4200  & \powheg+\pythia \\
+      \multirow{3}{*}{Single top} & $t$-channel  & 25.8               & 320                             & \acermc+\pythia \\
+                                  & $s$-channel  & 1.64               & 330                             & \powheg+\pythia \\
+                                  & $Wt$-channel & 2.15               & 4200                            & \powheg+\pythia \\
       \bottomrule
     \end{tabular}
   }
@@ -774,135 +770,203 @@ performing the simultaneous fit.
 
 
 \begin{table}[ht]
-\caption{Summary of the \ZGAMMAJETS\ background samples and their cross sections used
-  in this analysis. The \ZGAMMAJETS\ samples are sliced by the \pt\ of the $Z$
-  boson. For the inclusive sample, only events with $\pt^{Z} \le 40 \GeV$ were
-  used. For each \pt\ slice, three samples were generated, with different
-  filters applied on the jet flavor. The three samples are generated with
-  approximately the same cross section, but the different filter efficiencies
-  lead to different effective luminosities. The three columns under the
-  effective luminosity represent the three samples. The left column shows the
-  effective luminosity for the sample generated with a $b$-filter. The middle
-  column represents the sample with a $c$-filter and $b$-veto. The right column
-  shows the effective luminosity of the sample generated with a veto on both
-  $b$ and $c$ quarks.
-}
-\label{tab:background_grouping_z}
-\centering{
-  \resizebox{0.90\linewidth}{!}{
-    \begin{tabular}{c|cccccc}
-    \toprule
-      Grouping &
-      Process &
-      Cross-section [pb] &
-      \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} &
-      Generator \\
-      \midrule
-      \multirow{24}{*}{\ZGAMMAJETS} & $Z \rightarrow ee$                                              & 1110                 & 110                    & 9         & 6    & \sherpa \\
-                                    & $Z \rightarrow \mu\mu$                                          & 1110                 & 110                    & 9         & 6    & \sherpa \\
-                                    & $Z \rightarrow \tau\tau$                                        & 1110                 & 110                    & 9         & 6    & \sherpa \\
-                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                    & 22        & 30   & \sherpa \\
-                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                    & 22        & 30   & \sherpa \\
-                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                    & 22        & 30   & \sherpa \\
-                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                    & 90        & 110  & \sherpa \\
-                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                    & 90        & 110  & \sherpa \\
-                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                    & 90        & 110  & \sherpa \\
-                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                    & 240       & 250  & \sherpa \\
-                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                    & 240       & 250  & \sherpa \\
-                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                    & 240       & 250  & \sherpa \\
-                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                    & 480       & 360  & \sherpa \\
-                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                    & 480       & 360  & \sherpa \\
-                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                    & 480       & 360  & \sherpa \\
-                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                   & 1700      & 7000 & \sherpa \\
-                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                   & 1700      & 7000 & \sherpa \\
-                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                   & 1700      & 7000 & \sherpa \\
-                                    & DY $\rightarrow ee$       ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                    & \sherpa \\
-                                    & DY $\rightarrow \mu\mu$   ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                    & \sherpa \\
-                                    & DY $\rightarrow \tau\tau$ ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                    & \sherpa \\
-                                    & DY $\rightarrow ee$       ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                    & \sherpa \\
-                                    & DY $\rightarrow \mu\mu$   ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                    & \sherpa \\
-                                    & DY $\rightarrow \tau\tau$ ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                    & \sherpa \\
-      \bottomrule
-      \end{tabular}
+  \caption{Summary of the \ZGAMMAJETS\ background samples and their cross
+    sections used in this analysis.
+    The \ZGAMMAJETS\ samples are sliced by the \pt\ of the $Z$ boson.
+    For the inclusive sample, only events with $\pt^{Z} \le 40 \GeV$ were used.
+    For each \pt\ slice, nine samples were generated, with different lepton
+    flavor channels and filters applied on the jet flavor.
+    The three samples are generated with approximately the same cross section,
+    but the different filter efficiencies lead to different effective
+    luminosities.
+    The three columns under the effective luminosity represent the three
+    samples.
+    The left column shows the effective luminosity for the sample generated
+    with a $b$-filter.
+    The middle column represents the sample with a $c$-filter and $b$-veto.
+    The right column shows the effective luminosity of the sample generated
+    with a veto on both $b$- and $c$-quarks.
   }
-}
+  \label{tab:background_grouping_z}
+  \centering{
+    %% \resizebox{0.90\linewidth}{!}{
+    %%   \begin{tabular}{c|cccccc}
+    %%     \toprule
+    %%     Grouping                       & Process                                                         & Cross-section [pb]   & \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} & Generator \\
+    %%     \midrule
+    %%     \multirow{24}{*}{\ZGAMMAJETS}  & $Z \rightarrow ee$                                              & 1110                 & 110                                                 & 9            & 6    & \sherpa \\
+    %%                                    & $Z \rightarrow \mu\mu$                                          & 1110                 & 110                                                 & 9            & 6    & \sherpa \\
+    %%                                    & $Z \rightarrow \tau\tau$                                        & 1110                 & 110                                                 & 9            & 6    & \sherpa \\
+    %%                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                                                 & 22           & 30   & \sherpa \\
+    %%                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                                                 & 22           & 30   & \sherpa \\
+    %%                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                                                 & 22           & 30   & \sherpa \\
+    %%                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                                                 & 90           & 110  & \sherpa \\
+    %%                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                                                 & 90           & 110  & \sherpa \\
+    %%                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                                                 & 90           & 110  & \sherpa \\
+    %%                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                                                 & 240          & 250  & \sherpa \\
+    %%                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                                                 & 240          & 250  & \sherpa \\
+    %%                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                                                 & 240          & 250  & \sherpa \\
+    %%                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                                                 & 480          & 360  & \sherpa \\
+    %%                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                                                 & 480          & 360  & \sherpa \\
+    %%                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                                                 & 480          & 360  & \sherpa \\
+    %%                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                                                & 1700         & 7000 & \sherpa \\
+    %%                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                                                & 1700         & 7000 & \sherpa \\
+    %%                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                                                & 1700         & 7000 & \sherpa \\
+    %%                                    & DY $\rightarrow ee$       ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                              & \sherpa \\
+    %%                                    & DY $\rightarrow \mu\mu$   ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                              & \sherpa \\
+    %%                                    & DY $\rightarrow \tau\tau$ ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                              & \sherpa \\
+    %%                                    & DY $\rightarrow ee$       ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                              & \sherpa \\
+    %%                                    & DY $\rightarrow \mu\mu$   ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                              & \sherpa \\
+    %%                                    & DY $\rightarrow \tau\tau$ ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                              & \sherpa \\
+    %%     \bottomrule
+    %%   \end{tabular}
+    %% }
+    % \resizebox{0.90\linewidth}{!}{
+      \begin{tabular}{c|cccccc}
+        \toprule
+        Grouping                      & Process                                          & Cross-section [pb]                    & \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} & Generator \\
+        \midrule
+        \multirow{15}{*}{\ZGAMMAJETS} & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & 1110                                  & 110                                                 & 9                           & 6                     & \sherpa  \\ [1ex]
+                                      & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{70.5}                 & \multirow{2}{*}{110}                                & \multirow{2}{*}{22}         & \multirow{2}{*}{30}   & \multirow{2}{*}{\sherpa} \\
+                                      & $p_{T}^{Z} \in [40 ,70] \GeV$                    & & & & &  \\ [1ex]
+                                      & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{29.5}                 & \multirow{2}{*}{510}                                & \multirow{2}{*}{90}         & \multirow{2}{*}{110}  & \multirow{2}{*}{\sherpa} \\
+                                      & $p_{T}^{Z} \in [70 ,140] \GeV$                   & & & & &  \\ [1ex]
+                                      & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{3.99}                 & \multirow{2}{*}{470}                                & \multirow{2}{*}{240}        & \multirow{2}{*}{250}  & \multirow{2}{*}{\sherpa} \\
+                                      & $p_{T}^{Z} \in [140,280] \GeV$                   & & & & &  \\ [1ex]
+                                      & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{0.24}                 & \multirow{2}{*}{680}                                & \multirow{2}{*}{480}        & \multirow{2}{*}{360}  & \multirow{2}{*}{\sherpa} \\
+                                      & $p_{T}^{Z} \in [280,500] \GeV$                   & & & & &  \\ [1ex]
+                                      & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{$1.3 \times 10^{-2}$} & \multirow{2}{*}{5700}                               & \multirow{2}{*}{1700}       & \multirow{2}{*}{7000} & \multirow{2}{*}{\sherpa} \\
+                                      & $p_{T}^{Z} \ge 500 \GeV$                         & & & & &  \\ [1ex]
+                                      & DY $\rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$ & \multirow{2}{*}{92.1}                 & \multicolumn{3}{c}{\multirow{2}{*}{50}}                                                                   & \multirow{2}{*}{\sherpa} \\
+                                      & $m_{Z/\gamma^{*}} \in [8 ,15] \GeV$              & & & & &  \\ [1ex]
+                                      & DY $\rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$ & \multirow{2}{*}{279}                  & \multicolumn{3}{c}{\multirow{2}{*}{50}}                                                                   & \multirow{2}{*}{\sherpa} \\
+                                      & $m_{Z/\gamma^{*}} \in [15,40] \GeV$              & & & & &  \\
+        \bottomrule
+      \end{tabular}
+    % }
+  }
 \end{table}
 
 \begin{table}[ht]
-  \caption{Summary of other background samples and their cross sections used in this
-    analysis. The $W$ samples are generated with filters on the the jet flavor.
-    As in Tab. \ref{tab:background_grouping_z},  The three columns under the
-    effective luminosity represent the three samples (b-filter, c-filter and
-    b veto, veto on both b and c quarks).
+  \caption{Summary of other background samples and their cross sections used in
+    this analysis.
+    The $W \rightarrow \ell\nu$ and $Z \rightarrow \ell\ell$ processes each have 
+    dedicated samples for each lepton flavor as indicated in the parentheses.
+    The $W$ samples are generated with filters on the jet flavor.
+    As in Table~\ref{tab:background_grouping_z}, the three columns under the
+    effective luminosity represent the three samples ($b$-filter, $c$-filter
+    and $b$-veto, veto on both $b$- and $c$-quarks).
   }
   \label{tab:background_grouping_other}
   \centering{
-  \resizebox{0.90\linewidth}{!}{
-    \begin{tabular}{c|cccccc}
-      \toprule
-      Grouping &
-      Process &
-      Cross-section [pb] &
-      \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} &
-      Generator \\
-      \midrule
-      \multirow{50}{*}{Other}  & $\TTBAR\,W$                                                     & 0.10                 & \multicolumn{3}{c}{3300 }              & \madgraph+\pythia \\
-                               & $\TTBAR\,Wj$                                                    & $9.3 \times 10^{-2}$ & \multicolumn{3}{c}{3600 }              & \madgraph+\pythia \\
-                               & $\TTBAR\,Z$                                                     & $6.8 \times 10^{-2}$ & \multicolumn{3}{c}{4400 }              & \madgraph+\pythia \\
-                               & $\TTBAR\,Zj$                                                    & $8.7 \times 10^{-2}$ & \multicolumn{3}{c}{3400 }              & \madgraph+\pythia \\
-                               & $\TTBAR\,WW$                                                    & $9.2 \times 10^{-4}$ & \multicolumn{3}{c}{11000}              & \madgraph+\pythia \\
-                               & $WW \rightarrow \ell\ell\nu\nu$                                 & 5.30                 & \multicolumn{3}{c}{1400 }              & \sherpa           \\
-                               & $WW \rightarrow e\nu qq$                                        & 7.29                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
-                               & $WW \rightarrow \mu\nu qq$                                      & 7.30                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
-                               & $WW \rightarrow \tau\nu qq$                                     & 7.27                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
-                               & $WZ \rightarrow \ell\ell\ell\nu$                                & 9.74                 & \multicolumn{3}{c}{260  }              & \sherpa           \\
-                               & $WZ \rightarrow \ell\nu\nu\nu$                                  & 1.40                 & \multicolumn{3}{c}{270  }              & \sherpa           \\
-                               & $WZ \rightarrow e\nu qq$                                        & 1.90                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
-                               & $WZ \rightarrow \mu\nu qq$                                      & 1.91                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
-                               & $WZ \rightarrow \tau\nu qq$                                     & 1.92                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
-                               & $WZ \rightarrow ee qq$                                          & 1.46                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
-                               & $WZ \rightarrow \mu\mu qq$                                      & 1.46                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
-                               & $WZ \rightarrow \tau\tau qq$                                    & 1.45                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
-                               & $WZ \rightarrow \nu\nu qq$                                      & 2.70                 & \multicolumn{3}{c}{64   }              & \sherpa           \\
-                               & $ZZ \rightarrow \ell\ell\nu\nu$                                 & 0.49                 & \multicolumn{3}{c}{1700 }              & \sherpa           \\
-                               & $ZZ \rightarrow ee qq$                                          & 0.25                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
-                               & $ZZ \rightarrow \mu\mu qq$                                      & 0.25                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
-                               & $ZZ \rightarrow \tau\tau qq$                                    & 0.24                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
-                               & $ZZ \rightarrow \nu\nu qq$                                      & 1.74                 & \multicolumn{3}{c}{69   }              & \sherpa           \\
-                               & ggf $H \rightarrow WW$                                          & 0.44                 & \multicolumn{3}{c}{2000 }              & \powheg+\pythia 8 \\
-                               & ggf $H \rightarrow ZZ$                                          & $4.7 \times 10^{-2}$ & \multicolumn{3}{c}{2000 }              & \powheg+\pythia 8 \\
-                               & VBF $H \rightarrow WW$                                          & $3.6 \times 10^{-2}$ & \multicolumn{3}{c}{17000}              & \powheg+\pythia 8 \\
-                               & VBF $H \rightarrow ZZ$                                          & $3.8 \times 10^{-3}$ & \multicolumn{3}{c}{18000}              & \powheg+\pythia 8 \\
-                               & $WH \rightarrow W\ell\nu\ell\nu$                                & 0.15                 & \multicolumn{3}{c}{1000 }              & \pythia 8         \\
-                               & $WH \rightarrow W\ell\ell\nu\nu$                                & $1.7 \times 10^{-3}$ & \multicolumn{3}{c}{27000}              & \pythia 8         \\
-                               & $ZH \rightarrow Z\ell\nu\ell\nu$                                & $8.9 \times 10^{-3}$ & \multicolumn{3}{c}{2000 }              & \pythia 8         \\
-                               & $ZH \rightarrow Z\ell\ell\nu\nu$                                & $1.0 \times 10^{-2}$ & \multicolumn{3}{c}{48000}              & \pythia 8         \\
-                               & $\TTBAR H \rightarrow \TTBAR WW$                                & $2.8 \times 10^{-2}$ & \multicolumn{3}{c}{7000 }              & \pythia 8         \\
-                               & $W \rightarrow e\nu$                                            & 11000                & 100                       & 17   & 4   & \sherpa           \\
-                               & $W \rightarrow \mu\nu$                                          & 11000                & 100                       & 17   & 4   & \sherpa           \\
-                               & $W \rightarrow \tau\nu$                                         & 11000                & 100                       & 17   & 4   & \sherpa           \\
-                               & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
-                               & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
-                               & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
-                               & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
-                               & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
-                               & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
-                               & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
-                               & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
-                               & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
-                               & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
-                               & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
-                               & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
-                               & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 140 & \sherpa           \\
-                               & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 670 & \sherpa           \\
-                               & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 670 & \sherpa           \\
-      
-
-
-      \bottomrule
-    \end{tabular}
+    %% \resizebox{0.90\linewidth}{!}{
+    %%   \begin{tabular}{c|cccccc}
+    %%     \toprule
+    %%     Grouping &
+    %%     Process &
+    %%     Cross-section [pb] &
+    %%     \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} &
+    %%     Generator \\
+    %%     \midrule
+    %%     \multirow{50}{*}{Other}  & $\TTBAR\,W$                                                     & 0.10                 & \multicolumn{3}{c}{3300 }              & \madgraph+\pythia \\
+    %%                              & $\TTBAR\,Wj$                                                    & $9.3 \times 10^{-2}$ & \multicolumn{3}{c}{3600 }              & \madgraph+\pythia \\
+    %%                              & $\TTBAR\,Z$                                                     & $6.8 \times 10^{-2}$ & \multicolumn{3}{c}{4400 }              & \madgraph+\pythia \\
+    %%                              & $\TTBAR\,Zj$                                                    & $8.7 \times 10^{-2}$ & \multicolumn{3}{c}{3400 }              & \madgraph+\pythia \\
+    %%                              & $\TTBAR\,WW$                                                    & $9.2 \times 10^{-4}$ & \multicolumn{3}{c}{11000}              & \madgraph+\pythia \\
+    %%                              & $WW \rightarrow \ell\ell\nu\nu$                                 & 5.30                 & \multicolumn{3}{c}{1400 }              & \sherpa           \\
+    %%                              & $WW \rightarrow e\nu qq$                                        & 7.29                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
+    %%                              & $WW \rightarrow \mu\nu qq$                                      & 7.30                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
+    %%                              & $WW \rightarrow \tau\nu qq$                                     & 7.27                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
+    %%                              & $WZ \rightarrow \ell\ell\ell\nu$                                & 9.74                 & \multicolumn{3}{c}{260  }              & \sherpa           \\
+    %%                              & $WZ \rightarrow \ell\nu\nu\nu$                                  & 1.40                 & \multicolumn{3}{c}{270  }              & \sherpa           \\
+    %%                              & $WZ \rightarrow e\nu qq$                                        & 1.90                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
+    %%                              & $WZ \rightarrow \mu\nu qq$                                      & 1.91                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
+    %%                              & $WZ \rightarrow \tau\nu qq$                                     & 1.92                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
+    %%                              & $WZ \rightarrow ee qq$                                          & 1.46                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
+    %%                              & $WZ \rightarrow \mu\mu qq$                                      & 1.46                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
+    %%                              & $WZ \rightarrow \tau\tau qq$                                    & 1.45                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
+    %%                              & $WZ \rightarrow \nu\nu qq$                                      & 2.70                 & \multicolumn{3}{c}{64   }              & \sherpa           \\
+    %%                              & $ZZ \rightarrow \ell\ell\nu\nu$                                 & 0.49                 & \multicolumn{3}{c}{1700 }              & \sherpa           \\
+    %%                              & $ZZ \rightarrow ee qq$                                          & 0.25                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
+    %%                              & $ZZ \rightarrow \mu\mu qq$                                      & 0.25                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
+    %%                              & $ZZ \rightarrow \tau\tau qq$                                    & 0.24                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
+    %%                              & $ZZ \rightarrow \nu\nu qq$                                      & 1.74                 & \multicolumn{3}{c}{69   }              & \sherpa           \\
+    %%                              & ggf $H \rightarrow WW$                                          & 0.44                 & \multicolumn{3}{c}{2000 }              & \powheg+\pythia 8 \\
+    %%                              & ggf $H \rightarrow ZZ$                                          & $4.7 \times 10^{-2}$ & \multicolumn{3}{c}{2000 }              & \powheg+\pythia 8 \\
+    %%                              & VBF $H \rightarrow WW$                                          & $3.6 \times 10^{-2}$ & \multicolumn{3}{c}{17000}              & \powheg+\pythia 8 \\
+    %%                              & VBF $H \rightarrow ZZ$                                          & $3.8 \times 10^{-3}$ & \multicolumn{3}{c}{18000}              & \powheg+\pythia 8 \\
+    %%                              & $WH \rightarrow W\ell\nu\ell\nu$                                & 0.15                 & \multicolumn{3}{c}{1000 }              & \pythia 8         \\
+    %%                              & $WH \rightarrow W\ell\ell\nu\nu$                                & $1.7 \times 10^{-3}$ & \multicolumn{3}{c}{27000}              & \pythia 8         \\
+    %%                              & $ZH \rightarrow Z\ell\nu\ell\nu$                                & $8.9 \times 10^{-3}$ & \multicolumn{3}{c}{2000 }              & \pythia 8         \\
+    %%                              & $ZH \rightarrow Z\ell\ell\nu\nu$                                & $1.0 \times 10^{-2}$ & \multicolumn{3}{c}{48000}              & \pythia 8         \\
+    %%                              & $\TTBAR H \rightarrow \TTBAR WW$                                & $2.8 \times 10^{-2}$ & \multicolumn{3}{c}{7000 }              & \pythia 8         \\
+    %%                              & $W \rightarrow e\nu$                                            & 11000                & 100                       & 17   & 4   & \sherpa           \\
+    %%                              & $W \rightarrow \mu\nu$                                          & 11000                & 100                       & 17   & 4   & \sherpa           \\
+    %%                              & $W \rightarrow \tau\nu$                                         & 11000                & 100                       & 17   & 4   & \sherpa           \\
+    %%                              & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
+    %%                              & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
+    %%                              & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
+    %%                              & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
+    %%                              & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
+    %%                              & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
+    %%                              & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
+    %%                              & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
+    %%                              & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
+    %%                              & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
+    %%                              & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
+    %%                              & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
+    %%                              & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 140 & \sherpa           \\
+    %%                              & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 670 & \sherpa           \\
+    %%                              & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 670 & \sherpa           \\
+    %%     \bottomrule
+    %%   \end{tabular}
+    %% }
+      \begin{tabular}{c|cccccc}
+        \toprule
+        Grouping &
+        Process &
+        Cross-section [pb] &
+        \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} &
+        Generator \\
+        \midrule
+        \multirow{35}{*}{Other}    & $\TTBAR\,W$                                         & 0.10                  & \multicolumn{3}{c}{3300 } & \madgraph+\pythia \\
+                                   & $\TTBAR\,Wj$                                        & $9.3 \times 10^{-2}$  & \multicolumn{3}{c}{3600 } & \madgraph+\pythia \\ [1ex]
+                                   & $\TTBAR\,Z$                                         & $6.8 \times 10^{-2}$  & \multicolumn{3}{c}{4400 } & \madgraph+\pythia \\
+                                   & $\TTBAR\,Zj$                                        & $8.7 \times 10^{-2}$  & \multicolumn{3}{c}{3400 } & \madgraph+\pythia \\ [1ex]
+                                   & $\TTBAR\,WW$                                        & $9.2 \times 10^{-4}$  & \multicolumn{3}{c}{11000} & \madgraph+\pythia \\ [1ex]
+                                   & $WW \rightarrow \ell\ell\nu\nu$                     & 5.30                  & \multicolumn{3}{c}{1400 } & \sherpa           \\
+                                   & $WW \rightarrow \ell\nu qq (e,\mu,\tau)$            & 7.3                   & \multicolumn{3}{c}{100  } & \sherpa           \\ [1ex]
+                                   & $WZ \rightarrow \ell\ell\ell\nu$                    & 9.74                  & \multicolumn{3}{c}{260  } & \sherpa           \\
+                                   & $WZ \rightarrow \ell\nu\nu\nu$                      & 1.40                  & \multicolumn{3}{c}{270  } & \sherpa           \\
+                                   & $WZ \rightarrow \ell\nu qq (e,\mu,\tau)$            & 1.9                   & \multicolumn{3}{c}{110  } & \sherpa           \\
+                                   & $WZ \rightarrow \ell\ell qq (ee, \mu\mu, \tau\tau)$ & 1.46                  & \multicolumn{3}{c}{110  } & \sherpa           \\
+                                   & $WZ \rightarrow \nu\nu qq$                          & 2.70                  & \multicolumn{3}{c}{64   } & \sherpa           \\ [1ex]
+                                   & $ZZ \rightarrow \ell\ell\nu\nu$                     & 0.49                  & \multicolumn{3}{c}{1700 } & \sherpa           \\
+                                   & $ZZ \rightarrow \ell\ell qq (ee, \mu\mu, \tau\tau)$ & 0.25                  & \multicolumn{3}{c}{120  } & \sherpa           \\
+                                   & $ZZ \rightarrow \nu\nu qq$                          & 1.74                  & \multicolumn{3}{c}{69   } & \sherpa           \\ [1ex]
+                                   & ggf $H \rightarrow WW$                              & 0.44                  & \multicolumn{3}{c}{2000 } & \powheg+\pythia 8 \\
+                                   & ggf $H \rightarrow ZZ$                              & $4.7 \times 10^{-2}$  & \multicolumn{3}{c}{2000 } & \powheg+\pythia 8 \\
+                                   & VBF $H \rightarrow WW$                              & $3.6 \times 10^{-2}$  & \multicolumn{3}{c}{17000} & \powheg+\pythia 8 \\
+                                   & VBF $H \rightarrow ZZ$                              & $3.8 \times 10^{-3}$  & \multicolumn{3}{c}{18000} & \powheg+\pythia 8 \\ [1ex]
+                                   & $WH \rightarrow W\ell\nu\ell\nu$                    & 0.15                  & \multicolumn{3}{c}{1000 } & \pythia 8         \\
+                                   & $WH \rightarrow W\ell\ell\nu\nu$                    & $1.7 \times 10^{-3}$  & \multicolumn{3}{c}{27000} & \pythia 8         \\ [1ex]
+                                   & $ZH \rightarrow Z\ell\nu\ell\nu$                    & $8.9 \times 10^{-3}$  & \multicolumn{3}{c}{2000 } & \pythia 8         \\
+                                   & $ZH \rightarrow Z\ell\ell\nu\nu$                    & $1.0 \times 10^{-2}$  & \multicolumn{3}{c}{48000} & \pythia 8         \\ [1ex]
+                                   & $\TTBAR H \rightarrow \TTBAR WW$                    & $2.8 \times 10^{-2}$  & \multicolumn{3}{c}{7000 } & \pythia 8         \\ [1ex]
+                                   & $W \rightarrow \ell\nu (e, \mu, \tau)$              & 11000                 & 100                       & 17                   & 4                    & \sherpa \\ [1ex]
+                                   & $W \rightarrow \ell\nu (e, \mu, \tau)$              & \multirow{2}{*}{653}  & \multirow{2}{*}{44}       & \multirow{2}{*}{7}   & \multirow{2}{*}{30}  & \multirow{2}{*}{\sherpa} \\
+                                   & $p_\mathrm{T}^{W} \in [40,70] \GeV$                 &                       &                           &                      &                      & \\ [1ex]
+                                   & $W \rightarrow \ell\nu (e, \mu, \tau)$              & \multirow{2}{*}{251}  & \multirow{2}{*}{160}      & \multirow{2}{*}{54}  & \multirow{2}{*}{24}  & \multirow{2}{*}{\sherpa} \\
+                                   & $p_\mathrm{T}^{W} \in [70,140] \GeV$                &                       &                           &                      &                      & \\ [1ex]
+                                   & $W \rightarrow \ell\nu (e, \mu, \tau)$              & \multirow{2}{*}{31.2} & \multirow{2}{*}{460}      & \multirow{2}{*}{260} & \multirow{2}{*}{80}  & \multirow{2}{*}{\sherpa} \\
+                                   & $p_\mathrm{T}^{W} \in [140,280] \GeV$               &                       &                           &                      &                      & \\ [1ex]
+                                   & $W \rightarrow \ell\nu (e, \mu, \tau)$              & \multirow{2}{*}{1.84} & \multirow{2}{*}{590}      & \multirow{2}{*}{420} & \multirow{2}{*}{360} & \multirow{2}{*}{\sherpa} \\
+                                   & $p_\mathrm{T}^{W} \in [280,500] \GeV$               &                       &                           &                      &                      & \\ [1ex]
+                                   & $W \rightarrow \ell\nu (e, \mu, \tau)$              & \multirow{2}{*}{0.10} & \multirow{2}{*}{890}      & \multirow{2}{*}{360} & \multirow{2}{*}{140} & \multirow{2}{*}{\sherpa} \\
+                                   & $p_\mathrm{T}^{W} \ge 500 \GeV$                     &                       &                           &                      &                      &  \\
+        \bottomrule
+      \end{tabular}
   }
-}
 \end{table}
 
 \FloatBarrier
