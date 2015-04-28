@@ -318,6 +318,18 @@ counting backgrounds with heavy flavor quarks in the final state, the heavy
 flavor overlap removal procedure, described in Section~\ref{sec:jet_matching},
 is applied.
 
+Events in data are taken from both the \texttt{egamma} and \texttt{muons} data
+streams.
+It is possible for the same event to exist in both streams, leading to the
+possibility of double counting events.
+To prevent this double counting of data events, the data stream is chosen based
+on the flavor of the leading signal lepton in the event.
+If the highest \pt\ event is an electron, the event is required to be found in
+the \texttt{egamma} data stream.
+Similarly, if the highest \pt\ lepton is a muon, the event is required to be
+found in the \texttt{muons} data stream.
+Events found in the wrong stream, are rejected.
+
 %% -----------------------------------------------------------------------------
 \section{Trigger selection}
 \label{sec:trigger_selection}
@@ -410,16 +422,20 @@ dependence.
 \begin{figure}[ht]
   \centering
   \subbottom[\texttt{EF\_e24vhi\_medium1}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e24vhi_medium1.pdf}
+    \includegraphics[width=0.48\textwidth]
+      {figs/trigger/EF_e24vhi_medium1.pdf}
   }
   \subbottom[\texttt{EF\_e60\_medium1}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e60_medium1.pdf}
+    \includegraphics[width=0.48\textwidth]
+      {figs/trigger/EF_e60_medium1.pdf}
   }
   \subbottom[\texttt{EF\_mu24i\_tight trigger}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_mu24i_tight.pdf}
+    \includegraphics[width=0.48\textwidth]
+      {figs/trigger/EF_mu24i_tight.pdf}
   }
   \subbottom[\texttt{EF\_mu36\_tight}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_mu36_tight.pdf}
+    \includegraphics[width=0.48\textwidth]
+      {figs/trigger/EF_mu36_tight.pdf}
   }
   \caption{Efficiency of simulated stop events passing each single lepton
     trigger broken down by flavor channel.
@@ -441,10 +457,12 @@ dependence.
 \begin{figure}[ht]
   \centering
   \subbottom[\texttt{EF\_e24vhi\_medium1}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e24vhi_medium1__el_pt.pdf}
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
+      {figs/trigger/EF_e24vhi_medium1__el_pt.pdf}
   }
   \subbottom[\texttt{EF\_e60\_medium1}]{
-    \includegraphics[width=0.45\textwidth]{figs/trigger/EF_e60_medium1__el_pt.pdf}
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
+      {figs/trigger/EF_e60_medium1__el_pt.pdf}
   }
   \caption{Efficiency of simulated stop events passing each of the single
     electron triggers for several ranges of electron \ET.
@@ -468,7 +486,7 @@ on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.45\textwidth]
+  \includegraphics[width=0.60\textwidth]
     {figs/trigger/EF_e24vhi_medium1_OR_EF_e60_medium1_OR_EF_mu36_tight.pdf}
   \caption{Efficiency of simulated stop events passing the full trigger
     selection broken down by flavor channel.
@@ -530,19 +548,19 @@ Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists}.
 \begin{figure}
   \centering
   \subbottom[\MLL]{
-    \includegraphics[width=0.45\textwidth]
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
     {figs/blstop/no_data__no_k_factor__dists/flavor_all__mll__BMINUSL_BL_PAIRING__log.pdf}
   }
   \subbottom[\HT]{
-    \includegraphics[width=0.45\textwidth]
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
     {figs/blstop/no_data__no_k_factor__dists/flavor_all__ht_signal__BMINUSL_BL_PAIRING__log.pdf}
   }
   \subbottom[\MBLASYM]{
-    \includegraphics[width=0.45\textwidth]
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
     {figs/blstop/no_data__no_k_factor__dists/flavor_all__mbl_asym__BMINUSL_BL_PAIRING__log.pdf}
   }
   \subbottom[$\MBL^0$]{
-    \includegraphics[width=0.45\textwidth]
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
     {figs/blstop/no_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_BL_PAIRING__log.pdf}
   }
   \caption{Expected \MLL, \HT, \MBLASYM, and $\MBL^0$ distributions for SM
@@ -626,7 +644,7 @@ Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.6\textwidth]{figs/blstop/regions__met_sig__ht_plane.pdf}
+  \includegraphics[width=\textwidth]{figs/blstop/regions__met_sig__ht_plane.pdf}
   \caption{Position of the regions in the \METSIG\ versus \HT\ space.
     The two left plots show the \METSIG-\HT~plane after vetoing events within
     the $Z$ window, with the top plot requiring $\MBLASYM \geq 0.2$ and the
@@ -653,16 +671,18 @@ yields are normalized to 20.3 \ifb.
 \begin{figure}
   \centering
   \subbottom[\HT]{
-    \includegraphics[width=0.45\textwidth]{figs/blstop/ht_sr_400_minus_ht.pdf}
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
+      {figs/blstop/ht_sr_400_minus_ht.pdf}
   }
   \subbottom[\MBLASYM]{
-    \includegraphics[width=0.45\textwidth]{figs/blstop/mbl_asym_sr_400_minus_mbl_asym.pdf}
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
+      {figs/blstop/mbl_asym_sr_400_minus_mbl_asym.pdf}
   }
   \subbottom[$\MBL^0$]{
-    \includegraphics[width=0.45\textwidth]{figs/blstop/mbl_0_sr_minus_mbl.pdf}
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
+      {figs/blstop/mbl_0_sr_minus_mbl.pdf}
   }
-  \caption{Distributions of the variables which are used to define the
-    SRs.
+  \caption{Distributions of the variables which are used to define the SRs.
     These plots show the MC simulated background samples and three signal
     models, and are made after applying all the SR selection criteria except for
     that on the variable shown.
@@ -720,8 +740,8 @@ The three largest sources of SM background which contribute to this final state
 are \TTBAR, \ZGAMMAJETS, and single top production.
 Other sources, such as di-boson and Higgs boson production, contribute as
 background events as well, however in much smaller amounts.
-The list of MC simulation samples used to estimate the background contribution
-from SM processes is given in Section~\ref{sec:mc_samples}.
+The full list of MC simulation samples used to estimate the background
+contribution from SM processes is given in Section~\ref{sec:mc_samples}.
 The background estimates for the \TTBAR\ and the \ZGAMMAJETS\ backgrounds use
 MC simulation normalized in dedicated data control regions (CRs).
 Several validation regions (VRs) are defined to validate the extrapolation of
@@ -745,6 +765,41 @@ performing the simultaneous fit.
 %% -----------------------------------------------------------------------------
 \subsection{Monte Carlo simulation samples}
 \label{sec:mc_samples}
+
+Monte Carlo simulation samples are used to estimate the selection efficiency
+and kinematic distributions for SM processes.
+When constructing plots and tables, the \TTBAR, \ZGAMMAJETS, and single top
+production processes are kept separate, while all the other SM background
+processes are grouped into an ``other'' category.
+The \TTBAR\ background is modeled using the next-to-leading order (NLO)
+generator \POWHEG\ 
+revision~2129~\cite{Nason:2004rx, Frixione:2007vw, Alioli:2010xd,
+Frixione:2007nw} with NLO PDF set CTEQ 6L1~\cite{Nadolsky:2008zw}, and 
+showered with \PYTHIA\ version 6.426,
+When using the baseline \POWHEG+\PYTHIA\ \TTBAR production sample,
+events are reweighted in bins of the transverse mass (\pt) of the
+$t\bar{t}$ system to match the top quark
+pair differential cross section observed in ATLAS
+data~\cite{Aad:2012hg,Aad:2014zka}.
+The $Wt$-channel and $s$-channel of the single top background are
+modeled using \POWHEG\ revision~1556~\cite{Alioli:2009je}
+with \PYTHIA\ version 6.426, while the $t$-channel is modeled using
+\acermc\ version 3.8~\cite{Kersevan:2004yg} with \PYTHIA\ version 6.426,
+both with PDF set CTEQ 6L1~\cite{Nadolsky:2008zw}.
+The \ZGAMMAJETS\ production process is modeled using
+\SHERPA\ version~1.4.1~\cite{Gleisberg:2008ta} with NLO PDF set CT10.
+Charm and bottom quarks are treated as massive.
+
+The full list of background samples used, as well as the event generator used,
+SM production cross section, and the effective luminosity generated is given in 
+Tables~\ref{tab:background_grouping}, \ref{tab:background_grouping_z},
+and \ref{tab:background_grouping_other}.\footnote{The effective luminosity is
+given by $\nicefrac{N_\mathrm{gen}\sigma}{\epsilon_\mathrm{filter}}$, where
+$N_\mathrm{gen}$ is the number of MC events which were generated, $\sigma$ is
+the production cross section, and $\epsilon_\mathrm{filter}$ is the efficiency
+of any filter which was applied to the MC sample.}
+Unless \pythia8 is specified, \pythia\ version 6 is used for samples labeled
+with \pythia.
 
 \begin{table}[ht]
   \caption{Partial summary of background samples and their cross sections used
@@ -1042,11 +1097,11 @@ states this in the description.
 \begin{figure}
   \centering
   \subbottom[Top CR]{
-    \includegraphics[width=0.45\textwidth]
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_TOP_MBL_200__log.pdf}
   }
   \subbottom[$Z$ CR]{
-    \includegraphics[width=0.45\textwidth]
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
   \caption{Expected and observed $\MBL^0$ distribution in the Top CR and
@@ -1075,11 +1130,11 @@ production process, are shown in Table~\ref{tab:region_contributions_cr}.
 \begin{figure}
   \centering
   \subbottom[Top CR]{
-    \includegraphics[width=0.45\textwidth]
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_TOP_MBL_200__log.pdf}
   }
   \subbottom[$Z$ CR]{
-    \includegraphics[width=0.45\textwidth]
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
   \caption{Expected and observed $\MBL^0$ distribution in the Top CR and
@@ -1226,19 +1281,46 @@ VRs are explored in more detail in Section~\ref{sec:bkg_fit}.
 The normalization of the \TTBAR\ and the \ZGAMMAJETS\ backgrounds are
 determined using a simultaneous fit, which takes into account
 cross-contamination of the different background processes between the
-CRs as well as the statistical and systematic
-uncertainties (described in Section~\ref{sec:systematics})~\cite{Baak:2014wma}.
+CRs as well as the statistical and systematic uncertainties (described in
+Section~\ref{sec:systematics}).
+The fit is implemented using the HistFitter version~1.2.1, a framework for
+statistical data analysis~\cite{Baak:2014wma}.
 The remaining background estimates, due to  single top and other SM processes,
 are taken from the MC simulation.
-The number of observed events as well as the expected number
+
+The background-only estimate is performed using a maximum likelihood fit
+to the data in the Top and Z CRs.
+The three flavor channels ($ee$, $\mu\mu$, and $e\mu$) are summed over, and the
+total event yield in these regions are considered.
+The predicted event yield for a background process $p$ (\TTBAR\ or \ZGAMMAJETS)
+in a particular region $r$ is $\mu_{p} \cdot N_{r,p}^\mathrm{MC}$, where
+$N_{r,p}^\mathrm{MC}$ is the number of events from process $p$ in region $r$
+predicted by the MC simulation estimate, after applying all the relevant
+scale factors and efficiencies.
+$\mu_{p}$ is a strength parameter for each process which enters the likelihood
+fit, which is used to model any under/over-prediction in the MC simulation
+which is assumed to be constant across all regions.
+A strength parameter is defined for the \TTBAR\ and \ZGAMMAJETS\ background
+predictions, $\mu_{\TTBAR}$ and $\mu_\mathrm{Z}$ respectively.
+
+The background fit is performed by first summing the total background estimate
+for all backgrounds in each of the CRs.
+The strength parameters are varied until to obtain the best agreement between
+the observed event yields and the background predictions.
+The systematic uncertainties are treated as Gaussian nuisance parameters.
+The background only fit finds that the best fit values for $\mu_{\TTBAR}$ and
+$\mu_\mathrm{Z}$ are $1.11 \pm 0.14$ and $1.43 \pm 0.19$ respectively.
+
+The number of observed events as well as the post-fit expected number
 of events in each of the CRs and VRs are shown in
-Table \ref{tab:bkg_only_fit_results}.
+Table~\ref{tab:bkg_only_fit_results}.
 The agreement between the observed number of events and the fitted event
-yields in the VRs is summarized in Figure \ref{fig:pull_dist_vr}.
+yields in the VRs is summarized in Figure~\ref{fig:pull_dist_vr}.
 Using the fitted backgrounds, the dominant process in the same-flavor
 channels of the SRs is \ZGAMMAJETS\ followed by single top and
 \TTBAR. In the $e\mu$ channel, the \ZGAMMAJETS\ background does
 not contribute, thus, the largest backgrounds are single top and \TTBAR.
+
 As a result of the fit, the \ZGAMMAJETS\ background is scaled up by
 approximately 40\%. Due to this large normalization factor, the background is
 over-predicted in the $Z$ VR. This over-prediction is taken as an additional
@@ -1844,7 +1926,8 @@ are able to place experimental limits in this region \cite{ATLAS:2013oea}.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.6\textwidth]{figs/blstop/mass_limit_contours_no_extras_obs.pdf}
+  \includegraphics[width=\textwidth]
+    {figs/blstop/mass_limit_contours_no_extras_obs.pdf}
   \caption{The observed mass limit on the stop at 95\% CL.
     This limit is obtained using the nominal stop cross section.
     Stop masses between 400~\GeV\ and 1100~\GeV, in steps of 100~\GeV, are
