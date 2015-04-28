@@ -58,6 +58,14 @@ Table~\ref{tab:baseline_el_def}.
 }
 \end{table}
 
+The electron identification efficiency is different in the data and MC
+simulation.
+For this reason, a \pt\ and \eta\ dependent identification scale factor is
+applied to each electron in the MC simulation events, which corrects for the
+observed differences in the identification efficiency.
+The identification scale factors are derived 
+blah blah blah electron scale factors blah blah blah \cite{egamma2014}.
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% baseline muons
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -98,6 +106,8 @@ The baseline muon requirements are outlined in Table~\ref{tab:baseline_mu_def}.
     \end{tabular}
   }
 \end{table}
+
+blah blah blah muon scale factors blah blah blah \cite{Aad:2014rra}.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% baseline jets
@@ -500,6 +510,14 @@ on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
   \label{fig:full_trigger_efficiency}
 \end{figure}
 
+The trigger requirement is applied in both data and Monte Carlo simulation.
+To account for the difference in trigger efficiency, a trigger scale factor is
+applied to the Monte Carlo events which passed the trigger requirement.
+These trigger scale factors were provided by the \texttt{Egamma} and
+\texttt{Muon} performance groups using the \texttt{TrigMuonEfficency} package.
+
+
+
 %% -----------------------------------------------------------------------------
 \section{Signal regions}
 \label{sec:signal_regions}
@@ -601,6 +619,12 @@ Finally, $\MBL^0$ is used to define the two SRs.
 SR~400 has a requirement of $\MBL^0 \geq 400 \GeV$, and is optimal for lower
 stop masses, while SR~600 has a requirement of $\MBL^0 \geq 600 \GeV$, and is
 optimal for higher stop masses.
+Two additional SRs were considered with $\MBL^0 \geq 200 \GeV$ and
+$\MBL^0 \geq 800 \GeV$ (SR~200 and SR~800 respectively), however these were
+dropped from the analysis.
+The SR~200 region did not provide additional expected sensitivity compared with
+the SR~400 region, and the statistical uncertainty in the SR~800 region was very
+large, and reduced expected sensitivity.
 The full selection criteria for the analysis regions, including the Control and
 Validation regions, described in Section~\ref{sec:bkg}, is outlined in
 Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
@@ -610,9 +634,9 @@ Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
   \caption{Summary of signal, control, and validation regions used for this
     analysis.
     The control and validation regions are explained in Section~\ref{sec:bkg}.
-    All regions require two $b$-tagged jets and two oppositely charged
-    leptons. An event is in the $Z$ window if it contains two same-flavored
-    leptons with an invariant mass within 10~\GeV\ of the mass of the $Z$ boson.
+    All regions require two $b$-tagged jets and two oppositely charged leptons.
+    An event is in the $Z$ window if it contains two same-flavored leptons with
+    an invariant mass within 10~\GeV\ of the mass of the $Z$ boson.
   }
   \label{tab:regions}
   %
@@ -1719,6 +1743,7 @@ signal region are shown in Tables~\ref{tab:event_yields_sr_400} and
 the Standard Model prediction.  The kinematics of the two selected events
 are shown in Table~\ref{tab:sr_event_kinematics}, the $\MBL^0$ and
 \HT\ distributions in SR 400 are shown in Figure~\ref{fig:sr_dists}.
+Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
 
 \begin{table}
   \caption{The expected and observed event yields in SR~400. The expected event
@@ -1852,8 +1877,12 @@ are shown in Table~\ref{tab:sr_event_kinematics}, the $\MBL^0$ and
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=0.45\textwidth]{figs/blstop/sr_mbl_0.pdf}
-  \includegraphics[width=0.45\textwidth]{figs/blstop/sr_ht.pdf}
+  \subbottom[$\MBL^0$]{
+    \includegraphics[width=0.45\textwidth]{figs/blstop/sr_mbl_0.pdf}
+  }
+  \subbottom[\HT]{
+    \includegraphics[width=0.45\textwidth]{figs/blstop/sr_ht.pdf}
+  }
   \caption{These plots show the $\MBL^0$ (left) and \HT\ (right) distributions
     in SR 400. The Standard Model background prediction is taken from the
     fitted background prediction. The hashed bands show
@@ -1863,6 +1892,28 @@ are shown in Table~\ref{tab:sr_event_kinematics}, the $\MBL^0$ and
     background prediction.
   }
   \label{fig:sr_dists}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \subbottom[Run 214216, Event 121272046]{
+    \includegraphics[height=0.41\textheight]
+    {figs/blstop/event_display_run_214216_event_121272046.pdf}
+    \label{fig:event_display_1}
+  }
+  \subbottom[Run 210302, Event 2292645761]{
+    \includegraphics[height=0.41\textheight]
+    {figs/blstop/event_display_run_210302_event_2292645761.pdf}
+    \label{fig:event_display_2}
+  }
+  \caption{Event displays for the two observed events passing the signal region
+    criteria.
+    The event shown in Figure~\ref{fig:event_display_1} passes the SR~400
+    selection with $\MBL^{0} = 558~\GeV$.
+    Figure~\ref{fig:event_display_2} shows the event which passes both the
+    SR~400 and SR~600 selection with $\MBL^{0} = 686~\GeV$.
+  }
+  \label{fig:event_displays}
 \end{figure}
 
 As the observed number of events is consistent with the Standard Model
