@@ -64,6 +64,7 @@ For this reason, a \pt\ and \eta\ dependent identification scale factor is
 applied to each electron in the MC simulation events, which corrects for the
 observed differences in the identification efficiency.
 The identification scale factors are derived 
+{\color{red} TODO}
 blah blah blah electron scale factors blah blah blah \cite{egamma2014}.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -107,6 +108,7 @@ The baseline muon requirements are outlined in Table~\ref{tab:baseline_mu_def}.
   }
 \end{table}
 
+{\color{red} TODO}
 blah blah blah muon scale factors blah blah blah \cite{Aad:2014rra}.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -247,18 +249,27 @@ asymmetry of the two $b\ell$ pairs as described in Section
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.60\textwidth]
-    {figs/blstop/PairingEfficiencies/pairing_eff__inclusive.pdf}
-  \caption{The efficiency of correctly pairing $b$-tagged jets and leptons
-    using the pairing heuristic described in Section~\ref{sec:object_selection}
-    for the different stop masses which are considered.
-    The different lines show the fraction of events where zero, one, or two
+    {figs/blstop/PairingEfficiencies/pairing_abundance__inclusive.pdf}
+    % {figs/blstop/PairingEfficiencies/pairing_eff__inclusive.pdf}
+  \caption{The relative abundance of each category of correctly pairing
+    $b$-tagged jets and leptons using the pairing heuristic described in
+    Section~\ref{sec:object_selection} for the different stop masses which are
+    considered.
+    The regions show the relative abundance of events where two, one, and zero
     pairs are grouped correctly.
     The scenario where one pair is identified correctly corresponds to events
     where one pair is grouped correctly, but at least of of the $b$-tagged jets
     or one of the leptons is not matched to a stop parent.
-    {\color{red} TODO remake this plot with 1.1~\TeV\ mass point. Add data
-    points to plot}
   }
+  % \caption{The efficiency of correctly pairing $b$-tagged jets and leptons
+  %   using the pairing heuristic described in Section~\ref{sec:object_selection}
+  %   for the different stop masses which are considered.
+  %   The different lines show the fraction of events where zero, one, or two
+  %   pairs are grouped correctly.
+  %   The scenario where one pair is identified correctly corresponds to events
+  %   where one pair is grouped correctly, but at least of of the $b$-tagged jets
+  %   or one of the leptons is not matched to a stop parent.
+  % }
   \label{fig:pairing_eff}
 \end{figure}
 
@@ -800,7 +811,7 @@ generator \POWHEG\
 revision~2129~\cite{Nason:2004rx, Frixione:2007vw, Alioli:2010xd,
 Frixione:2007nw} with NLO PDF set CTEQ 6L1~\cite{Nadolsky:2008zw}, and 
 showered with \PYTHIA\ version 6.426,
-When using the baseline \POWHEG+\PYTHIA\ \TTBAR production sample,
+When using the baseline \POWHEG+\PYTHIA\ \TTBAR\ production sample,
 events are reweighted in bins of the transverse mass (\pt) of the
 $t\bar{t}$ system to match the top quark
 pair differential cross section observed in ATLAS
@@ -1108,12 +1119,21 @@ This disagreement seems to be caused by a poor modeling of the
 \ZGAMMAJETS\ background process when heavy flavor jets are required in the
 final state.
 For the final result, the fit procedure is used to determine the normalization
-of the \ZGAMMAJETS\ background; however, due to the large disagreement, it is
-useful to scale the \ZGAMMAJETS\ background based on this disagreement for
-exploratory plots and tables to obtain a more realistic estimate of the expected
-backgrounds in each region.
+of the \ZGAMMAJETS\ background; however, due to the large disagreement in the
+data and MC simulation, it is useful to scale the \ZGAMMAJETS\ background based
+on the difference in normalization for exploratory plots and tables to obtain a
+more realistic estimate of the expected backgrounds in each region.
+The scaling factor is calculated in the expression
+\begin{equation}
+  k_Z = \frac{N_\mathrm{data}^{\mathrm{CR}~Z} -
+                \sum_{p \neq Z}N_{p}^{\mathrm{CR}~Z} }
+             {N_{Z}^{\mathrm{CR}~Z}}
+\end{equation}
+where $N_\mathrm{data}^{\mathrm{CR}~Z}$ is the number of observed events in
+the $Z$ CR, and $N_{p}^{\mathrm{CR}~Z}$ is the number of expected events in
+$Z$ CR from process $p$ based on the MC background simulation.
 This scaling factor is determined to be $k_Z = 1.39$, and will be applied to
-many of the plots in this section.
+the \ZGAMMAJETS\ background prediction in many of the plots in this section.
 This normalization factor is not included in the final fit to data, and any plot
 or figure which is produced using this normalization factor will explicitly
 states this in the description.
