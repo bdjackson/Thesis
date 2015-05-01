@@ -8,6 +8,11 @@
 
 {\color{red} TODO add brief overview to the beginning of the chapter}
 {\color{red} TODO the weights and scale factors have not been described yet!!!}
+% lepton SF - 
+% trigger SF - done
+% MC event weight
+% b tag SF - done
+% lumi*cross section weight
 
 \begin{figure}[ht]
   \centering
@@ -58,15 +63,6 @@ Table~\ref{tab:baseline_el_def}.
 }
 \end{table}
 
-The electron identification efficiency is different in the data and MC
-simulation.
-For this reason, a \pt\ and \eta\ dependent identification scale factor is
-applied to each electron in the MC simulation events, which corrects for the
-observed differences in the identification efficiency.
-The identification scale factors are derived 
-{\color{red} TODO}
-blah blah blah electron scale factors blah blah blah \cite{egamma2014}.
-
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% baseline muons
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -107,9 +103,6 @@ The baseline muon requirements are outlined in Table~\ref{tab:baseline_mu_def}.
     \end{tabular}
   }
 \end{table}
-
-{\color{red} TODO}
-blah blah blah muon scale factors blah blah blah \cite{Aad:2014rra}.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% baseline jets
@@ -171,14 +164,65 @@ within a cone of $\Delta R \leq 0.30$ of a lepton ($\pt^\mathrm{cone30}$) is
 used to determine if the lepton is isolated.
 Both electrons and muons require
 $\nicefrac{\pT^{\mathrm{cone30}}}{\min(p_T, 60 \GeV)} \leq 0.1$ in order
-to be declared signa leptons.
+to be declared signal leptons.
 Jets must pass a tighter cut of $|\eta| \leq 2.4$, and be tagged as a $b$-jet
-using the 80\% working point of $\mathrm{MV1} \geq 0.3511$
+according to the MV1 flavor tagging
+algorithm~\cite{ATLAS-CONF-2014-004, ATLAS-CONF-2014-046}.
+The operating point of $\mathrm{MV1} \geq 0.3511$ corresponds to an overall
+80\% $b$-tagging efficiency, as measured in simulated \TTBAR\ events, to a
+rejection factor of 25 for jets originating from light quarks or gluons, and to
+a rejection factor of 3 for jets originating from charm quarks.
 
 Events are required to have at least two signal leptons and two $b$-tagged jets.
 If more are found, the event is kept, but only the two signal leptons and two
 $b$-tagged jets with the highest \pt\ are selected.
 Furthermore, the two highest \pt\ leptons are required to have opposite charge.
+
+The identification efficiencies for the various objects used in this analysis
+differ in the data and the MC simulation.
+The efficiencies are determined in both data and MC simulation, and an
+identification scale factor is applied to the MC simulation events to account
+for the differences in identification efficiency.
+
+The electron identification scale factors are provided by the Egamma combined
+performance group, and depend on both the \et\ and \eta\ of the electrons within
+a MC simulation event \cite{egamma2014}.
+The scale factor is computed for each of the signal electrons in the event (at
+most two), and the product of these scale factors is used as an event weight.
+The muon identification scale factors follow the same procedure as the
+electrons.
+The muon scale factors, provided by the Muon combined performance group, depend
+on both \pt\ and \eta, and are derived for each signal muon in the
+event \cite{Aad:2014rra}.
+The product of the muon identification scale factors is then taken as an
+additional event weight.
+
+A scale factor is applied to MC simulated events to match the probability of
+tagging a $b$-jet correctly, and misidentifying jets originating from the
+fragmentation of light-flavor quarks, gluons, and charm quarks. 
+The scale factor depends on all the baseline jets in the event, and depends
+on the \et, \eta, and truth flavor of each of the baseline jets in the
+simulated event.
+The scale factor for each individual jet is determined, and the overall
+scale factor is given by
+\begin{equation}
+  \label{eqn:b_tag_sf}
+  SF_{b\mathrm{-tagging}}^\mathrm{event} =
+  \prod_{i \in \mathrm{tagged}}
+  SF_i^\mathrm{eff}
+  \times
+  \prod_{j \in \mathrm{Not~tagged}}
+  % SF_j^\mathrm{ineff},
+  (1- SF_j^\mathrm{eff}),
+\end{equation}
+where $SF_i^\mathrm{eff}$ is the tagging efficiency scale factor of jet $i$, and
+% $SF_j^\mathrm{ineff}$
+$(1- SF_j^\mathrm{eff})$
+is the rejection efficiency for jet $j$.
+The two terms in equation~\ref{eqn:b_tag_sf}, are the products over the
+$b$-tagged and non-$b$-tagged jets in the event respectively.
+This $SF_{b\mathrm{-tagging}}^\mathrm{event}$ quantity is taken as an additional
+event weight in MC simulated events.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% pairing
@@ -202,10 +246,14 @@ and $b_1$.
 %
 \begin{center}
   \begin{tikzpicture}
-    \node[rectangle, rounded corners=1ex, fill=pairing_b_0, text=black] (b0) at (-3,0) {$b_0$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black] (b1) at (-1,0) {$b_1$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_l_0, text=black] (l0) at (+1,0) {$\ell_0$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black] (l1) at (+3,0) {$\ell_1$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_0, text=black]
+      (b0) at (-3,0) {$b_0$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black]
+      (b1) at (-1,0) {$b_1$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_0, text=black]
+      (l0) at (+1,0) {$\ell_0$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black]
+      (l1) at (+3,0) {$\ell_1$};
   \end{tikzpicture}
 \end{center}
 %
@@ -216,19 +264,35 @@ There are two possible choices of pairings for these four objects.
     \node[rectangle, text=black] (sel1) at (-5.0,+0.5) {Selection 1:};
     \node[rectangle, text=black] (sel2) at (-5.0,-0.5) {Selection 2:};
 
-    \node[rectangle, rounded corners=1ex, fill=pairing_b_0, text=black] (b1) at (-3.25,+0.5) {$b_0$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_l_0, text=black] (l0) at (-2.50,+0.5) {$\ell_0$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black] (b1) at (+1.25,+0.5) {$b_1$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black] (l1) at (+2.00,+0.5) {$\ell_1$};
-    \node[rectangle, text=black] (m00) at (-1.0,+0.5) {$\Rightarrow m_{b_0\ell_0} = m_{b\ell}^\mathrm{a}$};
-    \node[rectangle, text=black] (m11) at (+3.5,+0.5) {$\Rightarrow m_{b_1\ell_1} = m_{b\ell}^\mathrm{b}$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_0, text=black]
+      (b1) at (-3.25,+0.5) {$b_0$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_0, text=black]
+      (l0) at (-2.50,+0.5) {$\ell_0$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black]
+      (b1) at (+1.25,+0.5) {$b_1$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black]
+      (l1) at (+2.00,+0.5) {$\ell_1$};
+    \node[rectangle, text=black]
+      (m00) at (-1.0,+0.5)
+      {$\Rightarrow m_{b_0\ell_0} = m_{b\ell}^\mathrm{a}$};
+    \node[rectangle, text=black]
+      (m11) at (+3.5,+0.5)
+      {$\Rightarrow m_{b_1\ell_1} = m_{b\ell}^\mathrm{b}$};
 
-    \node[rectangle, rounded corners=1ex, fill=pairing_b_0, text=black] (b0) at (-3.25,-0.5) {$b_0$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black] (l1) at (-2.50,-0.5) {$\ell_1$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black] (b1) at (+1.25,-0.5) {$b_1$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_l_0, text=black] (l0) at (+2.00,-0.5) {$\ell_0$};
-    \node[rectangle, text=black] (m01) at (-1.0,-0.5) {$\Rightarrow m_{b_0\ell_1} = m_{b\ell}^\mathrm{a} $};
-    \node[rectangle, text=black] (m10) at (+3.5,-0.5) {$\Rightarrow m_{b_1\ell_0} = m_{b\ell}^\mathrm{b} $};
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_0, text=black]
+      (b0) at (-3.25,-0.5) {$b_0$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black]
+      (l1) at (-2.50,-0.5) {$\ell_1$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black]
+      (b1) at (+1.25,-0.5) {$b_1$};
+    \node[rectangle, rounded corners=1ex, fill=pairing_l_0, text=black]
+      (l0) at (+2.00,-0.5) {$\ell_0$};
+    \node[rectangle, text=black]
+      (m01) at (-1.0,-0.5)
+      {$\Rightarrow m_{b_0\ell_1} = m_{b\ell}^\mathrm{a} $};
+    \node[rectangle, text=black]
+      (m10) at (+3.5,-0.5)
+      {$\Rightarrow m_{b_1\ell_0} = m_{b\ell}^\mathrm{b} $};
   \end{tikzpicture}
 \end{center}
 
@@ -524,10 +588,30 @@ on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
 The trigger requirement is applied in both data and Monte Carlo simulation.
 To account for the difference in trigger efficiency, a trigger scale factor is
 applied to the Monte Carlo events which passed the trigger requirement.
-These trigger scale factors were provided by the \texttt{Egamma} and
-\texttt{Muon} performance groups using the \texttt{TrigMuonEfficency} package.
-
-
+The trigger efficiencies for data and MC simulation are provided by
+the Egamma and Muon combined performance groups.
+The trigger scale factor is the ratio of the efficiencies (data to MC
+simulation) for an event passing the trigger requirement, as described in
+Table~\ref{tab:triggers}, and is given by
+\begin{equation}
+  SF_\mathrm{trigger} =
+  \frac{1- \prod_{t \in \mathrm{triggers}}\prod_{\ell \in \{0,1\}}
+                 (1-\epsilon_{\ell, t}^\mathrm{data})}
+       {1- \prod_{t \in \mathrm{triggers}}\prod_{\ell \in \{0,1\}}
+                 (1-\epsilon_{\ell, t}^\mathrm{MC})},
+\end{equation}
+where $\epsilon_{\ell,t}^\mathrm{data}$ ($\epsilon_{\ell,t}^\mathrm{MC}$) is
+the trigger efficiency (electron or muon) for lepton $\ell$ to pass trigger $t$
+in the data (MC simulation).
+The trigger scale factor is calculated using only the two signal leptons in the
+event, and they are the only objects considered when checking the trigger
+requirement.
+The efficiency for an electron (muon) to pass one of the muon (electron)
+triggers is set to zero.
+This is justified based on the trigger efficiencies shown in
+Figure~\ref{fig:single_trigger_efficiency}.
+The trigger scale factor is treated as an additional event weight for events in
+the MC simulation.
 
 %% -----------------------------------------------------------------------------
 \section{Signal regions}
@@ -1940,41 +2024,43 @@ As the observed number of events is consistent with the Standard Model
 prediction, Upper limits at 95\% confidence level (CL) on the number of
 beyond the Standard Model (BSM) events for each signal region are derived
 using the $CL_s$ prescription and neglecting any possible contamination in the
-control regions. Normalizing these by the integrated luminosity of the data
-sample they can be interpreted as upper limits on the visible BSM
-cross section, $\sigma_\mathrm{vis}$, where $\sigma_\mathrm{vis}$ is defined
-as the product of acceptance, reconstruction efficiency and production
-cross section. The results are given in
-Tables~\ref{tab:event_yields_sr_400}~and~\ref{tab:event_yields_sr_600}.
+control regions.
+Normalizing these by the integrated luminosity of the data sample they can be
+interpreted as upper limits on the visible BSM cross section,
+$\sigma_\mathrm{vis}$, where $\sigma_\mathrm{vis}$ is defined as the product of
+acceptance, reconstruction efficiency and production cross section.
+The model independent limits are given in
+Tables~\ref{tab:event_yields_sr_400}~(SR 400)
+and~\ref{tab:event_yields_sr_600}~(SR 600).
 
 Exclusion limits on the signal model are determined using the $CL_S$
-prescription based on a simultaneous fit of the SRs and
-CRs~\cite{Baak:2014wma}. The predicted signal contamination is
-taken into account in the CRs.  For each stop mass,
-exclusion fits are performed with various assumptions on the branching
-ratios of the stop. For each point on the branching ratio plane, the
-SR which provided the best expected sensitivity, as
-measured by the lowest expected $CL_S$ value, is chosen. The expected
-and observed limits are shown in Figure \ref{fig:limit_contours}. This figure
-shows, for each simulated stop mass, the observed (expected) 95\% exclusion
-limit on the 
-branching fraction under the red (blue) line. A yellow band shows the
-$\pm 1\sigma$ uncertainty on the expected limit, determined from the
-systematic uncertainty on the signal and background prediction excluding
-the effect of the signal cross section uncertainty.  The effect of varying
-the signal cross section on the observed limit is indicated by the dashed
-red lines.  The final limit on the stop mass is shown in
-Figure~\ref{fig:mass_limit_obs}.  This plot shows the 95\% confidence
-limit~(CL)
-on the mass obtained by choosing the maximum excluded mass for each
-branching ratio on the plane using the nominal cross section value.  
-As the branching ratio of $\tilde{t} \rightarrow b\tau$ increases, the number
-of expected events with electrons or muons in the final state decreases
-for the same simulated stop mass. Therefore, the limit on the mass is
-strongest at the bottom of the plane. In the top corner of the plot, the
-SRs described in this analysis note have no sensitivity, however traditional
-lepto-quark searches for final states with $b$-tagged jets and $\tau$ leptons
-are able to place experimental limits in this region \cite{ATLAS:2013oea}.
+prescription based on a simultaneous fit of the SRs and CRs~\cite{Baak:2014wma}.
+The predicted signal contamination is taken into account in the CRs.
+For each stop mass, exclusion fits are performed with various assumptions on
+the branching ratios of the stop.
+For each point on the branching ratio plane, the SR which provided the best
+expected sensitivity, as measured by the lowest expected $CL_S$ value, is
+chosen.
+The expected and observed limits are shown in Figure \ref{fig:limit_contours}.
+This figure shows, for each simulated stop mass, the observed (expected)
+95\% exclusion limit on the branching fraction under the red (blue) line.
+A yellow band shows the $\pm 1\sigma$ uncertainty on the expected limit,
+determined from the systematic uncertainty on the signal and background
+prediction excluding the effect of the signal cross section uncertainty.
+The effect of varying the signal cross section on the observed limit is
+indicated by the dashed red lines.
+The final limit on the stop mass is shown in Figure~\ref{fig:mass_limit_obs}.
+This plot shows the 95\% confidence limit~(CL) on the mass obtained by choosing
+the maximum excluded mass for each branching ratio on the plane using the
+nominal cross section value.  
+As the branching ratio of $\tilde{t} \rightarrow b\tau$ increases, the number of
+expected events with electrons or muons in the final state decreases for the
+same simulated stop mass.
+Therefore, the limit on the mass is strongest at the bottom of the plane.
+In the top corner of the plot, the SRs described in this analysis note have no
+sensitivity, however traditional lepto-quark searches for final states with
+$b$-tagged jets and $\tau$ leptons are able to place experimental limits in this
+region \cite{ATLAS:2013oea}.
 
 \begin{figure}[ht]
   \centering
