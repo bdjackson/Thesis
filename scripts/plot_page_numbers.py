@@ -90,4 +90,5 @@ draw_annotation('Started\nB-L stop\nsection',
 
 ## -----------------------------------------------------------------------------
 # save the figure to a pdf
-plt.savefig('pages.pdf', bbox_inches='tight', format='pdf')
+# plt.savefig('pages.pdf', bbox_inches='tight', format='pdf')
+plt.savefig('pages.png', bbox_inches='tight', dpi=200)
