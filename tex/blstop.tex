@@ -3,16 +3,41 @@
 \chapter[B-L stop search][B-L stop search]{B-L stop search}
 \label{ch:bl_stop}
 
-{\color{red}A lot of this chapter is just going to be lifted from the CONF note
-  and then expanded upon. The section headings are mostly the same}
-
 {\color{red} TODO add brief overview to the beginning of the chapter}
-{\color{red} TODO the weights and scale factors have not been described yet!!!}
-% lepton SF - 
+
+% MC event weight - done
+% pile up weight - done
+% lumi*cross section weight - done
+% lepton SF - done
 % trigger SF - done
-% MC event weight
 % b tag SF - done
-% lumi*cross section weight
+% Z k factor - done
+% ttbar pt reweght - done
+
+% Cuts
+% BMINUSL_CUT_GRL                    - done
+% BMINUSL_CUT_INCOMPLETE_EVENT       - done
+% BMINUSL_CUT_LAR_ERROR              - done
+% BMINUSL_CUT_TILE_ERROR             - done
+% BMINUSL_CUT_TILE_HOT_SPOT          - done
+% BMINUSL_CUT_TILE_TRIP              - done
+% BMINUSL_CUT_BAD_JET_VETO           - done
+% BMINUSL_CUT_CALO_PROBLEM_JET       - done
+% BMINUSL_CUT_PRIMARY_VERTEX         - done
+% BMINUSL_CUT_BAD_MUON               - done
+% BMINUSL_CUT_COSMIC_MUON_VETO       - done
+% BMINUSL_CUT_HFOR                   - done
+% BMINUSL_CUT_MC_OVERLAP             - done
+% BMINUSL_CUT_GE_2_BASELINE_LEPTONS  - done
+% BMINUSL_CUT_GE_2_SIGNAL_LEPTON     - done
+% BMINUSL_CUT_OS_LEP                 - done
+% BMINUSL_CUT_TRIGGER                - done
+% BMINUSL_CUT_PHASE                  - done
+% BMINUSL_CUT_TRIGGER_MATCH          - done
+% BMINUSL_CUT_GE_2_B_JET             - done
+% BMINUSL_CUT_BL_PAIRING             - done
+% BMINUSL_CUT_ZVETO                  - done
+
 
 \begin{figure}[ht]
   \centering
@@ -23,6 +48,69 @@
   \label{fig:blstop_diagram}
 \end{figure}
 
+%% -----------------------------------------------------------------------------
+\section{Signal model simulation}
+\label{sec:signal_model_mc}
+
+This search is optimized using Monte Carlo (MC) simulation of stop pair
+production and decay.
+Stop pair production is modeled using \madgraph\ version
+1.5.12~\cite{Alwall:2011uj} to generate stop-anti-stop pairs using the
+CTEQ 6L1 parton distribution functions (PDFs)~\cite{Nadolsky:2008zw},
+and \pythia version 6.427~\cite{Sjostrand:2006za} to perform the
+RPV stop decay as well as the parton shower calculation.
+Stop pairs are generated for stop masses between 400~\GeV\ and 1100~\GeV\ in
+steps of 100~\GeV.
+Signal cross sections are calculated at next-to-leading order (NLO) in
+$\alpha_s$, including the resummation of soft gluon emission at
+next-to-leading-logarithm accuracy
+(NLO+NLL)~\cite{Beenakker:1997ut,Beenakker:2010nq,Beenakker:2011fu}.
+The nominal cross section and the uncertainty are taken from an envelope of
+cross section predictions using different PDF sets and factorization and
+renormalization scales, as described in Ref.~\cite{Kramer:2012bx}.
+The simulated stop cross section ranges from $356 \pm 51$~fb for a stop mass
+of 400~\GeV\ to $0.18 \pm 0.06$~fb for a stop mass of 1100~\GeV.
+The cross sections and associated uncertainties for stop pair production are
+summarized in Table~\ref{tab:stop_xsec}.
+
+The simulated stop branching ratios in the MC simplified models is set to 
+$Br(\tilde{t} \rightarrow be) = Br(\tilde{t} \rightarrow b\mu) = 0.5$.
+The simulated events can be appropriately weighted to give any branching fraction
+hypothesis.
+Signal contributions from $\tilde{t} \rightarrow b\tau$ decays were shown not
+to significantly contribute to the final state with two light leptons and two
+$b$-jets.
+This is due partially to the low branching ratio of leptonic tau decays (35\%
+for each tau lepton), as well as the addition of a neutrino to the final state.
+Because the decay $\tilde{t} \rightarrow b\tau$ does not significantly
+contribute to the search sensitivity, is not included in the simulated
+simplified model.
+
+\begin{table}[ht]
+  \caption{Stop cross sections and their associated
+    uncertainties.~\cite{Beenakker:1997ut,Beenakker:2010nq,Beenakker:2011fu}.
+    {\color{red} TODO convert from percent to pb.}
+  }
+  \label{tab:stop_xsec}
+  \centering{
+    \begin{tabular}{cc}
+      Stop Mass [\GeV] & Cross section [pb] \\
+      \midrule
+      % 100              & $559.8               \pm 16$\% \\
+      % 200              & $18.5                \pm 15$\% \\
+      % 300              & $2.0                 \pm 15$\% \\
+      400              & $0.4                 \pm 14$\% \\
+      500              & $8.6  \times 10^{-2} \pm 15$\% \\
+      600              & $2.5  \times 10^{-2} \pm 17$\% \\
+      700              & $8.1  \times 10^{-3} \pm 18$\% \\
+      800              & $2.9  \times 10^{-3} \pm 21$\%  \\
+      900              & $1.1  \times 10^{-3} \pm 24$\% \\
+      1000             & $4.4  \times 10^{-4} \pm 28$\% \\
+      1100             & $1.8  \times 10^{-4} \pm 32$\% \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
 %% -----------------------------------------------------------------------------
 \section{Object selection}
 \label{sec:object_selection}
@@ -402,6 +490,8 @@ An additional requirement is applied to MC simulation events to avoid double
 counting backgrounds with heavy flavor quarks in the final state, the heavy
 flavor overlap removal procedure, described in Section~\ref{sec:jet_matching},
 is applied.
+{\color{red} This reference might belong to the MC section rather than jet
+matching. TODO see what this ends up being.}
 
 Events in data are taken from both the \texttt{egamma} and \texttt{muons} data
 streams.
@@ -585,9 +675,9 @@ on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
   \label{fig:full_trigger_efficiency}
 \end{figure}
 
-The trigger requirement is applied in both data and Monte Carlo simulation.
+The trigger requirement is applied in both data and MC simulation.
 To account for the difference in trigger efficiency, a trigger scale factor is
-applied to the Monte Carlo events which passed the trigger requirement.
+applied to the MC events which passed the trigger requirement.
 The trigger efficiencies for data and MC simulation are provided by
 the Egamma and Muon combined performance groups.
 The trigger scale factor is the ratio of the efficiencies (data to MC
@@ -885,7 +975,7 @@ performing the simultaneous fit.
 \subsection{Monte Carlo simulation samples}
 \label{sec:mc_samples}
 
-Monte Carlo simulation samples are used to estimate the selection efficiency
+MC simulation samples are used to estimate the selection efficiency
 and kinematic distributions for SM processes.
 When constructing plots and tables, the \TTBAR, \ZGAMMAJETS, and single top
 production processes are kept separate, while all the other SM background
@@ -897,11 +987,10 @@ Frixione:2007nw} with NLO PDF set CTEQ 6L1~\cite{Nadolsky:2008zw}, and
 showered with \PYTHIA\ version 6.426,
 When using the baseline \POWHEG+\PYTHIA\ \TTBAR\ production sample,
 events are reweighted in bins of the transverse mass (\pt) of the
-$t\bar{t}$ system to match the top quark
-pair differential cross section observed in ATLAS
-data~\cite{Aad:2012hg,Aad:2014zka}.
-The $Wt$-channel and $s$-channel of the single top background are
-modeled using \POWHEG\ revision~1556~\cite{Alioli:2009je}
+$t\bar{t}$ system to match the top quark pair differential cross section
+observed in ATLAS data~\cite{Aad:2012hg,Aad:2014zka}.
+The $Wt$-channel and $s$-channel of the single top background are modeled using
+\POWHEG\ revision~1556~\cite{Alioli:2009je}
 with \PYTHIA\ version 6.426, while the $t$-channel is modeled using
 \acermc\ version 3.8~\cite{Kersevan:2004yg} with \PYTHIA\ version 6.426,
 both with PDF set CTEQ 6L1~\cite{Nadolsky:2008zw}.
@@ -919,6 +1008,54 @@ the production cross section, and $\epsilon_\mathrm{filter}$ is the efficiency
 of any filter which was applied to the MC sample.}
 Unless \pythia8 is specified, \pythia\ version 6 is used for samples labeled
 with \pythia.
+
+Various filters are applied to the The \ZGAMMAJETS\ samples to achieve
+reasonable coverage of final states and kinematics in the finite MC simulation
+samples.
+A dedicated set of samples are generated for each of the di-lepton flavor
+combinations from the $Z$~boson ($ee$, $\mu\mu$, and $\tau\tau$).
+Filters are also applied based on the quark content of the simulated event.
+Samples are generated with a filter requiring at least one $b$~quark in the
+event.
+These samples have the largest contribution to the final background estimate.
+Samples are also produced which require at least one $c$~quark, but veto events
+including a $b$~quark.
+The last set of samples is generated which vetoes events with either $b$~quark
+or $c$~quark content.
+The samples are further sliced by the \pt\ of the $Z$~boson.
+Dedicated samples with generator filters are produced in slices above 40~\GeV,
+and an inclusive sample is used to cover the kinematic space with
+$\pt^{Z} \leq 40~\GeV$.
+To avoid overlap between the inclusive sample and the higher $\pt^{Z}$ slices,
+An additional requirement of $\pt^{Z,\mathrm{truth}} \leq 40 \GeV$ for the
+inclusive \ZGAMMAJETS\ samples simulated used \sherpa.
+As \sherpa\ does not include the intermediate $Z$~boson in the truth record,
+the $\pt^{Z,\mathrm{truth}}$ quantity is obtained by searching through all the
+truth leptons in the event, and picking the two leptons with a parent ID
+consistent with a $Z$~boson, and calculating the \pt\ of the (truth level) 
+di-lepton pair.
+
+Similar filters to the \ZGAMMAJETS\ MC samples are applied to the Drell Yan (DY)
+samples.
+The DY samples apply the same filters on the lepton flavor combinations
+and the quark content.
+Rather than slicing based on the \pt\ of the $Z$~boson, the DY samples are
+sliced based on the mass of the off-shell $Z/\gamma^{*}$ in the event.
+Two sets of samples are produced with requirements of
+$8 \leq m_{Z/\gamma^{*}}^\mathrm{truth} \leq 15 \GeV$ and 
+$15 \leq m_{Z/\gamma^{*}}^\mathrm{truth} \leq 40 \GeV$ respectively, where
+$m_{Z/\gamma^{*}}$ is obtained by searching through the truth record for the
+decay products of the $Z/\gamma^{*}$, and computing the (truth level) invariant
+mass of the di-lepton pair.
+
+A weight is applied to the MC samples based on the number of simulated
+interaction per crossing to match the pile up distribution observed in the
+data collection.
+Additionally, several of the MC generators provide event weights, which are
+used to correct the kinematic distributions to better match those observed in
+data.
+When these MC event weights are provided by the generator, they are applied to
+each event in the MC background sample.
 
 \begin{table}[ht]
   \caption{Partial summary of background samples and their cross sections used
@@ -946,7 +1083,7 @@ with \pythia.
 \begin{table}[ht]
   \caption{Summary of the \ZGAMMAJETS\ background samples and their cross
     sections used in this analysis.
-    The \ZGAMMAJETS\ samples are sliced by the \pt\ of the $Z$ boson.
+    The \ZGAMMAJETS\ samples are sliced by the \pt\ of the $Z$~boson.
     For the inclusive sample, only events with $\pt^{Z} \le 40 \GeV$ were used.
     For each \pt\ slice, nine samples were generated, with different lepton
     flavor channels and filters applied on the jet flavor.
