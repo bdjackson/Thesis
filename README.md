@@ -1,3 +1,11 @@
+# PhD Thesis
+
+This is my PhD thesis. Thanks to Ryan Reece for the template!
+
+## Progress
+![Page count](pages.png)
+
+## Old README with dependencies and build instructions
 
 Several LaTeX packages are required - I don't have a comprehensive list, but 
 the main one that you may not have is PGF:
