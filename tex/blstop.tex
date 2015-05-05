@@ -89,24 +89,20 @@ simplified model.
 \begin{table}[ht]
   \caption{Stop cross sections and their associated
     uncertainties.~\cite{Beenakker:1997ut,Beenakker:2010nq,Beenakker:2011fu}.
-    {\color{red} TODO convert from percent to pb.}
   }
   \label{tab:stop_xsec}
   \centering{
     \begin{tabular}{cc}
       Stop Mass [\GeV] & Cross section [pb] \\
       \midrule
-      % 100              & $559.8               \pm 16$\% \\
-      % 200              & $18.5                \pm 15$\% \\
-      % 300              & $2.0                 \pm 15$\% \\
-      400              & $0.4                 \pm 14$\% \\
-      500              & $8.6  \times 10^{-2} \pm 15$\% \\
-      600              & $2.5  \times 10^{-2} \pm 17$\% \\
-      700              & $8.1  \times 10^{-3} \pm 18$\% \\
-      800              & $2.9  \times 10^{-3} \pm 21$\%  \\
-      900              & $1.1  \times 10^{-3} \pm 24$\% \\
-      1000             & $4.4  \times 10^{-4} \pm 28$\% \\
-      1100             & $1.8  \times 10^{-4} \pm 32$\% \\
+      400  & $0.36                \pm 0.05$               \\
+      500  & $8.6  \times 10^{-2} \pm 1.3 \times 10^{-2}$ \\
+      600  & $2.5  \times 10^{-2} \pm 4   \times 10^{-3}$ \\
+      700  & $8.1  \times 10^{-3} \pm 1.5 \times 10^{-3}$ \\
+      800  & $2.9  \times 10^{-3} \pm 6   \times 10^{-4}$ \\
+      900  & $1.09 \times 10^{-3} \pm 2.6 \times 10^{-4}$ \\
+      1000 & $4.4  \times 10^{-4} \pm 1.2 \times 10^{-4}$ \\
+      1100 & $1.8  \times 10^{-4} \pm 6   \times 10^{-5}$ \\
       \bottomrule
     \end{tabular}
   }
@@ -1965,14 +1961,14 @@ estimate in the SRs.
 
 When determining the expected contributions of each of the signal models,
 the effects of the JES, $b$-tagging efficiency, JER, and luminosity are
-considered as well as the uncertainty on the signal model cross section which
-ranges between 14\% and 28\%.
+considered as well as the uncertainty on the signal model cross section,
+outlined in Table~\ref{tab:stop_xsec}.
 
 %% -----------------------------------------------------------------------------
 \section{Results}
 \label{sec:results}
 
-The background yields in these signal regions are determined by a maximum
+The background yields in the signal regions are determined using a maximum
 likelihood fit~\cite{Baak:2014wma} for the \TTBAR\ and
 \ZGAMMAJETS\ normalizations, which are constrained by the observed data in the
 Top and $Z$ CRs.
@@ -1980,10 +1976,11 @@ The systematic uncertainties described previously are included as
 Gaussian-distributed nuisance parameters.
 The fitted background yields and the observed number of events in each
 signal region are shown in Tables~\ref{tab:event_yields_sr_400} and
-\ref{tab:event_yields_sr_600}. Two events are observed, in agreement with
-the Standard Model prediction.  The kinematics of the two selected events
-are shown in Table~\ref{tab:sr_event_kinematics}, the $\MBL^0$ and
-\HT\ distributions in SR 400 are shown in Figure~\ref{fig:sr_dists}.
+\ref{tab:event_yields_sr_600}.
+Two events are observed, in agreement with the Standard Model prediction.
+The kinematics of the two selected events are shown in
+Table~\ref{tab:sr_event_kinematics}, the $\MBL^0$ and \HT\ distributions in
+SR 400 are shown in Figure~\ref{fig:sr_dists}.
 Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
 
 \begin{table}
@@ -2160,8 +2157,8 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
 As the observed number of events is consistent with the Standard Model
 prediction, Upper limits at 95\% confidence level (CL) on the number of
 beyond the Standard Model (BSM) events for each signal region are derived
-using the $CL_s$ prescription and neglecting any possible contamination in the
-control regions.
+using the $CL_S$ prescription and neglecting any possible contamination in the
+control regions~\cite{Baak:2014wma}.
 Normalizing these by the integrated luminosity of the data sample they can be
 interpreted as upper limits on the visible BSM cross section,
 $\sigma_\mathrm{vis}$, where $\sigma_\mathrm{vis}$ is defined as the product of
@@ -2170,11 +2167,66 @@ The model independent limits are given in
 Tables~\ref{tab:event_yields_sr_400}~(SR 400)
 and~\ref{tab:event_yields_sr_600}~(SR 600).
 
-Exclusion limits on the signal model are determined using the $CL_S$
-prescription based on a simultaneous fit of the SRs and CRs~\cite{Baak:2014wma}.
-The predicted signal contamination is taken into account in the CRs.
+%% -----------------------------------------------------------------------------
+\subsection{Model dependent limits}
+\label{sec:model_dependent_limits}
+
+In the absence of an excess of events in the SRs beyond the SM prediction,
+limits are set on the allowable stop masses and branching ratios for this model.
+Expected and observed exclusion limits on the signal model are determined using
+the $CL_S$ prescription based on a simultaneous fit of the SRs and
+CRs~\cite{Baak:2014wma}.
+For the model dependent limits, the predicted signal contamination in the CRs
+is taken into account.
+
+An expected limit is first determined for each SR
+
+{\color{red}TODO Talk about single model test}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.75\textwidth]{figs/blstop/cls_plots/cls_vs_m_br_e_50_br_m_50_br_t_0.pdf}
+  \caption{Expected and observed $CL_S$ value as a function of stop mass for
+    the scenario with $Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$.
+    The point where the line crosses $CL_S=0.05$ is where the expected limit is
+    to be set.
+  }
+  \label{fig:exp_limit_br_5050}
+\end{figure}
+
+
 For each stop mass, exclusion fits are performed with various assumptions on
 the branching ratios of the stop.
+
+{\color{red}TODO talk about how to scale for branching fractions.}
+
+\begin{align}
+  SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bbee)     &=
+    \frac{Br(\tilde{t} \rightarrow be)^2}{0.25} \\
+  SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bb\mu\mu) &=
+    \frac{Br(\tilde{t} \rightarrow b\mu)^2}{0.25} \\
+  SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bbe\mu)   &=
+    \frac{2Br(\tilde{t} \rightarrow be)Br(\tilde{t} \rightarrow b\mu)}{0.50} 
+\end{align}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figs/blstop/branching_fractions.png}
+  \caption{Branching fraction to each di-lepton flavor channel depending on the
+    branching ratios of the stop.
+  }
+  \label{fig:flavor_scaling_bf}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figs/blstop/scale_factors.png}
+  \caption{Scaling factors which need to be applied to events depending on the
+    target stop branching ratios.
+  }
+  \label{fig:flavor_scaling_sf}
+\end{figure}
+
 For each point on the branching ratio plane, the SR which provided the best
 expected sensitivity, as measured by the lowest expected $CL_S$ value, is
 chosen.
