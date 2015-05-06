@@ -619,8 +619,6 @@ dependence.
     Due to the trigger requirement, and the overlap removal procedure, $ee$
     events do not pass the single muon triggers, and $\mu\mu$ events do not
     pass the single electron triggers.
-    {\color{red} TODO re-make these plots with overlap removal turned on and
-    the 1100 \GeV\ point added}
   }
   \label{fig:single_trigger_efficiency}
 \end{figure}
@@ -645,8 +643,6 @@ dependence.
     The \texttt{EF\_e24vhi\_medium1} trigger has the high efficiency for low
     \HT\ electrons, while the \texttt{EF\_e60\_medium1} trigger is more
     efficient for high \HT\ electrons.
-    {\color{red} TODO re-make these plots with overlap removal turned on and
-    the 1100 \GeV\ point added}
   }
   \label{fig:electron_trigger_pt_dependence}
 \end{figure}
@@ -658,15 +654,11 @@ on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.60\textwidth]
-    {figs/trigger/EF_e24vhi_medium1_OR_EF_e60_medium1_OR_EF_mu36_tight.pdf}
+    {figs/trigger/EF_e24vhi_medium1_OR_EF_e60_medium1_OR_EF_mu24i_tight_OR_EF_mu36_tight.pdf}
   \caption{Efficiency of simulated stop events passing the full trigger
     selection broken down by flavor channel.
     When the full trigger selection is considered, the trigger efficiency does
     not depend on the stop mass.
-    {\color{red} TODO remake this plot using or of all four triggers (currently
-      only shows the two electron triggers and the mu36 trigger). Also, include
-      the 1100 GeV mass point.
-    }
   }
   \label{fig:full_trigger_efficiency}
 \end{figure}
@@ -2176,10 +2168,20 @@ limits are set on the allowable stop masses and branching ratios for this model.
 Expected and observed exclusion limits on the signal model are determined using
 the $CL_S$ prescription based on a simultaneous fit of the SRs and
 CRs~\cite{Baak:2014wma}.
-For the model dependent limits, the predicted signal contamination in the CRs
-is taken into account.
+The predicted signal contamination in the CRs is taken into account for each
+signal model tested.
+An expected and observed mass limit is first determined for a single choice of
+stop branching ratio, $Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$,
+the branching ratio simulated in the MC signal models.
 
-An expected limit is first determined for each SR
+Each SR (SR 400 and SR 600) is interpreted separately, using the predicted and
+observed event yields in the CRs and the SR of interest.
+A likelihood fit is performed to obtain the model-dependent estimate of the
+background and signal strengths.
+To obtain an expected limit, the data in the SR is replaced with the pre-fit MC
+prediction in the SR.
+A $CL_S$ value is computed....
+
 
 {\color{red}TODO Talk about single model test}
 
