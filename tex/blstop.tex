@@ -49,6 +49,7 @@
 \end{figure}
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \section{Signal model simulation}
 \label{sec:signal_model_mc}
 
@@ -107,7 +108,9 @@ simplified model.
     \end{tabular}
   }
 \end{table}
+
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \section{Object selection}
 \label{sec:object_selection}
 
@@ -422,6 +425,7 @@ asymmetry of the two $b\ell$ pairs as described in Section
 \end{figure}
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \section{Event cleaning}
 \label{sec:event_cleaning}
 
@@ -502,6 +506,7 @@ found in the \texttt{muons} data stream.
 Events found in the wrong stream, are rejected.
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \section{Trigger selection}
 \label{sec:trigger_selection}
 
@@ -692,6 +697,7 @@ The trigger scale factor is treated as an additional event weight for events in
 the MC simulation.
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \section{Signal regions}
 \label{sec:signal_regions}
 
@@ -928,6 +934,7 @@ yields are normalized to 20.3 \ifb.
 \end{table}
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \section{Background estimate}
 \label{sec:bkg}
 
@@ -960,6 +967,7 @@ uncertainty, described in Section~\ref{sec:systematics}, are considered when
 performing the simultaneous fit.
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \subsection{Monte Carlo simulation samples}
 \label{sec:mc_samples}
 
@@ -1272,6 +1280,7 @@ each event in the MC background sample.
 
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \subsection{Control regions}
 \label{sec:cr}
 
@@ -1448,6 +1457,7 @@ production process, are shown in Table~\ref{tab:region_contributions_cr}.
 {\color{red} TODO add plots showing pre-fit agreement in CRs}
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \subsection{Validation regions}
 \label{sec:vr}
 
@@ -1528,6 +1538,7 @@ VRs are explored in more detail in Section~\ref{sec:bkg_fit}.
 \end{table}
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \subsection{Background fit}
 \label{sec:bkg_fit}
 
@@ -1687,6 +1698,7 @@ Figures \ref{fig:mbl_vr} and \ref{fig:ht_vr}.
 
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \section{Systematic uncertainties}
 \label{sec:systematics}
 
@@ -1957,6 +1969,7 @@ considered as well as the uncertainty on the signal model cross section,
 outlined in Table~\ref{tab:stop_xsec}.
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \section{Results}
 \label{sec:results}
 
@@ -2160,6 +2173,7 @@ Tables~\ref{tab:event_yields_sr_400}~(SR 400)
 and~\ref{tab:event_yields_sr_600}~(SR 600).
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \subsection{Model dependent limits}
 \label{sec:model_dependent_limits}
 
@@ -2225,6 +2239,7 @@ is used to select the additional weight.
 
 The di-stop branching fractions are given by 
 \begin{equation}
+  \label{eqn:branching_fractions}
   \begin{aligned}
     Br_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bbee)     &=
       Br_\mathrm{flavor}(\tilde{t} \rightarrow be )^{2} \\
@@ -2235,58 +2250,168 @@ The di-stop branching fractions are given by
       Br_\mathrm{flavor}(\tilde{t} \rightarrow b\mu ).
   \end{aligned}
 \end{equation}
+
 The di-stop branching fractions for each flavor channel are plotted for choices
 of the single-stop branching ratio in Figure~\ref{fig:flavor_scaling_bf}, where
 darker colors represent a higher branching fraction.
-As the value of $Br(\tilde{t} \to eb)$ increases (represented by moving toward
+The simulated stop samples correspond the center of the $x$-axis, and have
+di-stop branching fractions of 0.25, 0.25, and 0.50 for the $eebb$,
+$\mu\mu bb$, $e\mu bb$ channels respectively.
+As the value of $Br(\tilde{t} \to be)$ increases (represented by moving toward
 the bottom right corner of each of the plots), the fraction of events decaying
 to the $eebb$ final state increases, while the other two flavor channels
 have fewer expected events.
-Similarly, as the value of $Br(\tilde{t} \to \mu b)$ increases (represented by
+Similarly, as the value of $Br(\tilde{t} \to b\mu)$ increases (represented by
 moving toward the bottom left corner of each of the plots), the fraction of
 events decaying to the $\mu\mu bb$ final state increases.
-Finally, as the branching ratio of the stop to $\tau b$ decay increases,
-represented by moving toward the upper right corner of the plots, the number of
-expected events with two light leptons decreases.
-The nominal di-stop branching fractions of 0.25, 0.25, and 0.50 for the $eebb$,
-$\mu\mu bb$, $e\mu bb$ channels respectively.
+Finally, an increasing branching ratio of the $\tilde{t} \to b\tau$ decay
+(represented by moving toward the upper left corner of the plots), the number
+of expected events with two light leptons decreases.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=\textwidth]{figs/blstop/branching_fractions.png}
-  \caption{Branching fraction to each di-lepton flavor channel depending on the
-    branching ratios of the stop.
+  \subbottom[Stop branching fractions for each flavor channel]{
+    \includegraphics[width=\textwidth]{figs/blstop/branching_fractions.png}
+    \label{fig:flavor_scaling_bf}
   }
-  \label{fig:flavor_scaling_bf}
+  \subbottom[Scale factors for each flavor channel]{
+    \includegraphics[width=\textwidth]{figs/blstop/scale_factors.png}
+    \label{fig:flavor_scaling_sf}
+  }
+  \caption{Branching fraction and corresponding scale factor to each di-lepton
+    flavor channel depending on the branching ratios of the stop.
+    The di-stop branching fractions are given by
+    Equation~\ref{eqn:branching_fractions}.
+    The scale factor plot obtained by plotting
+    Equation~\ref{eqn:flavor_scale_factor}.
+    In all six plots, a darker color corresponds to a higher value for the
+    branching fraction or the scale factor.
+    {\color{red} Do I want to keep this scale factor plot in here? It's just a
+      rescaling of the branching fraction plot, so it may not add anything.
+    }
+  }
+  \label{fig:flavor_scaling}
 \end{figure}
 
-
-
-
+Taking the ratio of the target and nominal di-stop branching fraction, a
+scale factor is defined for each flavor channel to weight the MC simulation
+such that it can represent and stop branching ratio.
+These scale factors are given by
 \begin{equation}
+  \label{eqn:flavor_scale_factor}
   \begin{aligned}
     SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bbee)     &=
       \frac{Br(\tilde{t} \rightarrow be)^2}{0.25} \\
     SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bb\mu\mu) &=
       \frac{Br(\tilde{t} \rightarrow b\mu)^2}{0.25} \\
     SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bbe\mu)   &=
-      \frac{2Br(\tilde{t} \rightarrow be)Br(\tilde{t} \rightarrow b\mu)}{0.50} 
+      \frac{2Br(\tilde{t} \rightarrow be)Br(\tilde{t} \rightarrow b\mu)}{0.50}.
   \end{aligned}
 \end{equation}
+The appropriate flavor scale factor is applied to each simulated signal event
+depending on the reconstructed flavor channel.
+The values of the scale factors are shown in Figure~\ref{fig:flavor_scaling_sf},
+where a darker corresponds to a larger value for the scale factor.
+
+The expected and observed $CL_S$ values in SR~400 and SR~600 are shown
+over a range of stop branching ratio hypotheses in
+Figures~\ref{fig:cls_plane_sr_400_m_500} and~\ref{fig:cls_plane_sr_600_m_900}
+respectively for select stop masses.
+A complete collection of the expected and observed $CL_S$ plots are found in
+Appendix~\ref{sec:axp_interpretation_plots}.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[width=\textwidth]{figs/blstop/scale_factors.png}
-  \caption{Scaling factors which need to be applied to events depending on the
-    target stop branching ratios.
+  \subbottom[Expected $CL_S$ or SR~400]{
+    \includegraphics[width=0.48\textwidth]
+      {figs/blstop/cls_plots/cls_vs_br_m_500_sr_400_exp.pdf}
   }
-  \label{fig:flavor_scaling_sf}
+  \subbottom[Observed $CL_S$ or SR~400]{
+    \includegraphics[width=0.48\textwidth]
+      {figs/blstop/cls_plots/cls_vs_br_m_500_sr_400_obs.pdf}
+  }
+  \caption{
+    The expected and observed $CL_S$ values in SR~400 for a stop mass of
+    500~\GeV, shown across the plane of physical stop branching ratios.
+  }
+  \label{fig:cls_plane_sr_400_m_500}
 \end{figure}
 
-For each point on the branching ratio plane, the SR which provided the best
-expected sensitivity, as measured by the lowest expected $CL_S$ value, is
-chosen.
-The expected and observed limits are shown in Figure \ref{fig:limit_contours}.
+\begin{figure}[ht]
+  \centering
+  \subbottom[Expected $CL_S$ or SR~600]{
+    \includegraphics[width=0.48\textwidth]
+      {figs/blstop/cls_plots/cls_vs_br_m_900_sr_600_exp.pdf}
+  }
+  \subbottom[Observed $CL_S$ or SR~600]{
+    \includegraphics[width=0.48\textwidth]
+      {figs/blstop/cls_plots/cls_vs_br_m_900_sr_600_obs.pdf}
+  }
+  \caption{
+    The expected and observed $CL_S$ values in SR~600 for a stop mass of
+    900~\GeV, shown across the plane of physical stop branching ratios.
+  }
+  \label{fig:cls_plane_sr_600_m_900}
+\end{figure}
+
+A limit on the allowed stop masses and stop branching ratios is obtained
+similar to the example with a single branching ratio hypothesis.
+For each combination of stop mass and branching ratios, the SR which gives the
+lowest expected value of $CL_S$ is selected. The SR selection for select masses
+are shown in Figure~\ref{fig:sr_selection}.
+Based on the selected SR, the model is rejected at 95\% CL if the observed
+$CL_S$ is less than 0.05, and for each branching ratio, the highest stop mass
+which is excluded is taken to be the mass limit.
+
+\begin{figure}[ht]
+  \centering
+  \subbottom[Selected SR for 500~Gev stop mass]{
+    \includegraphics[width=0.48\textwidth]
+      {figs/blstop/region_selection/region_choice_vs_br_m_500.pdf}
+  }
+  \subbottom[Selected SR for 900~Gev stop mass]{
+    \includegraphics[width=0.48\textwidth]
+      {figs/blstop/region_selection/region_choice_vs_br_m_900.pdf}
+  }
+  \caption{
+    The selected SR for select stop branching ratios for a stop mass of
+    900~\GeV.
+    The SR is selected by choosing the SR with the smallest expected $CL_S$
+    value for a given branching ratio.
+    For several points in the branching ratio plane, SR~400 was selected because
+    the two regions have the same expected $CL_S$ value, with the numerical
+    precision of the statistical software.
+    For these points, the expected sensitivity for both SRs is such that
+    there is little difference between the expected sensitivity.
+  }
+  \label{fig:sr_selection}
+\end{figure}
+
+Figure~\ref{fig:mass_limit_exp} shows the expected 95\% CL mass limit for each
+point on the stop branching ratio plane.
+These limits are obtained by selecting the highest stop mass with an expected
+$CL_S < 0.05$ in the selected SR.
+For each point on the stop branching ratio plane, the color corresponds to the
+maximum excluded stop mass or the selected branching ratio hypothesis.
+The nominal stop cross section is used when determining these limit contours.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]
+    {figs/blstop/mass_limit_contours_no_extras_exp.pdf}
+  \caption{The expected mass limit on the stop at 95\% CL.
+    This limit is obtained using the nominal stop cross section.
+    Stop masses between 400~\GeV\ and 1100~\GeV, in steps of 100~\GeV, are
+    tested.
+    The mass limit shown corresponds to the highest-mass stop sample which is
+    excluded.
+    {\color{red} consider moving to appendix.}
+  }
+  \label{fig:mass_limit_exp}
+\end{figure}
+
+The expected and observed limits for each stop mass are shown in
+Figure~\ref{fig:limit_contours}.
 This figure shows, for each simulated stop mass, the observed (expected)
 95\% exclusion limit on the branching fraction under the red (blue) line.
 A yellow band shows the $\pm 1\sigma$ uncertainty on the expected limit,
@@ -2294,18 +2419,12 @@ determined from the systematic uncertainty on the signal and background
 prediction excluding the effect of the signal cross section uncertainty.
 The effect of varying the signal cross section on the observed limit is
 indicated by the dashed red lines.
-The final limit on the stop mass is shown in Figure~\ref{fig:mass_limit_obs}.
-This plot shows the 95\% confidence limit~(CL) on the mass obtained by choosing
-the maximum excluded mass for each branching ratio on the plane using the
-nominal cross section value.  
-As the branching ratio of $\tilde{t} \rightarrow b\tau$ increases, the number of
-expected events with electrons or muons in the final state decreases for the
-same simulated stop mass.
-Therefore, the limit on the mass is strongest at the bottom of the plane.
-In the top corner of the plot, the SRs described in this analysis note have no
-sensitivity, however traditional lepto-quark searches for final states with
-$b$-tagged jets and $\tau$ leptons are able to place experimental limits in this
-region \cite{ATLAS:2013oea}.
+Since the two observed events are in the $\mu\mu$ channel, the observed limit
+is somewhat stronger than expected in scenarios with a large stop branching
+fraction to $be$ (on the right side of the branching ratio plane), and somewhat
+weaker than expected when the branching ratio to $b\mu$ becomes significant.
+This explains why the red (observed) limit contour crosses the dashed
+blue (expected) limit contour.
 
 \begin{figure}[ht]
   \centering
@@ -2326,6 +2445,19 @@ region \cite{ATLAS:2013oea}.
   \label{fig:limit_contours}
 \end{figure}
 
+The observed limit on the stop mass is shown in Figure~\ref{fig:mass_limit_obs}.
+This plot shows the 95\% CL on the mass obtained by choosing
+the maximum excluded mass for each branching ratio on the plane using the
+nominal cross section value.  
+As the branching ratio of $\tilde{t} \rightarrow b\tau$ increases, the number of
+expected events with electrons or muons in the final state decreases for the
+same simulated stop mass.
+Therefore, the limit on the mass is strongest at the bottom of the plane.
+In the top corner of the plot, the SRs described in this analysis note have no
+sensitivity, however traditional lepto-quark searches for final states with
+$b$-tagged jets and $\tau$ leptons are able to place experimental limits in this
+region \cite{ATLAS:2013oea}.
+
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]
@@ -2333,16 +2465,15 @@ region \cite{ATLAS:2013oea}.
   \caption{The observed mass limit on the stop at 95\% CL.
     This limit is obtained using the nominal stop cross section.
     Stop masses between 400~\GeV\ and 1100~\GeV, in steps of 100~\GeV, are
-    tested. The mass limit shown corresponds to the highest-mass stop sample
-    which was excluded.
-    As the branching ratio of $\tilde{t} \rightarrow b\tau$ increases, the
-    number of expected events with electrons or muons in the final state
-    decreases. Therefore, the limit on the mass decreases.
+    tested.
+    The mass limit shown corresponds to the highest-mass stop sample which is
+    excluded.
   }
   \label{fig:mass_limit_obs}
 \end{figure}
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \section{Proposed improvements}
 \label{sec:improvements}
 
