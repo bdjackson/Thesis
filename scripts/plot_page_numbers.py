@@ -84,9 +84,13 @@ draw_annotation('Started\noutline',
                 date_string='Wed Apr 01 17:52:19 CEST 2015',
                 offset_x=-2, offset_y=+10)
 
-draw_annotation('Started\nB-L stop\nsection',
+draw_annotation('Started\nB-L stop\nchapter',
                 date_string='Tue Apr 7 13:41:54 CEST 2015',
                 offset_x=-4, offset_y=+10)
+
+draw_annotation('First draft\nB-L stop\nchapter',
+                date_string='Fri May 8 18:15:22 CEST 2015',
+                offset_x=-15, offset_y=-10)
 
 ## -----------------------------------------------------------------------------
 # save the figure to a pdf
