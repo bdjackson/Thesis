@@ -2178,12 +2178,29 @@ Each SR (SR 400 and SR 600) is interpreted separately, using the predicted and
 observed event yields in the CRs and the SR of interest.
 A likelihood fit is performed to obtain the model-dependent estimate of the
 background and signal strengths.
-To obtain an expected limit, the data in the SR is replaced with the pre-fit MC
-prediction in the SR.
-A $CL_S$ value is computed....
-
-
-{\color{red}TODO Talk about single model test}
+For the expected limit the data in the SR is replaced with the pre-fit MC
+prediction.
+An expected and observed $CL_S$ value is computed for each simulated stop mass,
+in each SR to assess the relative compatibility of the data with the
+signal~+~background hypothesis and the background only hypothesis.
+For each stop mass, the SR which gives the best expected sensitivity, as
+measured by the lower $CL_S$ value is selected, and used to interpret the model
+at that mass.
+The HistFitter package limits the precision of the $CL_S$ value to $10^{-6}$;
+if the two SRs are affected by this cutoff, SR~400 is chosen by convention.
+This simplification is not expected to affect the final result, as these points
+are far from the mass limit boundary.
+If the observed $CL_S$ value in the selected SR is less than 0.05, the signal
+model is rejected at 95\%~CL, and an observed (expected) limit on the stop mass
+is determined by taking the highest stop mass, with an observed (expected)
+$CL_S$ value less than 0.05.
+Figure~\ref{fig:exp_limit_br_5050} shows an example $CL_S$ plot (for both SRs)
+for the scenario with $Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$.
+In the high mass regime, SR~600 is selected to interpret the mode, and
+the points where the solid line is below 0.05 (indicated with a dashed red line)
+are excluded.
+No interpolation between the mass points is performed, so the mass limit for
+this choice of stop branching ratios is 900~\GeV.
 
 \begin{figure}[t]
   \centering
@@ -2196,20 +2213,43 @@ A $CL_S$ value is computed....
   \label{fig:exp_limit_br_5050}
 \end{figure}
 
+This procedure of finding a stop mass limit is repeated for branching ratios
+across the plan of allowed values.
+The MC simulation stop samples are generated with fixed branching
+ratios ($Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$),
+however, an additional event weight, dependent on the di-lepton flavor channel,
+to scale the signal process to any desired choice of stop branching ratios.
+It was shown that the disagreement between the generated and reconstructed
+flavor channels is negligible, so the reconstructed di-lepton flavor channel
+is used to select the additional weight.
 
-For each stop mass, exclusion fits are performed with various assumptions on
-the branching ratios of the stop.
-
-{\color{red}TODO talk about how to scale for branching fractions.}
-
-\begin{align}
-  SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bbee)     &=
-    \frac{Br(\tilde{t} \rightarrow be)^2}{0.25} \\
-  SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bb\mu\mu) &=
-    \frac{Br(\tilde{t} \rightarrow b\mu)^2}{0.25} \\
-  SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bbe\mu)   &=
-    \frac{2Br(\tilde{t} \rightarrow be)Br(\tilde{t} \rightarrow b\mu)}{0.50} 
-\end{align}
+The di-stop branching fractions are given by 
+\begin{equation}
+  \begin{aligned}
+    Br_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bbee)     &=
+      Br_\mathrm{flavor}(\tilde{t} \rightarrow be )^{2} \\
+    Br_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bb\mu\mu) &=
+      Br_\mathrm{flavor}(\tilde{t} \rightarrow b\mu )^{2} \\
+    Br_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bbe\mu)   &=
+      2Br_\mathrm{flavor}(\tilde{t} \rightarrow be )
+      Br_\mathrm{flavor}(\tilde{t} \rightarrow b\mu ).
+  \end{aligned}
+\end{equation}
+The di-stop branching fractions for each flavor channel are plotted for choices
+of the single-stop branching ratio in Figure~\ref{fig:flavor_scaling_bf}, where
+darker colors represent a higher branching fraction.
+As the value of $Br(\tilde{t} \to eb)$ increases (represented by moving toward
+the bottom right corner of each of the plots), the fraction of events decaying
+to the $eebb$ final state increases, while the other two flavor channels
+have fewer expected events.
+Similarly, as the value of $Br(\tilde{t} \to \mu b)$ increases (represented by
+moving toward the bottom left corner of each of the plots), the fraction of
+events decaying to the $\mu\mu bb$ final state increases.
+Finally, as the branching ratio of the stop to $\tau b$ decay increases,
+represented by moving toward the upper right corner of the plots, the number of
+expected events with two light leptons decreases.
+The nominal di-stop branching fractions of 0.25, 0.25, and 0.50 for the $eebb$,
+$\mu\mu bb$, $e\mu bb$ channels respectively.
 
 \begin{figure}[ht]
   \centering
@@ -2219,6 +2259,20 @@ the branching ratios of the stop.
   }
   \label{fig:flavor_scaling_bf}
 \end{figure}
+
+
+
+
+\begin{equation}
+  \begin{aligned}
+    SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bbee)     &=
+      \frac{Br(\tilde{t} \rightarrow be)^2}{0.25} \\
+    SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bb\mu\mu) &=
+      \frac{Br(\tilde{t} \rightarrow b\mu)^2}{0.25} \\
+    SF_\mathrm{flavor}(\tilde{t}\tilde{t}^{*} \rightarrow bbe\mu)   &=
+      \frac{2Br(\tilde{t} \rightarrow be)Br(\tilde{t} \rightarrow b\mu)}{0.50} 
+  \end{aligned}
+\end{equation}
 
 \begin{figure}[ht]
   \centering
