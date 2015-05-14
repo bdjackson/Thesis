@@ -3,50 +3,44 @@
 \chapter[B-L stop search][B-L stop search]{B-L stop search}
 \label{ch:bl_stop}
 
-{\color{red} TODO add brief overview to the beginning of the chapter}
+In this chapter, a search is presented for the direct scalar top (stop) pair
+production where the stops decay via an RPV coupling to a final state with two
+leptons and two identified $b$-jets, show in Figure~\ref{fig:blstop_diagram}.
+The motivation and phenomenology of this model is described further in
+Section~\ref{sec:theory_bl_extension}.
+20.3~\ifb of $\sqrt{s} = 8\TeV$ proton-proton collision data collected with the
+ATLAS detector at the LHC is analyzed for this search.
 
-% MC event weight - done
-% pile up weight - done
-% lumi*cross section weight - done
-% lepton SF - done
-% trigger SF - done
-% b tag SF - done
-% Z k factor - done
-% ttbar pt reweght - done
+This analysis required the generation of simulated signal Monte Carlo 
+(Section~\ref{sec:signal_model_mc}) to develop the selection criteria, and
+determine the expected sensitivity for the signatures of interest.
+The object definitions, event cleaning, and trigger selections are described in
+\cref{sec:object_selection,sec:event_cleaning,sec:trigger_selection}.
+A "cuts-based" selection criteria is used to achieve a large separation between
+signal-like processes and Standard Model (SM) background processes.
+Two signal regions, expected to have a high signal-to-background ratio are
+defined in Section~\ref{sec:signal_regions}, and used to assess the
+compatibility of the data with the prediction from the target signal model,
+compared with that of the SM prediction alone.
+The background estimate is performed using MC simulation of SM processes, with
+the normalizations taken from the observed yields in dedicated Control Regions,
+defined in Section~\ref{sec:cr}, using a maximum likelihood fit, described in
+Section~\ref{sec:bkg_fit}.
+The extrapolation of the background estimate from the Control Regions to other
+regions in kinematic space are validated in several Validation Regions.
 
-% Cuts
-% BMINUSL_CUT_GRL                    - done
-% BMINUSL_CUT_INCOMPLETE_EVENT       - done
-% BMINUSL_CUT_LAR_ERROR              - done
-% BMINUSL_CUT_TILE_ERROR             - done
-% BMINUSL_CUT_TILE_HOT_SPOT          - done
-% BMINUSL_CUT_TILE_TRIP              - done
-% BMINUSL_CUT_BAD_JET_VETO           - done
-% BMINUSL_CUT_CALO_PROBLEM_JET       - done
-% BMINUSL_CUT_PRIMARY_VERTEX         - done
-% BMINUSL_CUT_BAD_MUON               - done
-% BMINUSL_CUT_COSMIC_MUON_VETO       - done
-% BMINUSL_CUT_HFOR                   - done
-% BMINUSL_CUT_MC_OVERLAP             - done
-% BMINUSL_CUT_GE_2_BASELINE_LEPTONS  - done
-% BMINUSL_CUT_GE_2_SIGNAL_LEPTON     - done
-% BMINUSL_CUT_OS_LEP                 - done
-% BMINUSL_CUT_TRIGGER                - done
-% BMINUSL_CUT_PHASE                  - done
-% BMINUSL_CUT_TRIGGER_MATCH          - done
-% BMINUSL_CUT_GE_2_B_JET             - done
-% BMINUSL_CUT_BL_PAIRING             - done
-% BMINUSL_CUT_ZVETO                  - done
+The observed event yields in the Signal Regions are consistent with the SM
+predictions, so limits are placed on the allowed stop masses and branching
+ratios in Section~\ref{sec:results}.
 
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.60\textwidth]{figs/blstop/b_minus_l_stop_stop.pdf}
-  \caption{Simplified model of pair production of stop quarks, with decay to a
-    charged lepton and $b$-quark.
-  }
-  \label{fig:blstop_diagram}
-\end{figure}
+% \begin{figure}[ht]
+%   \centering
+%   \includegraphics[width=0.60\textwidth]{figs/blstop/b_minus_l_stop_stop.pdf}
+%   \caption{Simplified model of pair production of stop quarks, with decay to a
+%     charged lepton and $b$-quark.
+%   }
+%   \label{fig:blstop_diagram}
+% \end{figure}
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
@@ -520,7 +514,10 @@ Table~\ref{tab:triggers}, and the trigger requirements are described in
 Table~\ref{tab:trigger_defs}.
 
 \begin{table}[ht]
-  \caption{Trigger selection for each final state. If the event passes any of
+  % \caption{Trigger selection for each final state. If the event passes any of
+  %   the triggers for the given final state, the event is accepted.
+  % }
+  \caption[Trigger selection for each final state.]{Trigger selection for each final state. If the event passes any of
     the triggers for the given final state, the event is accepted.
   }
   \label{tab:triggers}
@@ -1662,7 +1659,7 @@ where the SRs are located is validated using the Top VR 3
 and $Z$ VR. These validation regions show fair
 agreement between the observed and predicted event yields as well as
 for the shape of the $\MBL^{0}$ and \HT\ distributions as shown in
-Figures \ref{fig:mbl_vr} and \ref{fig:ht_vr}.
+Figures~\ref{fig:mbl_vr} and~\ref{fig:ht_vr}.
 
 \begin{figure}
   \centering
