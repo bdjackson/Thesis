@@ -4,8 +4,9 @@
 \label{ch:bl_stop}
 
 In this chapter, a search is presented for the direct scalar top (stop) pair
-production where the stops decay via an RPV coupling to a final state with two
-leptons and two identified $b$-jets, show in Figure~\ref{fig:blstop_diagram}.
+production where the stops decay via an $R$-parity violating (RPV) coupling to
+a final state with two leptons and two identified $b$-jets, show in
+Figure~\ref{fig:blstop_diagram}.
 The motivation and phenomenology of this model is described further in
 Section~\ref{sec:theory_bl_extension}.
 20.3~\ifb of $\sqrt{s} = 8\TeV$ proton-proton collision data collected with the
@@ -52,7 +53,7 @@ production and decay.
 Stop pair production is modeled using \madgraph\ version
 1.5.12~\cite{Alwall:2011uj} to generate stop-anti-stop pairs using the
 CTEQ 6L1 parton distribution functions (PDFs)~\cite{Nadolsky:2008zw},
-and \pythia version 6.427~\cite{Sjostrand:2006za} to perform the
+and \pythia\ version 6.427~\cite{Sjostrand:2006za} to perform the
 RPV stop decay as well as the parton shower calculation.
 Stop pairs are generated for stop masses between 400~\GeV\ and 1100~\GeV\ in
 steps of 100~\GeV.
@@ -62,16 +63,18 @@ next-to-leading-logarithm accuracy
 (NLO+NLL)~\cite{Beenakker:1997ut,Beenakker:2010nq,Beenakker:2011fu}.
 The nominal cross section and the uncertainty are taken from an envelope of
 cross section predictions using different PDF sets and factorization and
-renormalization scales, as described in Ref.~\cite{Kramer:2012bx}.
+renormalization scales, as described in Reference~\cite{Kramer:2012bx}.
 The simulated stop cross section ranges from $356 \pm 51$~fb for a stop mass
 of 400~\GeV\ to $0.18 \pm 0.06$~fb for a stop mass of 1100~\GeV.
 The cross sections and associated uncertainties for stop pair production are
 summarized in Table~\ref{tab:stop_xsec}.
 
-The simulated stop branching ratios in the MC simplified models is set to 
+Each of The MC simplified models are generated with stop branching ratios of 
 $Br(\tilde{t} \rightarrow be) = Br(\tilde{t} \rightarrow b\mu) = 0.5$.
-The simulated events can be appropriately weighted to give any branching fraction
-hypothesis.
+From this nominal branching ratio, the simulated events can be appropriately
+weighted to give any branching fraction hypothesis.
+This procedure is described in detail in
+Section~\ref{sec:model_dependent_limits}
 Signal contributions from $\tilde{t} \rightarrow b\tau$ decays were shown not
 to significantly contribute to the final state with two light leptons and two
 $b$-jets.
@@ -87,17 +90,25 @@ simplified model.
   }
   \label{tab:stop_xsec}
   \centering{
-    \begin{tabular}{cc}
-      Stop Mass [\GeV] & Cross section [pb] \\
+    \begin{tabular}{ccc}
+      Stop Mass [\GeV] & Cross section [pb] & Uncertainty [pb] \\
       \midrule
-      400  & $0.36                \pm 0.05$               \\
-      500  & $8.6  \times 10^{-2} \pm 1.3 \times 10^{-2}$ \\
-      600  & $2.5  \times 10^{-2} \pm 4   \times 10^{-3}$ \\
-      700  & $8.1  \times 10^{-3} \pm 1.5 \times 10^{-3}$ \\
-      800  & $2.9  \times 10^{-3} \pm 6   \times 10^{-4}$ \\
-      900  & $1.09 \times 10^{-3} \pm 2.6 \times 10^{-4}$ \\
-      1000 & $4.4  \times 10^{-4} \pm 1.2 \times 10^{-4}$ \\
-      1100 & $1.8  \times 10^{-4} \pm 6   \times 10^{-5}$ \\
+      % 400  & $0.36                \pm 0.05$               \\
+      % 500  & $8.6  \times 10^{-2} \pm 1.3 \times 10^{-2}$ \\
+      % 600  & $2.5  \times 10^{-2} \pm 4   \times 10^{-3}$ \\
+      % 700  & $8.1  \times 10^{-3} \pm 1.5 \times 10^{-3}$ \\
+      % 800  & $2.9  \times 10^{-3} \pm 6   \times 10^{-4}$ \\
+      % 900  & $1.09 \times 10^{-3} \pm 2.6 \times 10^{-4}$ \\
+      % 1000 & $4.4  \times 10^{-4} \pm 1.2 \times 10^{-4}$ \\
+      % 1100 & $1.8  \times 10^{-4} \pm 6   \times 10^{-5}$ \\
+      400  & $0.36$                & $0.05$               \\
+      500  & $8.6  \times 10^{-2}$ & $1.3 \times 10^{-2}$ \\
+      600  & $2.5  \times 10^{-2}$ & $4   \times 10^{-3}$ \\
+      700  & $8.1  \times 10^{-3}$ & $1.5 \times 10^{-3}$ \\
+      800  & $2.9  \times 10^{-3}$ & $6   \times 10^{-4}$ \\
+      900  & $1.09 \times 10^{-3}$ & $2.6 \times 10^{-4}$ \\
+      1000 & $4.4  \times 10^{-4}$ & $1.2 \times 10^{-4}$ \\
+      1100 & $1.8  \times 10^{-4}$ & $6   \times 10^{-5}$ \\
       \bottomrule
     \end{tabular}
   }
@@ -112,10 +123,11 @@ Events are required to have at least two light leptons (electrons or muons)
 with opposite charge, and two $b$-tagged jets.
 The object selection is performed in multiple steps. First, lepton and jet
 objects are reconstructed using detector signatures as described in
-Sections~\ref{sec:elctrons},~\ref{sec:muons},~and~\ref{sec:jets}.
+\cref{sec:elctrons,sec:muons,sec:jets}.
 Baseline requirements are applied to remove poorly reconstructed objects.
-Also, all baseline objects are required to have $\ET(\pt) \geq 40 \GeV$ since the
-stop signatures of interest tend to produce high momentum decay products.
+All baseline objects are required to have $\ET(\pt) \geq 40 \GeV$ since the
+stop signatures of interest are of high mass and produce high momentum decay
+products.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% baseline electrons
@@ -157,11 +169,12 @@ Additional requirements are applied on the number of hits in the ID to ensure
 high quality tracks.
 These  hit requirements include at least one hit on track in both the B layer
 and the Pixel detector.
-The ID track must also have at least 5 hits in the SCT, at most 2 missing 
+The ID track must also have at least 5 hits in the SCT, and at most 2 missing 
 hits-on-track (holes) in both the Pixel detector and the SCT. 
 If the muon has $|\eta| \leq 1.9$, there must additionally be at least 6 TRT
 hits, of which no more than 90\% are outliers.
-Otherwise, no requirement is placed on the number of TRT hits.
+No requirement is placed on the number of TRT hits in the high~$|\eta|$ region
+of $|\eta| > 1.9$.
 The baseline muon requirements are outlined in Table~\ref{tab:baseline_mu_def}.
 
 \begin{table}[ht]
@@ -208,9 +221,8 @@ The baseline jet requirements are outlined in Table~\ref{tab:baseline_jet_def}.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% overlap removal
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-After selecting baseline leptons and jets, overlap between baseline objects are
-is removed to prevent a single detector signature from being included in
-multiple particle collections. 
+The following overlap between baseline objects is removed to prevent a single
+detector signature from being included in multiple particle collections. 
 
 \begin{enumerate}
   \item $\Delta R(e,e) \le 0.05$: If two baseline electrons fall
@@ -221,19 +233,19 @@ multiple particle collections.
     assumed that the electron is also reconstructed as a jet, and the
     jet is removed from the event.
   \item $\Delta R(\ell,\mathrm{jet}) \le 0.40$: If remaining lepton (electron
-    or muon) and a remaining jet are within a cone of
-    $\Delta R(\ell,\mathrm{jet}) \le 0.40$, the reconstructed lepton is assumed
-    to be a constituent of the jet, and is removed from the event.
+    or muon) is within a cone of $\Delta R(\ell,\mathrm{jet}) \le 0.40$ of a
+    remaining jet, the reconstructed lepton is assumed to be a constituent of
+    the jet, and is removed from the event.
   \item $\Delta R(e,\mu) \le 0.01$: If a remaining electron and a remaining muon
     are within $\Delta R(e,\mu) \le 0.01$, both are removed from the event.
   \item $\Delta R(\mu,\mu) \le 0.05$: If two remaining muons are within
     $\Delta R(\mu,\mu) \le 0.05$, both are removed from the event.
 \end{enumerate}
 
-To reject leptons coming from low mass resonances, the invariant mass of any
-remaining same-flavor lepton pairs with opposite charge is computed.
-If the invariant mass of any of these pairs is less than 12~\GeV, both leptons
-are removed from the event.
+Leptons from low mass resonances are rejected.
+The invariant mass of any remaining same-flavor lepton pairs with opposite
+charge is computed, and if the invariant mass of any of these pairs is less
+than 12~\GeV, both leptons are removed from the event.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% signal object definitions
@@ -244,9 +256,9 @@ The scalar sum of the momentum of all tracks with $\pt \geq 400 \GeV$
 within a cone of $\Delta R \leq 0.30$ of a lepton ($\pt^\mathrm{cone30}$) is
 used to determine if the lepton is isolated.
 Both electrons and muons require
-$\nicefrac{\pT^{\mathrm{cone30}}}{\min(p_T, 60 \GeV)} \leq 0.1$ in order
+$\nicefrac{\pT^{\mathrm{cone30}}}{\min(p_T, 60\,\GeV)} \leq 0.1$ in order
 to be declared signal leptons.
-Jets must pass a tighter cut of $|\eta| \leq 2.4$, and be tagged as a $b$-jet
+Signal jets must pass a tighter cut of $|\eta| \leq 2.4$, and be tagged as a $b$-jet
 according to the MV1 flavor tagging
 algorithm~\cite{ATLAS-CONF-2014-004, ATLAS-CONF-2014-046}.
 The operating point of $\mathrm{MV1} \geq 0.3511$ corresponds to an overall
@@ -254,38 +266,38 @@ The operating point of $\mathrm{MV1} \geq 0.3511$ corresponds to an overall
 rejection factor of 25 for jets originating from light quarks or gluons, and to
 a rejection factor of 3 for jets originating from charm quarks.
 
-Events are required to have at least two signal leptons and two $b$-tagged jets.
+Events must contain at least two signal leptons and two $b$-tagged jets.
 If more are found, the event is kept, but only the two signal leptons and two
-$b$-tagged jets with the highest \pt\ are selected.
-Furthermore, the two highest \pt\ leptons are required to have opposite charge.
+$b$-tagged jets with the highest \ET(\pt) are selected.
+Furthermore, the two highest \ET(\pt) leptons are required to have opposite charge.
 
 The identification efficiencies for the various objects used in this analysis
 differ in the data and the MC simulation.
-The efficiencies are determined in both data and MC simulation, and an
-identification scale factor is applied to the MC simulation events to account
-for the differences in identification efficiency.
+The efficiencies are determined in both data and MC simulation, by the relevant
+performance groups, and an identification scale factor is applied to the MC
+simulation events to account for the differences in identification efficiency.
 
-The electron identification scale factors are provided by the Egamma combined
-performance group, and depend on both the \et\ and \eta\ of the electrons within
-a MC simulation event \cite{egamma2014}.
-The scale factor is computed for each of the signal electrons in the event (at
-most two), and the product of these scale factors is used as an event weight.
-The muon identification scale factors follow the same procedure as the
-electrons.
-The muon scale factors, provided by the Muon combined performance group, depend
-on both \pt\ and \eta, and are derived for each signal muon in the
-event \cite{Aad:2014rra}.
-The product of the muon identification scale factors is then taken as an
-additional event weight.
+The lepton identification efficiency scale factors comprise the electron and
+muon identification scale factors, and are provided by the Egamma and muon
+combined performance group \cite{egamma2014,Aad:2014rra}.
+The lepton identification scale factors and are computed for each of the signal
+leptons in a MC simulated event (at most two), and depend on both the
+\pt\ and \eta\ of the signal leptons.
+The product of the leptons identification scale factors is taken as and additional event weight.
 
 A scale factor is applied to MC simulated events to match the probability of
 tagging a $b$-jet correctly, and misidentifying jets originating from the
 fragmentation of light-flavor quarks, gluons, and charm quarks. 
-The scale factor depends on all the baseline jets in the event, and depends
-on the \et, \eta, and truth flavor of each of the baseline jets in the
-simulated event.
-The scale factor for each individual jet is determined, and the overall
-scale factor is given by
+The individual jet scale factor is defined as
+\begin{equation}
+  SF_\mathrm{jet}^\mathrm{eff}
+  =
+  \frac{\epsilon_\mathrm{jet}^\mathrm{data}}{\epsilon_\mathrm{jet}^\mathrm{MC}},
+\end{equation}
+and depends on the \et, \eta, and truth flavor of the jet.
+The individual jet scale factor is calculated for each of the baseline jets in
+a MC simulated event, and the overall event level $b$-tagging scale factor is
+given by 
 \begin{equation}
   \label{eqn:b_tag_sf}
   SF_{b\mathrm{-tagging}}^\mathrm{event} =
@@ -293,13 +305,10 @@ scale factor is given by
   SF_i^\mathrm{eff}
   \times
   \prod_{j \in \mathrm{Not~tagged}}
-  % SF_j^\mathrm{ineff},
   (1- SF_j^\mathrm{eff}),
 \end{equation}
 where $SF_i^\mathrm{eff}$ is the tagging efficiency scale factor of jet $i$, and
-% $SF_j^\mathrm{ineff}$
-$(1- SF_j^\mathrm{eff})$
-is the rejection efficiency for jet $j$.
+$(1- SF_j^\mathrm{eff})$ is the rejection efficiency for jet $j$.
 The two terms in equation~\ref{eqn:b_tag_sf}, are the products over the
 $b$-tagged and non-$b$-tagged jets in the event respectively.
 This $SF_{b\mathrm{-tagging}}^\mathrm{event}$ quantity is taken as an additional
@@ -308,8 +317,8 @@ event weight in MC simulated events.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% pairing
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-To construct the mass of each of the $b\ell$ pairs, the leptons and $b$-tagged
-jets must be paired.
+A pairing of leptons and $b$-tagged jets must be defined to construct the mass
+of each of the $b\ell$ pairs in a event.
 It is possible to exploit the fact that in the target signal model, each
 $b\ell$ pair comes from a resonant decay of a stop particle, and should
 reconstruct the same invariant mass.
@@ -386,35 +395,26 @@ This ensures $\MBL^{0} \geq \MBL^{1}$ by definition.
 
 This heuristic correctly identifies at least one correct pairing of $b$-tagged
 jets and leptons in roughly 65-90\% of events in the simulated signal samples
-depending on the mass of the simulated stop. The efficiency, shown in
-Figure~\ref{fig:pairing_eff}, improves once a cut is applied on the mass
-asymmetry of the two $b\ell$ pairs as described in Section
-\ref{sec:signal_regions}.
+depending on the mass of the simulated stop. The relative abundance of
+identifying 2, 1, 0 correct pairs in simulated stop events is shown in
+Figure~\ref{fig:pairing_eff}.
+The efficiency of identifying correct pairs improves once a cut is applied on
+the mass asymmetry of the two $b\ell$ pairs as described in
+Section~\ref{sec:signal_regions}.
+The scenario where one pair is identified correctly corresponds to events where
+one pair is grouped correctly, but at least of of the $b$-tagged jets or one of
+the leptons is not matched to a stop parent.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.60\textwidth]
     {figs/blstop/PairingEfficiencies/pairing_abundance__inclusive.pdf}
-    % {figs/blstop/PairingEfficiencies/pairing_eff__inclusive.pdf}
   \caption{The relative abundance of each category of correctly pairing
-    $b$-tagged jets and leptons using the pairing heuristic described in
-    Section~\ref{sec:object_selection} for the different stop masses which are
-    considered.
+    $b$-tagged jets and leptons, using the pairing heuristic, for the different
+    stop masses which are considered.
     The regions show the relative abundance of events where two, one, and zero
     pairs are grouped correctly.
-    The scenario where one pair is identified correctly corresponds to events
-    where one pair is grouped correctly, but at least of of the $b$-tagged jets
-    or one of the leptons is not matched to a stop parent.
   }
-  % \caption{The efficiency of correctly pairing $b$-tagged jets and leptons
-  %   using the pairing heuristic described in Section~\ref{sec:object_selection}
-  %   for the different stop masses which are considered.
-  %   The different lines show the fraction of events where zero, one, or two
-  %   pairs are grouped correctly.
-  %   The scenario where one pair is identified correctly corresponds to events
-  %   where one pair is grouped correctly, but at least of of the $b$-tagged jets
-  %   or one of the leptons is not matched to a stop parent.
-  % }
   \label{fig:pairing_eff}
 \end{figure}
 
@@ -433,16 +433,20 @@ By applying the GRL requirement, the total integrated luminosity is reduced
 from 21.4~\ifb\ to 20.3~\ifb.
 The uncertainty on the luminosity is $\pm 2.8$\%.
 It is derived following the same methodology as that detailed
-in Ref.~\cite{Lumi}.
+in Reference~\cite{Lumi}.
 The GRL requirement is applied to data events only; the MC simulation samples
 are scaled to match the target luminosity.
+Each event is also required to have at least one primary vertex with at least
+5 associated tracks.
 
 % Several other detector errors can lead to an event being rejected.
-In the event of a certain detector busy condition, the TTC may be restarted in
-order to recover the detector without a full run-restart. In the lumi-block
-after a TTC restart, it is possible for stored events to be incomplete.
+In the event of a certain detector busy condition, the Timing, Trigger, and
+Control system (TTC) may be restarted in order to recover the detector without
+a full run-restart.
+In the lumi-block after a TTC restart, it is possible for stored events to be
+incomplete.
 For this reason, events stored immediately after a TTC restart are rejected.
-Furthermore, events are rejected if either the LAr or tile calorimeter is
+Events are also rejected if either the LAr or tile calorimeter is
 flagged as having an error.
 During periods G-J several events are corrupt in a single channel of the tile
 calorimeter, but not flagged as having a tile calorimeter error.
@@ -459,26 +463,23 @@ If any of these bad jets remain after the overlap removal procedure, the event
 is rejected.
 Additionally, during periods E-H, a region of the LAr
 calorimeter ($-0.1\le\eta\le1.5$ and $-0.9\le\phi\le-0.5$) malfunctioned
-resulting in a hole in the sub-detector.
-This resulted in energy not being collected from electrons and jets close to
-this hole, and indirectly changing the \met\ measurement.
+resulting in a hole in the sub-detector, resulting energy not being collected
+from electrons and jets close to this hole, and indirectly changing
+the \met\ measurement.
 A correction is applied to jets to account for the energy loss in the hole,
 however, if the correction is too large (greater than 0.05) and the \met\ is
 close to the jet ($\Delta\phi(\met, \text{jet}) \le 0.3$), it is assumed the
 \met\ is mismeasured, and the event is rejected.
 
-In addition to the impact parameter requirement on muons discussed in
+In addition to the impact parameter requirement on signal muons discussed in
 Section~\ref{sec:object_selection}, an additional requirement of
 $|d_0| \leq 0.2$~mm is applied to muons passing the overlap removal to reject
-muons from cosmic rays. Any event failing this selection requirement is
+muons from cosmic ray showers. Any event failing this selection requirement is
 rejected.
 In order to ensure muons are well measured, any event containing a muon after
 overlap removal with $\sigma_{q/p}/|q/p| > 0.2$ is rejected.
 These poorly measured muons can arise from the MS and ID reconstructing
 different momenta for the same muon.
-
-Each event is also required to have at least one primary vertex with at least
-5 associated tracks.
 
 An additional requirement is applied to MC simulation events to avoid double
 counting backgrounds with heavy flavor quarks in the final state, the heavy
@@ -489,14 +490,12 @@ matching. TODO see what this ends up being.}
 
 Events in data are taken from both the \texttt{egamma} and \texttt{muons} data
 streams.
-It is possible for the same event to exist in both streams, leading to the
-possibility of double counting events.
+It is possible for the same event to exist in both streams, in particular for
+$e\mu$ events, leading to the potential double counting of events in data.
 To prevent this double counting of data events, the data stream is chosen based
 on the flavor of the leading signal lepton in the event.
-If the highest \pt\ event is an electron, the event is required to be found in
-the \texttt{egamma} data stream.
-Similarly, if the highest \pt\ lepton is a muon, the event is required to be
-found in the \texttt{muons} data stream.
+If the highest \pt\ lepton in the event is an electron (muon), the event is
+required to be found in the \texttt{egamma} (\texttt{muons}) data stream.
 Events found in the wrong stream, are rejected.
 
 %% -----------------------------------------------------------------------------
@@ -552,12 +551,12 @@ Table~\ref{tab:trigger_defs}.
       \multirow{2}{*}{\texttt{EF\_e24vhi\_medium1}}
       & \multirow{2}{*}{$\pt^{e} \geq 24 \GeV$}
       & hadronic core isolation $\leq 1 \GeV$ \\
-      & & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.1$ \\
-      \texttt{EF\_e60\_medium1} & $\pt^{e} \geq 60 \GeV$ & -- \\
+      & & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.1$ \\ [1ex]
+      \texttt{EF\_e60\_medium1} & $\pt^{e} \geq 60 \GeV$ & -- \\ [1ex]
       \texttt{EF\_mu24i\_tight}
       & $\pt^{e} \geq 24 \GeV$
-      & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.12$ \\
-      \texttt{EF\_mu36\_tight}  & $\pt^{e} \geq 36 \GeV$ & -- \\
+      & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.12$ \\ [1ex]
+      \texttt{EF\_mu36\_tight}  & $\pt^{e} \geq 36 \GeV$ & -- \\ [1ex]
       \bottomrule
     \end{tabular}
   }
@@ -565,6 +564,9 @@ Table~\ref{tab:trigger_defs}.
 
 At least one of the reconstructed leptons is required to be within 
 $\Delta R \leq 0.15$ of the detector signature found by the trigger.
+A reconstructed lepton must be matched to a trigger object of the correct flavor.
+For example, a reconstructed electron which is very close to a muon trigger
+object is not considered matched for these purposes.
 The expected trigger efficiencies for simulated stop events are shown
 for each trigger individually in Figure~\ref{fig:single_trigger_efficiency}.
 The two muon triggers have roughly the same trigger efficiency, of about 93\% 
@@ -576,14 +578,16 @@ stop masses.
 The \texttt{EF\_e60\_medium1} trigger is not efficient for lower stop
 masses, but quickly reaches approximately efficiencies above 95\% efficiency for
 $ee$ and $e\mu$ events.
+The electron (muon) triggers are not efficient for $\mu\mu$ ($ee$) events due
+to the trigger matching requirement.
 
 The dependence on the stop mass is a result of the \ET\ dependence of the
 electron triggers.
 The decay products of lighter stops tend to have lower momentum.
-As a result, the electrons from the very light stops ($\leq 300~\GeV$) do not 
-are more likely have \ET\ less than the threshold for the
+As a result, the electrons from the very light stops ($\leq 300~\GeV$) 
+are more likely to have \ET\ less than the threshold for the
 \texttt{EF\_e60\_medium1} trigger.
-Similarly, high-\HT\ electrons will deposit more energy into the calorimeter,
+High-\HT\ electrons will deposit more energy into the calorimeter,
 and some of this energy will reach the hadronic calorimeter.
 As the electron \HT\ increases, the probability that the energy deposition into
 the hadronic calorimeter is enough to fail hadronic core isolation requirement
@@ -667,11 +671,11 @@ on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
 
 The trigger requirement is applied in both data and MC simulation.
 To account for the difference in trigger efficiency, a trigger scale factor is
-applied to the MC events which passed the trigger requirement.
+applied to the MC events passing the trigger requirement.
 The trigger efficiencies for data and MC simulation are provided by
 the Egamma and Muon combined performance groups.
-The trigger scale factor is the ratio of the efficiencies (data to MC
-simulation) for an event passing the trigger requirement, as described in
+The trigger scale factor is the ratio (data to MC simulation) of the
+efficiencies for an event passing the trigger requirement, described in
 Table~\ref{tab:triggers}, and is given by
 \begin{equation}
   SF_\mathrm{trigger} =
@@ -683,8 +687,8 @@ Table~\ref{tab:triggers}, and is given by
 where $\epsilon_{\ell,t}^\mathrm{data}$ ($\epsilon_{\ell,t}^\mathrm{MC}$) is
 the trigger efficiency (electron or muon) for lepton $\ell$ to pass trigger $t$
 in the data (MC simulation).
-The trigger scale factor is calculated using only the two signal leptons in the
-event, and they are the only objects considered when checking the trigger
+The trigger scale factor is calculated using the two signal leptons in the
+event, as these are the only objects considered when checking the trigger
 requirement.
 The efficiency for an electron (muon) to pass one of the muon (electron)
 triggers is set to zero.
@@ -701,17 +705,16 @@ the MC simulation.
 This analysis targets a wide range of stop masses, which differ greatly in the
 expected cross sections and the expected event kinematics.
 For this reason, two overlapping signal regions (SRs) are defined to search for
-an excess of signal-like events, which are inconsistent with the prediction from
+an excess of signal-like events, inconsistent with the prediction from
 the SM alone.
-The two signal regions target the low stop mass and high stop mass regions
-separately.
+The two SRs target the low and high stop mass regions separately.
 
 One of the major sources of SM background come from \ZGAMMAJETS.
 To reduce this background, events where the two leptons have the same
 flavor, and reconstruct an invariant mass consistent with the mass of the $Z$
 boson ($|m_{\ell\ell} - m_{Z}| \leq 10 \GeV$) are rejected.
 
-The scalar sum of the \pt\ of the two $b$-tagged jets and two leptons (\HT) 
+The scalar sum of the \et(pt) of the two $b$-tagged jets and two leptons (\HT) 
 effectively separates the signal processes from the major sources of
 Standard Model background.
 The stops of interest are extremely massive, so all the decay products tend to
@@ -729,9 +732,10 @@ Events from stop decays are expected to have low \MBLASYM\ as the mass
 difference in the two pairs is expected to be small, while the masses of the
 $b\ell$ pairs coming from SM processes are roughly uncorrelated, and there is
 no preference for \MBLASYM.
-The asymmetry is used rather than the simple difference in the masses so a
-single cut value can be used for all stop masses which are considered.
-Furthermore, events from SM background processes tend to have low \MBL\ for
+The asymmetry is used rather than the simple difference in the masses to remove
+the effect of the mass scale, and a single cut value can be used for all stop
+masses which are considered.
+Events from SM background processes tend to have low \MBL\ for
 both pairs.
 The $\MBL^0$ variable can also provide additional discrimination power.
 The expected \MLL, \HT, \MBLASYM\, and $\MBL^{0}$ distributions for SM
@@ -774,27 +778,21 @@ Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists}.
   %%
 \end{figure}
 
-In order to achieve a large expected signal to background ratio in the signal
-regions, MC simulation is used to optimize the selection requirements.
+MC simulation is used to optimize the selection requirements and achieve a
+large signal to background ration in the SRs.
 The optimization is performed assuming a stop branching fraction of
 $Br(\STOP\rightarrow~be)~=~Br(\STOP\rightarrow~b\mu)~=~0.5$.
 A single SR selection criteria is obtained for both the \HT\ and
-\MBLASYM\ variables which perform reasonably well for all mass above 500 \GeV.
-Events in both SRs are required to have $\HT \geq 1100~\GeV$ and
+\MBLASYM\ variables which perform reasonably well for all mass above 400~\GeV.
+Events in both SRs are required to have $\HT \geq 1100\,\GeV$ and
 $\MBLASYM \leq 0.2$.
+Events with two same flavor leptons with invariant mass within 10~\GeV\ of the
+$Z$-boson mass are vetoed to reduce the backgrounds from $Z$-boson production.
 $\MBL^0$ is used to define the two SRs.
-SR~400 has a requirement of $\MBL^0 \geq 400 \GeV$, and is optimal for lower
+SR~400 has a requirement of $\MBL^0 \geq 400~\GeV$, and is optimal for lower
 stop masses, while SR~600, with a requirement of $\MBL^0 \geq 600 \GeV$, is
 optimal for higher stop masses.
 
-Events in the SRs are required to have \HT\ above 1100~\GeV.
-Events with two same-flavor leptons with invariant mass within 10~\GeV\ of the
-$Z$-boson mass are vetoed to reduce the backgrounds from $Z$-boson production.
-The SRs require a mass asymmetry of less than or equal to 0.2.
-Finally, $\MBL^0$ is used to define the two SRs.
-SR~400 has a requirement of $\MBL^0 \geq 400 \GeV$, and is optimal for lower
-stop masses, while SR~600 has a requirement of $\MBL^0 \geq 600 \GeV$, and is
-optimal for higher stop masses.
 Two additional SRs were considered with $\MBL^0 \geq 200 \GeV$ and
 $\MBL^0 \geq 800 \GeV$ (SR~200 and SR~800 respectively), however these were
 dropped from the analysis.
@@ -902,7 +900,7 @@ yields are normalized to 20.3 \ifb.
 
 \begin{table}[ht]
   \caption{The number of expected signal events pasing each of the signal
-    region cuts.
+    region selection criteria.
     This is shown for stop masses of 500~\GeV, 800~\GeV, and 1000~\GeV.
     The estimated yields are taken from MC simulation, and are normalized
     to 20.3~\ifb, and the uncertainty given is the MC statistical uncertainty.
@@ -954,7 +952,7 @@ The CRs and VRs are described in more detail in
 Sections~\ref{sec:cr}~and~\ref{sec:vr} respectively.
 
 The \TTBAR\ and \ZGAMMAJETS\ normalization factors are determined using a
-simultaneous fit to the data in th CRs, allowing the normalization of each
+simultaneous fit to the data in the CRs, allowing the normalization of each
 background to float independent of one another to obtain the best agreement
 between the prediction and observation in the CRs.
 The background fit procedure and results are described in
@@ -991,40 +989,29 @@ The \ZGAMMAJETS\ production process is modeled using
 \SHERPA\ version~1.4.1~\cite{Gleisberg:2008ta} with NLO PDF set CT10.
 Charm and bottom quarks are treated as massive.
 
-The full list of background samples used, as well as the event generator used,
-SM production cross section, and the effective luminosity generated is given in 
-Tables~\ref{tab:background_grouping}, \ref{tab:background_grouping_z},
-and \ref{tab:background_grouping_other}.\footnote{The effective luminosity is
-given by $\nicefrac{N_\mathrm{gen}\sigma}{\epsilon_\mathrm{filter}}$, where
-$N_\mathrm{gen}$ is the number of MC events which were generated, $\sigma$ is
-the production cross section, and $\epsilon_\mathrm{filter}$ is the efficiency
-of any filter which was applied to the MC sample.}
-Unless \pythia8 is specified, \pythia\ version 6 is used for samples labeled
-with \pythia.
-
 Various filters are applied to the The \ZGAMMAJETS\ samples to achieve
 reasonable coverage of final states and kinematics in the finite MC simulation
 samples.
 A dedicated set of samples are generated for each of the di-lepton flavor
 combinations from the $Z$~boson ($ee$, $\mu\mu$, and $\tau\tau$).
 Filters are also applied based on the quark content of the simulated event.
-Samples are generated with a filter requiring at least one $b$~quark in the
+Samples are generated with a filter requiring at least one $b$-quark in the
 event.
 These samples have the largest contribution to the final background estimate.
-Samples are also produced which require at least one $c$~quark, but veto events
-including a $b$~quark.
-The last set of samples is generated which vetoes events with either $b$~quark
-or $c$~quark content.
+Samples are also produced which require at least one $c$-quark, but veto events
+including a $b$-quark.
+The last set of samples is generated which vetoes events with either $b$-quark
+or $c$-quark content.
 The samples are further sliced by the \pt\ of the $Z$~boson.
 Dedicated samples with generator filters are produced in slices above 40~\GeV,
 and an inclusive sample is used to cover the kinematic space with
 $\pt^{Z} \leq 40~\GeV$.
 To avoid overlap between the inclusive sample and the higher $\pt^{Z}$ slices,
-An additional requirement of $\pt^{Z,\mathrm{truth}} \leq 40 \GeV$ for the
-inclusive \ZGAMMAJETS\ samples simulated used \sherpa.
+an additional requirement of $\pt^{Z,\mathrm{truth}} \leq 40 \GeV$ is applied
+for the inclusive \ZGAMMAJETS\ samples simulated used \sherpa.
 As \sherpa\ does not include the intermediate $Z$~boson in the truth record,
 the $\pt^{Z,\mathrm{truth}}$ quantity is obtained by searching through all the
-truth leptons in the event, and picking the two leptons with a parent ID
+truth leptons in the event, picking the two leptons with a parent ID
 consistent with a $Z$~boson, and calculating the \pt\ of the (truth level) 
 di-lepton pair.
 
@@ -1040,6 +1027,17 @@ $15 \leq m_{Z/\gamma^{*}}^\mathrm{truth} \leq 40 \GeV$ respectively, where
 $m_{Z/\gamma^{*}}$ is obtained by searching through the truth record for the
 decay products of the $Z/\gamma^{*}$, and computing the (truth level) invariant
 mass of the di-lepton pair.
+
+The full list of background samples used, as well as the event generator used,
+SM production cross section, and the effective luminosity generated is given in 
+Tables~\ref{tab:background_grouping}, \ref{tab:background_grouping_z},
+and \ref{tab:background_grouping_other}.\footnote{The effective luminosity is
+given by $\nicefrac{N_\mathrm{gen}\sigma}{\epsilon_\mathrm{filter}}$, where
+$N_\mathrm{gen}$ is the number of MC events which were generated, $\sigma$ is
+the production cross section, and $\epsilon_\mathrm{filter}$ is the efficiency
+of any filter which was applied to the MC sample.}
+Unless \pythia8 is specified, \pythia\ version 6 is used for samples labeled
+with \pythia.
 
 A weight is applied to the MC samples based on the number of simulated
 interaction per crossing to match the pile up distribution observed in the
