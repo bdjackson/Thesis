@@ -78,7 +78,7 @@ def draw_annotation(label_text, date_string, offset_x, offset_y,
 
 draw_annotation('Begin\nThesis',
                 date_string='Fri Mar 27 17:42:32 CET 2015',
-                offset_x=+1, offset_y=+10, angle_b=30)
+                offset_x=+0, offset_y=+50, angle_b=30)
 
 draw_annotation('Started\noutline',
                 date_string='Wed Apr 01 17:52:19 CEST 2015',
