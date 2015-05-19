@@ -90,7 +90,11 @@ draw_annotation('Started\nB-L stop\nchapter',
 
 draw_annotation('First draft\nB-L stop\nchapter',
                 date_string='Fri May 8 18:15:22 CEST 2015',
-                offset_x=-15, offset_y=-10)
+                offset_x=-16, offset_y=-20)
+
+draw_annotation('Started\nTheory\nchapter',
+                date_string='Tue May 19 15:32:24 CEST 2015',
+                offset_x=-25, offset_y=-10)
 
 ## -----------------------------------------------------------------------------
 # save the figure to a pdf
