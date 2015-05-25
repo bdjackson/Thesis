@@ -98,32 +98,64 @@ lightest stop significantly lighter than the other squarks due to
 renormalization group effects~\cite{Barbieri:1987fn,deCarlos:1993yy}.
 The stop decays via an RPV interaction to a charged lepton (of any
 flavor) and a $b$-quark.
-The decay branching fractions to $e b$, $\mu b$, and $\tau b$ may be different
+The decay branching fractions to $e b$, $\mu b$, and $\tau b$ may be different,
 in a manner related to the neutrino mass
-hierarchy as shown in
-Figure~\ref{fig:pheno_bounds}.
+hierarchy seen in Figure~\ref{fig:pheno_bounds}.
 Each point in this plot represents a simulation with a particular choice of
-model parameters, all varied within a natural range of values.
-The four colors represent different choices for the neutrino mass hierarchy and 
-$\sin^2(\theta_{23})$.
+model parameters, all varied within a natural range of values, shown in
+Table~\ref{tab:pheno_ranges}, and the four colors represent different choices
+for the neutrino mass hierarchy and 
+$\sin^2\theta_{23}$~\cite{Marshall:2014cwa,Marshall:2014kea}.
 There is a clear relation between the neutrino mass hierarchy and the allowed
-stop branching ratios.\cite{Marshall:2014kea, Marshall:2014cwa}
+stop branching ratios, therefore if a stop consistent with this model is
+discovered, its properties could potentially give information about the
+structure of the neutrino sector.
 
-\begin{figure}[ht]
+\begin{figure}[p]
   \centering{
-    \includegraphics[width=0.75\textwidth]{figs/theory/WithGaussian.pdf}
+    \includegraphics[width=\textwidth]{figs/theory/WithGaussian.pdf}
     \caption{This plot shows the allowed branching ratios for the stop LSP
       for various choices of the neutrino mass hierarchy and
-      $\sin^2(\theta_{23})$,
+      $\sin^2\theta_{23}$,
       obtained by varying various model parameters within a range of natural
-      values.\cite{Marshall:2014cwa}
+      values shown in Table~\ref{tab:pheno_ranges}~\cite{Marshall:2014cwa}.
     }
     \label{fig:pheno_bounds}
   }
 \end{figure}
 
+\begin{table}[ht]
+  \caption{Ranges for the parameter scan used to generate the simulated models
+    in \cref{fig:stop_vs_mixing_angle,fig:pheno_bounds}.
+    The neutrino sector constrains all buy one one of the R-parity violating
+    parameters, which is chosen to be $\epsilon_i$ where the generational
+    index, $i$, is also scanned to avoid any biases~\cite{Marshall:2014cwa}.
+  }
+  \label{tab:pheno_ranges}
+  \centering{
+    \begin{tabular}{cc}
+      \toprule
+      Parameter & Range \\
+      \midrule
+      $M_3~[\TeV]$               & $1.5 - 10$    \\[1ex]
+      $M_{Z_\mathrm{R}}~[\TeV]$  & $2.5 - 10$    \\[1ex]
+      $\tan\beta$                & $2 - 55$      \\[1ex]
+      $\mu~[\GeV]$               & $150 - 1000$  \\[1ex]
+      $m_{\stop_1}~[\GeV]$       & $400 - 1000$  \\[1ex]
+      $\theta_t~[^\circ]$        & $0 - 90$      \\[1ex]
+      $|\epsilon_i|~[\GeV]$      & $10^{-4} - 1$ \\[1ex]
+      $\arg(\epsilon_i)$         & $0 - 360$     \\[1ex]
+      $i$                        & $1 - 3$       \\[1ex]
+      $\xi_0, \xi_3$             & $-1, 1$       \\[1ex]
+      $\delta,\alpha~[^{\circ}]$ & $0 - 360$     \\[1ex]
+      Neutrino Hierarchy         & NH, IH        \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
+
 Within this model, a stop LSP can decay in one of two ways, depending on
-the helicity of the stop.
+the handedness of the stop.
 A right-handed stop decays to a top quark and a right-handed neutrino with a
 coupling strength proportional to vacuum expectation value (VEV) of the
 left-handed neutrino mass.
@@ -132,62 +164,87 @@ $W$ and $Z$ bosons, and a large VEV would result in these bosons gaining
 additional mass.
 {\color{red} (TODO check this statement is true - I think I'm missing
 something).}
-A left handed stop decays to a $b$-quark and a lepton with the coupling
-strength proportional to the VEV of the right-handed sneutrino.
-Since the right-handed sneutrino does not couple to the electroweak bosons,
+A purely left-handed stop decays to a $b$-quark and a lepton with the coupling
+strength proportional to the VEV of the right-handed sneutrino, which may be
+large, as the right-handed sneutrino does not couple to the electroweak bosons,
 a large VEV does not break electroweak symmetry.
 {\color{red} (TODO check this statement is true - I think I'm missing
 something)}.
-If the stop LSP is an admixture of left- and right-handed stops, the preferred
-decay mode depends on the stop mixing angle ($\theta_t$), as seen in
-Figure~\ref{fig:stop_br_vs_mixing_angle}, which shows the ratio
+In the scenario where the stop LSP is an admixture of left- and right-handed
+stops, the preferred decay mode depends on the stop mixing angle ($\theta_t$).
+This dependence is plotted in Figure~\ref{fig:stop_br_vs_mixing_angle}, which
+shows the ratio
 $\nicefrac{\mathrm{Br}(\stop \to t\nu)}{\mathrm{Br}(\stop \to b\ell)}$
 versus $\theta_t$.
-Each point represents a simulation with a particular choice of model parameters.
-The $\stop \to b\ell$ decay is the dominant decay mode for mixing
-angles less than abut $80^{\circ}$, where the LSP stop is mostly right handed,
-and the $\stop \to t\nu$ decay becomes significance.
+Each point represents a simulation with a particular choice of model parameters,
+again scanning over the natural values in Table~\ref{tab:pheno_ranges}.
+The $\stop \to b\ell$ decay is the dominant decay mode for mixing angles less
+than abut $80^{\circ}$, where the LSP stop is mostly right handed, and the
+$\stop \to t\nu$ decay becomes significance.
 The $\stop \to b\ell$ decay is still non-negligible for a mostly right-handed
 stop in many of the simulated models,
-however.\cite{Marshall:2014kea, Marshall:2014cwa}
-
-Since the $\stop \to b\ell$ decay is preferred for most of parameter space,
-the analysis described in this thesis will focus on this decay mode.
-Additionally, if the $\stop \to t\nu$ decay is significant, the decay of stop
-pairs would lead to final states with $t\bar{t}$ associated with large missing
-energy.
-This is the same final state as stop pair production with $R$-Parity conserving
-decays, and the limits from traditional stop searches can be reinterpreted for
-this model.
+however~\cite{Marshall:2014cwa,Marshall:2014kea}.
 
 \begin{figure}[ht]
   \centering{
     \subbottom[Stop branching ratio]{
-      \includegraphics[width=0.45\textwidth]{figs/theory/StopBranchingRatiosVsMixingAngle.pdf}
+      \includegraphics[width=0.70\textwidth]{figs/theory/StopBranchingRatiosVsMixingAngle.pdf}
       \label{fig:stop_br_vs_mixing_angle}
     }
     \subbottom[Stop decay length]{
-      \includegraphics[width=0.45\textwidth]{figs/theory/DecayLength.pdf}
+      \includegraphics[width=0.70\textwidth]{figs/theory/DecayLength.pdf}
       \label{fig:stop_decay_length_vs_mixing_angle}
     }
     \caption{These plots show the stop decay length and branching ratio versus
-      the stop mixing angle, assuming the stop is the
-      LSP.
+      the stop mixing angle, assuming the stop is the LSP.
       Each point in these plots represent a simulation with a particular
       choice of model parameters, which are varies within a range of natural
-      values.\cite{Marshall:2014cwa}
+      values~\cite{Marshall:2014cwa}.
     }
     \label{fig:stop_vs_mixing_angle}
   }
 \end{figure}
 
-\begin{figure}[ht]
+The analysis described in this thesis focuses on the $\stop \to b\ell$ decay
+as it is preferred for most of parameter space.
+Additionally, if the $\stop \to t\nu$ decay is significant, the decay of stop
+pairs would lead to final states with $t\bar{t}$ associated with large missing
+energy, which is the same final state as stop pair production with
+$R$-Parity conserving decays, and the limits from traditional stop searches can
+be reinterpreted for this model.
+
+%% -----------------------------------------------------------------------------
+\FloatBarrier
+\subsubsection{Expected kinematics}
+
+{\color{red} TODO talk about expected event kinematics at truth level}
+
+%% -----------------------------------------------------------------------------
+\FloatBarrier
+\subsubsection{Previous results}
+
+The results from existing leptoquark searches performed at ATLAS were
+re-interpreted in the context of this $B-L$ SUSY model with a stop LSP, and the
+limits obtained on the minimum allowable stop mass across the plane of
+physical stop branching ratios are shown in
+Figure~\ref{fig:pheno_limit}~\cite{Marshall:2014cwa,Marshall:2014kea}.
+The leptoquark searches, used to obtain these mass limits, searched for
+models where the decay products are in the same generation.
+As a result, $b$-tagging is only required in events associated with a $\tau$
+lepton.
+A dedicated search requiring $b$-tagged jets associated with light leptons
+(electrons and muons) can provide additional sensitivity to this model, as
+well as other models which result in final states with $b$-quarks and light
+leptons in the final state.
+
+\begin{figure}[p]
   \centering{
-    \includegraphics[width=0.75\textwidth]{figs/theory/BoundContourPlotNoCombination.pdf}
-    \caption{Limits on the stop mass obtained by reinterpreting lepto-quark
-      searches performed at ATLAS.\cite{Marshall:2014cwa}
+    \includegraphics[width=\textwidth]
+    {figs/theory/BoundContourPlotNoCombination.pdf}
+    \caption{Limits on the stop mass obtained by reinterpreting leptoquark
+      searches performed at ATLAS.
       The mass limits assume the stop is the LSP, and decays to a $b$-quark
-      and a lepton.
+      and a lepton~\cite{Marshall:2014cwa}.
     }
     \label{fig:pheno_limit}
   }
