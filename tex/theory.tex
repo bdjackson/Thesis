@@ -54,6 +54,7 @@ the LSP with the detector.
 
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\FloatBarrier
 \subsection{Motivation}
 
 {\color{red} Why this model? :-) Talk about things like:
@@ -77,17 +78,8 @@ The LSP can now decay via $R$-parity-violating (RPV) processes, and may now
 carry color and electric charge.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\FloatBarrier
 \subsection{Phenomenology}
-
-{\color{red} Why this model? :-)
-\begin{itemize}
-\item $U(1)_{B-L}$ gauge boson
-\item Natural choices for LSP? Why stop
-\item relation between stop branching ratios and the neutrino hierarchy)!
-\item Why look for $\stop \to b\ell$ instead of
-  $\stop \to t\nu$? (handedness argument)
-\end{itemize}
-}
 
 This leads to unique signatures~\cite{FileviezPerez:2012mj, Perez:2013kla,
 Ovrut:2012wg, Ovrut:2014rba, Ovrut:2015uea} that are disallowed in conventional
@@ -129,7 +121,9 @@ structure of the neutrino sector.
     in \cref{fig:stop_vs_mixing_angle,fig:pheno_bounds}.
     The neutrino sector constrains all buy one one of the R-parity violating
     parameters, which is chosen to be $\epsilon_i$ where the generational
-    index, $i$, is also scanned to avoid any biases~\cite{Marshall:2014cwa}.
+    index, $i$, is also scanned to avoid any biases.
+    ``NH'' and ``IH'' represent the normal and inverted neutrino mass hierarchy
+    respectively~\cite{Marshall:2014cwa}.
   }
   \label{tab:pheno_ranges}
   \centering{
@@ -213,15 +207,51 @@ energy, which is the same final state as stop pair production with
 $R$-Parity conserving decays, and the limits from traditional stop searches can
 be reinterpreted for this model.
 
+It is also reasonable to assume the stop decays in this model are prompt, and
+decay with a negligible impact parameter, as shown in
+Figure~\ref{fig:stop_decay_length_vs_mixing_angle}, where for most natural
+models, the stop is expected to have a decay length of less than
+$10^{-3}~\mathrm{mm}$;
+in particular, this is true for models where the stop is not mostly
+right-handed ($\theta_t \leq 80$)~\cite{Marshall:2014cwa,Marshall:2014kea}.
+Therefore, long-lived particles are not considered in this analysis.
+
+In this $B-L$ extension to the MSSM, stop pair production has the same
+production cross section as in the traditional MSSM.
+The expected production cross section are shown in Figure~\ref{fig:stop_xsec}.
+
+\begin{figure}[ht]
+  \centering{
+    \includegraphics[width=0.6\textwidth]{figs/theory/xsec.pdf}
+  }
+  \caption{Stop cross sections and their associated
+    uncertainties~\cite{Beenakker:1997ut,Beenakker:2010nq,Beenakker:2011fu}.
+  }
+  \label{fig:stop_xsec}
+\end{figure}
+
+% %% -----------------------------------------------------------------------------
+% \FloatBarrier
+% \subsection{Expected kinematics}
+% 
+% {\color{red} TODO talk about expected event kinematics at truth level}
+% 
+% The expected event kinematics are studied using Monte Carlo (MC) simulation.
+% Simulated stop pair production events are generated using \madgraph\ version
+% 1.5.12~\cite{Alwall:2011uj} and \pythia\ version 6.427~\cite{Sjostrand:2006za},
+% and the expected event kinematics are studied at the truth level, ignoring
+% detector effects and potential inefficiencies.
+% The simulated signal event generation procedure is described in more detail in
+% Section~\ref{sec:mc_samples}.
+% For illustration purposes, three choices of stop mass (100~\GeV, 500~\GeV,
+% and 1000~\GeV), are compared in this section to give a picture of how the event
+% kinematics are expected to evolve with increasing stop mass.
+% 
+% Figure~\ref{fig:truth_stop_pt} shows the expected 
+
 %% -----------------------------------------------------------------------------
 \FloatBarrier
-\subsubsection{Expected kinematics}
-
-{\color{red} TODO talk about expected event kinematics at truth level}
-
-%% -----------------------------------------------------------------------------
-\FloatBarrier
-\subsubsection{Previous results}
+\subsection{Previous results}
 
 The results from existing leptoquark searches performed at ATLAS were
 re-interpreted in the context of this $B-L$ SUSY model with a stop LSP, and the
@@ -231,11 +261,20 @@ Figure~\ref{fig:pheno_limit}~\cite{Marshall:2014cwa,Marshall:2014kea}.
 The leptoquark searches, used to obtain these mass limits, searched for
 models where the decay products are in the same generation.
 As a result, $b$-tagging is only required in events associated with a $\tau$
-lepton.
+lepton, and events with a light lepton simply require a jet, regardless of the
+flavor.
+Additionally, previous leptoquark searches only consider decays to a single
+lepton flavor, resulting in final states with either two leptons of the same
+flavor and two jets, or a single charged lepton and at least one jet.
+The previous analyses did not consider final states with two charged leptons
+with different flavors ($e\mu$) and at least two 
+jets~\cite{ATLAS:2013oea, ATLAS:2012aq, Aad:2011ch, CMS:2014qpa,
+  Chatrchyan:2012sv, Chatrchyan:2012vza, Chatrchyan:2012st}.
 A dedicated search requiring $b$-tagged jets associated with light leptons
-(electrons and muons) can provide additional sensitivity to this model, as
-well as other models which result in final states with $b$-quarks and light
-leptons in the final state.
+(electrons and muons), and considering different flavored leptons in the final
+state can provide additional sensitivity to this model, as well as other models
+which result in final states with $b$-quarks and light leptons in the final
+state.
 
 \begin{figure}[p]
   \centering{
