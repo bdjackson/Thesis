@@ -17,10 +17,193 @@ Could have different
 decay rates to e, mu, tau.
 }
 
-%% ------------------------------------------------------------------------------
-\section{Standard Model}
+In this chapter, a brief overview of the theoretical background for this thesis
+is presented.
+The topics discussed include the Standard Model (SM) of particle physics,
+Supersymmetry, and the particular $B-L$ extension to the SM, which is the
+focus of the search presented in this dissertation.
+Additionally, the phenomenology of this $B-L$ extension is described.
+In particular, the scenario where the scalar top is the LSP.
+{\color{red}TODO add references to the following sections.}
 
 %% ------------------------------------------------------------------------------
+\FloatBarrier
+\section{Standard Model}
+
+The Standard Model (SM) of particle physics is described in
+brief.
+The SM is a quantum field theory which encapsulates the current understanding
+of the elementary particles, and their interactions, and has been developed,
+and rigorously tested over the last fifty years.
+The interactions described by the Quantum Chromdynamics (QCD) and
+electroweak sectors, are included in the SM Lagrangian, which is a non-abelian
+gauge theory, with the symmetry group
+$\mathrm{SU}(3)_\mathrm{c} \times \mathrm{SU}(2)_\mathrm{L} \times U(1)_\mathrm{Y}$.
+% The SM Lagrangian describes matter and force carrier particles as quantum fields.
+A more complete description of the SM can be found in
+References~\cite{Agashe:2014kda,opac-b1131978,halzen1984quarks}.
+
+The symmetry groups in the SM Lagrangian prescribe the particle content of the
+force carriers.
+Each of the force carrier fields have spin 1 (bosons), and are predicted to be
+massless.
+The QCD sector, with symmetry group $\mathrm{SU}(3)_\mathrm{c}$, contains eight
+gluon fields, which mediate the interactions between particles with one of
+three color charges {\color{red} TODO find references for QCD}.
+The electroweak sector has the symmetry group,
+$\mathrm{SU}(2)_\mathrm{L} \times U(1)_\mathrm{Y}$, and the interactions are
+mediated by three $W^i$ boson fields, and a $B$ boson field.
+The physical eigenstates of these fields are a mixture, leading to the
+$W^{\pm}$ and $Z$ bosons, which mediate weak nuclear interactions, and the
+photon ($\gamma$), which propagates electric fields
+{\color{red} TODO find references for QCD}.
+
+The matter particles are described in the SM Lagrangian as quantum fields, with
+spin equal to \nicefrac{1}{2} (fermions).
+The full list of fermions, and the corresponding quantum numbers shown
+in Table~\ref{tab:sm_matter_content}.
+The matter content is broken up into three generations of particles, each with
+similar structure, differing by their mass.
+Each generation includes quarks, which have both electric and color, change,
+and therefore, interact with both the strong and electroweak forces.
+Leptons, including charged leptons and neutrinos, are also included in each
+generation, and have no color charge.
+Charged leptons, such as electrons have electric charge, while neutrinos do not.
+
+The weak force, mediated by the $W^{\pm}$ and $Z$ bosons, only interacts with
+matter fields with left-handed chirality, with non-zero isospin.
+In each generation, these left-handed fields make a quark doublet, comprising
+an up and down type quark, and a lepton doublet, containing a neutrino and a
+charged lepton.
+These doublets behave the same way under weak interactions, with the up-type
+quarks and neutrinos having the third component of weak isospin ($T_3$) equal 
+to $+\nicefrac{1}{2}$, and the down-type quarks and charged leptons having
+$T_3 = -\nicefrac{1}{2}$.
+The quarks and charged leptons each have a corresponding right-handed particle.
+These right-handed fermions are not part of a 
+
+while the neutrinos
+have no electric charge, and interact only weakly.
+Since the leptons have no color charge, they do not interact via the strong
+force at all.
+The 
+
+While the photon is a massless particle, the $W^{\pm}$ and $Z$ bosons are short
+ranged, implying they are massive.
+
+
+\begin{table}
+  \caption{Summary of the matter particles described by the SM, along with the
+    associated quantum numbers.
+    The quantum numbers include the spin, electric charge $Q$, the third
+    component of weak isospin $T_3$, hypercharge $Y$, and the allowable color
+    charges.
+  }
+  \label{tab:sm_matter_content}
+  \begin{center}
+    \begin{tabular}{ccccccccc}
+      \toprule
+      \multirow{2}{*}{Fermions} &
+      \multicolumn{3}{c}{Generation} &
+      \multirow{2}{*}{Spin} &
+      \multirow{2}{*}{$Q$} &
+      \multirow{2}{*}{$T_3$} &
+      \multirow{2}{*}{$Y$} &
+      \multirow{2}{*}{Color}
+      \\[1ex]
+      & 1 & 2 & 3
+      \\
+      \midrule
+      \addlinespace[1ex]
+      %%
+      \multirow{5}{*}{Quarks} &
+      \multirow{2}{*}{$\left(
+          \begin{tabular}{c} u \\ d \end{tabular} \right)_{L}$ } &
+      \multirow{2}{*}{$\left(
+          \begin{tabular}{c} c \\ s \end{tabular} \right)_{L}$ } &
+      \multirow{2}{*}{$\left(
+          \begin{tabular}{c} t \\ b \end{tabular} \right)_{L}$ } &
+      \multirow{2}{*}{$\frac{1}{2}$} &
+      $+\frac{2}{3}$ &
+      $+\frac{1}{2}$ &
+      \multirow{2}{*}{$\frac{1}{6}$} &
+      \multirow{2}{*}{r, g, b}
+      \\[1ex]
+      %%
+      & & & & &
+      $-\frac{1}{3}$ &
+      $-\frac{1}{2}$ &
+      &
+      \\
+      %%
+      \cmidrule{2-9}
+      %%
+      &
+      $u_R$ &
+      $c_R$ &
+      $t_R$ &
+      $\frac{1}{2}$ &
+      $+\frac{1}{2}$ &
+      0 &
+      $+\frac{2}{3}$ &
+      r, g, b
+      \\[1ex]
+      %%
+      &
+      $d_R$ &
+      $s_R$ &
+      $b_R$ &
+      $\frac{1}{2}$ &
+      $-\frac{1}{2}$ &
+      0 &
+      $-\frac{1}{3}$ &
+      r, g, b
+      \\
+      %%
+      \midrule
+      %%
+      \multirow{3}{*}{Leptons} &
+      \multirow{2}{*}{$\left(
+          \begin{tabular}{c} $\nu_{e}$ \\ e \end{tabular}
+        \right)_{L}$ } &
+      \multirow{2}{*}{$\left(
+          \begin{tabular}{c} $\nu_{\mu}$ \\ $\mu$ \end{tabular}
+        \right)_{L}$ } &
+      \multirow{2}{*}{$\left(
+          \begin{tabular}{c} $\nu_{\tau}$ \\ $\tau$ \end{tabular}
+        \right)_{L}$ } &
+      \multirow{2}{*}{$\frac{1}{2}$} &
+      0 &
+      $+\frac{1}{2}$ &
+      \multirow{2}{*}{-$\frac{1}{2}$} &
+      \multirow{2}{*}{-}
+      \\[1ex]
+      %%
+      & & & & &
+      $-1$ &
+      $-\frac{1}{2}$ &
+      &
+      \\
+      \cmidrule{2-9}
+      %%
+      &
+      $e_{R}$ &
+      $\mu_{R}$ &
+      $\tau_{R}$ &
+      $\frac{1}{2}$ &
+      $-1$ &
+      0 &
+      $-1$ &
+      -
+      \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  
+\end{table}
+
+%% -----------------------------------------------------------------------------
+\FloatBarrier
 \section{Supersymmetry}
 
 Lightest supersymmetric particle (LSP) 
@@ -49,6 +232,7 @@ includes significant missing transverse momentum due to the non-interaction of
 the LSP with the detector.
 
 %% -----------------------------------------------------------------------------
+\FloatBarrier
 \section{B-L extension}
 \label{sec:theory_bl_extension}
 

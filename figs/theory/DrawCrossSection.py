@@ -43,11 +43,21 @@ g.Draw("AP")
 
 g.GetHistogram().SetMaximum(max(xsec_list)*100)
 g.GetHistogram().SetMinimum(min(xsec_list)/100)
-g.GetHistogram().GetXaxis().SetTitle('m(#tilde{t}) [GeV]')
-g.GetHistogram().GetYaxis().SetTitle('#sigma(p p #rightarrow #tilde{t} #tilde{t}*) [pb]')
+# g.GetHistogram().GetXaxis().SetTitle('m(#tilde{t}) [GeV]')
+g.GetHistogram().GetXaxis().SetTitle('Stop mass [GeV]')
+# g.GetHistogram().GetYaxis().SetTitle('#sigma(p p #rightarrow #tilde{t} #tilde{t}*) [pb]')
+g.GetHistogram().GetYaxis().SetTitle('NLO+NLL #sigma(pp#rightarrow#tilde{t}#tilde{t}*) [pb]')
 
 g.Draw("A4")
 g.Draw("LX")
+
+tl = ROOT.TLatex()
+tl.SetNDC()
+
+tl.DrawLatex(0.6, 0.9, 'pp collisions at 8 TeV')
+
+tl.SetTextColor(ROOT.kBlue+2)
+tl.DrawLatex(0.8, 0.35, '#tilde{t}#tilde{t}*')
 
 # c.Print("xsec.eps")
 # c.Print("xsec.png")

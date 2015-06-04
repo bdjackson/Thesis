@@ -59,14 +59,13 @@ def draw_annotation(label_text, date_string, offset_x, offset_y,
                        connectionstyle=connection_style)
 
     this_date=datetime.datetime.strptime(date_string,
-                                         '%a %b %d %H:%M:%S %Z %Y')
+                                         '%b %d %Y')
+                                         # '%a %b %d %H:%M:%S %Z %Y')
+                                         # '%a %b %d %H:%M:%S %Y')
 
-    point_x = (this_date.date() - first_date).days
+    point_x = (this_date.date() - first_date).days + 1
     point_x += (time.mktime(this_date.timetuple()) -
                 time.mktime(this_date.date().timetuple()))/(26*60*60)
-    # point_y = page_number_df[page_number_df['day_num'] >= point_x
-    # point_y = page_number_df[page_number_df['date-time'] >= this_date
-    #                         ]['pages'].iloc[0]
     point_y = page_number_df[page_number_df['date-time'] < this_date
                             ]['pages'].iloc[-1]
 
@@ -76,25 +75,34 @@ def draw_annotation(label_text, date_string, offset_x, offset_y,
     ax.annotate(label_text, color=text_color, xy=(point_x, point_y),
                 xytext=(text_x, text_y), arrowprops=arrow_props)
 
-draw_annotation('Begin\nThesis',
-                date_string='Fri Mar 27 17:42:32 CET 2015',
-                offset_x=+0, offset_y=+50, angle_b=30)
+# draw_annotation('Begin\nThesis',
+#                 date_string='Mar 27 2015',
+#                 offset_x=+0, offset_y=+50, angle_b=30)
 
 draw_annotation('Started\noutline',
-                date_string='Wed Apr 01 17:52:19 CEST 2015',
-                offset_x=-2, offset_y=+10)
+                date_string='Apr 01 2015',
+                offset_x=-5, offset_y=+80,
+                shrinkB=20, angle_a = 210, angle_b=110)
 
 draw_annotation('Started\nB-L stop\nchapter',
-                date_string='Tue Apr 7 13:41:54 CEST 2015',
-                offset_x=-4, offset_y=+10)
+                date_string='Apr 7 2015',
+                offset_x=-4, offset_y=+50,
+                shrinkB=5, angle_a = 225, angle_b=140)
 
 draw_annotation('First draft\nB-L stop\nchapter',
-                date_string='Fri May 8 18:15:22 CEST 2015',
-                offset_x=-16, offset_y=-20)
+                date_string='May 8 2015',
+                offset_x=-20, offset_y=-30,
+                shrinkB=15, angle_a = 90, angle_b=160)
 
 draw_annotation('Started\nTheory\nchapter',
-                date_string='Tue May 19 15:32:24 CEST 2015',
-                offset_x=-25, offset_y=-10)
+                date_string='May 19 2015',
+                offset_x=-25, offset_y=0,
+                shrinkB=15, angle_a = 20, angle_b=170)
+
+draw_annotation('Moved to\nChicago',
+                date_string='May 30 2015',
+                offset_x=-25, offset_y=-10,
+                shrinkB=10, angle_a = 20, angle_b=90)
 
 ## -----------------------------------------------------------------------------
 # save the figure to a pdf
