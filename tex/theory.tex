@@ -17,73 +17,93 @@ Could have different
 decay rates to e, mu, tau.
 }
 
+The universe, as we know it, comprises fundamental matter particles, and
+four fundamental forces.
+These forces include gravity, electromagnetism, and the strong and weak nuclear
+forces.
+Despite being the weakest of the four forces, gravity is certainly the most
+familiar to everyday life, as it assures objects fall to the ground.
+The Gravitational force is described by the general theory of relativity, and
+to this day, a successful quantum theory of gravity has yet to be developed.
+Since gravity is so weak, it does not significantly affect the physics at the
+LHC energy scale, and can safely be ignored for the purpose of this thesis.
+Of the remaining three forces,  electromagnetism and the weak force have been
+shown to come from the same underlying interactions, called the electroweak
+force.
+The electroweak and strong forces are described by the Standard Model of
+Particle Physics.
+
 In this chapter, a brief overview of the theoretical background for this thesis
 is presented.
-The topics discussed include the Standard Model (SM) of particle physics,
-Supersymmetry, and the particular $B-L$ extension to the SM, which is the
-focus of the search presented in this dissertation.
-Additionally, the phenomenology of this $B-L$ extension is described.
-In particular, the scenario where the scalar top is the LSP.
-{\color{red}TODO add references to the following sections.}
+The Standard Model and its shortcomings are discussed
+in \cref{sec:sm,sec:sm_shortcomings}.
+Supersymmetry, a popular extension to the Standard Model, is introduced in
+Section~\ref{sec:susy}.
+The chapter concludes with a presentation of the particular $B-L$ extension to
+the SM, which is the focus of the search presented in this dissertation.
+Section~\ref{sec:theory_bl_extension} includes presents a brief description of
+the underlying theory, as well as some of the interesting phenomenology expected
+in the scenario where the scalar top is the LSP.
 
 %% ------------------------------------------------------------------------------
 \FloatBarrier
 \section{Standard Model}
+\label{sec:sm}
 
-The Standard Model (SM) of particle physics is described in
+In this section, the Standard Model (SM) of particle physics is described in
 brief.
+The SM is a very rich subject, and a more complete description can be found in
+References~\cite{Agashe:2014kda,opac-b1131978,halzen1984quarks}.
 The SM is a quantum field theory which encapsulates the current understanding
 of the elementary particles, and their interactions, and has been developed,
-and rigorously tested over the last fifty years.
-The interactions described by the Quantum Chromdynamics (QCD) and
-electroweak sectors, are included in the SM Lagrangian, which is a non-abelian
-gauge theory, with the symmetry group
-$\mathrm{SU}(3)_\mathrm{c} \times \mathrm{SU}(2)_\mathrm{L} \times U(1)_\mathrm{Y}$.
-% The SM Lagrangian describes matter and force carrier particles as quantum fields.
-A more complete description of the SM can be found in
-References~\cite{Agashe:2014kda,opac-b1131978,halzen1984quarks}.
+and rigorously tested by experiments over the last fifty years.
+In 2012, the final particle predicted by the SM, the ``Higgs boson`` was
+discovered at CERN by the ATLAS and CMS collaborations, marking a great
+achievement for the both the experimental collaborations and the theorists
+who predicted the particle's existence.
+The SM Lagrangian is a non-abelian gauge theory with symmetry group 
+$\mathrm{SU}(3)_\mathrm{c} \times
+\mathrm{SU}(2)_\mathrm{L} \times
+U(1)_\mathrm{Y}$,
+which describes the matter content of the universe, as well as the interactions
+of the strong and electroweak forces.
+The matter content in the SM is made up of fermions (spin \nicefrac{1}{2}),
+called quarks and leptons.
+Massless gauge bosons (spin 1) mediate the interactions of the electroweak and
+strong forces.
 
-The symmetry groups in the SM Lagrangian prescribe the particle content of the
-force carriers.
-Each of the force carrier fields have spin 1 (bosons), and are predicted to be
-massless.
-The QCD sector, with symmetry group $\mathrm{SU}(3)_\mathrm{c}$, contains eight
-gluon fields, which mediate the interactions between particles with one of
-three color charges {\color{red} TODO find references for QCD}.
-The electroweak sector has the symmetry group,
-$\mathrm{SU}(2)_\mathrm{L} \times U(1)_\mathrm{Y}$, and the interactions are
-mediated by three $W^i$ boson fields, and a $B$ boson field.
-The physical eigenstates of these fields are a mixture, leading to the
-$W^{\pm}$ and $Z$ bosons, which mediate weak nuclear interactions, and the
-photon ($\gamma$), which propagates electric fields
-{\color{red} TODO find references for QCD}.
+\begin{figure}[ht]
+  \centering{
+    \includegraphics[width=\textwidth]{figs/theory/sm_particle_content.pdf}
+    \caption{Fundamental particles described by the Standard Model.
+      The masses of each particles are given in parentheses.
+    }
+    \label{fig:sm_particle_content}
+  }
+\end{figure}
 
-The matter particles are described in the SM Lagrangian as quantum fields, with
-spin equal to \nicefrac{1}{2} (fermions).
-The full list of fermions, and the corresponding quantum numbers shown
-in Table~\ref{tab:sm_matter_content}.
-The matter content is broken up into three generations of particles, each with
-similar structure, differing by their mass.
-Each generation includes quarks, which have both electric and color, change,
-and therefore, interact with both the strong and electroweak forces.
-Leptons, including charged leptons and neutrinos, are also included in each
-generation, and have no color charge.
-Charged leptons, such as electrons have electric charge, while neutrinos do not.
-
-The weak force, mediated by the $W^{\pm}$ and $Z$ bosons, only interacts with
-matter fields with left-handed chirality, with non-zero isospin.
-In each generation, these left-handed fields make a quark doublet, comprising
-an up and down type quark, and a lepton doublet, containing a neutrino and a
-charged lepton.
-These doublets behave the same way under weak interactions, with the up-type
-quarks and neutrinos having the third component of weak isospin ($T_3$) equal 
-to $+\nicefrac{1}{2}$, and the down-type quarks and charged leptons having
-$T_3 = -\nicefrac{1}{2}$.
-The quarks and charged leptons each have a corresponding right-handed particle.
-These right-handed fermions are not part of an isospin doublet, and do not
-interact via the weak force.
-It should also be noted that, in the SM, neutrinos do not have a right-handed
-counterpart, as they would not interact via any known forces.
+The fermionic matter is arranged into three families, or generations, each
+containing quarks and leptons.
+These particles can be charged under each part of the SM symmetry group,
+where the particle's charge determines how it interacts with each of the
+corces.
+Each generation contains two chiral left-handed quarks, arranged in a isospin
+doublet, consisting of an up-type and a down-type quark.
+There are also two chiral left-handed leptons, one with electric charge, and
+a neutrino, which is electrically neutral.
+As with the quarks, the two left-handed leptons are arranged into an isospin
+doublet.
+Finally, each fermionic family contains chiral right-handed counterparts to
+the two quarks, and the charged lepton.
+No right-handed neutrinos are included in the SM, as they would no react with
+any known forces, as will be explained shortly.
+The right-handed fermions are isospin singlets.
+The three generations are essentially copies of one another, differing only in
+the mass of the constituent particles, and the familiar world is made up
+entirely of particles from the first generation.
+The reason for exactly three generations, not more or less, remains a mystery.
+A summary of the SM matter content, with the charges under the various
+parts of the SM symmetry group is shown in Table~\ref{tab:sm_matter_content}.
 
 \begin{table}
   \caption{Summary of the matter particles described by the SM, along with the
@@ -111,16 +131,16 @@ counterpart, as they would not interact via any known forces.
       %%
       \multirow{5}{*}{Quarks} &
       \multirow{2}{*}{$\left(
-          \begin{tabular}{c} u \\ d \end{tabular} \right)_{L}$ } &
+        \begin{tabular}{c} u \\ d \end{tabular} \right)_{L}$ } & % (u d) quarks
       \multirow{2}{*}{$\left(
-          \begin{tabular}{c} c \\ s \end{tabular} \right)_{L}$ } &
+        \begin{tabular}{c} c \\ s \end{tabular} \right)_{L}$ } & % (c s) quarks
       \multirow{2}{*}{$\left(
-          \begin{tabular}{c} t \\ b \end{tabular} \right)_{L}$ } &
-      \multirow{2}{*}{$\frac{1}{2}$} &
-      $+\frac{2}{3}$ &
-      $+\frac{1}{2}$ &
-      \multirow{2}{*}{$\frac{1}{6}$} &
-      \multirow{2}{*}{r, g, b}
+        \begin{tabular}{c} t \\ b \end{tabular} \right)_{L}$ } & % (t b) quarks
+      \multirow{2}{*}{$\frac{1}{2}$} & % Spin
+      $+\frac{2}{3}$ & % Q
+      $+\frac{1}{2}$ & % T3
+      \multirow{2}{*}{$\frac{1}{3}$} & % Y
+      \multirow{2}{*}{r, g, b} % color
       \\[1ex]
       %%
       & & & & &
@@ -195,17 +215,124 @@ counterpart, as they would not interact via any known forces.
   
 \end{table}
 
+In addition to a charge, each piece of the SM symmetry group is associated with
+a massless gauge boson, which mediates the interactions between particles.
+The electroweak sector has the symmetry group
+$\mathrm{SU}(2)_\mathrm{L} \times U(1)_\mathrm{Y}$, and describes the
+interactions with fields with isospin or hypercharge ($Y$) in a theory called
+quantum electrodynamics (QED).
+The electroweak sector is a chiral theory, meaning right- and left-handed
+particles transform differently under the gauge group.
+Left-handed fermions have a value of the third component of isospin equal to
+$\pm \nicefrac{1}{2}$, while right-handed particles have no isospin, and do
+not interact with the weak force.
+The gauge bosons associated with the electroweak sector are three $W^{i}$
+bosons, arranged in a weak isospin triplet, and a $B^0$ boson, which is a weak
+isospin singlet.
+
+Since chiral fields translate differently, depending on their chiral handedness,
+there can be no mixing between the right- and left-handed states, which would
+break gauge invariance.
+Unfortunately, a mass term, allows for exactly this mixing, implying the
+fermions, as well as the gauge bosons must be massless.
+On the other hand, the weak force is observed to be short ranged, implying
+massive gauge bosons, and fermions do indeed have measurable masses.
+Adding masses to a chiral quantum field theory is a difficult endeavor, and
+is achieved through a process called ``spontaneous symmetry breaking,'' which
+is explained in Section~\ref{sec:higgs}.
+
+The $SU(3)_c$ part of the SM Lagrangian corresponds to the strong force,
+with a corresponding ``color'' charge.
+Quarks are colored objects, having red, green, or blue charge, while leptons
+have no color charge, and thus do not interact directly with the strong
+force.
+The eight massless gauge bosons associated with the $SU(3)_c$ symmetry group
+are called gluons, and are themselves colored objects.
+This leads to self interaction, and some interesting phenomenology!
+
+Because the gluon are allowed to interact with one another, QED and QCD have
+some very important differences.
+Perhaps, the most interesting, is related to the concept of ``screening''.
+In QED, as one moves further from a charged paricle, the charge tends to look
+smaller as a result of the polarization of the vacuum around the charge, where
+electron pairs pop out of the vacuum.
+The further from the particle one is, the more electron pairs are visible,
+obscuring the initial charge more.
+In QCD, this same screening effect occurs, with quark-anti-quark pairs being
+pair-produced from the vacuum, however gluon pairs may also be produced out of
+the vacuum.
+These gluon pairs produce the opposite screening effect, known as
+``anti-screening,'' increasing the effective charge observed.
+Rather than charges being screened, as in QED, there is a net anti-screening
+effect for objects with color charge.
+
+As two colored particles get very close together, the anti-screening is very
+small, and they can be treated as free particles, in an effect known as
+``asymptotic freedom.''
+Alternatively, as two charged particles move apart, the polarization of the
+vacuum between them results in an increasing energy buildup, until it is
+energetically favorable to pair produce a quark-anti-quark pair from the vacuum.
+For this reason, no free quarks or gluons have been observed, rather any
+objects with color charge will tend to into bound states called ``hadrons,''
+which has no net color.
+Hadrons can either be a bound state of a quark-anti-quark pair, called mesons,
+or three-quark bound states, called baryons.
+The anti-quark contained in a meson must have the corresponding anti-color of 
+the constituent quark.
+Similarly, the three quarks, which make up a baryon, must have colors that add
+to ``white,'' meaning one red , one green, and one blue quark.
+
+In particle collisions, this effect also leads to the phenomenon of ``jets,''
+where a spray of hadrons is projected at the particle detector, resulting from
+the multiple colored objects being pulled apart due to the energy of the
+collision.
+
+Since right-handed neutrinos are colorless objects which have have neither
+isospin or electric charge, they are not expected to interact with the known
+components of the SM, and are therefore not part of the theory.
+There are extensions to the SM, however, which do include right-handed
+neutrinos, including the one described in
+Section~\ref{sec:theory_bl_extension}.
+
+% The matter particles are described in the SM Lagrangian as quantum fields, with
+% spin equal to \nicefrac{1}{2} (fermions).
+% The full list of fermions, and the corresponding quantum numbers shown
+% in Table~\ref{tab:sm_matter_content}.
+% The matter content is broken up into three generations of particles, each with
+% similar structure, differing by their mass.
+% Each generation includes quarks, which have both electric and color, change,
+% and therefore, interact with both the strong and electroweak forces.
+% Leptons, including charged leptons and neutrinos, are also included in each
+% generation, and have no color charge.
+% Charged leptons, such as electrons have electric charge, while neutrinos do not.
+
+% The weak force, mediated by the $W^{\pm}$ and $Z$ bosons, only interacts with
+% matter fields with left-handed chirality, with non-zero isospin.
+% In each generation, these left-handed fields make a quark doublet, comprising
+% an up and down type quark, and a lepton doublet, containing a neutrino and a
+% charged lepton.
+% These doublets behave the same way under weak interactions, with the up-type
+% quarks and neutrinos having the third component of weak isospin ($T_3$) equal 
+% to $+\nicefrac{1}{2}$, and the down-type quarks and charged leptons having
+% $T_3 = -\nicefrac{1}{2}$.
+% The quarks and charged leptons each have a corresponding right-handed particle.
+% These right-handed fermions are not part of an isospin doublet, and do not
+% interact via the weak force.
+% It should also be noted that, in the SM, neutrinos do not have a right-handed
+% counterpart, as they would not interact via any known forces.
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsection{Higgs mechanism}
+\label{sec:higgs}
 
 While the photon is a massless particle, the $W^{\pm}$ and $Z$ bosons are
 observed to be short ranged, implying they are massive.
-The addition of these mass terms breaks gauge invariant in the SM Lagrangian,
+The addition of these mass terms to the SM Lagrangian breaks gauge invariant,
 and is, therefore, forbidden.
 Similarly, the fermions have masses, which are forbidden by the SM.
-This would allow a mixing between the left- and right-handed fermions,
-which would break gauge invariance.
+Fermion masses would allow a mixing between the left- and right-handed sectors
+fermions, which also breaks gauge invariance.
 
 A method to add mass terms to the SM Lagrangian without breaking the necessary
 gauge invariance was developed during the 1960's by several groups of theorists,
@@ -220,14 +347,21 @@ zero-point.
 The Higgs field ``spontaneously'' breaks the gauge symmetry while preserving
 the gauge invariance of the Lagrangian.
 
+%% ------------------------------------------------------------------------------
+\FloatBarrier
+\section{Shortcomings}
+\label{sec:sm_shortcomings}
+
 %% -----------------------------------------------------------------------------
 \FloatBarrier
 \section{Supersymmetry}
+\label{sec:susy}
 
 Lightest supersymmetric particle (LSP) 
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \subsection{R-Parity}
+\label{sec:r_parity}
 
 The extension of the Standard Model of particle physics with
 supersymmetry (SUSY)~\cite{Miyazawa:1966,Ramond:1971gb,Golfand:1971iw,
