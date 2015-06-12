@@ -604,13 +604,18 @@ Generic fermion mass terms are of the form
 $m \bar{f}_\mathrm{L} f_\mathrm{R} + \mathrm{h.c.}$, so reading
 Equation~\ref{eqn:expanded_fermion_lagrangian}, one can see the fermion masses
 are
-\begin{align}
-  \begin{split}
-    m_e = & \frac{G_e v}{\sqrt{2}} \\
-    m_u = & \frac{G_u v}{\sqrt{2}} \\
-    m_d = & \frac{G_d v}{\sqrt{2}}.
-  \end{split}
-\end{align}
+% \begin{align}
+%   \begin{split}
+%     m_e = & \frac{G_e v}{\sqrt{2}} \\
+%     m_u = & \frac{G_u v}{\sqrt{2}} \\
+%     m_d = & \frac{G_d v}{\sqrt{2}}.
+%   \end{split}
+% \end{align}
+\begin{equation}
+    m_e = \frac{G_e v}{\sqrt{2}},~~~~~
+    m_u = \frac{G_u v}{\sqrt{2}},~~~~~
+    m_d = \frac{G_d v}{\sqrt{2}}.
+\end{equation}
 The $h$ is dropped because it is the remnant of the Higgs doublet, and expected
 to be negligible.
 There are of course similar mass terms for the second and third generation
@@ -621,19 +626,117 @@ It should also be noted that the $G$'s, thus the fermion masses, are not
 predicted by the SM, and the fermion masses must be measured, and inputed
 into the theory.
 
-% While the photon is a massless particle, the $W^{\pm}$ and $Z$ bosons are
-% observed to be short ranged, implying they are massive.
-% The addition of these mass terms to the SM Lagrangian breaks gauge invariant,
-% and is, therefore, forbidden.
-% Similarly, the fermions have masses, which are forbidden by the SM.
-% Fermion masses would allow a mixing between the left- and right-handed sectors
-% fermions, which also breaks gauge invariance.
-% 
-
 %% -----------------------------------------------------------------------------
 \FloatBarrier
 \section{Shortcomings}
 \label{sec:sm_shortcomings}
+
+While the SM has been a very successful theory in describing particles
+and their interactions across many orders of magnitude, it does have some
+shortcomings.
+Some of these shortcomings, such as the existence of dark matter arise from
+experimental observations, which point toward potential problems with the SM,
+and currently constructed.
+Others, such as the Hierarchy problem arise from parts of the SM, which seem
+to require, seemingly unnatural, amounts of ``fine tuning'' of the parameters
+of the theory.
+
+%% -----------------------------------------------------------------------------
+\FloatBarrier
+\subsection{Gravity}
+
+One (seemingly obvious) feature, missing from the SM is the gravitational
+force.
+This seems counterintuitive because this is probably the force people are most
+familiar with, in their daily lives.
+However, gravity remains a very weak force, compared to the electroweak scale,
+and no successful quantum theory of gravity has been created.
+A spin 2 graviton particle has been proposed, which seems as if it can be added
+to the SM, but experiments have yet to observe such a particle.
+
+%% -----------------------------------------------------------------------------
+\FloatBarrier
+\subsection{Dark matter and dark energy}
+
+Cosmological experiments over the past several
+decades\cite{Clowe:2006eq,Ade:2013zuv} have shown that observable matter
+only makes up 5\% of the observable universe.
+It is still unknown what makes up the remaining 95\%!
+The unknown component is generally broken up into two categories, based on
+their expected properties.
+Dark matter is localized, and tends to be found in clumps, while dark energy
+permeates all of space.
+
+From the perspective of gravity, dark matter is expected to behave similar to
+normal matter, in that gravity exerts an attractive force on the dark matter.
+Dark matter differs in that it does not interact with electromagnetism,
+which is why it is called ``dark.''
+The other properties of dark matter are unknown.
+It is possible that it interacts with the strong or weak forces, however, this
+is by no means guaranteed.
+
+Dark energy, on the other hand, opposed the force of gravity, applying a
+repulsive force, accelerating the expansion of the universe.
+
+%% -----------------------------------------------------------------------------
+\FloatBarrier
+\subsection{Neutrino masses}
+
+As shown in Section~\ref{sec:higgs}, the BEH mechanism leaves the neutrinos
+massless in the SM because they have no chiral right-handed counterpart, and
+don't generate the Yukawa coupling with the scalar field.
+Neutrino experiments, have observed neutrino flavor oscillation, suggesting
+they do, in fact, have a mass~\cite{PhysRevD.86.010001}.
+For these oscillations to occur, the physical neutrino eigenstates must be
+a mixture of the flavor eigenstates, and have distinct masses.
+This provides evidence that there is a non-zero mass for at least two of the
+three neutrino masses.
+Some of the proposed mechanisms to generate massive neutrino masses with the
+SM are the addition of ``sterile'' right-handed neutrinos, or the possibility
+that neutrinos are Majorana particles, and they are their own anti-particle.
+
+%% -----------------------------------------------------------------------------
+\FloatBarrier
+\subsection{Hierarchy problem}
+
+Several potential problems arises from the large differences in energy scale
+between the electroweak scale ($\mathcal{O}(100) GeV$), where experiments are
+able to effectively probe, and the Planck scale ($\mathcal{O}(10^{18}) GeV$),
+where the effects of gravity can no longer be ignored, and the theory is no
+longer valid as it stands.
+Because the scales are so different, the bare parameters of the theory can
+differ from their renormalized values, or other values in the theory,
+by several orders of magnitude.
+These problems are classified as ``hierarchy problems,'' and do not immediately
+lead to contradictions, as the theory can remain consistent with these large
+differences.
+However, in order to construct a consistent theory, one is required to accept
+a certain amount of ``fine tuning,'' that many find unsatisfying.
+
+A particularly famous hierarchy problem is associated with the mass of the
+Higgs boson.
+Observed particles masses are a combination of the ``bare'' mass (tree level)
+and radiative corrections from additional loop diagrams.
+These loop momenta are cut off at the Planck scale, which leaves a lot of room
+for the these radiative corrections to increase.
+Fermion and gauge boson masses are protected from this high cutoff scale.
+Fermions are protected through chiral symmetry, and are only logarithmically
+dependent on the cutoff scale. 
+Gauge bosons are similarly protected through the local gauge symmetry.
+The Higgs boson is a scalar, and has a quadratic dependence on the cutoff
+scale.
+This tends to push the mass much higher than the weak scale.
+
+The Higgs mass is observed to be at 125~\GeV, so if the bare mass and the
+radiative correction terms are truly at such a high scale, it would be a large
+coincidence if they simply happen to cancel so precisely.
+While it is not impossible, it is extremely unlikely this would happen.
+This is the essence of the fine tuning problem.
+
+A way to remove the quadratic dependence on the Planck scale is to introduce
+new particles, which have the opposite loop behavior to their SM counterparts.
+This is the basic idea of supersymmetry, which is discussed in
+Section~\ref{sec:susy}.
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
