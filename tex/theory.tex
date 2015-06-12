@@ -62,9 +62,9 @@ discovered at CERN by the ATLAS and CMS collaborations, marking a great
 achievement for the both the experimental collaborations and the theorists
 who predicted the particle's existence.
 The SM Lagrangian is a non-abelian gauge theory with symmetry group 
-$\mathrm{SU}(3)_\mathrm{c} \times
+$\mathrm{SU}(3)_\mathrm{C} \times
 \mathrm{SU}(2)_\mathrm{L} \times
-U(1)_\mathrm{Y}$,
+\mathrm{U}(1)_\mathrm{Y}$,
 which describes the matter content of the universe, as well as the interactions
 of the strong and electroweak forces.
 The matter content in the SM is made up of fermions (spin \nicefrac{1}{2}),
@@ -81,6 +81,10 @@ strong forces.
     \label{fig:sm_particle_content}
   }
 \end{figure}
+
+%% ------------------------------------------------------------------------------
+\subsection{Matter}
+\label{sec:matter}
 
 The fermionic matter is arranged into three families, or generations, each
 containing quarks and leptons.
@@ -212,13 +216,16 @@ parts of the SM symmetry group is shown in Table~\ref{tab:sm_matter_content}.
       \bottomrule
     \end{tabular}
   \end{center}
-  
 \end{table}
+
+%% ------------------------------------------------------------------------------
+\subsection{Quantum electrodynamics}
+\label{sec:qed}
 
 In addition to a charge, each piece of the SM symmetry group is associated with
 a massless gauge boson, which mediates the interactions between particles.
 The electroweak sector has the symmetry group
-$\mathrm{SU}(2)_\mathrm{L} \times U(1)_\mathrm{Y}$, and describes the
+$\mathrm{SU}(2)_\mathrm{L} \times \mathrm{U}(1)_\mathrm{Y}$, and describes the
 interactions with fields with isospin or hypercharge ($Y$) in a theory called
 quantum electrodynamics (QED).
 The electroweak sector is a chiral theory, meaning right- and left-handed
@@ -240,14 +247,31 @@ massive gauge bosons, and fermions do indeed have measurable masses.
 Adding masses to a chiral quantum field theory is a difficult endeavor, and
 is achieved through a process called ``spontaneous symmetry breaking,'' which
 is explained in Section~\ref{sec:higgs}.
+The broken symmetry leads to a mixing of the $W^3$ and $B^0$ gauge bosons into
+a massless photon, and the massive $Z$ boson.
+The $W^1$ and $W^2$ become the massive $W^{+}$ and $W^{-}$.
+The $W^{\pm}$ and $Z$ bosons both have mass, and act as the propagator of the
+weak force, while the massless photon mediates the electromagnetic force.
 
-The $SU(3)_c$ part of the SM Lagrangian corresponds to the strong force,
-with a corresponding ``color'' charge.
+Since right-handed neutrinos have no charge under any part of the SM symmetry
+group, they are not expected to interact with the known components of the SM,
+and are therefore not included as part of the theory.
+There are extensions to the SM, however, which do include right-handed
+neutrinos, including the one described in Section~\ref{sec:theory_bl_extension}.
+
+%% ------------------------------------------------------------------------------
+\subsection{Quantum chromodynamics}
+\label{sec:qcd}
+
+The $\mathrm{SU}(3)_\mathrm{C}$ part of the SM Lagrangian corresponds to the
+strong force, with a corresponding ``color'' charge, and is described by the
+theory of quantum chromodynamics (QCD).
 Quarks are colored objects, having red, green, or blue charge, while leptons
 have no color charge, and thus do not interact directly with the strong
 force.
-The eight massless gauge bosons associated with the $SU(3)_c$ symmetry group
-are called gluons, and are themselves colored objects.
+The eight massless gauge bosons associated with the
+$\mathrm{SU}(3)_\mathrm{C}$ symmetry group are called gluons, and are
+themselves colored objects.
 This leads to self interaction, and some interesting phenomenology!
 
 Because the gluon are allowed to interact with one another, QED and QCD have
@@ -287,53 +311,16 @@ where a spray of hadrons is projected at the particle detector, resulting from
 the multiple colored objects being pulled apart due to the energy of the
 collision.
 
-Since right-handed neutrinos are colorless objects which have have neither
-isospin or electric charge, they are not expected to interact with the known
-components of the SM, and are therefore not part of the theory.
-There are extensions to the SM, however, which do include right-handed
-neutrinos, including the one described in
-Section~\ref{sec:theory_bl_extension}.
-
-% The matter particles are described in the SM Lagrangian as quantum fields, with
-% spin equal to \nicefrac{1}{2} (fermions).
-% The full list of fermions, and the corresponding quantum numbers shown
-% in Table~\ref{tab:sm_matter_content}.
-% The matter content is broken up into three generations of particles, each with
-% similar structure, differing by their mass.
-% Each generation includes quarks, which have both electric and color, change,
-% and therefore, interact with both the strong and electroweak forces.
-% Leptons, including charged leptons and neutrinos, are also included in each
-% generation, and have no color charge.
-% Charged leptons, such as electrons have electric charge, while neutrinos do not.
-
-% The weak force, mediated by the $W^{\pm}$ and $Z$ bosons, only interacts with
-% matter fields with left-handed chirality, with non-zero isospin.
-% In each generation, these left-handed fields make a quark doublet, comprising
-% an up and down type quark, and a lepton doublet, containing a neutrino and a
-% charged lepton.
-% These doublets behave the same way under weak interactions, with the up-type
-% quarks and neutrinos having the third component of weak isospin ($T_3$) equal 
-% to $+\nicefrac{1}{2}$, and the down-type quarks and charged leptons having
-% $T_3 = -\nicefrac{1}{2}$.
-% The quarks and charged leptons each have a corresponding right-handed particle.
-% These right-handed fermions are not part of an isospin doublet, and do not
-% interact via the weak force.
-% It should also be noted that, in the SM, neutrinos do not have a right-handed
-% counterpart, as they would not interact via any known forces.
-
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
-\subsection{Higgs mechanism}
+\subsection{Brout-Englert-Higgs mechanism}
 \label{sec:higgs}
 
-While the photon is a massless particle, the $W^{\pm}$ and $Z$ bosons are
-observed to be short ranged, implying they are massive.
-The addition of these mass terms to the SM Lagrangian breaks gauge invariant,
-and is, therefore, forbidden.
-Similarly, the fermions have masses, which are forbidden by the SM.
-Fermion masses would allow a mixing between the left- and right-handed sectors
-fermions, which also breaks gauge invariance.
-
+As mentioned in Section~\ref{sec:qed}, the fermions and gauge bosons described
+in the SM Lagrangian are massless, however, many of those observed in nature
+do, in fact, have a non-negligible mass.
+This would seem to allow for the mixing of chiral left- and right-handed
+fields, which would in turn break gauge invariance.
 A method to add mass terms to the SM Lagrangian without breaking the necessary
 gauge invariance was developed during the 1960's by several groups of theorists,
 including Robert Brout and Francois Englert~\cite{PhysRevLett.13.321},
@@ -341,13 +328,205 @@ Peter Higgs~\cite{Higgs1964132,PhysRevLett.13.508},
 and Gerald Guralnik, Carl R. Hagen, and Tom Kibble~\cite{PhysRevLett.13.585}
 working in parallel, and is commonly called the Brout-Englert-Higgs (BEH)
 mechanism.
-The BEH mechanism adds an additional complex scaler field, known as the Higgs
-field, to the Lagrangian, for which the ground state of the field is not at its
-zero-point.
-The Higgs field ``spontaneously'' breaks the gauge symmetry while preserving
-the gauge invariance of the Lagrangian.
+The BEH mechanism adds an additional complex scaler field to the Lagrangian,
+which acquires a vacuum expectation value (vev), which ``spontaneously''
+breaks the symmetry of the SM Lagrangian.
 
-%% ------------------------------------------------------------------------------
+Each spontaneously broken symmetry leads to new massive scalar particle, know
+as a ``Goldstone boson.''
+The gauge bosons can then absorb these Goldstone bosons in a process where they
+acquire a mass.
+Recall, before symmetry breaking, the electroweak sector has four massless
+gauge bosons, the $W^1$, $W^2$,  $W^3$, and the $B^0$, however experiments
+observe massive $W^{\pm}$, and the $Z$ bosons, associated with the weak force,
+and a massless photon to mediate the electromagnetic force.
+An electric charge $Q$ is also conserved.
+This implies that the
+$\mathrm{SU}(2)_\mathrm{L} \times \mathrm{U}(1)_\mathrm{Y}$ of QED is broken in
+a way that leaves only a $\mathrm{U}(1)_\mathrm{EM}$ symmetry group.
+This symmetry breaking requires at least three Goldstone bosons to be absorbed,
+and give masses to the gauge bosons.
+The simplest method to accomplish this is to add a complex scalar field
+\begin{equation}
+  \Phi = \begin{pmatrix} \phi^+ \\ \phi^0 \end{pmatrix},
+    \label{eqn:scalar_field}
+\end{equation}
+which is a doublet with positive hypercharge ($Y=\nicefrac{1}{2}$).
+
+To show how this, it is useful to consider the SM Lagrangian, ignoring the
+QCD part,
+\begin{equation}
+  \mathcal{L} =
+  - \frac{1}{4} W_{\mu\nu}^{a} W_{a}^{\mu\nu}
+  - \frac{1}{4} B_{\mu\nu} B^{\mu\nu}
+  + \bar{L}_i \left(i D_{\mu} \gamma^{\mu} \right) L_i
+  + \bar{e}_{\mathrm{R},i}\left(i D_{\mu} \gamma^{\mu}\right)e_{\mathrm{R},i},
+\end{equation}
+where the $i$ index runs over the three generations, the $\mu$,$\nu$ are
+Lorentz indices, and $a$ runs over the generators in the gauge group.
+The field strengths are given by
+\begin{eqnarray}
+  W_{\mu\nu}^{a} & = &
+  \partial_{\mu}W_{\nu}^{a} - 
+  \partial_{\nu}W_{\mu}^{a} +
+  g_{2}\epsilon^{abc}W_{\mu}^{b}W_{\nu}^{c}
+  \\
+  B_{\mu\nu} & = &
+  \partial_{\mu}B_{\nu} - 
+  \partial_{\nu}B_{\mu},
+\end{eqnarray}
+and the covariant derivatives for the left- and right-handed lepton fields are
+\begin{eqnarray}
+  D_{\mu}L_\mathrm{L} & = &
+  \left(
+    \partial_{\mu} - ig_{2}T_{a}W_{\mu}^{a} - ig_{1}YB_{\mu}
+  \right) L_\mathrm{L}
+  \\
+  D_{\mu}e_\mathrm{R} & = &
+  \left(
+    \partial_{\mu} - ig_{1}YB_{\mu}
+  \right) e_\mathrm{R}.
+\end{eqnarray}
+$T_a$ are the generators of the gauge group, and $g_1$ and $g_2$ are the
+coupling constants for electroweak interactions.
+
+Adding the complex scalar field from Equation~\ref{eqn:scalar_field} adds an
+additional scalar part to the Lagrangian,
+\begin{equation}
+  \mathcal{L} =
+  \left(D^{\mu}\Phi\right)^{\dagger}\left(D_{\mu}\Phi\right) - V(\Phi),
+  \label{eqn:scalar_lagrangian}
+\end{equation}
+where the first term is the kinetic term, and $V(\Phi)$ is the scalar
+potential.
+The exact form of the scalar potential is not known, however, the simplest
+possible form that has the desired properties can be used
+\begin{equation}
+  V(\Phi) = \mu^2 \Phi^{\dagger}\Phi + \lambda\left(\Phi^{\dagger}\Phi\right)^2.
+\end{equation}
+This form is an assumption that provides the required spontaneous symmetry
+breaking, while remaining renormalizable.
+In order for the vacuum to be stable, $\lambda$ must be positive.
+The choice of the $\mu^2$ parameter affects the shape of the scalar potential,
+as shown in Figure~\ref{fig:symmetry_breaking}.
+In the configuration with $\mu^2 > 0$, the scalar potential is always positive,
+and the minimum occurs at
+\begin{equation}
+  \bra{0} \Phi \ket{0} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}.
+\end{equation}
+There is no spontaneous symmetry is this scenario.
+On the other hand, if $\mu^2 < 0$, the scalar potential takes on the famous
+``Mexican hat'' shape, and the minimum of the potential is no longer located at
+the origin.
+With the minimum of the scalar potential located away from the origin, the
+neutral part of the scalar field acquires a vacuum expectation value (vev) $v$,
+\begin{equation}
+  \bra{0} \Phi \ket{0} =
+  \Phi_0 =
+  \begin{pmatrix} 0 \\ \frac{v}{\sqrt{2}} \end{pmatrix},
+  v = \sqrt{\frac{-\mu^2}{\lambda}}.
+\end{equation}
+By acquiring a vev, electroweak symmetry is spontaneously broken.
+The charged component of the scalar field cannot acquire a vev, otherwise
+electromagnetism is not conserved.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.48\textwidth]
+      {figs/theory/BoringPotential.png}
+  \\
+  \includegraphics[width=0.48\textwidth]
+      {figs/theory/Higgs-Potential-lookdown.png}
+  \includegraphics[width=0.48\textwidth]
+      {figs/theory/Higgs-Potential-Goldstone.png}
+      \caption{The scalar potential under two configurations.
+        The configuration on the top shows the case where $\mu^2 > 0$, where
+        the scalar potential is always positive.
+        In this configuration, the scalar potential has a minimum at the origin.
+        The configuration with $\mu^2 < 0$ is shown on the bottom.
+        In this case, the minimum of the scalar potential occurs away from the
+        origin.
+        In this scenario, the scalar field moves away from the origin, in a
+        process of spontaneous symmetry breaking.
+        The green line corresponds to the circle of minimum potential,
+        corresponding to the massless Goldstone
+      mode~\cite{QuantumDiariesHiggs}}.
+  \label{fig:symmetry_breaking}
+\end{figure}
+
+Expanding the scalar field $\Phi$ around it's minimum $\Phi_0$, one gets
+\begin{equation}
+  \Phi(x) = \frac{1}{\sqrt{2}} \begin{pmatrix} 0 \\ v + H(x) \end{pmatrix},
+\end{equation}
+with $H(x)$ being a new scalar field.
+Inserting this into the kinetic term of Equation~\ref{eqn:scalar_lagrangian},
+and redefining the gauge fields as
+\begin{eqnarray}
+  W_{\mu}^{\pm} & = & \frac{1}{\sqrt{2}}
+                      \left( W_{\mu}^{1} \mp W_{\mu}^{2} \right),
+  \\
+  Z_{\mu} & = & \frac{1}{\sqrt{g_1^2 + g_2^2}}
+                \left( g_2 W_{\mu}^{3} - g_1 B_{\mu} \right),
+  \\
+  A_{\mu} & = & \frac{1}{\sqrt{g_1^2 + g_2^2}}
+                \left( g_2 W_{\mu}^{3} + g_1 B_{\mu} \right),
+\end{eqnarray}
+where the redefined gauge fields correspond to the physical gauge bosons
+of QED, the $W^{\pm}$, $Z$, and the photon.
+The covariant derivative becomes
+\begin{equation}
+  \left| D_{\mu}\Phi \right|^2 =
+  \frac{1}{2} \left( \partial_{\mu} H \right)^2 +
+  \frac{1}{2} g_{2}^{2} \left(v + H\right)^2 W_{\mu}^{+}W^{\mu -} +
+  \frac{1}{8} \left(v + H\right)^2 \left(g_{1}^{2} + g_{2}^{2} \right)
+    Z_{\mu}Z^{\mu}.
+\end{equation}
+It can be seen that the gauge bosons take on the following masses through their
+interactions with the scalar field
+\begin{eqnarray}
+  M_{W} &=& \frac{1}{2} v g_2 \\
+  M_{Z} &=& \frac{1}{2} v \sqrt{g_1^2 + g_2^2} \\
+  M_{A} &=& 0
+\end{eqnarray}
+It is important to note that there is no term for the photon, implying it does
+not interact with the scalar field, and therefore, does not pick up a mass
+term.
+Three of the degrees of freedom from the scalar field that would be Goldstone
+bosons have been absorbed by the gauge bosons, giving them mass.
+There is one remaining degree of freedom, which becomes the Higgs boson.
+The Higgs boson itself has mass, equal to
+\begin{eqnarray}
+  m_H &=& 2 \lambda v^2 \\
+      &=& 2\mu^2.
+\end{eqnarray}
+This mass corresponds to the remaining degree of freedom in the scalar
+potential, where the field can oscillate in the radial direction, as shown in
+Figure~\ref{fig:higgs_mass}.
+The Higgs mass has no other handles in the SM, and must be determined
+experimentally.
+It was found to be equal to
+$125.02^{+0.22}_{0.27}\mathrm{(stat)}^{+0.14}_{-0.15}\mathrm{(syst)} \GeV$
+by the ATLAS and CMS experiments.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.48\textwidth]{figs/theory/Higgs-Potential-radial.png}
+  \caption{The Higgs boson corresponds to an excitation in the radial direction
+    of the scalar potential~\cite{QuantumDiariesHiggs}.
+  }
+  \label{fig:higgs_mass}
+\end{figure}
+
+% While the photon is a massless particle, the $W^{\pm}$ and $Z$ bosons are
+% observed to be short ranged, implying they are massive.
+% The addition of these mass terms to the SM Lagrangian breaks gauge invariant,
+% and is, therefore, forbidden.
+% Similarly, the fermions have masses, which are forbidden by the SM.
+% Fermion masses would allow a mixing between the left- and right-handed sectors
+% fermions, which also breaks gauge invariance.
+% 
+
+%% -----------------------------------------------------------------------------
 \FloatBarrier
 \section{Shortcomings}
 \label{sec:sm_shortcomings}
@@ -400,9 +579,10 @@ the LSP with the detector.
 \end{itemize}
 }
 
-An alternative approach is to add a local symmetry $U(1)_{B-L}$ to the
-$SU(3)_C \times SU(2)_L \times U(1)_Y$ Standard Model with right-handed
-neutrinos.
+An alternative approach is to add a local symmetry $\mathrm{U}(1)_{B-L}$ to the
+$\mathrm{SU}(3)_\mathrm{C} \times
+\mathrm{SU}(2)_\mathrm{L} \times
+\mathrm{U}(1)_\mathrm{Y}$ Standard Model with right-handed neutrinos.
 The minimal supersymmetric extension then only needs a vacuum expectation value
 for a right-handed sneutrino in order to spontaneously break the
 $B-L$ symmetry~\cite{FileviezPerez:2008sx, Barger:2008wn, FileviezPerez:2009gr,
