@@ -147,10 +147,15 @@ parts of the SM symmetry group is shown in Table~\ref{tab:sm_matter_content}.
       \multirow{2}{*}{r, g, b} % color
       \\[1ex]
       %%
-      & & & & &
-      $-\frac{1}{3}$ &
-      $-\frac{1}{2}$ &
-      &
+      & % Quarks
+      & % (u d) quarks
+      & % (c s) quarks
+      & % (t b) quarks
+      & % spin
+      $-\frac{1}{3}$ & % Q
+      $-\frac{1}{2}$ & % T3
+      & % Y
+      % color
       \\
       %%
       \cmidrule{2-9}
@@ -159,22 +164,22 @@ parts of the SM symmetry group is shown in Table~\ref{tab:sm_matter_content}.
       $u_R$ &
       $c_R$ &
       $t_R$ &
-      $\frac{1}{2}$ &
-      $+\frac{1}{2}$ &
-      0 &
-      $+\frac{2}{3}$ &
-      r, g, b
+      $\frac{1}{2}$ & % spin
+      $+\frac{2}{3}$ & % Q
+      0 & % T3
+      $+\frac{4}{3}$ & % Y
+      r, g, b % color
       \\[1ex]
       %%
       &
       $d_R$ &
       $s_R$ &
       $b_R$ &
-      $\frac{1}{2}$ &
-      $-\frac{1}{2}$ &
-      0 &
-      $-\frac{1}{3}$ &
-      r, g, b
+      $\frac{1}{2}$ & % spin
+      $-\frac{1}{3}$ & % Q
+      0 & % T3
+      $-\frac{2}{3}$ & % Y
+      r, g, b % color
       \\
       %%
       \midrule
@@ -189,29 +194,34 @@ parts of the SM symmetry group is shown in Table~\ref{tab:sm_matter_content}.
       \multirow{2}{*}{$\left(
           \begin{tabular}{c} $\nu_{\tau}$ \\ $\tau$ \end{tabular}
         \right)_{L}$ } &
-      \multirow{2}{*}{$\frac{1}{2}$} &
-      0 &
-      $+\frac{1}{2}$ &
-      \multirow{2}{*}{-$\frac{1}{2}$} &
-      \multirow{2}{*}{-}
+      \multirow{2}{*}{$\frac{1}{2}$} & % spin
+      0 & % Q
+      $+\frac{1}{2}$ & % T3
+      \multirow{2}{*}{-1} & % Y
+      \multirow{2}{*}{-} % color
       \\[1ex]
       %%
-      & & & & &
-      $-1$ &
-      $-\frac{1}{2}$ &
-      &
+      & % Leptons
+      & % (nue e)
+      & % (numu mu)
+      & % (nutau mu)
+      & % spin
+      $-1$ & % Q
+      $-\frac{1}{2}$ & % T3
+      & % Y
+      % color
       \\
       \cmidrule{2-9}
       %%
-      &
+      & % Leptons
       $e_{R}$ &
       $\mu_{R}$ &
       $\tau_{R}$ &
-      $\frac{1}{2}$ &
-      $-1$ &
-      0 &
-      $-1$ &
-      -
+      $\frac{1}{2}$ & % spin
+      $-1$ & % Q
+      0 & % T3
+      $-2$ & % Y
+      - % color
       \\
       \bottomrule
     \end{tabular}
@@ -351,7 +361,8 @@ The simplest method to accomplish this is to add a complex scalar field
   \Phi = \begin{pmatrix} \phi^+ \\ \phi^0 \end{pmatrix},
     \label{eqn:scalar_field}
 \end{equation}
-which is a doublet with positive hypercharge ($Y=\nicefrac{1}{2}$).
+%which is a doublet with positive hypercharge ($Y=\nicefrac{1}{2}$).
+which is a doublet with positive hypercharge ($Y=1$).
 
 To show how this, it is useful to consider the SM Lagrangian, ignoring the
 QCD part,
@@ -423,12 +434,10 @@ neutral part of the scalar field acquires a vacuum expectation value (vev) $v$,
 \begin{equation}
   \bra{0} \Phi \ket{0} =
   \Phi_0 =
-  \begin{pmatrix} 0 \\ \frac{v}{\sqrt{2}} \end{pmatrix},
+  \frac{1}{\sqrt{2}} \begin{pmatrix} 0 \\ v \end{pmatrix},
   v = \sqrt{\frac{-\mu^2}{\lambda}}.
 \end{equation}
 By acquiring a vev, electroweak symmetry is spontaneously broken.
-The charged component of the scalar field cannot acquire a vev, otherwise
-electromagnetism is not conserved.
 
 \begin{figure}[ht]
   \centering
@@ -454,11 +463,19 @@ electromagnetism is not conserved.
   \label{fig:symmetry_breaking}
 \end{figure}
 
+Since the charged part of the scalar field does not acquire a vev,
+electromagnetism is not broken, leaving a remaining $U(1)_\mathrm{EM}$
+symmetry with a conserved charge of
+\begin{equation}
+  Q = T_3 + \frac{Y}{2},
+\end{equation}
+corresponding to the electric charge.
+
 Expanding the scalar field $\Phi$ around it's minimum $\Phi_0$, one gets
 \begin{equation}
-  \Phi(x) = \frac{1}{\sqrt{2}} \begin{pmatrix} 0 \\ v + H(x) \end{pmatrix},
+  \Phi(x) = \frac{1}{\sqrt{2}} \begin{pmatrix} 0 \\ v + h(x) \end{pmatrix},
 \end{equation}
-with $H(x)$ being a new scalar field.
+with $h(x)$ being a new scalar field.
 Inserting this into the kinetic term of Equation~\ref{eqn:scalar_lagrangian},
 and redefining the gauge fields as
 \begin{eqnarray}
@@ -516,6 +533,93 @@ by the ATLAS and CMS experiments.
   }
   \label{fig:higgs_mass}
 \end{figure}
+
+The final piece to add to the SM are masses for the fermions, which are
+introduced through Yukawa cuplings between the fermion fields and the scalar
+field.
+An additional set of terms are added to the Lagrangian for the interactions
+between the scalar field and the fermion sector.
+The portion that represents the first generation of fermions is
+\begin{equation}
+  \mathcal{L}_\mathrm{F} =
+  - G_e \bar{L} \Phi e_\mathrm{R}
+  - G_d \bar{Q} \Phi d_\mathrm{R}
+  - G_u \bar{Q} \tilde{\Phi} u_\mathrm{R}
+  + \mathrm{h.c.}.
+  \label{eqn:fermion_lagrangian}
+\end{equation}
+There are copies of these terms for the second and third generations of
+fermions.
+A new term, $\tilde{\Phi}$ was introduced, which is the conjugate of $\Phi$
+with negative hypercharge ($Y = 1$), and is equal to
+\begin{eqnarray}
+  \tilde{\Phi} &=& i \tau_2 \Phi^{*} \\
+               &=& \frac{1}{\sqrt{2}} \begin{pmatrix} v + h \\ 0 \end{pmatrix}.
+\end{eqnarray}
+Substituting terms into Equation~\ref{eqn:fermion_lagrangian} gives
+\begin{align}
+  \begin{split}
+    \mathcal{L}_\mathrm{F} =
+      - \frac{1}{\sqrt{2}}
+      &
+      \left[
+      G_e
+    \begin{pmatrix} \bar{\nu} & \bar{e} \end{pmatrix}_\mathrm{L}
+    \begin{pmatrix} 0 \\ v+h \end{pmatrix}
+      e_\mathrm{R}
+      %% 
+      + G_d
+    \begin{pmatrix} \bar{u} & \bar{d} \end{pmatrix}_\mathrm{L}
+    \begin{pmatrix} 0 \\ v+h \end{pmatrix}
+      d_\mathrm{R}
+      \right.
+      \\
+      &
+      \left.
+      %%
+      + G_u
+    \begin{pmatrix} \bar{u} & \bar{d} \end{pmatrix}_\mathrm{L}
+    \begin{pmatrix} v+h \\ 0 \end{pmatrix}
+      u_\mathrm{R}
+    \right]
+    %%
+    + \mathrm{h.c.}
+    %%
+  \end{split}
+\end{align}
+%%
+\begin{equation}
+  \mathcal{L}_\mathrm{F} =
+  - \frac{1}{\sqrt{2}}
+  (v+h)
+  \left(
+    G_e \bar{e}_\mathrm{L} e_\mathrm{R} +
+    G_d \bar{d}_\mathrm{L} d_\mathrm{R} +
+    G_u \bar{u}_\mathrm{L} u_\mathrm{R}
+  \right) + \mathrm{h.c.}.
+  \label{eqn:expanded_fermion_lagrangian}
+\end{equation}
+
+Generic fermion mass terms are of the form
+$m \bar{f}_\mathrm{L} f_\mathrm{R} + \mathrm{h.c.}$, so reading
+Equation~\ref{eqn:expanded_fermion_lagrangian}, one can see the fermion masses
+are
+\begin{align}
+  \begin{split}
+    m_e = & \frac{G_e v}{\sqrt{2}} \\
+    m_u = & \frac{G_u v}{\sqrt{2}} \\
+    m_d = & \frac{G_d v}{\sqrt{2}}.
+  \end{split}
+\end{align}
+The $h$ is dropped because it is the remnant of the Higgs doublet, and expected
+to be negligible.
+There are of course similar mass terms for the second and third generation
+fermions.
+Since the neutrinos have no isospin, they do not interact with the scalar
+potential, and therefore, do not pick up a mass.
+It should also be noted that the $G$'s, thus the fermion masses, are not
+predicted by the SM, and the fermion masses must be measured, and inputed
+into the theory.
 
 % While the photon is a massless particle, the $W^{\pm}$ and $Z$ bosons are
 % observed to be short ranged, implying they are massive.
