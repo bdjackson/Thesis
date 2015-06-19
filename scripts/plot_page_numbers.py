@@ -104,6 +104,11 @@ draw_annotation('Moved to\nChicago',
                 offset_x=-25, offset_y=-10,
                 shrinkB=10, angle_a = 20, angle_b=90)
 
+draw_annotation('Interview!',
+                date_string='Jun 16 2015',
+                offset_x=-25, offset_y=-5,
+                shrinkB=10, angle_a = 20, angle_b=90)
+
 ## -----------------------------------------------------------------------------
 # save the figure to a pdf
 # plt.savefig('pages.pdf', bbox_inches='tight', format='pdf')
