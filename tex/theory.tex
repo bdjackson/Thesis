@@ -3,20 +3,6 @@
 \chapter[Theoretical overview][Theory]{Theoretical overview}
 \label{ch:theory}
 
-{\color{red} I'll need to go back and re-read through some books/papers before
-  writing this chapter!}
-
-{\color{red} Evelyn: 
-keep this brief by referencing as much as possible.
-Certainly contrast assumption of RPC vs assumption of RPV for experimental
-searches.
-Both are possibilities.
-Stop as LSP does give unique (crazy?) signature not well
-tested by previous searches (include LQ exclusion plot).
-Could have different
-decay rates to e, mu, tau.
-}
-
 The universe, as we know it, comprises fundamental matter particles, and
 four fundamental forces.
 These forces include gravity, electromagnetism, and the strong and weak nuclear
@@ -717,6 +703,8 @@ A particularly famous hierarchy problem is associated with the mass of the
 Higgs boson.
 Observed particles masses are a combination of the ``bare'' mass (tree level)
 and radiative corrections from additional loop diagrams.
+The one-loop corrections to the Higgs mass are shown in
+Figure~\ref{fig:oneloopdiagrams}.
 These loop momenta are cut off at the Planck scale, which leaves a lot of room
 for the these radiative corrections to increase.
 Fermion and gauge boson masses are protected from this high cutoff scale.
@@ -737,6 +725,55 @@ A way to remove the quadratic dependence on the Planck scale is to introduce
 new particles, which have the opposite loop behavior to their SM counterparts.
 This is the basic idea of supersymmetry, which is discussed in
 Section~\ref{sec:susy}.
+
+\begin{figure}[t]
+  \begin{tikzpicture}[scale=0.9]
+    \node[void] (in) at (0,0)  {};
+    \node[void] (v1) at (1,0) {};
+    \node[void] (v2) at (2,0) {};
+    \node[void] (out) at (3,0) {};
+    \draw[spin0] (in) -- node [above]{$H$} (v1) ;
+    \draw (1.5,0) circle (0.5);
+    \node at (1.5,0.7) {$f$};
+    \draw[spin0] (v2) -- node [above]{$H$} (out);
+  \end{tikzpicture}
+  \hfill
+  \begin{tikzpicture}[scale=0.9]
+    \node[void] (in) at (0,0)  {};
+    \node[void] (v1) at (1,0) {};
+    \node[void] (v2) at (2,0) {};
+    \node[void] (out) at (3,0) {};
+    \draw[massvect] (v1) arc(180:0:0.5) ;
+    \node at (1.5,0.8) {$W,Z$};
+    \draw[spin0] (in) -- node [above]{$H$} (v1) -- (v2) -- node [above]{$H$} (out);
+  \end{tikzpicture}
+  \hfill
+  \begin{tikzpicture}[scale=0.9]
+    \node[void] (in) at (0,0)  {};
+    \node[void] (v1) at (1,0) {};
+    \node[void] (v2) at (2,0) {};
+    \node[void] (out) at (3,0) {};
+    \draw[massvect] (1.5,0.45) circle (0.5);
+    \node at (1.5,1.3) {$W,Z$};
+    \draw[spin0] (in) -- node [above]{$H$} (v1) -- (v2) -- node [above]{$H$} (out);
+  \end{tikzpicture}
+  \hfill
+  \begin{tikzpicture}[scale=0.9]
+    \node[void] (in) at (0,0)  {};
+    \node[void] (v1) at (1,0) {};
+    \node[void] (v2) at (2,0) {};
+    \node[void] (out) at (3,0) {};
+    \draw[spin0] (1.5,0.5) circle (0.5);
+    \node at (1.5,1.3) {$H$};
+    \draw[spin0] (in) -- node [above]{$H$} (v1) -- (v2) -- node [above]{$H$} (out);
+  \end{tikzpicture}
+  \caption{One-loop quantum corrections to the Higgs boson mass.
+    From left to right: contribution
+    from the Yukawa interaction; two contributions from the gauge interaction;
+    contribution from the Higgs self-interaction.
+  }
+  \label{fig:oneloopdiagrams}
+\end{figure}
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
@@ -1065,38 +1102,96 @@ zino ($\tilde{Z}$) and the photino ($\tilde{\gamma}$).
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
-\subsection{MSSM Lagrangian}
+\subsection{Supersymmetric Lagrangian}
 \label{sec:mssm_lagrangian}
 
+In constructing a supersymmetric model, a new Lagrangian is constructed, with
+kinetic and interaction terms.
+The kinetic terms of a supersymmetric Lagrangian are of the form
 \begin{equation}
-  \mathcal{L} =
+  \mathcal{L}_\mathrm{kinetic} =
   - \frac{1}{4} G_{\mu\nu}^{a} G_{a}^{\mu\nu}
   + \tilde{G}^{\dagger a} i \bar{\sigma}^{\mu} D_{\mu} \tilde{G}_{a}
   + f^{\dagger i} i \bar{\sigma}^{\mu} D_{\mu} f_{i}
-  - \left( D_{\mu} \phi_{i} \right)^{\dagger} D^{\mu} \phi^{i}
+  - \left( D_{\mu} \phi_{i} \right)^{\dagger} D^{\mu} \phi^{i},
 \end{equation}
+where $G$ and $\tilde{G}$ represent any gauge boson and gaugino in the theory
+respectively.
+$f$ is any fermion, and $\phi$ is any scaler field.
+
+The interaction terms are written in terms of a superpotential $\mathcal{W}$,
+and takes the form.
+\begin{equation}
+  \mathcal{L}_\mathrm{int} =
+  - \sum_{i} \left| \frac{\partial \mathcal{W}}{\partial z_i} \right|^2
+  - \frac{1}{2} \sum_{ij}
+  \left( \bar{f}_i \frac{\partial^2 \mathcal{W}}{\partial z_i \partial z_j} f_j
+  + \mathrm{h.c.} \right).
+  %%
+  \label{eqn:mssm_lagrange_int}
+\end{equation}
+$z_i$ are the superfields of theory, and the theory is specified by
+$\mathcal{W}$.
+The particular form of $mathcal{W}$ that leads to the MSSM is 
+\begin{equation}
+  \mathcal{W} =
+  \sum_{ij}
+  \left(
+    - Y_{ij}^\mathrm{u} \bar{u}_i H_\mathrm{u} \cdot Q_j
+    + Y_{ij}^\mathrm{d} \bar{d}_i H_\mathrm{d} \cdot Q_j
+    + Y_{ij}^{\ell}     \bar{e}_i H_\mathrm{d} \cdot Q_j
+    + \mu H_\mathrm{u} \cdot H_\mathrm{d}
+  \right),
+\end{equation}
+where $Y_{ij}$ are Yukawa couplings among generations, and superscript is a
+label for the type of interaction rather than an index to be summed over.
+First three terms are generalizations of SM Yukawa interactions.
+Last term is globally supersymmetric mass for the Higgs fields.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsection{R-Parity}
 \label{sec:r_parity}
 
-The extension of the Standard Model of particle physics with
-supersymmetry (SUSY)~\cite{Miyazawa:1966,Ramond:1971gb,Golfand:1971iw,
-Neveu:1971rx,Neveu:1971iv,Gervais:1971ji,Volkov:1973ix,Wess:1973kz,Wess:1974tw}
+The extension of the Standard Model of particle physics with supersymmetry
 immediately leads to processes that violate both baryon number ($B$) and
-lepton number ($L$), leading to rapid proton decay and
-lepton-number-violating processes, such as unseen decays of
-$\mu \to e\gamma$, in conflict with experimental bounds.
+lepton number ($L$).
+In addition to the interaction terms given in
+Equation~\ref{eqn:mssm_lagrange_int}, the most general MSSM Lagrangian may
+contain terms such as
+\begin{align}
+  % \begin{split}
+    W_{\Delta L = 1} & =
+    \frac{1}{2} \lambda^{ijk} L_{i} L_{j} \bar{e}_{k} +
+    \lambda'^{ijk} L_{i} Q_{j} \bar{d}_{k} +
+    \mu'^{i} L_{i} H_\mathrm{u},
+    \label{eqn:rpv_terms_1}
+    \\
+    %%
+    W_{\Delta B = 1} & =
+    \frac{1}{2} \lambda''^{ijk} \bar{u}_{i} \bar{d}_{j} \bar{d}_{k},
+    \label{eqn:rpv_terms_2}
+  % \end{split}
+\end{align}
+where $i$, $j$, $k$ indicate the family indices.
+If both the lepton number violating and baryon number violating terms are
+allowed to contribute, the interactions lead to rapid proton decay
+($p \to \pi^{0} e^{+}$, and lepton-number-violating processes, such
+as unseen decays of $\mu \to e\gamma$, in conflict with experimental bounds.
 A conventional assumption to prevent these processes is to impose
 conservation of $R$-parity~\cite{Fayet:1976et,Fayet:1977yc,Farrar:1978xj,
 Fayet:1979sa,Dimopoulos:1981zb},
-defined as $R=(-1)^{3(B-L)+2s}$ where $s$ is the spin of the particle.
+defined as
+\begin{equation}
+  R=(-1)^{3(B-L)+2s},
+\end{equation}
+where $s$ is the spin of the particle.
 This has a value of $+1$ for Standard Model particles and $-1$ for
 SUSY particles.
 In this case SUSY particles are produced in pairs, and the LSP is stable.
 Further, this stable LSP cannot carry electric charge or color charge without
 coming into conflict with astrophysical data.
+A stable LSP also serves as a viable dark matter candidate.
 At the LHC, the conventional experimental signature for SUSY particles
 includes significant missing transverse momentum due to the non-interaction of
 the LSP with the detector.
@@ -1106,22 +1201,15 @@ the LSP with the detector.
 \section{B-L extension}
 \label{sec:theory_bl_extension}
 
-
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\FloatBarrier
-\subsection{Motivation}
-
-{\color{red} Why this model? :-) Talk about things like:
-\begin{itemize}
-\item RPC is overkill to prevent proton decay
-\item Links neutrino sector to susy properties
-\end{itemize}
-}
-
-An alternative approach is to add a local symmetry $\mathrm{U}(1)_{B-L}$ to the
+While $R$-Parity conservation does prevent the rapid decay of the proton, it is
+a rather strict requirement.
+There exist alternative approaches, that accomplish the same goal, but allow
+for some of the interactions described in
+Equations~\ref{eqn:rpv_terms_1}~and~\ref{eqn:rpv_terms_2}.
+One such approach is to add a local symmetry $\mathrm{U}(1)_{B-L}$ to the
 $\mathrm{SU}(3)_\mathrm{C} \times
 \mathrm{SU}(2)_\mathrm{L} \times
-\mathrm{U}(1)_\mathrm{Y}$ Standard Model with right-handed neutrinos.
+\mathrm{U}(1)_\mathrm{Y}$ SM with right-handed neutrinos.
 The minimal supersymmetric extension then only needs a vacuum expectation value
 for a right-handed sneutrino in order to spontaneously break the
 $B-L$ symmetry~\cite{FileviezPerez:2008sx, Barger:2008wn, FileviezPerez:2009gr,
@@ -1286,25 +1374,6 @@ The expected production cross section are shown in Figure~\ref{fig:stop_xsec}.
   }
   \label{fig:stop_xsec}
 \end{figure}
-
-% %% -----------------------------------------------------------------------------
-% \FloatBarrier
-% \subsection{Expected kinematics}
-% 
-% {\color{red} TODO talk about expected event kinematics at truth level}
-% 
-% The expected event kinematics are studied using Monte Carlo (MC) simulation.
-% Simulated stop pair production events are generated using \madgraph\ version
-% 1.5.12~\cite{Alwall:2011uj} and \pythia\ version 6.427~\cite{Sjostrand:2006za},
-% and the expected event kinematics are studied at the truth level, ignoring
-% detector effects and potential inefficiencies.
-% The simulated signal event generation procedure is described in more detail in
-% Section~\ref{sec:mc_samples}.
-% For illustration purposes, three choices of stop mass (100~\GeV, 500~\GeV,
-% and 1000~\GeV), are compared in this section to give a picture of how the event
-% kinematics are expected to evolve with increasing stop mass.
-% 
-% Figure~\ref{fig:truth_stop_pt} shows the expected 
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
