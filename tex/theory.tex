@@ -862,9 +862,9 @@ gauginos, and transform the same as their boson counterparts under gauge
 transformations.
 Therefore, the left- and right-handed gauginos are in the same supermultiplet.
 
-As mentioned in Section~\ref{susy_motivation}, no supersymmetric particles have
-been observed with the same mass as their SM counterparts; for this reason,
-if SUSY is a true symmetry of nature, it must be a broken.
+As mentioned in Section~\ref{sec:susy_motivation}, no supersymmetric particles
+have been observed with the same mass as their SM counterparts; for this
+reason, if SUSY is a true symmetry of nature, it must be a broken.
 In order to solve the hierarchy problem, only soft SUSY breaking is allowed,
 otherwise, quadratic divergences reappear.
 This means that the relation between dimensionless coupling constants must
@@ -888,9 +888,193 @@ the fine-tuning of the hierarchy problem.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
-\subsection{MSSM}
+\subsection{Minimal supersymmetric Standard Model}
 \label{sec:mssm}
 
+In order to construct a supersymmetric Standard Model (MSSM), the SM particles
+must be placed into the context of supersymmetric multiplets.
+As discussed in Section~\ref{sec:susy_formalism}, there are two types of
+supermultiplets which can be used to construct the model, chiral superfields,
+and gauge superfields.
+The SM fermions transform differently under the gauge transformations depending
+on the chirality (left- or right- handedness); for this reason, the SM fermions
+must be placed into chiral supermultiplets, where the left- and right-handed
+particles are treated separately.
+The supersymmetric partners of the fermions have spin-0, and are called
+scalar fermions, or sfermions.
+As with the SM fermions, the sfermions are made up of the partners come in
+two types, called scalar quarks (squarks), which have color charge, and scalar
+leptons (sleptons), which do not interact with the strong force.
+As the names suggest, the squarks and sleptons are the supersymmetric
+counterparts of the SM quarks and leptons.
+Despite the fact that these sfermions are scalar particles, they are assigned
+a handedness, corresponding to the handedness of the SM counterpart.
+This should not be confused with the particles being truly left- or
+right-handed chiral fields.
+
+The gauge bosons have spin-1, and are placed in gauge supermultiplets with
+their supersymmetric partners, the gauginos.
+The gauginos have spin-\nicefrac{1}{2}, and are fermions.
+Unlike the SM fermions however, the gauginos transform the same as the gauge
+bosons under gauge transformations in a way that does not depend on the
+handedness of the particle.
+
+The Higgs boson is the final particle to include in this MSSM.
+Since the Higgs boson is a scalar, it must be placed into a chiral
+supermultiplet, with a fermion Higgsino.
+It should be noted that in the supersymmetric model, a single Higgs boson is
+not sufficient, and a second chiral Higgs supermultiplet is added.
+A second supermultiplet is necessary in a due to the basic structure of
+supersymmetric models and to cancel anomalies that arise due to the additional
+symmetry breaking.
+\begin{itemize}
+  \item \textbf{Structure}: In the SM, the scalar field gives mass to the
+    up-type quarks and the conjugate field gives mass to the down-type quarks
+    and charged leptons.
+    In supersymmetric models, the Higgs field has hypercharge
+    $Y=+\nicefrac{1}{2}$, and gives mass to the up-type quarks, however the
+    conjugate of the Higgs field no longer gives mass to the particles with
+    negative hypercharge.
+    A second scalar field with hypercharge $Y=-\nicefrac{1}{2}$ is added to
+    give masses to the down-type quarks and the charged leptons
+  \item \textbf{Anomaly cancellation}: In general, breaking a gauge symmetry
+    of the Lagrangian can introduce anomalies, and cause the theory to be
+    inconsistent.
+    While the SM has several broken symmetries, it remains a consistent theory
+    because it satisfies the condition
+    $\Tr\left[ T_3^2 Y \right] = \Tr\left[ Y^3 \right] = 0$, where the trace
+    is run over the left-handed Weyl fermionic degrees of freedom.
+    If a single Higgsino field, with either $Y=+\nicefrac{1}{2}$ or
+    $Y=-\nicefrac{1}{2}$ is added to the theory, the cancellation is broken,
+    and the theory becomes inconsistent.
+    Adding a second Higgsino field with the opposite hypercharge restores the
+    cancellation.
+\end{itemize}
+The two Higgsino fields in the MSSM are named $H_\mathrm{u}$ and $H_\mathrm{d}$,
+and have $Y=+\nicefrac{1}{2}$ and $Y=-\nicefrac{1}{2}$ respectively.
+The subscript represents the types of quark which interact with the Higgsino
+field.
+
+The full list of chiral and gauge supermultiplets contained in the MSSM are
+shown in \cref{tab:chiral_superfields,tab:gauge_superfields}.
+It should also be noted that, just as the $W^3$ and $B$ fields of the SM mix to
+form the photon and the $Z$ boson, the corresponding gauginos mix to form the
+zino ($\tilde{Z}$) and the photino ($\tilde{\gamma}$).
+
+\begin{table}[ht]
+  \caption{Chiral supermultiplet fields in the
+    MSSM~\cite{aitchison2007supersymmetry}.
+  }
+  \label{tab:chiral_superfields}
+  \begin{center}
+    \begin{tabular}{ccccc}
+      \toprule
+      \multicolumn{2}{l}{Names} &
+      Spin 0 &
+      Spin \nicefrac{1}{2} &
+      $\mathrm{SU}(3)_\mathrm{C},
+       \mathrm{SU}(2)_\mathrm{L},
+       \mathrm{U}(1)_\mathrm{Y}$ \\
+      \midrule
+      %%
+      Squarks, quarks&
+      $Q$ &
+      $\left( \tilde{u}_\mathrm{L}, \tilde{d}_\mathrm{L} \right)$ &
+      $\left( u_\mathrm{L}, d_\mathrm{L} \right)$ &
+      $\mathbf{3}, \mathbf{2}, \nicefrac{1}{3}$ \\[1ex]
+      %%
+      (3 families) &
+      $\bar{u}$ &
+      $\tilde{\bar{u}}_\mathrm{L} = \tilde{u}_\mathrm{R}^{\dagger}$ &
+      $\bar{u}_\mathrm{L} = \left( u_\mathrm{R} \right)^\mathrm{c}$ &
+      $\mathbf{3}, \mathbf{1}, -\nicefrac{4}{3}$ \\[1ex]
+      %%
+      &
+      $\bar{d}$ &
+      $\tilde{\bar{d}}_\mathrm{L} = \tilde{d}_\mathrm{R}^{\dagger}$ &
+      $\bar{d}_\mathrm{L} = \left( d_\mathrm{R} \right)^\mathrm{c}$ &
+      $\mathbf{3}, \mathbf{1}, \nicefrac{2}{3}$ \\
+      %%
+      \midrule
+      %%
+      Sleptons, leptons &
+      $L$ &
+      $\left( \tilde{\nu}_{e, \mathrm{L}}, \tilde{e}_\mathrm{L} \right)$ &
+      $\left( nu_{e, \mathrm{L}}, e_\mathrm{L} \right)$ &
+      $\mathbf{1}, \mathbf{2}, -1$ \\[1ex]
+      %%
+      (3 families) &
+      $\bar{e}$ &
+      $\tilde{\bar{e}}_\mathrm{L} = \tilde{e}_\mathrm{R}^{\dagger}$ &
+      $\bar{e}_\mathrm{L} = \left( e_\mathrm{R} \right)^\mathrm{c}$ &
+      $\mathbf{1}, \mathbf{1}, 2$ \\
+      %%
+      \midrule
+      Higgs, Higgsinos &
+      $H_\mathrm{u}$ &
+      $\left( H_\mathrm{u}^{+}, H_\mathrm{u}^{0} \right)$ &
+      $\left( \tilde{H}_\mathrm{u}^{+}, \tilde{H}_\mathrm{u}^{0} \right)$ &
+      $\mathbf{1}, \mathbf{2}, 1$ \\[1ex]
+      %%
+      &
+      $H_\mathrm{d}$ &
+      $\left( H_\mathrm{d}^{0}, H_\mathrm{d}^{-} \right)$ &
+      $\left( \tilde{H}_\mathrm{d}^{0}, \tilde{H}_\mathrm{d}^{-} \right)$ &
+      $\mathbf{1}, \mathbf{2}, -1$ \\
+      %%
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[ht]
+  \caption{Gauge supermultiplet fields in the
+    MSSM~\cite{aitchison2007supersymmetry}.
+  }
+  \label{tab:gauge_superfields}
+  \begin{center}
+    \begin{tabular}{cccc}
+      \toprule
+      Names &
+      Spin \nicefrac{1}{2} &
+      Spin 1 &
+      $\mathrm{SU}(3)_\mathrm{C},
+       \mathrm{SU}(2)_\mathrm{L},
+       \mathrm{U}(1)_\mathrm{Y}$ \\
+      \midrule
+      %%
+      Gluinos, gluons &
+      $\tilde{g}$ &
+      $g$ &
+      $\mathbf{8}, \mathbf{1}, 0$ \\[1ex]
+      %%
+      Wino, $W$ boson &
+      $\tilde{W}^{\pm}, \tilde{W}^{0}$ &
+      $W^{\pm}, W^{0}$ &
+      $\mathbf{1}, \mathbf{3}, 0$ \\[1ex]
+      %%
+      Bino, $B$ boson &
+      $\tilde{B}$ &
+      $B$ &
+      $\mathbf{1}, \mathbf{1}, 0$ \\
+      %%
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\FloatBarrier
+\subsection{MSSM Lagrangian}
+\label{sec:mssm_lagrangian}
+
+\begin{equation}
+  \mathcal{L} =
+  - \frac{1}{4} G_{\mu\nu}^{a} G_{a}^{\mu\nu}
+  + \tilde{G}^{\dagger a} i \bar{\sigma}^{\mu} D_{\mu} \tilde{G}_{a}
+  + f^{\dagger i} i \bar{\sigma}^{\mu} D_{\mu} f_{i}
+  - \left( D_{\mu} \phi_{i} \right)^{\dagger} D^{\mu} \phi^{i}
+\end{equation}
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
