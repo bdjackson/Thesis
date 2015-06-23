@@ -3,14 +3,15 @@
 \chapter[B-L stop search][B-L stop search]{B-L stop search}
 \label{ch:bl_stop}
 
-In this chapter, a search is presented for the direct scalar top (stop) pair
+In this chapter, a search is presented for direct scalar top (stop) pair
 production where the stops decay via an $R$-parity violating (RPV) coupling to
 a final state with two leptons and two identified $b$-jets, show in
 Figure~\ref{fig:blstop_diagram}.
 The motivation and phenomenology of this model is described further in
 Section~\ref{sec:theory_bl_extension}.
-20.3~\ifb of $\sqrt{s} = 8\TeV$ proton-proton collision data collected with the
-ATLAS detector at the LHC is analyzed for this search.
+For this search, data collected with the ATLAS detector at the LHC,
+corresponding to 20.3~\ifb of $\sqrt{s} = 8\TeV$ proton-proton collision, is
+analyzed.
 
 This analysis required the generation of simulated signal Monte Carlo 
 (Section~\ref{sec:signal_model_mc}) to develop the selection criteria, and
@@ -28,12 +29,11 @@ the normalizations taken from the observed yields in dedicated Control Regions,
 defined in Section~\ref{sec:cr}, using a maximum likelihood fit, described in
 Section~\ref{sec:bkg_fit}.
 The extrapolation of the background estimate from the Control Regions to other
-regions in kinematic space are validated in several Validation Regions.
+regions in kinematic space is validated in several Validation Regions.
 
 The observed event yields in the Signal Regions are consistent with the SM
 predictions, so limits are placed on the allowed stop masses and branching
-% ratios in Section~\ref{sec:results}.
-ratios in Chapter~\ref{ch:results}.
+fractions in Chapter~\ref{ch:results}.
 
 % \begin{figure}[ht]
 %   \centering
@@ -70,20 +70,23 @@ of 400~\GeV\ to $0.18 \pm 0.06$~fb for a stop mass of 1100~\GeV.
 The cross sections and associated uncertainties for stop pair production are
 summarized in Table~\ref{tab:stop_xsec}.
 
-Each of The MC simplified models are generated with stop branching ratios of 
+All samples have been generated with stop branching fractions of 
 $Br(\tilde{t} \rightarrow be) = Br(\tilde{t} \rightarrow b\mu) = 0.5$.
-From this nominal branching ratio, the simulated events can be appropriately
+From this nominal branching fraction, the simulated events can be appropriately
 weighted to give any branching fraction hypothesis.
 This procedure is described in detail in
 Section~\ref{sec:model_dependent_limits}
-Signal contributions from $\tilde{t} \rightarrow b\tau$ decays were shown not
-to significantly contribute to the final state with two light leptons and two
+Except at high branching fraction for $Br(\tilde{t} \rightarrow b\tau)$,
+$\tilde{t} \rightarrow b\tau$ decays do not significantly contribute to the
+final state with two light leptons and two
 $b$-jets.
-This is due partially to the low branching ratio of leptonic tau decays (35\%
-for each tau lepton), as well as the addition of a neutrino to the final state.
-Because the decay $\tilde{t} \rightarrow b\tau$ does not significantly
-contribute to the search sensitivity, is not included in the simulated
-simplified model.
+This is due to the low branching fraction of
+$\tau^{-} \rightarrow e^{-} \bar{\nu}_{e} \nu_{\tau}$ and 
+$\tau^{-} \rightarrow \mu^{-} \bar{\nu}_{\mu} \nu_{\tau}$ (17\% each), as well
+as the addition of neutrinos to the final state, leading to poorer mass
+resolution on \MBL.
+The decay $\tilde{t} \rightarrow b\tau$ does not significantly contribute to
+the search sensitivity, and it is not included in the simulated samples.
 
 \begin{table}[ht]
   \caption{Stop cross sections and their associated
@@ -92,24 +95,25 @@ simplified model.
   \label{tab:stop_xsec}
   \centering{
     \begin{tabular}{ccc}
-      Stop Mass [\GeV] & Cross section [pb] & Uncertainty [pb] \\
+      % Stop Mass [\GeV] & Cross section [pb] & Uncertainty [pb] \\
+      Stop Mass [\GeV] & Cross section [fb] & Uncertainty [pb] \\
       \midrule
-      % 400  & $0.36                \pm 0.05$               \\
-      % 500  & $8.6  \times 10^{-2} \pm 1.3 \times 10^{-2}$ \\
-      % 600  & $2.5  \times 10^{-2} \pm 4   \times 10^{-3}$ \\
-      % 700  & $8.1  \times 10^{-3} \pm 1.5 \times 10^{-3}$ \\
-      % 800  & $2.9  \times 10^{-3} \pm 6   \times 10^{-4}$ \\
-      % 900  & $1.09 \times 10^{-3} \pm 2.6 \times 10^{-4}$ \\
-      % 1000 & $4.4  \times 10^{-4} \pm 1.2 \times 10^{-4}$ \\
-      % 1100 & $1.8  \times 10^{-4} \pm 6   \times 10^{-5}$ \\
-      400  & $0.36$                & $0.05$               \\
-      500  & $8.6  \times 10^{-2}$ & $1.3 \times 10^{-2}$ \\
-      600  & $2.5  \times 10^{-2}$ & $4   \times 10^{-3}$ \\
-      700  & $8.1  \times 10^{-3}$ & $1.5 \times 10^{-3}$ \\
-      800  & $2.9  \times 10^{-3}$ & $6   \times 10^{-4}$ \\
-      900  & $1.09 \times 10^{-3}$ & $2.6 \times 10^{-4}$ \\
-      1000 & $4.4  \times 10^{-4}$ & $1.2 \times 10^{-4}$ \\
-      1100 & $1.8  \times 10^{-4}$ & $6   \times 10^{-5}$ \\
+      % 400  & $0.36$                & $0.05$               \\
+      % 500  & $8.6  \times 10^{-2}$ & $1.3 \times 10^{-2}$ \\
+      % 600  & $2.5  \times 10^{-2}$ & $4   \times 10^{-3}$ \\
+      % 700  & $8.1  \times 10^{-3}$ & $1.5 \times 10^{-3}$ \\
+      % 800  & $2.9  \times 10^{-3}$ & $6   \times 10^{-4}$ \\
+      % 900  & $1.09 \times 10^{-3}$ & $2.6 \times 10^{-4}$ \\
+      % 1000 & $4.4  \times 10^{-4}$ & $1.2 \times 10^{-4}$ \\
+      % 1100 & $1.8  \times 10^{-4}$ & $6   \times 10^{-5}$ \\
+      400  & $360$  & $50$   \\
+      500  & $86$   & $130$  \\
+      600  & $25$   & $4$    \\
+      700  & $8.1$  & $1.5$  \\
+      800  & $2.9$  & $0.6$  \\
+      900  & $1.1$  & $0.3$  \\
+      1000 & $0.44$ & $0.12$ \\
+      1100 & $0.18$ & $0.06$ \\
       \bottomrule
     \end{tabular}
   }
@@ -135,9 +139,9 @@ products.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Baseline electrons must satisfy the \texttt{Medium++} identification
 requirement and have $|\eta| \leq 2.47$.
-A requirement of $\DZEROSIG \leq 3$ and $\ZZEROSINTHETA \leq 0.4$ mm
-is placed on the impact parameter to reject electrons coming from secondary
-vertices.
+A requirement of $\DZEROSIG \leq 3$ and
+$\ZZEROSINTHETA \leq 0.4$ mm is placed on the impact parameter
+to reject electrons coming from the decay of long-lived particles.
 The baseline electron requirements are outlined in
 Table~\ref{tab:baseline_el_def}.
 
@@ -162,7 +166,7 @@ Table~\ref{tab:baseline_el_def}.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Baseline muons are selected from the \texttt{STACO} muon collection, and
 required to pass the \texttt{Loose} identification requirement. The baseline
-muons must also have $|\eta| \leq 2.5$ 
+muons must also have $|\eta| \leq 2.5$.
 Impact parameter requirements of $\DZEROSIG \leq 3$ and
 $\ZZEROSINTHETA \leq 1$ mm are applied to reduce the contamination of muons
 from secondary vertices and cosmic rays.
@@ -174,8 +178,6 @@ The ID track must also have at least 5 hits in the SCT, and at most 2 missing
 hits-on-track (holes) in both the Pixel detector and the SCT. 
 If the muon has $|\eta| \leq 1.9$, there must additionally be at least 6 TRT
 hits, of which no more than 90\% are outliers.
-No requirement is placed on the number of TRT hits in the high~$|\eta|$ region
-of $|\eta| > 1.9$.
 The baseline muon requirements are outlined in Table~\ref{tab:baseline_mu_def}.
 
 \begin{table}[ht]
@@ -202,8 +204,10 @@ The baseline muon requirements are outlined in Table~\ref{tab:baseline_mu_def}.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% baseline jets
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Baseline jets are selected from the AntiKt4LCTopo jet collection, and required
-to have $|\eta| \leq 4.9$.
+Baseline jets are selected from the AntiKt4LCTopo jet collection, which apply a
+and required to have $|\eta| \leq 4.9$.
+These jets are build using the anti-$k_\mathrm{T}$ jet clustering algorithm
+with a cone size of $\Delta R \leq 0.4$~\cite{Cacciari:2008gp}.
 The baseline jet requirements are outlined in Table~\ref{tab:baseline_jet_def}.
 
 \begin{table}[ht]
@@ -222,8 +226,10 @@ The baseline jet requirements are outlined in Table~\ref{tab:baseline_jet_def}.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% overlap removal
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-The following overlap between baseline objects is removed to prevent a single
-detector signature from being included in multiple particle collections. 
+The overlap between baseline objects is removed to prevent a single
+detector signature from being included in multiple particle
+collections.~\footnote{The angular separation between the objects is measured
+as $\Delta R = \sqrt{(\Delta \phi)^2 + (\Delta \eta)^2}$}
 
 \begin{enumerate}
   \item $\Delta R(e,e) \le 0.05$: If two baseline electrons fall
@@ -243,7 +249,7 @@ detector signature from being included in multiple particle collections.
     $\Delta R(\mu,\mu) \le 0.05$, both are removed from the event.
 \end{enumerate}
 
-Leptons from low mass resonances are rejected.
+Leptons from the decays of low hadronic mass resonances are rejected.
 The invariant mass of any remaining same-flavor lepton pairs with opposite
 charge is computed, and if the invariant mass of any of these pairs is less
 than 12~\GeV, both leptons are removed from the event.
@@ -253,13 +259,13 @@ than 12~\GeV, both leptons are removed from the event.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Additional requirements are placed on the leptons and jets after overlap
 removal to select the final ``signal'' objects.
-The scalar sum of the momentum of all tracks with $\pt \geq 400 \GeV$
+The scalar sum of the transverse momentum of all tracks with $\pt \geq 400 \MeV$
 within a cone of $\Delta R \leq 0.30$ of a lepton ($\pt^\mathrm{cone30}$) is
 used to determine if the lepton is isolated.
 Both electrons and muons require
 $\nicefrac{\pT^{\mathrm{cone30}}}{\min(p_T, 60\,\GeV)} \leq 0.1$ in order
 to be declared signal leptons.
-Signal jets must pass a tighter cut of $|\eta| \leq 2.4$, and be tagged as a $b$-jet
+Signal jets must be within $|\eta| \leq 2.4$, and be tagged as a $b$-jet
 according to the MV1 flavor tagging
 algorithm~\cite{ATLAS-CONF-2014-004, ATLAS-CONF-2014-046}.
 The operating point of $\mathrm{MV1} \geq 0.3511$ corresponds to an overall
@@ -275,21 +281,17 @@ Furthermore, the two highest \ET(\pt) leptons are required to have opposite char
 The identification efficiencies for the various objects used in this analysis
 differ in the data and the MC simulation.
 The efficiencies are determined in both data and MC simulation, by the relevant
-performance groups, and an identification scale factor is applied to the MC
-simulation events to account for the differences in identification efficiency.
+ATLAS performance working groups~\cite{egamma2014,Aad:2014rra}.
+The lepton identification scale factors and are computed for each of the two
+signal leptons in a MC simulated event, and depend on both the
+\pt\ and \eta\ of the leptons.
+The product of the scale factors is taken as an event weight, ranging from
+{\color{red} TODO find the range of lepton SF event weights}.
 
-The lepton identification efficiency scale factors comprise the electron and
-muon identification scale factors, and are provided by the Egamma and muon
-combined performance group \cite{egamma2014,Aad:2014rra}.
-The lepton identification scale factors and are computed for each of the signal
-leptons in a MC simulated event (at most two), and depend on both the
-\pt\ and \eta\ of the signal leptons.
-The product of the leptons identification scale factors is taken as and additional event weight.
-
-A scale factor is applied to MC simulated events to match the probability of
-tagging a $b$-jet correctly, and misidentifying jets originating from the
-fragmentation of light-flavor quarks, gluons, and charm quarks. 
-The individual jet scale factor is defined as
+Data and MC simulation also have different efficiencies for tagging a $b$-jet
+and for misidentifying jets originating from the fragmentation of light-flavor
+quarks, gluons, and charm quarks. 
+An individual jet scale factor is defined as
 \begin{equation}
   SF_\mathrm{jet}^\mathrm{eff}
   =
@@ -320,14 +322,13 @@ event weight in MC simulated events.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 A pairing of leptons and $b$-tagged jets must be defined to construct the mass
 of each of the $b\ell$ pairs in a event.
-It is possible to exploit the fact that in the target signal model, each
-$b\ell$ pair comes from a resonant decay of a stop particle, and should
-reconstruct the same invariant mass.
+In the target signal model, each $b\ell$ pair comes from a resonant decay of a
+stop particle with the same invariant mass.
 Therefore, the pairing which minimizes the difference in mass between the two
 $b\ell$ pairs is selected as follows.
 
-The two signal leptons and two $b$-jets are labeled $\ell_0$, $\ell_1$, $b_0$,
-and $b_1$.
+In order of decreasing \pt, the two signal leptons and two $b$-jets are
+labeled $\ell_0$, $\ell_1$, $b_0$, and $b_1$.
 
 % Define some colors for this section to make changing colors easier
 \colorlet{pairing_l_0}{green!50!white}
@@ -335,20 +336,20 @@ and $b_1$.
 \colorlet{pairing_b_0}{red!50!white}
 \colorlet{pairing_b_1}{red!20!white}
 %
-\begin{center}
-  \begin{tikzpicture}
-    \node[rectangle, rounded corners=1ex, fill=pairing_b_0, text=black]
-      (b0) at (-3,0) {$b_0$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black]
-      (b1) at (-1,0) {$b_1$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_l_0, text=black]
-      (l0) at (+1,0) {$\ell_0$};
-    \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black]
-      (l1) at (+3,0) {$\ell_1$};
-  \end{tikzpicture}
-\end{center}
+% \begin{center}
+%   \begin{tikzpicture}
+%     \node[rectangle, rounded corners=1ex, fill=pairing_b_0, text=black]
+%       (b0) at (-3,0) {$b_0$};
+%     \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black]
+%       (b1) at (-1,0) {$b_1$};
+%     \node[rectangle, rounded corners=1ex, fill=pairing_l_0, text=black]
+%       (l0) at (+1,0) {$\ell_0$};
+%     \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black]
+%       (l1) at (+3,0) {$\ell_1$};
+%   \end{tikzpicture}
+% \end{center}
 %
-There are two possible choices of pairings for these four objects.
+There are two possible choices of pairings for these four objects:
 %
 \begin{center}
   \begin{tikzpicture}
@@ -387,33 +388,29 @@ There are two possible choices of pairings for these four objects.
   \end{tikzpicture}
 \end{center}
 
-The masses of all pairings are calculated, and the pairing which gives the 
+The choice that gives the
 smallest difference in the mass $|\MBL^\mathrm{a} - \MBL^\mathrm{b}|$
 is chosen.
 The pairs are then ordered, and relabeled such that the higher mass pair has a
 mass of $\MBL^{0}$, and the lower mass pair has a mass of $\MBL^{1}$.
 This ensures $\MBL^{0} \geq \MBL^{1}$ by definition.
 
-This heuristic correctly identifies at least one correct pairing of $b$-tagged
-jets and leptons in roughly 65-90\% of events in the simulated signal samples
+This heuristic correctly identifies at least one correct pairing in over
+70\% of events in the simulated signal samples
 depending on the mass of the simulated stop. The relative abundance of
-identifying 2, 1, 0 correct pairs in simulated stop events is shown in
-Figure~\ref{fig:pairing_eff}.
+identifying both, only one, or no correct pairs in simulated stop events is
+shown in Figure~\ref{fig:pairing_eff}.
 The efficiency of identifying correct pairs improves once a cut is applied on
 the mass asymmetry of the two $b\ell$ pairs as described in
 Section~\ref{sec:signal_regions}.
-The scenario where one pair is identified correctly corresponds to events where
-one pair is grouped correctly, but at least of of the $b$-tagged jets or one of
-the leptons is not matched to a stop parent.
+The scenario where one of the $b$-tagged jets or one of the leptons is not
+matched to a stop parent.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]
     {figs/blstop/PairingEfficiencies/pairing_abundance__inclusive.pdf}
-  \caption{The relative abundance of each category of correctly pairing
-    $b$-tagged jets and leptons, using the pairing heuristic, for the different
-    stop masses which are considered.
-    The regions show the relative abundance of events where two, one, and zero
+  \caption{The relative abundance of events where two, one, and zero
     pairs are grouped correctly.
   }
   \label{fig:pairing_eff}
@@ -464,16 +461,15 @@ If any of these bad jets remain after the overlap removal procedure, the event
 is rejected.
 Additionally, during periods E-H, a region of the LAr
 calorimeter ($-0.1\le\eta\le1.5$ and $-0.9\le\phi\le-0.5$) malfunctioned
-resulting in a hole in the sub-detector, resulting energy not being collected
-from electrons and jets close to this hole, and indirectly changing
-the \met\ measurement.
-A correction is applied to jets to account for the energy loss in the hole,
+resulting in energy not being collected from electrons and jets, and
+indirectly changing the \met\ measurement.
+A correction is applied to jets to account for the energy loss,
 however, if the correction is too large (greater than 0.05) and the \met\ is
 close to the jet ($\Delta\phi(\met, \text{jet}) \le 0.3$), it is assumed the
 \met\ is mismeasured, and the event is rejected.
 
-In addition to the impact parameter requirement on signal muons discussed in
-Section~\ref{sec:object_selection}, an additional requirement of
+In addition to the impact parameter significance requirement on signal muons
+discussed in Section~\ref{sec:object_selection}, an additional requirement of
 $|d_0| \leq 0.2$~mm is applied to muons passing the overlap removal to reject
 muons from cosmic ray showers. Any event failing this selection requirement is
 rejected.
@@ -484,10 +480,7 @@ different momenta for the same muon.
 
 An additional requirement is applied to MC simulation events to avoid double
 counting backgrounds with heavy flavor quarks in the final state, the heavy
-flavor overlap removal procedure, described in Section~\ref{sec:jet_matching},
-is applied.
-{\color{red} This reference might belong to the MC section rather than jet
-matching. TODO see what this ends up being.}
+flavor overlap removal procedure, described in Section~\ref{sec:jet_matching}.
 
 Events in data are taken from both the \texttt{egamma} and \texttt{muons} data
 streams.
@@ -572,15 +565,13 @@ The expected trigger efficiencies for simulated stop events are shown
 for each trigger individually in Figure~\ref{fig:single_trigger_efficiency}.
 The two muon triggers have roughly the same trigger efficiency, of about 93\% 
 for $\mu\mu$ events and 75\% for $e\mu$ events, for all stop masses.
-The two electron triggers, however, have dramatically different shapes, with
-the \texttt{EF\_e24vhi\_medium1} trigger being highly efficient for $ee$ and
-$e\mu$ events low mass from low mass stop, which decrease for higher
-stop masses. 
-The \texttt{EF\_e60\_medium1} trigger is not efficient for lower stop
-masses, but quickly reaches approximately efficiencies above 95\% efficiency for
-$ee$ and $e\mu$ events.
-The electron (muon) triggers are not efficient for $\mu\mu$ ($ee$) events due
-to the trigger matching requirement.
+The two electron triggers, however, have dramatically different shapes.
+The \texttt{EF\_e24vhi\_medium1} trigger is highly efficient for $ee$ and
+$e\mu$ events only at low stop mass values.
+The \texttt{EF\_e60\_medium1} trigger only reaches 95\% efficiency for
+$ee$ and $e\mu$ events from stops with $m_{\tilde{t}} > 200 \GeV$.
+Due to the trigger requirement, and the overlap removal procedure,
+$ee$~($\mu\mu$) events do not pass the single muon (electron) triggers.
 
 The dependence on the stop mass is a result of the \ET\ dependence of the
 electron triggers.
@@ -588,11 +579,11 @@ The decay products of lighter stops tend to have lower momentum.
 As a result, the electrons from the very light stops ($\leq 300~\GeV$) 
 are more likely to have \ET\ less than the threshold for the
 \texttt{EF\_e60\_medium1} trigger.
-High-\HT\ electrons will deposit more energy into the calorimeter,
+High-\ET\ electrons will deposit more energy into the calorimeter,
 and some of this energy will reach the hadronic calorimeter.
-As the electron \HT\ increases, the probability that the energy deposition into
-the hadronic calorimeter is enough to fail hadronic core isolation requirement
-of the \texttt{EF\_e24vhi\_medium1} trigger increases.
+As the electron \ET\ increases, the probability that the energy deposition into
+the hadronic calorimeter is enough to fail the hadronic core isolation
+requirement of the \texttt{EF\_e24vhi\_medium1} trigger increases.
 The \ET\ dependence of the two electron triggers, shown in
 Figure~\ref{fig:electron_trigger_pt_dependence}, is consistent with the expected
 dependence.
@@ -617,15 +608,12 @@ dependence.
   }
   \caption{Efficiency of simulated stop events passing each single lepton
     trigger broken down by flavor channel.
-    The two single electron triggers have different shapes, which the 
-    \texttt{EF\_e24vhi\_medium1} trigger being more efficient for low stop
-    masses and the \texttt{EF\_e60\_medium1} trigger more efficient for
-    higher stop masses.
-    The two single muon triggers have roughly equal efficiency for all stop
-    masses.
-    Due to the trigger requirement, and the overlap removal procedure, $ee$
-    events do not pass the single muon triggers, and $\mu\mu$ events do not
-    pass the single electron triggers.
+    % The two single electron triggers have different shapes, which the 
+    % \texttt{EF\_e24vhi\_medium1} trigger being more efficient for low stop
+    % masses and the \texttt{EF\_e60\_medium1} trigger more efficient for
+    % higher stop masses.
+    % The two single muon triggers have roughly equal efficiency for all stop
+    % masses.
   }
   \label{fig:single_trigger_efficiency}
 \end{figure}
@@ -644,12 +632,12 @@ dependence.
     electron triggers for several ranges of electron \ET.
     Only $e\mu$ events are shown in order to show to isolate the effect of
     the electron \ET\ on the single electron trigger efficiency.
-    These plots show the trigger efficiency dependence on the stop mass,
-    observed in Figure~\ref{fig:single_trigger_efficiency} is due to a
-    dependence on the electron \HT.
-    The \texttt{EF\_e24vhi\_medium1} trigger has the high efficiency for low
-    \HT\ electrons, while the \texttt{EF\_e60\_medium1} trigger is more
-    efficient for high \HT\ electrons.
+    % These plots show the trigger efficiency dependence on the stop mass,
+    % observed in Figure~\ref{fig:single_trigger_efficiency} is due to a
+    % dependence on the electron \HT.
+    % The \texttt{EF\_e24vhi\_medium1} trigger has the high efficiency for low
+    % \HT\ electrons, while the \texttt{EF\_e60\_medium1} trigger is more
+    % efficient for high \HT\ electrons.
   }
   \label{fig:electron_trigger_pt_dependence}
 \end{figure}
@@ -674,7 +662,8 @@ The trigger requirement is applied in both data and MC simulation.
 To account for the difference in trigger efficiency, a trigger scale factor is
 applied to the MC events passing the trigger requirement.
 The trigger efficiencies for data and MC simulation are provided by
-the Egamma and Muon combined performance groups.
+the Egamma and Muon combined performance
+groups~\cite{ATLAS-CONF-2014-032,Aad:2014rra}.
 The trigger scale factor is the ratio (data to MC simulation) of the
 efficiencies for an event passing the trigger requirement, described in
 Table~\ref{tab:triggers}, and is given by
@@ -2410,15 +2399,15 @@ channels, and weaker than expected in the $\mu\mu$ channel.
 \label{sec:model_dependent_limits}
 
 In the absence of an excess of events in the SRs beyond the SM prediction,
-limits are set on the allowable stop masses and branching ratios for this model.
+limits are set on the allowable stop masses and branching fractions for this model.
 Expected and observed exclusion limits on the signal model are determined using
 the $CL_S$ prescription based on a simultaneous fit of the SRs and
 CRs~\cite{Baak:2014wma}.
 The predicted signal contamination in the CRs is taken into account for each
 signal model tested.
 An expected and observed mass limit is first determined for a single choice of
-stop branching ratio, $Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$,
-the nominal branching ratio simulated in the MC signal models.
+stop branching fraction, $Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$,
+the nominal branching fraction simulated in the MC signal models.
 
 Each SR (SR 400 and SR 600) is interpreted separately, using the predicted and
 observed event yields in the CRs and the SR of interest.
@@ -2447,7 +2436,7 @@ In the high mass regime, SR~600 is selected to interpret the mode, and
 the points where the solid line is below 0.05 (indicated with a dashed red line)
 are excluded.
 No interpolation between the mass points is performed, so the mass limit for
-this choice of stop branching ratios is 900~\GeV.
+this choice of stop branching fractions is 900~\GeV.
 
 \begin{figure}[t]
   \centering
@@ -2462,19 +2451,19 @@ this choice of stop branching ratios is 900~\GeV.
   \label{fig:exp_limit_br_5050}
 \end{figure}
 
-This procedure of finding a stop mass limit is repeated for branching ratios
+This procedure of finding a stop mass limit is repeated for branching fractions
 across the plan of allowed values.
 The MC simulation stop samples are generated with fixed branching
-ratios, however, an additional event weight is constructed to scale the signal
-process to any desired choice of stop branching ratio.
+fractions, however, an additional event weight is constructed to scale the signal
+process to any desired choice of stop branching fraction.
 This event weight depends on the di-lepton flavor channel of each MC simulated
 event.
 It was shown that the disagreement between the generated and reconstructed
 flavor channels is negligible, so the reconstructed di-lepton flavor channel
 is used to select the additional weight.
 
-For a choice of stop branching ratio, the di-stop branching fractions are given
-by 
+For a choice of stop branching fraction, the di-stop branching fractions are
+given by 
 \begin{equation}
   \label{eqn:branching_fractions}
   \begin{aligned}
@@ -2489,8 +2478,8 @@ by
 \end{equation}
 
 The di-stop branching fractions for each flavor channel are plotted for choices
-of the single-stop branching ratio in Figure~\ref{fig:flavor_scaling_bf}, where
-darker colors represent a higher branching fraction.
+of the single-stop branching fraction in Figure~\ref{fig:flavor_scaling_bf},
+where darker colors represent a higher branching fraction.
 The simulated stop samples correspond the center of the $x$-axis, and have
 di-stop branching fractions of 0.25, 0.25, and 0.50 for the $eebb$,
 $\mu\mu bb$, $e\mu bb$ channels respectively.
@@ -2501,7 +2490,7 @@ have fewer expected events.
 Similarly, as the value of $Br(\tilde{t} \to b\mu)$ increases (represented by
 moving toward the bottom left corner of each of the plots), the fraction of
 events decaying to the $\mu\mu bb$ final state increases.
-Finally, increasing branching ratio of the $\tilde{t} \to b\tau$ decay
+Finally, increasing branching fraction of the $\tilde{t} \to b\tau$ decay
 (represented by moving toward the upper left corner of the plots) results in a
 decreasing number of expected events with two light leptons.
 
@@ -2516,7 +2505,7 @@ decreasing number of expected events with two light leptons.
     \label{fig:flavor_scaling_sf}
   }
   \caption{Branching fraction and corresponding scale factor to each di-lepton
-    flavor channel depending on the branching ratios of the stop.
+    flavor channel depending on the branching fractions of the stop.
     The di-stop branching fractions are given by
     Equation~\ref{eqn:branching_fractions}.
     The scale factor plot obtained by plotting
@@ -2532,7 +2521,7 @@ decreasing number of expected events with two light leptons.
 
 Taking the ratio of the target and nominal di-stop branching fraction, a
 scale factor is defined for each flavor channel to weight the MC simulation
-such that it can represent and stop branching ratio.
+such that it can represent and stop branching fraction.
 These scale factors are given by
 \begin{equation}
   \label{eqn:flavor_scale_factor}
@@ -2552,7 +2541,7 @@ where a darker corresponds to a larger value for the scale factor (with a
 maximum value of 4).
 
 The expected and observed $CL_S$ values in SR~400 and SR~600 are shown
-over a range of stop branching ratio hypotheses in
+over a range of stop branching fraction hypotheses in
 Figures~\ref{fig:cls_plane_sr_400_m_500} and~\ref{fig:cls_plane_sr_600_m_900}
 respectively for select stop masses.
 A complete collection of the expected and observed $CL_S$ plots are found in
@@ -2570,7 +2559,7 @@ Appendix~\ref{sec:axp_interpretation_plots}.
   }
   \caption{
     The expected and observed $CL_S$ values in SR~400 for a stop mass of
-    500~\GeV, shown across the plane of physical stop branching ratios.
+    500~\GeV, shown across the plane of physical stop branching fractions.
   }
   \label{fig:cls_plane_sr_400_m_500}
 \end{figure}
@@ -2587,18 +2576,18 @@ Appendix~\ref{sec:axp_interpretation_plots}.
   }
   \caption{
     The expected and observed $CL_S$ values in SR~600 for a stop mass of
-    900~\GeV, shown across the plane of physical stop branching ratios.
+    900~\GeV, shown across the plane of physical stop branching fractions.
   }
   \label{fig:cls_plane_sr_600_m_900}
 \end{figure}
 
-A limit on the allowed stop masses and stop branching ratios is obtained
-similar to the example with a single branching ratio hypothesis.
-For each combination of stop mass and branching ratios, the SR which gives the
+A limit on the allowed stop masses and stop branching fractions is obtained
+similar to the example with a single branching fraction hypothesis.
+For each combination of stop mass and branching fractions, the SR which gives the
 lowest expected value of $CL_S$ is selected. The SR selection for select masses
 are shown in Figure~\ref{fig:sr_selection}.
 Based on the selected SR, the model is rejected at 95\% CL if the observed
-$CL_S$ is less than 0.05, and for each branching ratio, the highest stop mass
+$CL_S$ is less than 0.05, and for each branching fraction, the highest stop mass
 which is excluded is taken to be the mass limit.
 
 \begin{figure}[ht]
@@ -2612,11 +2601,11 @@ which is excluded is taken to be the mass limit.
       {figs/blstop/region_selection/region_choice_vs_br_m_900.pdf}
   }
   \caption{
-    The selected SR for select stop branching ratios for a stop mass of
+    The selected SR for select stop branching fractions for a stop mass of
     900~\GeV.
     The SR is selected by choosing the SR with the smallest expected $CL_S$
-    value for a given branching ratio.
-    For several points in the branching ratio plane, SR~400 was selected because
+    value for a given branching fraction.
+    For several points in the branching fraction plane, SR~400 was selected because
     the two regions have the same expected $CL_S$ value, with the numerical
     precision of the statistical software.
     For these points, the expected sensitivity for both SRs is such that
@@ -2626,11 +2615,11 @@ which is excluded is taken to be the mass limit.
 \end{figure}
 
 Figure~\ref{fig:mass_limit_exp} shows the expected 95\% CL mass limit for each
-point on the stop branching ratio plane.
+point on the stop branching fraction plane.
 These limits are obtained by selecting the highest stop mass with an expected
 $CL_S < 0.05$ in the selected SR.
-For each point on the stop branching ratio plane, the color corresponds to the
-maximum excluded stop mass or the selected branching ratio hypothesis.
+For each point on the stop branching fraction plane, the color corresponds to the
+maximum excluded stop mass or the selected branching fraction hypothesis.
 The nominal stop cross section is used when determining these limit contours.
 
 \begin{figure}[p]
@@ -2659,18 +2648,18 @@ The effect of varying the signal cross section on the observed limit is
 indicated by the dashed red lines.
 Since the two observed events are in the $\mu\mu$ channel, the observed limit
 is somewhat stronger than expected in scenarios with a large stop branching
-fraction to $be$ (on the right side of the branching ratio plane), and somewhat
-weaker than expected when the branching ratio to $b\mu$ becomes significant.
+fraction to $be$ (on the right side of the branching fraction plane), and somewhat
+weaker than expected when the branching fraction to $b\mu$ becomes significant.
 This explains why the red (observed) limit contour crosses the dashed
 blue (expected) limit contour.
 
 \begin{figure}[p]
   \centering
   \includegraphics[width=\textwidth]{figs/blstop/limit_contours.pdf}
-  \caption{Expected and observed limit on the branching ratios for the stop
+  \caption{Expected and observed limit on the branching fractions for the stop
     decaying to different lepton flavors shown for different stop mass
     hypotheses between 400~\GeV and 1~\TeV. The shaded area under the solid
-    line represents the branching ratios which are excluded at 95\% CL
+    line represents the branching fractions which are excluded at 95\% CL
     for each stop mass.
     The dotted lines represent the uncertainty in the observed mass limit
     obtained by varying the signal model cross section up and down one standard
@@ -2685,9 +2674,9 @@ blue (expected) limit contour.
 
 The observed limit on the stop mass is shown in Figure~\ref{fig:mass_limit_obs}.
 This plot shows the 95\% CL on the mass obtained by choosing
-the maximum excluded mass for each branching ratio on the plane using the
+the maximum excluded mass for each branching fraction on the plane using the
 nominal cross section value.  
-As the branching ratio of $\tilde{t} \rightarrow b\tau$ increases, the number of
+As the branching fraction of $\tilde{t} \rightarrow b\tau$ increases, the number of
 expected events with electrons or muons in the final state decreases for the
 same simulated stop mass.
 Therefore, the limit on the mass is strongest at the bottom of the plane.
