@@ -1845,9 +1845,18 @@ channels of the SRs is \ZGAMMAJETS\ followed by single top and
 not contribute, thus, the largest backgrounds are single top and \TTBAR.
 
 As a result of the fit, the \ZGAMMAJETS\ background is scaled up by
-approximately 40\%. Due to this large normalization factor, the background is
-over-predicted in the $Z$ VR. This over-prediction is taken as an additional
-systematic uncertainty, described in Section~\ref{sec:systematics}.
+approximately 40\%.
+Due to this large normalization factor, the background is over-predicted in
+the $Z$ VR.
+The over-prediction is understood to be due to the difficulty in modeling
+the production of \ZGAMMA\ in association with heavy flavor quarks.
+This mismodeling is also observed by ATLAS in the SM measurement of
+the $Z$~boson differential cross section~\cite{Aad:2013ysa,Aad:2014dvb}.
+To account for this over-prediction, an additional systematic uncertainty of
+50\% is taken on the background estimate from \ZGAMMAJETS\ events in regions
+with large values of \HT.
+This is described in Section~\ref{sec:systematics} along with the other
+systematic uncertainties.
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \begin{table}[ht]
@@ -2248,6 +2257,19 @@ from in Table~\ref{tab:stop_xsec}.
 \chapter[Results][Results]{Results}
 \label{ch:results}
 
+This chapter presents the results of the $B-L$ stop search, which was
+introduced in Chapter~\ref{ch:bl_stop}.
+The observed event yields and the background prediction, obtained using a
+maximum likelihood fit, are shown in Section~\ref{sec:event_yields}.
+The chapter concludes in Section~\ref{sec:model_dependent_limits} with the
+expected and observed limits limits on the allowable stop masses in the
+context of the particular supersymmetric model with $B-L$ stop pair production.
+
+%% -----------------------------------------------------------------------------
+\FloatBarrier
+\section[Event yields][Event yields]{Event Yields}
+\label{sec:event_yields}
+
 The fitted background yields and the observed number of events in each
 signal region are shown in Tables~\ref{tab:event_yields_sr_400} and
 \ref{tab:event_yields_sr_600}.
@@ -2461,11 +2483,12 @@ channels, and weaker than expected in the $\mu\mu$ channel.
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
-\subsection{Model dependent limits}
+\section{Model dependent limits}
 \label{sec:model_dependent_limits}
 
 In the absence of an excess of events in the SRs beyond the SM prediction,
-limits are set on the allowable stop masses and branching fractions for this model.
+limits are set on the allowable stop masses and branching fractions for this
+model.
 Expected and observed exclusion limits on the signal model are determined using
 the $CL_S$ prescription based on a simultaneous fit of the SRs and
 CRs~\cite{Baak:2014wma}.
@@ -2474,12 +2497,19 @@ each signal model tested.
 An expected and observed mass limit is first determined for a single choice of
 stop branching fraction, $Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$,
 the nominal branching fraction simulated in the MC signal models.
+Then, the simulated signal samples are rescaled in order to determine mass
+limits for different choices of stop branching fractions.
+
+%% -----------------------------------------------------------------------------
+\FloatBarrier
+\subsection{Single mass limit}
+\label{sec:single_mass_limit}
 
 Each SR (SR 400 and SR 600) is interpreted separately, using the predicted and
 observed event yields in the CRs and the SR of interest.
 A maximum likelihood fit is performed to obtain the model-dependent estimate of
 the background and signal strengths.
-When calculating the expected limit the data in the SR is replaced with the
+When calculating the expected limit, the data in the SR is replaced with the
 pre-fit MC prediction.
 An expected and observed $CL_S$ value is computed for each simulated stop mass,
 in each SR to assess the relative compatibility of the data with the
@@ -2516,6 +2546,11 @@ this choice of stop branching fractions is 900~\GeV.
   }
   \label{fig:exp_limit_br_5050}
 \end{figure}
+
+%% -----------------------------------------------------------------------------
+\FloatBarrier
+\subsection{Branching fraction scan}
+\label{sec:branching_fraction_scan}
 
 This procedure of finding a stop mass limit is repeated for branching fractions
 across the plane of allowed values.
@@ -2615,7 +2650,8 @@ respectively for select stop masses of 500 \GeV\ and 900 \GeV.
 A complete collection of the expected and observed $CL_S$ plots are found in
 Appendix~\ref{sec:axp_interpretation_plots}.
 
-\begin{figure}[ht]
+% \begin{figure}[ht]
+\begin{figure}[p]
   \centering
   \subbottom[Expected $CL_S$ or SR~400]{
     \includegraphics[width=0.48\textwidth]
@@ -2632,7 +2668,8 @@ Appendix~\ref{sec:axp_interpretation_plots}.
   \label{fig:cls_plane_sr_400_m_500}
 \end{figure}
 
-\begin{figure}[ht]
+% \begin{figure}[ht]
+\begin{figure}[p]
   \centering
   \subbottom[Expected $CL_S$ or SR~600]{
     \includegraphics[width=0.48\textwidth]
@@ -2659,6 +2696,7 @@ $CL_S$ is less than 0.05, and for each branching fraction, the highest stop
 mass which is excluded is taken to be the mass limit.
 
 \begin{figure}[ht]
+% \begin{figure}[p]
   \centering
   \subbottom[Selected SR for 500~Gev stop mass]{
     \includegraphics[width=0.48\textwidth]
@@ -2670,7 +2708,7 @@ mass which is excluded is taken to be the mass limit.
   }
   \caption{
     The selected SR for select stop branching fractions for a stop mass of
-    900~\GeV.
+    500~\GeV (left) and 900~\GeV (right).
     The SR is selected by choosing the SR with the smallest expected $CL_S$
     value for a given branching fraction.
     % For several points in the branching fraction plane, SR~400 was selected because
@@ -2700,7 +2738,6 @@ The nominal stop cross section is used when determining these limit contours.
     tested.
     The mass limit shown corresponds to the highest-mass stop sample which is
     excluded.
-    {\color{red} consider moving to appendix.}
   }
   \label{fig:mass_limit_exp}
 \end{figure}
