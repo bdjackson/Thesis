@@ -474,7 +474,7 @@ $|d_0| \leq 0.2$~mm is applied to muons passing the overlap removal to reject
 muons from cosmic ray showers. Any event failing this selection requirement is
 rejected.
 In order to ensure muons are well measured, any event containing a muon after
-overlap removal with $\sigma_{q/p}/|q/p| > 0.2$ is rejected.
+overlap removal with $\nicefrac{\sigma_{q/p}}{|q/p|} > 0.2$ is rejected.
 These poorly measured muons can arise from the MS and ID reconstructing
 different momenta for the same muon.
 
@@ -789,62 +789,62 @@ dropped from the analysis.
 The SR~200 region did not provide additional expected sensitivity compared with
 the SR~400 region, and the statistical uncertainty in the SR~800 region was very
 large, and reduced expected sensitivity.
-The full selection criteria for the analysis regions, including the Control and
-Validation regions, described in Section~\ref{sec:bkg}, is outlined in
-Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
-
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\begin{table}[ht]
-  \caption{Summary of signal, control, and validation regions used for this
-    analysis.
-    The control and validation regions are explained in Section~\ref{sec:bkg}.
-    All regions require two $b$-tagged jets and two oppositely charged leptons.
-    An event is in the $Z$ window if it contains two same-flavored leptons with
-    an invariant mass within 10~\GeV\ of the mass of the $Z$ boson.
-  }
-  \label{tab:regions}
-  %
-  \centering{
-    \begin{tabular}{l|ccccc}
-      \toprule
-      Region &
-      $\MBL^0$ [\GeV] &
-      \HT [\GeV] &
-      \METSIG\ [$\GeV^{1/2}$] &
-      \MBLASYM &
-      $Z$ window \\
-      \midrule
-      SR~400   & $\geq 400$  & $\geq 1100$ & --       & $\leq 0.2$ & Veto   \\[1ex]
-      SR~600   & $\geq 600$  & $\geq 1100$ & --       & $\leq 0.2$ & Veto   \\
-      \midrule
-      Top CR   & $\geq 200$  & $\leq 500$  & $\geq 4$ & $\leq 0.2$ & Veto   \\[1ex]
-      $Z$ CR   & $\geq 200$  & $\leq 500$  & $\leq 4$ & $\leq 0.2$ & Select \\
-      \midrule
-      Top VR 1 & $\geq 200$  & $\leq 500$  & $< 4$    & $\leq 0.2$ & Veto   \\[1ex]
-      Top VR 2 & $\geq 200$  & $\leq 500$  & -        & $>    0.2$ & Veto   \\[1ex]
-      Top VR 3 & $\geq 200$  & $>   500$   & $> 4$    & $>    0.2$ & Veto   \\[1ex]
-      $Z$ VR   & $\geq 200$  & $>   500$   & --       & $\leq 0.2$ & Select \\
-      \bottomrule
-    \end{tabular}
-  }
-\end{table}
-
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=\textwidth]{figs/blstop/regions__met_sig__ht_plane.pdf}
-  \caption{Position of the regions in the \METSIG\ versus \HT\ space.
-    The two left plots show the \METSIG-\HT~plane after vetoing events within
-    the $Z$ window, with the top plot requiring $\MBLASYM \geq 0.2$ and the
-    bottom requiring $\MBLASYM \leq 0.2$.
-    The right plot shows the plane when requiring events be within the $Z$
-    window.
-    The two SRs apply a different requirement on the
-    invariant mass of the higher-mass $b\ell$ pair. SR~400 requires
-    $\MBL^{0} \geq 400 \GeV$, and SR~600 requires $\MBL^{0} \geq 600 \GeV$.
-  }
-  \label{fig:region_coverage}
-\end{figure}
+% The full selection criteria for the analysis regions, including the Control and
+% Validation regions, described in Section~\ref{sec:bkg}, is outlined in
+% Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
+% 
+% %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% \begin{table}[ht]
+%   \caption{Summary of signal, control, and validation regions used for this
+%     analysis.
+%     The control and validation regions are explained in Section~\ref{sec:bkg}.
+%     All regions require two $b$-tagged jets and two oppositely charged leptons.
+%     An event is in the $Z$ window if it contains two same-flavored leptons with
+%     an invariant mass within 10~\GeV\ of the mass of the $Z$ boson.
+%   }
+%   \label{tab:regions}
+%   %
+%   \centering{
+%     \begin{tabular}{l|ccccc}
+%       \toprule
+%       Region &
+%       $\MBL^0$ [\GeV] &
+%       \HT [\GeV] &
+%       \METSIG\ [$\GeV^{1/2}$] &
+%       \MBLASYM &
+%       $Z$ window \\
+%       \midrule
+%       SR~400   & $\geq 400$  & $\geq 1100$ & --       & $\leq 0.2$ & Veto   \\[1ex]
+%       SR~600   & $\geq 600$  & $\geq 1100$ & --       & $\leq 0.2$ & Veto   \\
+%       \midrule
+%       Top CR   & $\geq 200$  & $\leq 500$  & $\geq 4$ & $\leq 0.2$ & Veto   \\[1ex]
+%       $Z$ CR   & $\geq 200$  & $\leq 500$  & $\leq 4$ & $\leq 0.2$ & Select \\
+%       \midrule
+%       Top VR 1 & $\geq 200$  & $\leq 500$  & $< 4$    & $\leq 0.2$ & Veto   \\[1ex]
+%       Top VR 2 & $\geq 200$  & $\leq 500$  & -        & $>    0.2$ & Veto   \\[1ex]
+%       Top VR 3 & $\geq 200$  & $>   500$   & $> 4$    & $>    0.2$ & Veto   \\[1ex]
+%       $Z$ VR   & $\geq 200$  & $>   500$   & --       & $\leq 0.2$ & Select \\
+%       \bottomrule
+%     \end{tabular}
+%   }
+% \end{table}
+% 
+% %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% \begin{figure}[ht]
+%   \centering
+%   \includegraphics[width=\textwidth]{figs/blstop/regions__met_sig__ht_plane.pdf}
+%   \caption{Position of the regions in the \METSIG\ versus \HT\ space.
+%     The two left plots show the \METSIG-\HT~plane after vetoing events within
+%     the $Z$ window, with the top plot requiring $\MBLASYM \geq 0.2$ and the
+%     bottom requiring $\MBLASYM \leq 0.2$.
+%     The right plot shows the plane when requiring events be within the $Z$
+%     window.
+%     The two SRs apply a different requirement on the
+%     invariant mass of the higher-mass $b\ell$ pair. SR~400 requires
+%     $\MBL^{0} \geq 400 \GeV$, and SR~600 requires $\MBL^{0} \geq 600 \GeV$.
+%   }
+%   \label{fig:region_coverage}
+% \end{figure}
 
 Figure~\ref{fig:n_minus_one_sr} shows the expected \HT, \MBLASYM, and $\MBL^0$
 distributions after applying all the SR selection criteria except that on the
@@ -940,6 +940,62 @@ normalization is scaled based on the cross section of the production process and
 the integrated luminosity collected in data.
 The CRs and VRs are described in more detail in
 Sections~\ref{sec:cr}~and~\ref{sec:vr} respectively.
+The full selection criteria for the analysis regions, including the SRs, CRs,
+and VRs, is outlined in Table~\ref{tab:regions} and
+Figure~\ref{fig:region_coverage}.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\begin{table}[ht]
+  \caption{Summary of signal, control, and validation regions used for this
+    analysis.
+    The control and validation regions are explained in Section~\ref{sec:bkg}.
+    All regions require two $b$-tagged jets and two oppositely charged leptons.
+    An event is in the $Z$ window if it contains two same-flavored leptons with
+    an invariant mass within 10~\GeV\ of the mass of the $Z$ boson.
+  }
+  \label{tab:regions}
+  %
+  \centering{
+    \begin{tabular}{l|ccccc}
+      \toprule
+      Region &
+      $\MBL^0$ [\GeV] &
+      \HT [\GeV] &
+      \METSIG\ [$\GeV^{1/2}$] &
+      \MBLASYM &
+      $Z$ window \\
+      \midrule
+      SR~400   & $\geq 400$  & $\geq 1100$ & --       & $\leq 0.2$ & Veto   \\[1ex]
+      SR~600   & $\geq 600$  & $\geq 1100$ & --       & $\leq 0.2$ & Veto   \\
+      \midrule
+      Top CR   & $\geq 200$  & $\leq 500$  & $\geq 4$ & $\leq 0.2$ & Veto   \\[1ex]
+      $Z$ CR   & $\geq 200$  & $\leq 500$  & $\leq 4$ & $\leq 0.2$ & Select \\
+      \midrule
+      Top VR 1 & $\geq 200$  & $\leq 500$  & $< 4$    & $\leq 0.2$ & Veto   \\[1ex]
+      Top VR 2 & $\geq 200$  & $\leq 500$  & -        & $>    0.2$ & Veto   \\[1ex]
+      Top VR 3 & $\geq 200$  & $>   500$   & $> 4$    & $>    0.2$ & Veto   \\[1ex]
+      $Z$ VR   & $\geq 200$  & $>   500$   & --       & $\leq 0.2$ & Select \\
+      \bottomrule
+    \end{tabular}
+  }
+\end{table}
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{figs/blstop/regions__met_sig__ht_plane.pdf}
+  \caption{Position of the regions in the \METSIG\ versus \HT\ space.
+    The two left plots show the \METSIG-\HT~plane after vetoing events within
+    the $Z$ window, with the top plot requiring $\MBLASYM \geq 0.2$ and the
+    bottom requiring $\MBLASYM \leq 0.2$.
+    The right plot shows the plane when requiring events be within the $Z$
+    window.
+    The two SRs apply a different requirement on the
+    invariant mass of the higher-mass $b\ell$ pair. SR~400 requires
+    $\MBL^{0} \geq 400 \GeV$, and SR~600 requires $\MBL^{0} \geq 600 \GeV$.
+  }
+  \label{fig:region_coverage}
+\end{figure}
 
 The \TTBAR\ and \ZGAMMAJETS\ normalization factors are determined using a
 simultaneous fit to the data in the CRs, allowing the normalization of each
@@ -951,6 +1007,7 @@ In addition to the statistical uncertainty, several sources of systematic
 uncertainty, described in Section~\ref{sec:systematics}, are considered when
 performing the simultaneous fit.
 
+
 %% -----------------------------------------------------------------------------
 \FloatBarrier
 \subsection{Monte Carlo simulation samples}
@@ -958,14 +1015,14 @@ performing the simultaneous fit.
 
 MC simulation samples are used to estimate the selection efficiency
 and kinematic distributions for SM processes.
-When constructing plots and tables, the \TTBAR, \ZGAMMAJETS, and single top
-production processes are kept separate, while all the other SM background
+The \TTBAR, \ZGAMMAJETS, and single top
+production processes are shown separately, while all the other SM background
 processes are grouped into an ``other'' category.
 The \TTBAR\ background is modeled using the next-to-leading order (NLO)
 generator \POWHEG\ 
 revision~2129~\cite{Nason:2004rx, Frixione:2007vw, Alioli:2010xd,
 Frixione:2007nw} with NLO PDF set CTEQ 6L1~\cite{Nadolsky:2008zw}, and 
-showered with \PYTHIA\ version 6.426,
+showered with \PYTHIA\ version 6.426.
 When using the baseline \POWHEG+\PYTHIA\ \TTBAR\ production sample,
 events are reweighted in bins of the transverse mass (\pt) of the
 $t\bar{t}$ system to match the top quark pair differential cross section
@@ -979,7 +1036,7 @@ The \ZGAMMAJETS\ production process is modeled using
 \SHERPA\ version~1.4.1~\cite{Gleisberg:2008ta} with NLO PDF set CT10.
 Charm and bottom quarks are treated as massive.
 
-Various filters are applied to the The \ZGAMMAJETS\ samples to achieve
+Various filters are applied to the \ZGAMMAJETS\ samples to achieve
 reasonable coverage of final states and kinematics in the finite MC simulation
 samples.
 A dedicated set of samples are generated for each of the di-lepton flavor
@@ -1029,14 +1086,17 @@ of any filter which was applied to the MC sample.}
 Unless \pythia8 is specified, \pythia\ version 6 is used for samples labeled
 with \pythia.
 
-A weight is applied to the MC samples based on the number of simulated
-interaction per crossing to match the pile up distribution observed in the
-data collection.
-Additionally, several of the MC generators provide event weights, which are
-used to correct the kinematic distributions to better match those observed in
-data.
-When these MC event weights are provided by the generator, they are applied to
-each event in the MC background sample.
+The MC simulation is generated with an assumption on the distribution of
+the number of simulated interactions per crossing that differs from that
+recorded in the data.
+A weight is applied to the MC samples based on this difference.
+
+Additionally, several of the MC generators provide event weights, which can
+be positive or negative.
+These weights account for the diagram subtraction that enters the NLL or NLO
+calculations, and are commonly referred to as the ``MC event weight.''
+When the generator provides MC event weights, they are applied to each event in
+the MC background sample; otherwise, they are not used.
 
 \begin{table}[ht]
   \caption{Partial summary of background samples and their cross sections used
@@ -1325,11 +1385,10 @@ using the observed data in two dedicated CRs, labeled the top control region
 (Top CR) and $Z$ control region ($Z$ CR) respectively.
 To reduce the uncertainty in the \TTBAR\ and \ZGAMMAJETS\ normalization factors,
 the CRs are defined such that they are expected to be fairly pure in events
-coming from a single background process of interest.
-The Top ($Z$) CR is defined to be pure in events from \TTBAR\ (\ZGAMMAJETS).
-There is also little signal contamination in the CRs to prevent potential
-signal events from influencing the background normalization.
+coming from the single background process of interest.
 
+There must also be little signal contamination in the CRs to prevent potential
+signal events from influencing the background normalization.
 To reduce signal contamination, the Top and $Z$ CRs both require
 $\HT \leq 500~\GeV$.
 In addition to reducing the expected signal contamination, the CRs should have
@@ -1346,7 +1405,7 @@ number of events in both CRs, and a reliable estimate of the \TTBAR\ and
 No requirement is made on the $\MBL^1$.
 
 To ensure the CRs are relatively pure in \TTBAR\ or \ZGAMMAJETS, the
-\MET\ information is used.
+missing transverse energy (\MET) is used.
 Rather than select on the \MET\ alone, \METSIG\ is defined as
 \begin{equation}
   \METSIG = \frac{\MET}{\sqrt{\HT}}.
@@ -1355,7 +1414,8 @@ By scaling the \MET\ by the total amount of energy in the event, the
 \METSIG\ is less susceptible to the effects of fake \MET\ from of mismeasurement
 of objects in an event.
 This makes the \METSIG\ more robust to the energy scale of the event.
-Processes like \TTBAR\ and single top, with real \MET\ in the final state, tend
+Processes like \TTBAR\ and single top, with \MET\ in the final state from
+neutrinos, tend
 to have large \METSIG, while processes with \MET coming entirely from
 mismeasurement, such as \ZGAMMAJETS, tend to have low values for \METSIG.
 The Top CR requires $\METSIG \geq 4 \GeV^{1/2}$
@@ -1369,8 +1429,8 @@ Figure~\ref{fig:region_coverage}.
 
 The expected and observed $\MBL^{0}$ distributions in the Top CR and $Z$ CR,
 shown in Figure~\ref{fig:cr_mbl_0__no_norm_factor} show reasonable agreement
-between the predicted and observed data in the Top CR, however, the
-normalization is underpredicted in the $Z$ CR.
+between the predicted and observed data in the Top CR.
+However, the normalization is underpredicted in the $Z$ CR.
 This disagreement seems to be caused by a poor modeling of the
 \ZGAMMAJETS\ background process when heavy flavor jets are required in the
 final state.
@@ -1630,7 +1690,8 @@ $\MBL^0 \geq 200 \GeV$ as is required in the CRs.
 As with the CRs, regions with higher \MBL\ requires were tested, but the
 expected and observed event yields were too low to make a reliable comparison.
 
-Three orthogonal VRs are defined to validate the \TTBAR\ background estimate,
+As shown in Figure~\ref{fig:region_coverage} and Table~\ref{tab:regions},
+three orthogonal VRs are defined to validate the \TTBAR\ background estimate,
 labeled Top VR 1, Top VR 2, and Top VR 3.
 Top VR 1 is constructed by reversing the cut on \METSIG\ in the Top CR.
 That is, Top VR 1 requires events have $\METSIG < 4 \GeV^{1/2}$, and is
@@ -1653,7 +1714,7 @@ production process, are shown in Table~\ref{tab:region_contributions_vr}.
 Select kinematic distributions in the VRs are shown in
 Figure~\ref{fig:vr_dists_w_norm_factor}.
 The agreement between the observed and predicted yields and distributions in the
-VRs are explored in more detail in Section~\ref{sec:bkg_fit}.
+VRs is explored in more detail in Section~\ref{sec:bkg_fit}.
 
 \begin{table}
   \caption{Number of expected events in each of the VRs broken down by process.
@@ -1764,12 +1825,12 @@ predictions, $\mu_{\TTBAR}$ and $\mu_\mathrm{Z}$ respectively.
 
 The background fit is performed by first summing the total background estimate
 for all background processes in each of the CRs.
-The strength parameters are varied until to obtain the best agreement between
+The strength parameters are varied to obtain the best agreement between
 the observed event yields and the background predictions.
 The systematic uncertainties are treated as Gaussian nuisance parameters.
 The background only fit finds that the best fit values for $\mu_{\TTBAR}$ and
 $\mu_\mathrm{Z}$ are $1.11 \pm 0.14$ and $1.43 \pm 0.19$ respectively.
-It should be noted that the $\mu_Z$ is consistent with the ad hoc $k_Z$
+It should be noted that the $\mu_Z$ is consistent with the $k_Z$
 derived in Section~\ref{sec:cr}.
 
 The number of observed events as well as the post-fit expected number
@@ -1825,13 +1886,13 @@ systematic uncertainty, described in Section~\ref{sec:systematics}.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{figs/blstop/histpull_CR_detailed.pdf}
-\caption{The top of this plot shows the number of observed and expected
-  events in the CRs, and broken down by flavor channel.
+\caption{The number of observed and expected events in the CRs,
+  broken down by flavor channel and for each di-lepton flavor channel.
   The uncertainty band includes the statistical uncertainty as well as the
-  systematic uncertainty (described in Section~\ref{sec:systematics}). The
-  bottom of the plot shows the deviation of that channel's prediction
-  from the observed number of events divided by the uncertainty in the
-  prediction. The normalization of the background yields are determined
+  systematic uncertainty (described in Section~\ref{sec:systematics}).
+  The deviation of that channel's prediction from the observed number of events
+  divided by the uncertainty in the prediction is also shown.
+  The normalization of the background yields are determined
   by fitting the \TTBAR\ and \ZGAMMAJETS\ backgrounds to the observed
   data in the two CRs, so the Top CR and $Z$ CR bins have perfect agreement by
   construction.
@@ -1842,13 +1903,13 @@ systematic uncertainty, described in Section~\ref{sec:systematics}.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{figs/blstop/histpull_VR_detailed.pdf}
-\caption{The top of this plot shows the number of observed and expected
-  events in the VR, and broken down by flavor channel.
+\caption{The number of observed and expected events in the VRs,
+  broken down by flavor channel and for each di-lepton flavor channel.
   The uncertainty band includes the statistical uncertainty as well as the
-  systematic uncertainty (described in Section~\ref{sec:systematics}). The
-  bottom of the plot shows the deviation of that channel's prediction
-  from the observed number of events divided by the uncertainty in the
-  prediction. The normalization of the background yields are determined
+  systematic uncertainty (described in Section~\ref{sec:systematics}).
+  The deviation of that channel's prediction from the observed number of events
+  divided by the uncertainty in the prediction is also shown.
+  The normalization of the background yields are determined
   by fitting the \TTBAR\ and \ZGAMMAJETS\ backgrounds to the observed
   data in the two CRs.
 }
@@ -1908,11 +1969,11 @@ Figures~\ref{fig:mbl_vr} and~\ref{fig:ht_vr}.
 \section{Systematic uncertainties}
 \label{sec:systematics}
 
-In addition to the statistical uncertainty, several sources of systematic
+Several sources of systematic
 uncertainty are considered when determining the estimated signal and background
 contributions.
 The largest sources of systematic uncertainty are those related to the
-MC statistical uncertainty in the SRs, the jet energy scale (JES),
+MC statistical uncertainty in the SRs, the jet energy scale (JES), and
 the $b$-tagging efficiency.
 The uncertainty in the lepton energy scale and resolution was considered,
 but shown to be negligible.
@@ -1941,9 +2002,10 @@ The smearing is provided by the \texttt{JetSmearingTool} tool, and depends on
 the \pt\ and \eta\ of the jets within an event.
 The JER smearing alters the \pt\ of the jets within the event, and therefore
 the event selection.
-As with the JES, the JER uncertainty is evaluated by re-running the full event
-selection on MC simulation, applying the smearing, then propagating the
-variations to the event kinematic variables and yields.
+As with the JES, the JER uncertainty is evaluated by applying the smearing,
+propagating the variations to the event kinematic variables, and
+re-running the full event selection on MC simulation to determine the new
+event yields.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 The efficiency of the $b$-tagging
@@ -1952,15 +2014,12 @@ This includes the possibility of a light flavor jet being incorrectly tagged
 as a $b$-jet, or a jet which initiated by a $b$-quark failing the $b$-tagging
 requirement.
 The $b$-tagging efficiency uncertainty is broken into three components,
-corresponding to the tagging and rejection efficiency of the different jet
-flavors, $b$-jets, $c$-jets, and light flavor jets (light quarks and gluons).
+corresponding to the tagging efficiency of $b$-jets, $c$-jets, and light
+flavor jets (light quarks and gluons).
 These uncertainties take into account the dependence on \pt\ and jet flavor.
-For the MC simulation, the $b$-tagging efficiency is implemented as a scale
-factor, so the $b$-tagging uncertainty can be evaluated without running the
-full event selection multiple times.
-Rather, the weight associated with the $b$-tagging scale factor is varied up or
-down based on the specific parameter of interest, and used to determine the
-uncertainty in the event yield.
+For the MC simulation, the weight associated with the $b$-tagging scale factor
+is varied up or down based on the specific parameter of interest, and used to
+determine the uncertainty in the event yield.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 The backgrounds are constrained in the CRs which are regions with low \HT,
@@ -1975,7 +2034,7 @@ The \ZGAMMAJETS\ background extrapolation is assessed using the $Z$ VR.
 The overall background is overpredicted in this region by 29\%, and the
 prediction is the worst in the highest \HT\ bins.
 An additional uncertainty of 50\% is applied to the \ZGAMMAJETS\ background
-for events with $\HT > 500 GeV$.
+for events with $\HT > 500 \GeV$.
 % An \HT\ extrapolation uncertainty of 50\% is applied to \ZGAMMAJETS\ events
 % with $\HT \geq 500$~\GeV. This is assigned to account for uncertainty in
 % the \ZGAMMAJETS\ \HT\ spectrum. This uncertainty is derived from the
@@ -1985,8 +2044,8 @@ for events with $\HT > 500 GeV$.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Several uncertainties related to the theoretical modeling of the major
 background processes in MC simulation are considered.
-These include the uncertainty in the cross sections, scale variations, and
-generator uncertainties.
+These include the uncertainty in the cross sections, renormalization and
+factorization scale variations, and generator uncertainties.
 These uncertainties are evaluated by performing the event selection using only
 the MC truth information, and comparing the expected event yields obtained
 from MC simulation samples produced using different generator configurations.
@@ -1994,14 +2053,13 @@ An additional systematic uncertainty, due to the $\pm 2.8$\% uncertainty in the
 integrated luminosity is evaluated for all background processes except
 \TTBAR\ and \ZGAMMAJETS, because these backgrounds take the normalization from
 data control regions.
-A breakdown of the estimated effect of each source of systematic uncertainty
-(both experimental and theoretical) are outlined in
-Table~\ref{tab:systematic_breakdown}.
+A summary of the estimated effect of each source of systematic uncertainty
+(both experimental and theoretical) is in Table~\ref{tab:systematic_breakdown}.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% ttbar theory systematics
-The sources of systematic uncertainty specific to the \TTBAR\ background include
-the renormalization and factorization scale variations, MC generator
+The sources of systematic uncertainty evaluated for the \TTBAR\ background
+include the renormalization and factorization scale variations, MC generator
 uncertainties, parton shower, and the amount of initial or final state
 radiation (ISR or FSR) in the event.
 %%
@@ -2009,10 +2067,11 @@ radiation (ISR or FSR) in the event.
 The scale variations are evaluated by comparing the expected event yields at the
 truth level obtained using dedicated \TTBAR\ samples, each generated using
 \powheg\ and \pythia, where the factorization and renormalization
-scales are varied up and down by a factor of 2.
-This isolates the effect of each of the scale variations, and the difference in
-expected number of events in each region is taken to be the uncertainty in the
-\TTBAR\ background.
+scales are separately varied up and down by a factor of 2.
+This isolates the effect of each of the scale variations.
+% The difference in
+% expected number of events in each region is taken to be the uncertainty in the
+% \TTBAR\ background.
 The differences in the expected event yields for these samples is take to be
 the uncertainty due to the scale variations.
 %%
@@ -2040,13 +2099,13 @@ either using \pythia\ or \jimmy.
 The uncertainty in the ISR and FSR is evaluated by comparing the expected number
 of events in a truth level event selection found in two \TTBAR\ samples, each
 generated using \acermc\ and \pythia.
-The two samples differ in the amount of parton shower is included in the
+The two samples differ in the amount of ISR and FSR is included in the
 simulation.
 %%
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% single top theory systematics
-The sources of systematic uncertainty specific to the single top background
+For the single top background, the sources of systematic uncertainty
 include the single top cross section, the MC generator uncertainties, the parton
 shower, ISR and FSR, and the interference with \TTBAR.
 %%
@@ -2058,12 +2117,10 @@ cross sections
   \item $t$-channel: $87.76^{+3.44}_{-1.91}$ pb
   \item $Wt$-channel: $22.37 \pm 1.52$ pb.
 \end{itemize}
-It was shown that the $Wt$-channel is dominant single top production channel for
-the regions of interest.
-For this reason, the uncertainty in the $Wt$-channel cross section is the only
-single top cross section uncertainty which is considered, and a systematic
-uncertainty of 7\% was applied to the single top background estimate in every
-analysis region.
+It was shown that the $Wt$-channel is the dominant single top production
+channel for the regions of interest.
+For this reason, the 7\% uncertainty in the $Wt$-channel cross section is the
+only single top cross section uncertainty which is considered.
 %%
 % MC gen uncertainty.
 The MC generator uncertainty in the single top background estimate is evaluated
@@ -2079,21 +2136,20 @@ The parton shower step was performed using \pythia\ and \herwig.
 % ISR/FSR
 Similar to the \TTBAR\ background, the uncertainty in the single top background
 estimate due to ISR and FSR uncertainties is determined by comparing two
-samples, each generated using \acermc\ and \pythia, where the two samples
-differ in the amount of parton shower is included in the simulation
+samples, each generated using \acermc\ and \pythia.
 %%
 % ttbar interference
-There is some interference between the \TTBAR\ and the $Wt$-channel single top
-background processes.
-This interference is handled by applying an additional uncertainty to the single
-top background estimate by comparing the truth level event selection of two
-$Wt$-channel samples, each generated using \powheg, but one using the DS
+Interference between the \TTBAR\ and the $Wt$-channel single top
+background processes is handled by applying an additional uncertainty to the
+single top background estimate by comparing the truth level event selection of
+two $Wt$-channel samples, each generated using \powheg, but one using the DS
 renormalization scheme, and the other using the DR renormalization scheme.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% Z+jets theory systematics
-In addition to the \HT\ extrapolation uncertainty discussed previously, an
-additional uncertainty is applied to account for the finite number of partons in
+For the \ZGAMMAJETS\ background, he \HT\ extrapolation uncertainty of 50\%,
+previously discussed in this Section.
+A separate an additional uncertainty is applied to account for the finite number of partons in
 the \ZGAMMAJETS\ background MC samples.
 This uncertainty is evaluated by comparing the truth level event yields for two
 \ZGAMMAJETS\ samples, generated with different numbers of additional partons
@@ -2107,30 +2163,34 @@ Both samples are generated using \sherpa.
 In addition to the above sources of systematic uncertainty, the uncertainty
 in the background estimate due to limited MC statistics in the CRs and SRs is
 considered.
-The MC statistical uncertainty was evaluated for each background process
+The MC statistical uncertainty is evaluated for each background process
 independently in each analysis region as
-\begin{equation}
-  \sigma_{r,p}^\mathrm{MC~stat}
-  =
-  \sqrt{N_{r,p}^\mathrm{gen}},
-\end{equation}
-where $r$ and $p$ represent the region and background MC process respectively.
-$N_{r,p}^\mathrm{gen}$ is the number of MC simulated events from background
-process $p$ in region $r$.
+$\sqrt{N}$, where $N$ is the number of MC simulated events from a given
+background process in a particular region.
+% \begin{equation}
+%   \sigma_{r,p}^\mathrm{MC~stat}
+%   =
+%   \sqrt{N_{r,p}^\mathrm{gen}},
+% \end{equation}
+% where $r$ and $p$ represent the region and background MC process respectively.
+% $N_{r,p}^\mathrm{gen}$
+% is the number of MC simulated events from background
+% process $p$ in region $r$.
 No weights or scale factors are applied to this number of simulated events.
 The total relative uncertainty in a region $r$ due to MC statistical
 limitations ($\sigma_{r}^\mathrm{MC~stat,relative}$) is obtained by summing the
-relative uncertainties for each process in region $r$ in quadrature, giving
-\begin{equation}
-  \begin{aligned}
-  \sigma_{r}^\mathrm{MC~stat,relative}
-  & =
-  \sqrt{ \sum_{p} \left(\frac{\sigma_{r,p}^\mathrm{MC~stat}}{N_{r,p}^\mathrm{gen}}\right)^2 }
-  \\
-  & =
-  \sqrt{ \sum_{p} \frac{1}{N_{r,p}^\mathrm{gen}} }.
-  \end{aligned}
-\end{equation}
+relative uncertainties for each process in region $r$ in quadrature.
+% , giving
+% \begin{equation}
+%   \begin{aligned}
+%   \sigma_{r}^\mathrm{MC~stat,relative}
+%   & =
+%   \sqrt{ \sum_{p} \left(\frac{\sigma_{r,p}^\mathrm{MC~stat}}{N_{r,p}^\mathrm{gen}}\right)^2 }
+%   \\
+%   & =
+%   \sqrt{ \sum_{p} \frac{1}{N_{r,p}^\mathrm{gen}} }.
+%   \end{aligned}
+% \end{equation}
 The total MC statistical uncertainty is evaluated in each region, and treated
 as a systematic uncertainty in the background estimate.
 The Top CR and $Z$ CR are used to constrain the \TTBAR\ and
@@ -2143,10 +2203,10 @@ estimate in the SRs.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \begin{table}[ht]
 \caption{Summary of the effect of each considered sources of systematic
-  uncertainty in the background estimate in SR~400 and SR~600. Several
-  sources of theoretical systematic uncertainty which have a small
-  effect on the total background estimate are grouped into the
-  ``Other theory'' category.
+  uncertainty on the total background estimate in SR~400 and SR~600.
+  % Several sources of theoretical systematic uncertainty which have a small
+  % effect on the total background estimate are grouped into the
+  % ``Other theory'' category.
   If the uncertainty is asymmetric, the larger deviation is reported in this
   table.
   {\color{red} TODO update this table with broken down info and CRs.}
@@ -2179,7 +2239,7 @@ estimate in the SRs.
 When determining the expected contributions of each of the signal models,
 the effects of the JES, $b$-tagging efficiency, JER, and luminosity are
 considered as well as the uncertainty in the signal model cross section,
-outlined in Table~\ref{tab:stop_xsec}.
+from in Table~\ref{tab:stop_xsec}.
 
 %% -----------------------------------------------------------------------------
 % \FloatBarrier
