@@ -2579,16 +2579,17 @@ decreasing number of expected events with two light leptons.
     Equation~\ref{eqn:flavor_scale_factor}.
     In all six plots, a darker color corresponds to a higher value for the
     branching fraction or the scale factor.
-    {\color{red} Do I want to keep this scale factor plot in here? It's just a
-      rescaling of the branching fraction plot, so it may not add anything.
-    }
+    % {\color{red} TODO Do I want to keep this scale factor plot in here? It's
+    % just a rescaling of the branching fraction plot, so it may not add
+    % anything.
+    % }
   }
   \label{fig:flavor_scaling}
 \end{figure}
 
 Taking the ratio of the target and nominal di-stop branching fraction, a
 scale factor is defined for each flavor channel to weight the MC simulation
-such that it can represent and stop branching fraction.
+such that it can represent any stop branching fraction.
 These scale factors are given by
 \begin{equation}
   \label{eqn:flavor_scale_factor}
@@ -2604,13 +2605,13 @@ These scale factors are given by
 The appropriate flavor scale factor is applied to each simulated signal event
 depending on the reconstructed flavor channel.
 The values of the scale factors are shown in Figure~\ref{fig:flavor_scaling_sf},
-where a darker corresponds to a larger value for the scale factor (with a
+where a darker color corresponds to a larger value for the scale factor (with a
 maximum value of 4).
 
 The expected and observed $CL_S$ values in SR~400 and SR~600 are shown
 over a range of stop branching fraction hypotheses in
 Figures~\ref{fig:cls_plane_sr_400_m_500} and~\ref{fig:cls_plane_sr_600_m_900}
-respectively for select stop masses.
+respectively for select stop masses of 500 \GeV\ and 900 \GeV.
 A complete collection of the expected and observed $CL_S$ plots are found in
 Appendix~\ref{sec:axp_interpretation_plots}.
 
@@ -2650,12 +2651,12 @@ Appendix~\ref{sec:axp_interpretation_plots}.
 
 A limit on the allowed stop masses and stop branching fractions is obtained
 similar to the example with a single branching fraction hypothesis.
-For each combination of stop mass and branching fractions, the SR which gives the
-lowest expected value of $CL_S$ is selected. The SR selection for select masses
-are shown in Figure~\ref{fig:sr_selection}.
+For each combination of stop mass and branching fractions, the SR which gives
+the lowest expected value of $CL_S$ is selected. The SR selection for select
+masses are shown in Figure~\ref{fig:sr_selection}.
 Based on the selected SR, the model is rejected at 95\% CL if the observed
-$CL_S$ is less than 0.05, and for each branching fraction, the highest stop mass
-which is excluded is taken to be the mass limit.
+$CL_S$ is less than 0.05, and for each branching fraction, the highest stop
+mass which is excluded is taken to be the mass limit.
 
 \begin{figure}[ht]
   \centering
@@ -2672,11 +2673,11 @@ which is excluded is taken to be the mass limit.
     900~\GeV.
     The SR is selected by choosing the SR with the smallest expected $CL_S$
     value for a given branching fraction.
-    For several points in the branching fraction plane, SR~400 was selected because
-    the two regions have the same expected $CL_S$ value, with the numerical
-    precision of the statistical software.
-    For these points, the expected sensitivity for both SRs is such that
-    there is little difference between the expected sensitivity.
+    % For several points in the branching fraction plane, SR~400 was selected because
+    % the two regions have the same expected $CL_S$ value, with the numerical
+    % precision of the statistical software.
+    % For these points, the expected sensitivity for both SRs is such that
+    % there is little difference between the expected sensitivity.
   }
   \label{fig:sr_selection}
 \end{figure}
