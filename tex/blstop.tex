@@ -692,46 +692,115 @@ the MC simulation.
 \section{Signal regions}
 \label{sec:signal_regions}
 
-This analysis targets a wide range of stop masses, which differ greatly in the
-expected cross sections and the expected event kinematics.
-For this reason, two overlapping signal regions (SRs) are defined to search for
-an excess of signal-like events, inconsistent with the prediction from
-the SM alone.
-The two SRs target the low and high stop mass regions separately.
+The goal of this analysis is to define a signal region with low background
+contamination in order to search for pair production of massive stops.
+As the analysis targets a wide range of stop masses; therefore, the expected
+kinematics of the stop decay products have a large range as well.
+Two overlapping signal regions (SRs) are defined to search for an excess of
+signal-like events, inconsistent with the prediction from the SM alone.
+Several kinematic quantities, calculated from the four-vectors of the two
+leptons and two $b$-tagged jets provide excellent discrimination to reject
+background. 
+These quantities are discussed below and shown in
+Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists} for an
+region, applying only event cleaning, and requiring two $b$-tagged jets and
+two leptons.
 
-One of the major sources of SM background come from \ZGAMMAJETS.
-To reduce this background, events where the two leptons have the same
-flavor, and reconstruct an invariant mass consistent with the mass of the $Z$
-boson ($|m_{\ell\ell} - m_{Z}| \leq 10 \GeV$) are rejected.
+The largest SM processes of background events are \ZGAMMAJETS, \TTBAR, and
+single top production.
+The selection requirements are optimized using MC simulation to achieve a
+large signal to background ration in the SRs.
+The optimization assumes a stop branching fraction of
+$Br(\STOP\rightarrow~be)~=~Br(\STOP\rightarrow~b\mu)~=~0.5$.
+The following selection criteria effectively reduces these, and other
+(smaller) SM background, while leaving a reasonably high expected signal
+efficiency.
 
-The scalar sum of the \et(pt) of the two $b$-tagged jets and two leptons (\HT) 
-effectively separates the signal processes from the major sources of
-Standard Model background.
-The stops of interest are extremely massive, so all the decay products tend to
-have a large amount of energy, resulting in a high \HT.
-SM processes, such as \TTBAR\ and \ZGAMMAJETS, do not have as large \HT.
+\begin{description}
+  \item[$\mathbf{\MLL}$] \hfill \\
+    The background from \ZGAMMAJETS\ has a narrow resonance in he invariant
+    mass of the two leptons ($\mathbf{\MLL}$) around the $Z$~boson mass of
+    91~\GeV, as seen in
+    Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists}.
+    Events with two leptons of the same flavor ($ee$ or $\mu\mu$), with a
+    reconstructed invariant mass consistent with the $Z$~boson
+    ($|m_{\ell\ell} - m_{Z}| \leq 10 \GeV$) are rejected to reduce the
+    contributions of the \ZGAMMAJETS\ background.
+  %%
+  \item[$\mathbf{\HT}$] \hfill \\
+    The leptons and $b$-jets from the two-body decays of massive stops tend to
+    have more \pt\ than those from the decays of lower mas SM particles.
+    The $\mathbf{\HT}$\ variable, shown in
+    Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists},
+    is the scalar sum of the \et(\pt) of the two $b$-tagged jets and the two
+    leptons.
+    Events in the SRs are required to have $\HT \geq 1100 \GeV$.
+  %%
+  \item[$\mathbf{\MBL^{0}}$] \hfill \\
+    The invariant masses of he two $b\ell$ pairs provide two ways to reduce
+    the background from SM processes.
+    Firstly, the highest invariant mass value, $\mathbf{\MBL^{0}}$, has a broad
+    resonance about the stop mass, as seen in
+    Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists},
+    while the SM backgrounds have lower values.
+    Since a large range of stop masses are considered, two overlapping SRs are
+    defined, differing in the \MBL-requirement.
+    SR~400 is optimal for lower stop masses, and has a requirement of
+    $\MBL^0 \geq 400~\GeV$, while SR~600, with a requirement of
+    $\MBL^0 \geq 600 \GeV$, is optimal for higher stop masses.
+    \\[1ex]
+    Two additional SRs were considered with $\MBL^0 \geq 200 \GeV$ and
+    $\MBL^0 \geq 800 \GeV$ (SR~200 and SR~800 respectively), however these
+    were dropped from the analysis.
+    The SR~200 region did not provide additional expected sensitivity compared
+    with the SR~400 region, and the statistical uncertainty in the SR~800
+    region was very large, and reduced expected sensitivity.
+  %% 
+  \item[$\mathbf{\MBL}$~\textbf{asymmetry}] \hfill \\
+    Secondly, event when $\MBL^{0}$ is large, the difference in invariant mass
+    between the highest and lowest pair can be large for SM processes as seen
+    in 
+    Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists}.
+    To quantify the difference in the two masses, the
+    $\mathbf{\MBL}$~\textbf{asymmetry} is defined as
+    $\MBLASYM = \nicefrac{\MBL^0-\MBL^1}{\MBL^0+\MBL^1}$.
+    The \MBLASYM\ is used rather than the simple difference in the masses
+    because it is incorporates the effects of the mass scale, and as single
+    requirement on the \MBLASYM\ can be used for all stop masses which are
+    considered.
+    In order to be selected for one or both of the SRs, an event requires
+    $\MBLASYM \leq 0.2$.
+  %%
+\end{description}
 
-For the signal model, the two $b\ell$ pairs making up the final state are the
-decay products of the stop/anti-stop, and therefore have the same mass.
-The mass asymmetry variable is defined as
-\begin{equation}
-  \MBLASYM = 
-  \frac{\MBL^0-\MBL^1}{\MBL^0+\MBL^1}.
-\end{equation}
-Events from stop decays are expected to have low \MBLASYM\ as the mass
-difference in the two pairs is expected to be small, while the masses of the
-$b\ell$ pairs coming from SM processes are roughly uncorrelated, and there is
-no preference for \MBLASYM.
-The asymmetry is used rather than the simple difference in the masses to remove
-the effect of the mass scale, and a single cut value can be used for all stop
-masses which are considered.
-Events from SM background processes tend to have low \MBL\ for
-both pairs.
-The $\MBL^0$ variable can also provide additional discrimination power.
-The expected \MLL, \HT, \MBLASYM\, and $\MBL^{0}$ distributions for SM
-background processes and three signal models is shown in an inclusive region
-after event cleaning and selecting two $b$-tagged jets and two leptons in
-Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists}.
+% The scalar sum of the \et(pt) of the two $b$-tagged jets and two leptons (\HT) 
+% effectively separates the signal processes from the major sources of
+% Standard Model background.
+% The stops of interest are extremely massive, so all the decay products tend to
+% have a large amount of energy, resulting in a high \HT.
+% SM processes, such as \TTBAR\ and \ZGAMMAJETS, do not have as large \HT.
+
+% For the signal model, the two $b\ell$ pairs making up the final state are the
+% decay products of the stop/anti-stop, and therefore have the same mass.
+% The mass asymmetry variable is defined as
+% \begin{equation}
+%   \MBLASYM = 
+%   \frac{\MBL^0-\MBL^1}{\MBL^0+\MBL^1}.
+% \end{equation}
+% Events from stop decays are expected to have low \MBLASYM\ as the mass
+% difference in the two pairs is expected to be small, while the masses of the
+% $b\ell$ pairs coming from SM processes are roughly uncorrelated, and there is
+% no preference for \MBLASYM.
+% The asymmetry is used rather than the simple difference in the masses to remove
+% the effect of the mass scale, and a single cut value can be used for all stop
+% masses which are considered.
+% Events from SM background processes tend to have low \MBL\ for
+% both pairs.
+% The $\MBL^0$ variable can also provide additional discrimination power.
+% The expected \MLL, \HT, \MBLASYM\, and $\MBL^{0}$ distributions for SM
+% background processes and three signal models is shown in an inclusive region
+% after event cleaning and selecting two $b$-tagged jets and two leptons in
+% Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists}.
 
 \begin{figure}
   \centering
@@ -768,31 +837,31 @@ Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists}.
   %%
 \end{figure}
 
-MC simulation is used to optimize the selection requirements and achieve a
-large signal to background ration in the SRs.
-The optimization is performed assuming a stop branching fraction of
-$Br(\STOP\rightarrow~be)~=~Br(\STOP\rightarrow~b\mu)~=~0.5$.
-A single SR selection criteria is obtained for both the \HT\ and
-\MBLASYM\ variables which perform reasonably well for all mass above 400~\GeV.
-Events in both SRs are required to have $\HT \geq 1100\,\GeV$ and
-$\MBLASYM \leq 0.2$.
-Events with two same flavor leptons with invariant mass within 10~\GeV\ of the
-$Z$-boson mass are vetoed to reduce the backgrounds from $Z$-boson production.
-$\MBL^0$ is used to define the two SRs.
-SR~400 has a requirement of $\MBL^0 \geq 400~\GeV$, and is optimal for lower
-stop masses, while SR~600, with a requirement of $\MBL^0 \geq 600 \GeV$, is
-optimal for higher stop masses.
-
-Two additional SRs were considered with $\MBL^0 \geq 200 \GeV$ and
-$\MBL^0 \geq 800 \GeV$ (SR~200 and SR~800 respectively), however these were
-dropped from the analysis.
-The SR~200 region did not provide additional expected sensitivity compared with
-the SR~400 region, and the statistical uncertainty in the SR~800 region was very
-large, and reduced expected sensitivity.
-% The full selection criteria for the analysis regions, including the Control and
-% Validation regions, described in Section~\ref{sec:bkg}, is outlined in
-% Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
-% 
+%% MC simulation is used to optimize the selection requirements and achieve a
+%% large signal to background ration in the SRs.
+%% The optimization is performed assuming a stop branching fraction of
+%% $Br(\STOP\rightarrow~be)~=~Br(\STOP\rightarrow~b\mu)~=~0.5$.
+%% A single SR selection criteria is obtained for both the \HT\ and
+%% \MBLASYM\ variables which perform reasonably well for all mass above 400~\GeV.
+%% Events in both SRs are required to have $\HT \geq 1100\,\GeV$ and
+%% $\MBLASYM \leq 0.2$.
+%% Events with two same flavor leptons with invariant mass within 10~\GeV\ of the
+%% $Z$-boson mass are vetoed to reduce the backgrounds from $Z$-boson production.
+%% $\MBL^0$ is used to define the two SRs.
+%% SR~400 has a requirement of $\MBL^0 \geq 400~\GeV$, and is optimal for lower
+%% stop masses, while SR~600, with a requirement of $\MBL^0 \geq 600 \GeV$, is
+%% optimal for higher stop masses.
+%% 
+%% Two additional SRs were considered with $\MBL^0 \geq 200 \GeV$ and
+%% $\MBL^0 \geq 800 \GeV$ (SR~200 and SR~800 respectively), however these were
+%% dropped from the analysis.
+%% The SR~200 region did not provide additional expected sensitivity compared with
+%% the SR~400 region, and the statistical uncertainty in the SR~800 region was very
+%% large, and reduced expected sensitivity.
+%% % The full selection criteria for the analysis regions, including the Control and
+%% % Validation regions, described in Section~\ref{sec:bkg}, is outlined in
+%% % Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
+%% % 
 % %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 % \begin{table}[ht]
 %   \caption{Summary of signal, control, and validation regions used for this
@@ -2805,7 +2874,7 @@ region~\cite{ATLAS:2013oea}.
 \end{figure}
 
 %% -----------------------------------------------------------------------------
-\FloatBarrier
-\section{Proposed improvements}
-\label{sec:improvements}
+%% \FloatBarrier
+%% \section{Proposed improvements}
+%% \label{sec:improvements}
 
