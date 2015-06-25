@@ -633,7 +633,10 @@ dependence.
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/trigger/EF_e60_medium1__el_pt.pdf}
   }
-  \caption{
+  \caption[
+    Efficiency of simulated stop events passing each of the single
+    electron triggers for several ranges of electron \ET.
+  ]{
     Efficiency of simulated stop events passing each of the single
     electron triggers for several ranges of electron \ET.
     Only $e\mu$ events are shown in order to show to isolate the effect of
@@ -642,9 +645,10 @@ dependence.
   \label{fig:electron_trigger_pt_dependence}
 \end{figure}
 
-The full trigger requirement is highly efficient for signal-like events; between
-93\% and 98\% of simulated signal events pass the trigger selection depending
-on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
+The full trigger requirement is highly efficient for signal-like events,
+and does not depend on the stop mass; between 93\% and 98\% of simulated
+signal events pass the trigger selection depending on the flavor channel as
+shown in Figure~\ref{fig:full_trigger_efficiency}.
 
 \begin{figure}[ht]
   \centering
@@ -653,8 +657,6 @@ on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
   \caption{
     Efficiency of simulated stop events passing the full trigger
     selection broken down by flavor channel.
-    When the full trigger selection is considered, the trigger efficiency does
-    not depend on the stop mass.
   }
   \label{fig:full_trigger_efficiency}
 \end{figure}
@@ -705,7 +707,9 @@ background.
 These quantities are discussed below and shown in
 Figure~\ref{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists} for an
 region, applying only event cleaning, and requiring two $b$-tagged jets and
-two leptons.
+two leptons (electrons or muons).
+The signal models have an assumed
+$Br(\STOP\rightarrow~be)~=~Br(\STOP\rightarrow~b\mu)~=~0.5$.
 
 The largest SM processes of background events are \ZGAMMAJETS, \TTBAR, and
 single top production.
@@ -821,19 +825,23 @@ efficiency.
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
     {figs/blstop/no_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_BL_PAIRING__log.pdf}
   }
-  \caption{
+  \caption[
     Expected \MLL, \HT, \MBLASYM, and $\MBL^0$ distributions for SM
     background processes and three simulated stop samples with different masses.
-    Basic event cleaning is applied and the events are required to pass the
-    trigger selection, as described in
-    Sections~\ref{sec:event_cleaning}~and~\ref{sec:trigger_selection}, and the
-    events are required to have at least two $b$-tagged jets and two light
-    leptons (electrons or muons).
+  ]{
+    Expected \MLL, \HT, \MBLASYM, and $\MBL^0$ distributions for SM
+    background processes and three simulated stop samples with different masses.
+    % Basic event cleaning is applied and the events are required to pass the
+    % trigger selection, as described in
+    % Sections~\ref{sec:event_cleaning}~and~\ref{sec:trigger_selection}, and the
+    % events are required to have at least two $b$-tagged jets and two
+    % leptons (electrons or muons).
     In each plot, the last bin includes the overflow for values beyond the
-    maximum shown. The hashed error bands show only the statistical
-    uncertainty in the background MC simulation samples. The signal
-    models have an assumed
-    $Br(\STOP\rightarrow~be)~=~Br(\STOP\rightarrow~b\mu)~=~0.5$.
+    maximum shown.
+    The hashed error bands show only the statistical uncertainty in the
+    background MC simulation samples.
+    % The signal models have an assumed
+    % $Br(\STOP\rightarrow~be)~=~Br(\STOP\rightarrow~b\mu)~=~0.5$.
   }
   \label{fig:no_data__no_k__inclusive_flavor_all__kinematic_dists}
   %%
@@ -941,19 +949,24 @@ yields are normalized to 20.3 \ifb.
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/mbl_0_sr_minus_mbl.pdf}
   }
-  \caption{
+  \caption[
     Distributions of the variables which are used to define the SRs.
     These plots show the MC simulated background samples and three signal
     models, and are made after applying all the SR selection criteria except for
     that on the variable shown.
-    The top two plots show the \HT\ and \MBLASYM\ variables, and the bottom
-    plot shows the $\MBL^0$ distribution.
+  ]{
+    Distributions of the variables which are used to define the SRs.
+    These plots show the MC simulated background samples and three signal
+    models, and are made after applying all the SR selection criteria except for
+    that on the variable shown.
+    % The top two plots show the \HT\ and \MBLASYM\ variables, and the bottom
+    % plot shows the $\MBL^0$ distribution.
     The arrows show the SR requirement on the variable being shown.
     In each plot, the last bin includes the overflow for values beyond the
     maximum shown.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
-    The signal models have an assumed
+    The signal models have an assumed branching fraction of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
   }
   \label{fig:n_minus_one_sr}
@@ -1063,9 +1076,13 @@ Figure~\ref{fig:region_coverage}.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{figs/blstop/regions__met_sig__ht_plane.pdf}
-  \caption{
-    Position of the regions in the \METSIG\ versus \HT\ space.
-    The two left plots show the \METSIG-\HT~plane after vetoing events within
+  \caption[
+    Position of the control, validation, and signal regions in the
+    \METSIG\ versus \HT\ plane.
+  ]{
+    Position of the control, validation, and signal regions in the
+    \METSIG\ versus \HT\ plane.
+    The two left plots show the plane after vetoing events within
     the $Z$ window, with the top plot requiring $\MBLASYM \geq 0.2$ and the
     bottom requiring $\MBLASYM \leq 0.2$.
     The right plot shows the plane when requiring events be within the $Z$
@@ -1355,7 +1372,7 @@ Figure~\ref{fig:region_coverage}.
 The expected and observed $\MBL^{0}$ distributions in the Top CR and $Z$ CR,
 shown in Figure~\ref{fig:cr_mbl_0__no_norm_factor} show reasonable agreement
 between the predicted and observed data in the Top CR.
-However, the normalization is underpredicted in the $Z$ CR.
+However, the background normalization is underpredicted in the $Z$ CR.
 This disagreement seems to be caused by a poor modeling of the
 \ZGAMMAJETS\ background process when heavy flavor jets are required in the
 final state.
@@ -1391,17 +1408,20 @@ states this in the description.
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{
+  \caption[
+    Expected and observed $\MBL^0$ distribution in the Top CR and
+    $Z$ CR when all flavor channels are combined.
+  ]{
     Expected and observed $\MBL^0$ distribution in the Top CR and
     $Z$ CR when all flavor channels are combined.
     The prediction in the Top CR shows reasonable agreement with the observed
     data.
-    The background is underpredicted in the $Z$ CR.
+    % The background is underpredicted in the $Z$ CR.
     % In each plot, the last bin includes the overflow for values beyond the
     % maximum shown.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
-    The signal models have an assumed
+    The signal models have assumed stop branching fractions of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
     {\color{red} TODO remake with dashed line in ratio.}
   }
@@ -1431,17 +1451,21 @@ $b$-jets are shown in
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{
+  \caption[
     Expected and observed $\MBL^0$ distribution in the Top CR and
     $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR
     when all flavor channels are combined.
-    After applying the $k_Z$ normalization factor, both CRs show reasonable
-    agreement between the predicted and observed distributions.
+  ]{
+    Expected and observed $\MBL^0$ distribution in the Top CR and
+    $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR
+    when all flavor channels are combined.
+    % After applying the $k_Z$ normalization factor, both CRs show reasonable
+    % agreement between the predicted and observed distributions.
     % In each plot, the last bin includes the overflow for values beyond the
     % maximum shown.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
-    The signal models have an assumed
+    The signal models have assumed stop branching fractions of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
     {\color{red} TODO remake with dashed line in ratio.}
   }
@@ -1459,7 +1483,11 @@ $b$-jets are shown in
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__lep_pt_0__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{
+  \caption[
+    Expected and observed \pt\ distribution for the leading lepton in
+    the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived
+    in the $Z$ CR when all flavor channels are combined.
+  ]{
     Expected and observed \pt\ distribution for the leading lepton in
     the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived
     in the $Z$ CR when all flavor channels are combined.
@@ -1469,7 +1497,7 @@ $b$-jets are shown in
     % maximum shown.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
-    The signal models have an assumed
+    The signal models have assumed stop branching fractions of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
     {\color{red} TODO remake with dashed line in ratio.}
     {\color{red} TODO Change x-axis to ``lepton \pt''.}
@@ -1488,7 +1516,11 @@ $b$-jets are shown in
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__lep_pt_1__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{
+  \caption[
+    Expected and observed \pt\ distribution for the sub-leading lepton in
+    the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived
+    in the $Z$ CR when all flavor channels are combined.
+  ]{
     Expected and observed \pt\ distribution for the sub-leading lepton in
     the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived
     in the $Z$ CR when all flavor channels are combined.
@@ -1498,7 +1530,7 @@ $b$-jets are shown in
     % maximum shown.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
-    The signal models have an assumed
+    The signal models have assumed stop branching fractions of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
     {\color{red} TODO remake with dashed line in ratio.}
     {\color{red} TODO Change x-axis to ``lepton \pt''.}
@@ -1517,13 +1549,17 @@ $b$-jets are shown in
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__b_jet_pt_0__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{
+  \caption[
+    Expected and observed \pt\ distribution for the leading $b$-jet in
+    the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived
+    in the $Z$ CR when all flavor channels are combined.
+  ]{
     Expected and observed \pt\ distribution for the leading $b$-jet in
     the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived
     in the $Z$ CR when all flavor channels are combined.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
-    The signal models have an assumed
+    The signal models have assumed stop branching fractions of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
     {\color{red} TODO remake with dashed line in ratio.}
     {\color{red} TODO Change x-axis to ``$b$-jet \pt''.}
@@ -1542,13 +1578,17 @@ $b$-jets are shown in
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__lep_pt_1__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{
+  \caption[
+    Expected and observed \pt\ distribution for the sub-leading $b$-jet
+    in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor
+    derived in the $Z$ CR when all flavor channels are combined.
+  ]{
     Expected and observed \pt\ distribution for the sub-leading $b$-jet
     in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor
     derived in the $Z$ CR when all flavor channels are combined.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
-    The signal models have an assumed
+    The signal models have assumed stop branching fractions of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
     {\color{red} TODO remake with dashed line in ratio.}
     {\color{red} TODO Change x-axis to ``$b$-jet \pt''.}
@@ -1556,48 +1596,6 @@ $b$-jets are shown in
   \label{fig:cr_b_jet_pt_1__w_norm_factor}
   %%
 \end{figure}
-
-% \begin{table}
-%   \caption{
-%     Number of expected events in each of the CRs broken down by process.
-%     The uncertainty in the total background prediction is the MC statistical
-%     uncertainty only for each background process.
-%     The total uncertainty is obtained by summing the uncertainty in each
-%     background process in quadrature.
-%     The $k_Z$ normalization factor is applied to the \ZGAMMAJETS\ background
-%     yield estimate.
-%     For each signal model, the expected signal to background ratio is given in
-%     parentheses.
-%     % For each signal model, the ratio of expected signal events to the sum of the
-%     % background in each region is show in parentheses.
-%     {\color{red} TODO add observed number events in each CR.}
-%     {\color{red} TODO update with only stat uncertainty.}
-%     {\color{red} TODO update with breakdown by flavor channel.}
-%   }
-%   \label{tab:region_contributions_cr}
-%   \centering{
-%     \begin{tabular}{c|cc}
-%       \toprule
-%                                            & Top CR                            & $Z$ CR                            \\
-%       \midrule
-%       \TTBAR                               & $311.8$                           & $8.2$                             \\
-%       \ZGAMMAJETS                          & $3.1$                             & $297.9$                           \\
-%       Single top                           & $16.7$                            & $0.8$                             \\
-%       Other                                & $2.9$                             & $8.6$                             \\
-%       \midrule
-%       Total                                & \multirow{2}{*}{$334.5 \pm 93.7$} & \multirow{2}{*}{$315.6 \pm 89.5$} \\
-%       background                           &                                   &                                   \\
-%       \midrule
-%       \multirow{2}{*}{B-L stop (500 GeV)}  & $1.3$                             & $0.03$                            \\
-%                                            & ($< 0.01$)                        & ($< 0.01$) \vspace{1ex}           \\
-%       \multirow{2}{*}{B-L stop (800 GeV)}  & $< 0.01$                          & $< 0.01$                          \\
-%                                            & ($< 0.01$)                        & ($< 0.01$) \vspace{1ex}           \\
-%       \multirow{2}{*}{B-L stop (1000 GeV)} & $< 0.01$                          & $< 0.01$                          \\
-%                                            & ($< 0.01$)                        & ($< 0.01$) \vspace{1ex}           \\
-%       \bottomrule
-%     \end{tabular}
-%   }
-% \end{table}
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
@@ -1706,10 +1704,7 @@ VRs is explored in more detail in Section~\ref{sec:bkg_fit}.
   }
   \caption{
     Expected and observed \MBL\ and \HT\ distributions in the
-    VRs and the $Z$ VR after applying the $k_Z$ normalization factor derived
-    in the $Z$ CR when all flavor channels are combined.
-    % In each plot, the last bin includes the overflow for values beyond the
-    % maximum shown.
+    VRs.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
     The signal models have an assumed
@@ -1718,9 +1713,6 @@ VRs is explored in more detail in Section~\ref{sec:bkg_fit}.
   }
   \label{fig:vr_dists_w_norm_factor}
 \end{figure}
-
-
-
 
 
 %% -----------------------------------------------------------------------------
@@ -1833,38 +1825,48 @@ systematic uncertainties.
 \end{table}
 
 \begin{figure}[ht]
-\centering
-\includegraphics[width=\textwidth]{figs/blstop/histpull_CR_detailed.pdf}
-\caption{
-  The number of observed and expected events in the CRs,
-  broken down by flavor channel and for each di-lepton flavor channel.
-  The uncertainty band includes the statistical uncertainty as well as the
-  systematic uncertainty (described in Section~\ref{sec:systematics}).
-  The deviation of that channel's prediction from the observed number of events
-  divided by the uncertainty in the prediction is also shown.
-  The normalization of the background yields are determined
-  by fitting the \TTBAR\ and \ZGAMMAJETS\ backgrounds to the observed
-  data in the two CRs, so the Top CR and $Z$ CR bins have perfect agreement by
-  construction.
-}
-\label{fig:pull_dist_cr}
+  \centering
+  \includegraphics[width=\textwidth]{figs/blstop/histpull_CR_detailed.pdf}
+  \caption[
+    The number of observed and expected events in the CRs,
+    broken down by flavor channel and for each di-lepton flavor channel.
+    The deviation of that channel's prediction from the observed number of
+    events divided by the uncertainty in the prediction is also shown.
+  ]{
+    The number of observed and expected events in the CRs,
+    broken down by flavor channel and for each di-lepton flavor channel.
+    The uncertainty band includes the statistical uncertainty as well as the
+    systematic uncertainty (described in Section~\ref{sec:systematics}).
+    The deviation of that channel's prediction from the observed number of
+    events divided by the uncertainty in the prediction is also shown.
+    The normalization of the background yields are determined
+    by fitting the \TTBAR\ and \ZGAMMAJETS\ backgrounds to the observed
+    data in the two CRs, so the Top CR and $Z$ CR bins have perfect agreement
+    by construction.
+  }
+  \label{fig:pull_dist_cr}
 \end{figure}
 
 \begin{figure}[ht]
-\centering
-\includegraphics[width=\textwidth]{figs/blstop/histpull_VR_detailed.pdf}
-\caption{
-  The number of observed and expected events in the VRs,
-  broken down by flavor channel and for each di-lepton flavor channel.
-  The uncertainty band includes the statistical uncertainty as well as the
-  systematic uncertainty (described in Section~\ref{sec:systematics}).
-  The deviation of that channel's prediction from the observed number of events
-  divided by the uncertainty in the prediction is also shown.
-  The normalization of the background yields are determined
-  by fitting the \TTBAR\ and \ZGAMMAJETS\ backgrounds to the observed
-  data in the two CRs.
-}
-\label{fig:pull_dist_vr}
+  \centering
+  \includegraphics[width=\textwidth]{figs/blstop/histpull_VR_detailed.pdf}
+  \caption[
+    The number of observed and expected events in the VRs,
+    broken down by flavor channel and for each di-lepton flavor channel.
+    The deviation of that channel's prediction from the observed number of
+    events divided by the uncertainty in the prediction is also shown.
+  ]{
+    The number of observed and expected events in the VRs,
+    broken down by flavor channel and for each di-lepton flavor channel.
+    The uncertainty band includes the statistical uncertainty as well as the
+    systematic uncertainty (described in Section~\ref{sec:systematics}).
+    The deviation of that channel's prediction from the observed number of
+    events divided by the uncertainty in the prediction is also shown.
+    The normalization of the background yields are determined
+    by fitting the \TTBAR\ and \ZGAMMAJETS\ backgrounds to the observed data in
+    the two CRs.
+  }
+  \label{fig:pull_dist_vr}
 \end{figure}
 
 The extrapolation from low \HT\ CRs to the high \HT\ region
@@ -1882,7 +1884,9 @@ Figures~\ref{fig:mbl_vr} and~\ref{fig:ht_vr}.
   \subbottom[$Z$ VR]{
     \includegraphics[width=0.48\textwidth]{figs/blstop/vr_Z_mbl_0.pdf}
   }
-  \caption{
+  \caption[
+    The $\MBL^0$ distribution in Top VR 3 (left) and $Z$ VR (right).
+  ]{
     The $\MBL^0$ distribution in Top VR 3 (left) and $Z$ VR (right).
     The Standard Model background prediction is shown after setting the
     normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds based on the
@@ -1903,7 +1907,9 @@ Figures~\ref{fig:mbl_vr} and~\ref{fig:ht_vr}.
   \subbottom[$Z$ VR]{
     \includegraphics[width=0.48\textwidth]{figs/blstop/vr_Z_ht_signal.pdf}
   }
-  \caption{
+  \caption[
+    The \HT\ distribution in Top VR 3 (left) and $Z$ VR (right).
+  ]{
     The \HT\ distribution in Top VR 3 (left) and $Z$ VR (right).
     The Standard Model background prediction is shown after setting the
     normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds based on the
@@ -2234,7 +2240,11 @@ SR 400 are shown in Figure~\ref{fig:sr_dists}.
 Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
 
 \begin{table}
-  \caption{
+  \caption[
+    The expected and observed event yields in SR~400. The expected event yields.
+    The last three rows show the model-independent 95\% CL on the visible
+    cross section and the upper limit on the number of events.
+  ]{
     The expected and observed event yields in SR~400. The expected event
     yields are shown before and after performing the fit to the data in the
     control regions.
@@ -2276,7 +2286,11 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
 \end{table}
 
 \begin{table}
-  \caption{
+  \caption[
+    The expected and observed event yields in SR~600. The expected event yields.
+    The last three rows show the model-independent 95\% CL on the visible
+    cross section and the upper limit on the number of events.
+  ]{
     The expected and observed event yields in SR~600. The expected event
     yields are shown before and after performing the fit to the data in the
     control regions.
@@ -2385,9 +2399,10 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
     % \includegraphics[width=0.75\textwidth]{figs/blstop/sr_ht.pdf}
     \includegraphics[width=0.70\textwidth]{figs/blstop/sr_ht.pdf}
   }
-  \caption{
-    These plots show the $\MBL^0$ (left) and \HT\ (right) distributions
-    in SR 400.
+  \caption[
+    The $\MBL^0$ (top) and \HT\ (bottom) distributions in SR~400.
+  ]{
+    The $\MBL^0$ (top) and \HT\ (bottom) distributions in SR~400.
     The Standard Model background prediction is taken from the fitted
     background prediction.
     The hashed bands show the uncertainty in the fitted background prediction
@@ -2408,13 +2423,15 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
     {figs/blstop/event_display_run_210302_event_2292645761.pdf}
     \label{fig:event_display_2}
   }
-  \caption{
+  \caption[
     Event displays for the two observed events passing the signal region
     criteria.
-    The event shown in Figure~\ref{fig:event_display_1} passes the SR~400
-    selection with $\MBL^{0} = 558~\GeV$.
-    Figure~\ref{fig:event_display_2} shows the event which passes both the
-    SR~400 and SR~600 selection with $\MBL^{0} = 686~\GeV$.
+  ]{
+    Event displays for the two observed events passing the signal region
+    criteria.
+    The top event passes the SR~400 selection with $\MBL^{0} = 558~\GeV$.
+    The event shown on the bottom passes both the SR~400 and SR~600 selection
+    with $\MBL^{0} = 686~\GeV$.
   }
   \label{fig:event_displays}
 \end{figure}
@@ -2492,8 +2509,12 @@ this choice of stop branching fractions is 900~\GeV.
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=0.75\textwidth]{figs/blstop/cls_plots/cls_vs_m_br_e_50_br_m_50_br_t_0.pdf}
-  \caption{
+  \includegraphics[width=0.75\textwidth]
+  {figs/blstop/cls_plots/cls_vs_m_br_e_50_br_m_50_br_t_0.pdf}
+  \caption[
+    Expected and observed $CL_S$ value as a function of stop mass for
+    the scenario with $Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$.
+  ]{
     Expected and observed $CL_S$ value as a function of stop mass for
     the scenario with $Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$.
     The last mass which has an observed $CL_S < 0.05$ is where the limit is to
@@ -2563,9 +2584,14 @@ decreasing number of expected events with two light leptons.
     \includegraphics[width=\textwidth]{figs/blstop/scale_factors.png}
     \label{fig:flavor_scaling_sf}
   }
-  \caption{
-    Branching fraction and corresponding scale factor to each di-lepton
-    flavor channel depending on the branching fractions of the stop.
+  \caption[
+    Stop pair branching fraction and corresponding scale factor to each
+    di-lepton flavor channel depending on the branching fractions of a single
+    stop.
+  ]{
+    Stop pair branching fraction and corresponding scale factor to each
+    di-lepton flavor channel depending on the branching fractions of a single
+    stop.
     The di-stop branching fractions are given by
     Equation~\ref{eqn:branching_fractions}.
     The scale factor plot obtained by plotting
@@ -2665,7 +2691,7 @@ mass which is excluded is taken to be the mass limit.
       {figs/blstop/region_selection/region_choice_vs_br_m_900.pdf}
   }
   \caption{
-    The selected SR for select stop branching fractions for a stop mass of
+    The selected SR for several stop branching fractions for a stop mass of
     500~\GeV (left) and 900~\GeV (right).
     The SR is selected by choosing the SR with the smallest expected $CL_S$
     value for a given branching fraction.
@@ -2689,9 +2715,11 @@ The nominal stop cross section is used when determining these limit contours.
 \begin{figure}[p]
   \centering
   \includegraphics[width=\textwidth]
-    {figs/blstop/mass_limit_contours_no_extras_exp.pdf}
-  \caption{
-    The expected mass limit on the stop at 95\% CL.
+  {figs/blstop/mass_limit_contours_no_extras_exp.pdf}
+  \caption[
+    The \textbf{expected} mass limit on the stop at 95\% CL.
+  ]{
+    The \textbf{expected} mass limit on the stop at 95\% CL.
     This limit is obtained using the nominal stop cross section.
     Stop masses between 400~\GeV\ and 1100~\GeV, in steps of 100~\GeV, are
     tested.
@@ -2720,19 +2748,23 @@ blue (expected) limit contour.
 \begin{figure}[p]
   \centering
   \includegraphics[width=\textwidth]{figs/blstop/limit_contours.pdf}
-  \caption{
+  \caption[
     Expected and observed limit on the branching fractions for the stop
     decaying to different lepton flavors shown for different stop mass
-    hypotheses between 400~\GeV and 1~\TeV. The shaded area under the solid
-    line represents the branching fractions which are excluded at 95\% CL
-    for each stop mass.
+    hypotheses between 400~\GeV and 1.1~\TeV.
+  ]{
+    Expected and observed limit on the branching fractions for the stop
+    decaying to different lepton flavors shown for different stop mass
+    hypotheses between 400~\GeV and 1.1~\TeV.
+    The shaded area under the solid line represents the branching fractions
+    which are excluded at 95\% CL for each stop mass.
     The dotted lines represent the uncertainty in the observed mass limit
     obtained by varying the signal model cross section up and down one standard
-    deviation from the nominal value. The dashed line shows the
-    expected 95\% CL exclusion for each stop mass, and the shaded band shows
-    the uncertainty in this expected exclusion limit from statistical
-    uncertainty and the sources of systematic uncertainty discussed in
-    Section~\ref{sec:systematics}.
+    deviation from the nominal value.
+    The dashed line shows the expected 95\% CL exclusion for each stop mass,
+    and the shaded band shows the uncertainty in this expected exclusion limit
+    from statistical uncertainty and the sources of systematic uncertainty
+    discussed in Section~\ref{sec:systematics}.
   }
   \label{fig:limit_contours}
 \end{figure}
@@ -2753,9 +2785,11 @@ region~\cite{ATLAS:2013oea}.
 \begin{figure}[p]
   \centering
   \includegraphics[width=\textwidth]
-    {figs/blstop/mass_limit_contours_no_extras_obs.pdf}
-  \caption{
-    The observed mass limit on the stop at 95\% CL.
+  {figs/blstop/mass_limit_contours_no_extras_obs.pdf}
+  \caption[
+    The \textbf{observed} mass limit on the stop at 95\% CL.
+  ]{
+    The \textbf{observed} mass limit on the stop at 95\% CL.
     This limit is obtained using the nominal stop cross section.
     Stop masses between 400~\GeV\ and 1100~\GeV, in steps of 100~\GeV, are
     tested.
