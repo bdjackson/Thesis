@@ -63,7 +63,7 @@
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Expected and observed \ensuremath {p_{\mathrm {T}}}\ distribution for the sub-leading $b$-jet in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR when all flavor channels are combined. }}{68}{figure.5.13}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{68}{figure.5.13}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{68}{figure.5.13}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Expected and observed \ensuremath {m_{b\ell }}\ and \ensuremath {H_{\mathrm {T}}}\ distributions in the VRs. The hashed error bands show only the statistical uncertainty in the background MC simulation samples. The signal models have an assumed $Br(\mathaccentV {tilde}07E{t}\rightarrow be) = Br(\mathaccentV {tilde}07E{t}\rightarrow b\mu ) = 0.5$. {\color {red} TODO remake with dashed line in ratio.} }}{70}{figure.5.14}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Expected and observed \ensuremath {m_{b\ell }}\ and \ensuremath {H_{\mathrm {T}}}\ distributions in the VRs. }}{70}{figure.5.14}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top VR 1}}{70}{figure.5.14}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces Top VR 2}}{70}{figure.5.14}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces Top VR 3}}{70}{figure.5.14}
