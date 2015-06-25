@@ -17,7 +17,7 @@ This analysis required the generation of simulated signal Monte Carlo
 (Section~\ref{sec:signal_model_mc}) to develop the selection criteria, and
 determine the expected sensitivity for the signatures of interest.
 The object definitions, event cleaning, and trigger selections are described in
-\cref{sec:object_selection,sec:event_cleaning,sec:trigger_selection}.
+\Cref{sec:object_selection,sec:event_cleaning,sec:trigger_selection}.
 A ``cuts-based'' selection criteria is used to achieve a large separation between
 signal-like processes and Standard Model (SM) background processes.
 Two signal regions, expected to have a high signal-to-background ratio are
@@ -89,7 +89,8 @@ The decay $\tilde{t} \rightarrow b\tau$ does not significantly contribute to
 the search sensitivity, and it is not included in the simulated samples.
 
 \begin{table}[ht]
-  \caption{Stop cross sections and their associated
+  \caption{
+    Stop cross sections and their associated
     uncertainties~\cite{Beenakker:1997ut,Beenakker:2010nq,Beenakker:2011fu}.
   }
   \label{tab:stop_xsec}
@@ -128,7 +129,7 @@ Events are required to have at least two light leptons (electrons or muons)
 with opposite charge, and two $b$-tagged jets.
 The object selection is performed in multiple steps. First, lepton and jet
 objects are reconstructed using detector signatures as described in
-\cref{sec:elctrons,sec:muons,sec:jets}.
+\Cref{sec:elctrons,sec:muons,sec:jets}.
 Baseline requirements are applied to remove poorly reconstructed objects.
 All baseline objects are required to have $\ET(\pt) \geq 40 \GeV$ since the
 stop signatures of interest are of high mass and produce high momentum decay
@@ -146,19 +147,21 @@ The baseline electron requirements are outlined in
 Table~\ref{tab:baseline_el_def}.
 
 \begin{table}[ht]
-\caption{Baseline electron requirements.}
-\label{tab:baseline_el_def}
-\centering{
-  \begin{tabular}{cc}
-    \toprule
-    Quality        & \texttt{Medium++} \\
-    $p_T$          & $\geq 40 \GeV$    \\
-    $|\eta|$       & $\leq 2.47$       \\
-    \DZEROSIG      & $\leq 3$          \\
-    \ZZEROSINTHETA & $\leq 0.4$ mm     \\
-    \bottomrule
-  \end{tabular}
-}
+  \caption{
+    Baseline electron requirements.
+  }
+  \label{tab:baseline_el_def}
+  \centering{
+    \begin{tabular}{cc}
+      \toprule
+      Quality        & \texttt{Medium++} \\
+      $p_T$          & $\geq 40 \GeV$    \\
+      $|\eta|$       & $\leq 2.47$       \\
+      \DZEROSIG      & $\leq 3$          \\
+      \ZZEROSINTHETA & $\leq 0.4$ mm     \\
+      \bottomrule
+    \end{tabular}
+  }
 \end{table}
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -181,7 +184,9 @@ hits, of which no more than 90\% are outliers.
 The baseline muon requirements are outlined in Table~\ref{tab:baseline_mu_def}.
 
 \begin{table}[ht]
-  \caption{Baseline muon requirements.}
+  \caption{
+    Baseline muon requirements.
+  }
   \label{tab:baseline_mu_def}
   \centering{
     \begin{tabular}{cc}
@@ -211,8 +216,10 @@ with a cone size of $\Delta R \leq 0.4$~\cite{Cacciari:2008gp}.
 The baseline jet requirements are outlined in Table~\ref{tab:baseline_jet_def}.
 
 \begin{table}[ht]
-    \caption{Baseline jet requirements.}
-    \label{tab:baseline_jet_def}
+  \caption{
+    Baseline jet requirements.
+  }
+  \label{tab:baseline_jet_def}
   \centering{
     \begin{tabular}{cc}
       \toprule
@@ -410,7 +417,8 @@ matched to a stop parent.
   \centering
   \includegraphics[width=0.75\textwidth]
     {figs/blstop/PairingEfficiencies/pairing_abundance__inclusive.pdf}
-  \caption{The relative abundance of events where two, one, and zero
+  \caption{
+    The relative abundance of events where two, one, and zero
     pairs are grouped correctly.
   }
   \label{fig:pairing_eff}
@@ -507,10 +515,10 @@ Table~\ref{tab:triggers}, and the trigger requirements are described in
 Table~\ref{tab:trigger_defs}.
 
 \begin{table}[ht]
-  % \caption{Trigger selection for each final state. If the event passes any of
-  %   the triggers for the given final state, the event is accepted.
-  % }
-  \caption[Trigger selection for each final state.]{Trigger selection for each final state. If the event passes any of
+  \caption[
+    Trigger selection for each final state.
+  ]{
+    Trigger selection for each final state. If the event passes any of
     the triggers for the given final state, the event is accepted.
   }
   \label{tab:triggers}
@@ -519,24 +527,26 @@ Table~\ref{tab:trigger_defs}.
       \toprule
       Final state & Trigger \\
       \midrule
-      \multirow{2}{*}{$ee$bb}     &  \texttt{EF\_e24vhi\_medium1} \\
-                                  &  \texttt{EF\_e60\_medium1}    \\
+      \multirow{2}{*}{$eebb$}      &  \texttt{EF\_e24vhi\_medium1} \\[1ex]
+                                   &  \texttt{EF\_e60\_medium1}    \\
       \midrule
-      $\mu\mu$bb                  &  \texttt{EF\_mu24i\_tight}    \\
-      $\mu\mu$bb                  &  \texttt{EF\_mu36\_tight}     \\
+      \multirow{2}{*}{$\mu\mu bb$} &  \texttt{EF\_mu24i\_tight}    \\[1ex]
+                                   &  \texttt{EF\_mu36\_tight}     \\
       \midrule
-      \multirow{3}{*}{$e\mu$bb}   &  \texttt{EF\_e24vhi\_medium1} \\
-                                  &  \texttt{EF\_e60\_medium1}    \\
-                                  &  \texttt{EF\_mu24i\_tight}    \\
-                                  &  \texttt{EF\_mu36\_tight}     \\
+      \multirow{4}{*}{$e\mu bb$}   &  \texttt{EF\_e24vhi\_medium1} \\[1ex]
+                                   &  \texttt{EF\_e60\_medium1}    \\[1ex]
+                                   &  \texttt{EF\_mu24i\_tight}    \\[1ex]
+                                   &  \texttt{EF\_mu36\_tight}     \\
       \bottomrule
     \end{tabular}
   }
 \end{table}
 
 \begin{table}[ht]
-    \caption{Requirements for the triggers used in this analysis.  }
-    \label{tab:trigger_defs}
+  \caption{
+    Requirements for the triggers used in this analysis.
+  }
+  \label{tab:trigger_defs}
   \centering{
     \begin{tabular}{c|cc}
       \toprule
@@ -545,12 +555,12 @@ Table~\ref{tab:trigger_defs}.
       \multirow{2}{*}{\texttt{EF\_e24vhi\_medium1}}
       & \multirow{2}{*}{$\pt^{e} \geq 24 \GeV$}
       & hadronic core isolation $\leq 1 \GeV$ \\
-      & & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.1$ \\ [1ex]
-      \texttt{EF\_e60\_medium1} & $\pt^{e} \geq 60 \GeV$ & -- \\ [1ex]
+      & & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.1$ \\ [2ex]
+      \texttt{EF\_e60\_medium1} & $\pt^{e} \geq 60 \GeV$ & -- \\ [2ex]
       \texttt{EF\_mu24i\_tight}
       & $\pt^{e} \geq 24 \GeV$
-      & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.12$ \\ [1ex]
-      \texttt{EF\_mu36\_tight}  & $\pt^{e} \geq 36 \GeV$ & -- \\ [1ex]
+      & $\nicefrac{\pt^\mathrm{cone20}}{\pt} < 0.12$ \\ [2ex]
+      \texttt{EF\_mu36\_tight}  & $\pt^{e} \geq 36 \GeV$ & -- \\
       \bottomrule
     \end{tabular}
   }
@@ -606,14 +616,9 @@ dependence.
     \includegraphics[width=0.48\textwidth]
       {figs/trigger/EF_mu36_tight.pdf}
   }
-  \caption{Efficiency of simulated stop events passing each single lepton
+  \caption{
+    Efficiency of simulated stop events passing each single lepton
     trigger broken down by flavor channel.
-    % The two single electron triggers have different shapes, which the 
-    % \texttt{EF\_e24vhi\_medium1} trigger being more efficient for low stop
-    % masses and the \texttt{EF\_e60\_medium1} trigger more efficient for
-    % higher stop masses.
-    % The two single muon triggers have roughly equal efficiency for all stop
-    % masses.
   }
   \label{fig:single_trigger_efficiency}
 \end{figure}
@@ -628,16 +633,11 @@ dependence.
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/trigger/EF_e60_medium1__el_pt.pdf}
   }
-  \caption{Efficiency of simulated stop events passing each of the single
+  \caption{
+    Efficiency of simulated stop events passing each of the single
     electron triggers for several ranges of electron \ET.
     Only $e\mu$ events are shown in order to show to isolate the effect of
     the electron \ET\ on the single electron trigger efficiency.
-    % These plots show the trigger efficiency dependence on the stop mass,
-    % observed in Figure~\ref{fig:single_trigger_efficiency} is due to a
-    % dependence on the electron \HT.
-    % The \texttt{EF\_e24vhi\_medium1} trigger has the high efficiency for low
-    % \HT\ electrons, while the \texttt{EF\_e60\_medium1} trigger is more
-    % efficient for high \HT\ electrons.
   }
   \label{fig:electron_trigger_pt_dependence}
 \end{figure}
@@ -650,7 +650,8 @@ on the flavor channel as shown in Figure~\ref{fig:full_trigger_efficiency}.
   \centering
   \includegraphics[width=0.75\textwidth]
     {figs/trigger/EF_e24vhi_medium1_OR_EF_e60_medium1_OR_EF_mu24i_tight_OR_EF_mu36_tight.pdf}
-  \caption{Efficiency of simulated stop events passing the full trigger
+  \caption{
+    Efficiency of simulated stop events passing the full trigger
     selection broken down by flavor channel.
     When the full trigger selection is considered, the trigger efficiency does
     not depend on the stop mass.
@@ -820,7 +821,8 @@ efficiency.
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
     {figs/blstop/no_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_BL_PAIRING__log.pdf}
   }
-  \caption{Expected \MLL, \HT, \MBLASYM, and $\MBL^0$ distributions for SM
+  \caption{
+    Expected \MLL, \HT, \MBLASYM, and $\MBL^0$ distributions for SM
     background processes and three simulated stop samples with different masses.
     Basic event cleaning is applied and the events are required to pass the
     trigger selection, as described in
@@ -939,7 +941,8 @@ yields are normalized to 20.3 \ifb.
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/mbl_0_sr_minus_mbl.pdf}
   }
-  \caption{Distributions of the variables which are used to define the SRs.
+  \caption{
+    Distributions of the variables which are used to define the SRs.
     These plots show the MC simulated background samples and three signal
     models, and are made after applying all the SR selection criteria except for
     that on the variable shown.
@@ -958,9 +961,12 @@ yields are normalized to 20.3 \ifb.
 \end{figure}
 
 \begin{table}[ht]
-  \caption{The number of expected signal events pasing each of the signal
-    region selection criteria.
-    This is shown for stop masses of 500~\GeV, 800~\GeV, and 1000~\GeV.
+  \caption[
+    The number of expected signal events pasing each of the signal
+    for stop masses of 500~\GeV, 800~\GeV, and 1000~\GeV.
+  ]{
+    The number of expected signal events pasing each of the signal
+    for stop masses of 500~\GeV, 800~\GeV, and 1000~\GeV.
     The estimated yields are taken from MC simulation, and are normalized
     to 20.3~\ifb, and the uncertainty given is the MC statistical uncertainty.
     The signal models have an assumed branching fraction of
@@ -975,12 +981,12 @@ yields are normalized to 20.3 \ifb.
       \midrule
       $\sigma \cdot L$                 & $1750 \pm 260$             & $59 \pm 12$                & $8.9 \pm 2.5$ \\
       \midrule
-      $bb\ell\ell$                     & $624 \pm 4$                & $19.65 \pm 0.18$           & $2.68 \pm 0.05$   \\
-      $Z$ veto                         & $619 \pm 4$                & $19.62 \pm 0.18$           & $2.68 \pm 0.05$   \\
-      $H_{T} \ge 1100 \GeV$            & $122.9 \pm 1.8$            & $16.01 \pm 0.17$           & $2.50 \pm 0.04$   \\
+      $bb\ell\ell$                     & $624 \pm 4$                & $19.65 \pm 0.18$           & $2.68 \pm 0.05$   \\[1ex]
+      $Z$ veto                         & $619 \pm 4$                & $19.62 \pm 0.18$           & $2.68 \pm 0.05$   \\[1ex]
+      $H_{T} \ge 1100 \GeV$            & $122.9 \pm 1.8$            & $16.01 \pm 0.17$           & $2.50 \pm 0.04$   \\[1ex]
       $m_{b\ell}$ asymmetry $\leq 0.2$ & $112.8 \pm 1.7$            & $14.00 \pm 0.15$           & $2.11 \pm 0.04$   \\
       \midrule
-      $m_{b\ell} \geq 400 \GeV$        & $110.3 \pm 1.7$            & $13.74 \pm 0.15$           & $2.09 \pm 0.04$   \\
+      $m_{b\ell} \geq 400 \GeV$        & $110.3 \pm 1.7$            & $13.74 \pm 0.15$           & $2.09 \pm 0.04$   \\[1ex]
       $m_{b\ell} \geq 600 \GeV$        & $7.7 \pm 0.4$              & $12.86 \pm 0.15$           & $1.99 \pm 0.04$   \\
       \bottomrule
     \end{tabular}
@@ -1015,7 +1021,11 @@ Figure~\ref{fig:region_coverage}.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \begin{table}[ht]
-  \caption{Summary of signal, control, and validation regions used for this
+  \caption[
+    Summary of signal, control, and validation regions used for this
+    analysis.
+  ]{
+    Summary of signal, control, and validation regions used for this
     analysis.
     The control and validation regions are explained in Section~\ref{sec:bkg}.
     All regions require two $b$-tagged jets and two oppositely charged leptons.
@@ -1053,7 +1063,8 @@ Figure~\ref{fig:region_coverage}.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{figs/blstop/regions__met_sig__ht_plane.pdf}
-  \caption{Position of the regions in the \METSIG\ versus \HT\ space.
+  \caption{
+    Position of the regions in the \METSIG\ versus \HT\ space.
     The two left plots show the \METSIG-\HT~plane after vetoing events within
     the $Z$ window, with the top plot requiring $\MBLASYM \geq 0.2$ and the
     bottom requiring $\MBLASYM \leq 0.2$.
@@ -1168,18 +1179,22 @@ When the generator provides MC event weights, they are applied to each event in
 the MC background sample; otherwise, they are not used.
 
 \begin{table}[ht]
-  \caption{Partial summary of background samples and their cross sections used
-    in this analysis except for the ``other'' category (summarized
-    in Table~\ref{tab:background_grouping_other})
-    The \ZGAMMAJETS\ samples are sliced by the \pt\ of the $Z$~boson.
-    For the inclusive sample, only events with $\pt^{Z} \le 40 \GeV$ were used.
-    For each \pt\ slice, nine samples were generated, with different lepton
+  \caption[
+    Partial summary of background samples and their cross sections used
+    in this analysis.
+  ]{
+    Partial summary of background samples and their cross sections used
+    in this analysis.
+    For each di-lepton flavor channel, samples are generated with requirements
+    on the \pt\ of the $Z$ boson.
+    For the inclusive \ZGAMMAJETS\ sample, only events with
+    $\pt^{Z} \le 40 \GeV$ were used.
+    For each combination of di-lepton flavor and \pt\ requirement, three
+    samples are generated, with filters applied on the three jet flavors 
+    different lepton
     flavor channels and filters applied on the jet flavor.
-    The three samples are generated with the same cross section,
-    but different filter efficiencies, leading to different effective
+    The different filter efficiencies, lead to different effective
     luminosities.
-    The three columns under the effective luminosity represent the three
-    samples.
     The left column shows the effective luminosity for the sample generated
     with a $b$-filter.
     The middle column represents the sample with a $c$-filter and $b$-veto.
@@ -1218,111 +1233,14 @@ the MC background sample; otherwise, they are not used.
   }
 \end{table}
 
-%% \begin{table}[ht]
-%%   \caption{Partial summary of background samples and their cross sections used
-%%     in this analysis except for the \ZGAMMAJETS\ background (summarized in
-%%     Table~\ref{tab:background_grouping_z}) and the ``other'' category (summarized
-%%     in Table~\ref{tab:background_grouping_other})
-%%   }
-%%   \label{tab:background_grouping}
-%%   \centering{
-%%     \begin{tabular}{c|cccc}
-%%       \toprule
-%%       Grouping                    & Process      & Cross-section [pb] & Luminosity [$\mathrm{fb}^{-1}$] & Generator \\
-%%       \midrule
-%%       \TTBAR                      & \TTBAR       & 253                & 727.4                           & \powheg+\pythia \\
-%%       \midrule
-%%       \multirow{3}{*}{Single top} & $t$-channel  & 25.8               & 320                             & \acermc+\pythia \\
-%%                                   & $s$-channel  & 1.64               & 330                             & \powheg+\pythia \\
-%%                                   & $Wt$-channel & 2.15               & 4200                            & \powheg+\pythia \\
-%%       \bottomrule
-%%     \end{tabular}
-%%   }
-%% \end{table}
-
-
-%% \begin{table}[ht]
-%%   \caption{Summary of the \ZGAMMAJETS\ background samples and their cross
-%%     sections used in this analysis.
-%%     The \ZGAMMAJETS\ samples are sliced by the \pt\ of the $Z$~boson.
-%%     For the inclusive sample, only events with $\pt^{Z} \le 40 \GeV$ were used.
-%%     For each \pt\ slice, nine samples were generated, with different lepton
-%%     flavor channels and filters applied on the jet flavor.
-%%     The three samples are generated with approximately the same cross section,
-%%     but the different filter efficiencies lead to different effective
-%%     luminosities.
-%%     The three columns under the effective luminosity represent the three
-%%     samples.
-%%     The left column shows the effective luminosity for the sample generated
-%%     with a $b$-filter.
-%%     The middle column represents the sample with a $c$-filter and $b$-veto.
-%%     The right column shows the effective luminosity of the sample generated
-%%     with a veto on both $b$- and $c$-quarks.
-%%   }
-%%   \label{tab:background_grouping_z}
-%%   \centering{
-%%     %% \resizebox{0.90\linewidth}{!}{
-%%     %%   \begin{tabular}{c|cccccc}
-%%     %%     \toprule
-%%     %%     Grouping                       & Process                                                         & Cross-section [pb]   & \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} & Generator \\
-%%     %%     \midrule
-%%     %%     \multirow{24}{*}{\ZGAMMAJETS}  & $Z \rightarrow ee$                                              & 1110                 & 110                                                 & 9            & 6    & \sherpa \\
-%%     %%                                    & $Z \rightarrow \mu\mu$                                          & 1110                 & 110                                                 & 9            & 6    & \sherpa \\
-%%     %%                                    & $Z \rightarrow \tau\tau$                                        & 1110                 & 110                                                 & 9            & 6    & \sherpa \\
-%%     %%                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                                                 & 22           & 30   & \sherpa \\
-%%     %%                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                                                 & 22           & 30   & \sherpa \\
-%%     %%                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [40 ,70] \GeV$)       & 70.5                 & 110                                                 & 22           & 30   & \sherpa \\
-%%     %%                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                                                 & 90           & 110  & \sherpa \\
-%%     %%                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                                                 & 90           & 110  & \sherpa \\
-%%     %%                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [70 ,140] \GeV$)      & 29.5                 & 510                                                 & 90           & 110  & \sherpa \\
-%%     %%                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                                                 & 240          & 250  & \sherpa \\
-%%     %%                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                                                 & 240          & 250  & \sherpa \\
-%%     %%                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [140,280] \GeV$)      & 3.99                 & 470                                                 & 240          & 250  & \sherpa \\
-%%     %%                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                                                 & 480          & 360  & \sherpa \\
-%%     %%                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                                                 & 480          & 360  & \sherpa \\
-%%     %%                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \in [280,500] \GeV$)      & 0.24                 & 680                                                 & 480          & 360  & \sherpa \\
-%%     %%                                    & $Z \rightarrow ee$        ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                                                & 1700         & 7000 & \sherpa \\
-%%     %%                                    & $Z \rightarrow \mu\mu$    ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                                                & 1700         & 7000 & \sherpa \\
-%%     %%                                    & $Z \rightarrow \tau\tau$  ($p_{T}^{Z} \ge 500 \GeV$)            & $1.3 \times 10^{-2}$ & 5700                                                & 1700         & 7000 & \sherpa \\
-%%     %%                                    & DY $\rightarrow ee$       ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                              & \sherpa \\
-%%     %%                                    & DY $\rightarrow \mu\mu$   ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                              & \sherpa \\
-%%     %%                                    & DY $\rightarrow \tau\tau$ ($m_{Z/\gamma^{*}} \in [8 ,15] \GeV$) & 92.1                 & \multicolumn{3}{c}{50}                              & \sherpa \\
-%%     %%                                    & DY $\rightarrow ee$       ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                              & \sherpa \\
-%%     %%                                    & DY $\rightarrow \mu\mu$   ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                              & \sherpa \\
-%%     %%                                    & DY $\rightarrow \tau\tau$ ($m_{Z/\gamma^{*}} \in [15,40] \GeV$) & 279                  & \multicolumn{3}{c}{50}                              & \sherpa \\
-%%     %%     \bottomrule
-%%     %%   \end{tabular}
-%%     %% }
-%%     % \resizebox{0.90\linewidth}{!}{
-%%       \begin{tabular}{c|cccccc}
-%%         \toprule
-%%         Grouping                      & Process                                          & Cross-section [pb]                    & \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} & Generator \\
-%%         \midrule
-%%         \multirow{15}{*}{\ZGAMMAJETS} & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & 1110                                  & 110                                                 & 9                           & 6                     & \sherpa  \\ [1ex]
-%%                                       & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{70.5}                 & \multirow{2}{*}{110}                                & \multirow{2}{*}{22}         & \multirow{2}{*}{30}   & \multirow{2}{*}{\sherpa} \\
-%%                                       & $p_{T}^{Z} \in [40 ,70] \GeV$                    & & & & &  \\ [1ex]
-%%                                       & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{29.5}                 & \multirow{2}{*}{510}                                & \multirow{2}{*}{90}         & \multirow{2}{*}{110}  & \multirow{2}{*}{\sherpa} \\
-%%                                       & $p_{T}^{Z} \in [70 ,140] \GeV$                   & & & & &  \\ [1ex]
-%%                                       & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{3.99}                 & \multirow{2}{*}{470}                                & \multirow{2}{*}{240}        & \multirow{2}{*}{250}  & \multirow{2}{*}{\sherpa} \\
-%%                                       & $p_{T}^{Z} \in [140,280] \GeV$                   & & & & &  \\ [1ex]
-%%                                       & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{0.24}                 & \multirow{2}{*}{680}                                & \multirow{2}{*}{480}        & \multirow{2}{*}{360}  & \multirow{2}{*}{\sherpa} \\
-%%                                       & $p_{T}^{Z} \in [280,500] \GeV$                   & & & & &  \\ [1ex]
-%%                                       & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{$1.3 \times 10^{-2}$} & \multirow{2}{*}{5700}                               & \multirow{2}{*}{1700}       & \multirow{2}{*}{7000} & \multirow{2}{*}{\sherpa} \\
-%%                                       & $p_{T}^{Z} \ge 500 \GeV$                         & & & & &  \\ [1ex]
-%%                                       & DY $\rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$ & \multirow{2}{*}{92.1}                 & \multicolumn{3}{c}{\multirow{2}{*}{50}}                                                                   & \multirow{2}{*}{\sherpa} \\
-%%                                       & $m_{Z/\gamma^{*}} \in [8 ,15] \GeV$              & & & & &  \\ [1ex]
-%%                                       & DY $\rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$ & \multirow{2}{*}{279}                  & \multicolumn{3}{c}{\multirow{2}{*}{50}}                                                                   & \multirow{2}{*}{\sherpa} \\
-%%                                       & $m_{Z/\gamma^{*}} \in [15,40] \GeV$              & & & & &  \\
-%%         \bottomrule
-%%       \end{tabular}
-%%     % }
-%%   }
-%% \end{table}
-
 \begin{table}[ht]
-  \caption{Summary of other background samples and their cross sections used in
+  \caption[
+    Summary of other background samples and their cross sections used in
     this analysis.
-    The $W \rightarrow \ell\nu$ and $Z \rightarrow \ell\ell$ processes each have 
+  ]{
+    Summary of other background samples and their cross sections used in
+    this analysis.
+    The $W \rightarrow \ell\nu$ and $Z \rightarrow \ell\ell$ processes have 
     dedicated samples for each lepton flavor as indicated in the parentheses.
     The $W$ samples are generated with filters on the jet flavor.
     As in Table~\ref{tab:background_grouping}, the three columns under the
@@ -1331,68 +1249,6 @@ the MC background sample; otherwise, they are not used.
   }
   \label{tab:background_grouping_other}
   \centering{
-    %% \resizebox{0.90\linewidth}{!}{
-    %%   \begin{tabular}{c|cccccc}
-    %%     \toprule
-    %%     Grouping &
-    %%     Process &
-    %%     Cross-section [pb] &
-    %%     \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} &
-    %%     Generator \\
-    %%     \midrule
-    %%     \multirow{50}{*}{Other}  & $\TTBAR\,W$                                                     & 0.10                 & \multicolumn{3}{c}{3300 }              & \madgraph+\pythia \\
-    %%                              & $\TTBAR\,Wj$                                                    & $9.3 \times 10^{-2}$ & \multicolumn{3}{c}{3600 }              & \madgraph+\pythia \\
-    %%                              & $\TTBAR\,Z$                                                     & $6.8 \times 10^{-2}$ & \multicolumn{3}{c}{4400 }              & \madgraph+\pythia \\
-    %%                              & $\TTBAR\,Zj$                                                    & $8.7 \times 10^{-2}$ & \multicolumn{3}{c}{3400 }              & \madgraph+\pythia \\
-    %%                              & $\TTBAR\,WW$                                                    & $9.2 \times 10^{-4}$ & \multicolumn{3}{c}{11000}              & \madgraph+\pythia \\
-    %%                              & $WW \rightarrow \ell\ell\nu\nu$                                 & 5.30                 & \multicolumn{3}{c}{1400 }              & \sherpa           \\
-    %%                              & $WW \rightarrow e\nu qq$                                        & 7.29                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
-    %%                              & $WW \rightarrow \mu\nu qq$                                      & 7.30                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
-    %%                              & $WW \rightarrow \tau\nu qq$                                     & 7.27                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
-    %%                              & $WZ \rightarrow \ell\ell\ell\nu$                                & 9.74                 & \multicolumn{3}{c}{260  }              & \sherpa           \\
-    %%                              & $WZ \rightarrow \ell\nu\nu\nu$                                  & 1.40                 & \multicolumn{3}{c}{270  }              & \sherpa           \\
-    %%                              & $WZ \rightarrow e\nu qq$                                        & 1.90                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
-    %%                              & $WZ \rightarrow \mu\nu qq$                                      & 1.91                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
-    %%                              & $WZ \rightarrow \tau\nu qq$                                     & 1.92                 & \multicolumn{3}{c}{100  }              & \sherpa           \\
-    %%                              & $WZ \rightarrow ee qq$                                          & 1.46                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
-    %%                              & $WZ \rightarrow \mu\mu qq$                                      & 1.46                 & \multicolumn{3}{c}{110  }              & \sherpa           \\
-    %%                              & $WZ \rightarrow \tau\tau qq$                                    & 1.45                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
-    %%                              & $WZ \rightarrow \nu\nu qq$                                      & 2.70                 & \multicolumn{3}{c}{64   }              & \sherpa           \\
-    %%                              & $ZZ \rightarrow \ell\ell\nu\nu$                                 & 0.49                 & \multicolumn{3}{c}{1700 }              & \sherpa           \\
-    %%                              & $ZZ \rightarrow ee qq$                                          & 0.25                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
-    %%                              & $ZZ \rightarrow \mu\mu qq$                                      & 0.25                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
-    %%                              & $ZZ \rightarrow \tau\tau qq$                                    & 0.24                 & \multicolumn{3}{c}{120  }              & \sherpa           \\
-    %%                              & $ZZ \rightarrow \nu\nu qq$                                      & 1.74                 & \multicolumn{3}{c}{69   }              & \sherpa           \\
-    %%                              & ggf $H \rightarrow WW$                                          & 0.44                 & \multicolumn{3}{c}{2000 }              & \powheg+\pythia 8 \\
-    %%                              & ggf $H \rightarrow ZZ$                                          & $4.7 \times 10^{-2}$ & \multicolumn{3}{c}{2000 }              & \powheg+\pythia 8 \\
-    %%                              & VBF $H \rightarrow WW$                                          & $3.6 \times 10^{-2}$ & \multicolumn{3}{c}{17000}              & \powheg+\pythia 8 \\
-    %%                              & VBF $H \rightarrow ZZ$                                          & $3.8 \times 10^{-3}$ & \multicolumn{3}{c}{18000}              & \powheg+\pythia 8 \\
-    %%                              & $WH \rightarrow W\ell\nu\ell\nu$                                & 0.15                 & \multicolumn{3}{c}{1000 }              & \pythia 8         \\
-    %%                              & $WH \rightarrow W\ell\ell\nu\nu$                                & $1.7 \times 10^{-3}$ & \multicolumn{3}{c}{27000}              & \pythia 8         \\
-    %%                              & $ZH \rightarrow Z\ell\nu\ell\nu$                                & $8.9 \times 10^{-3}$ & \multicolumn{3}{c}{2000 }              & \pythia 8         \\
-    %%                              & $ZH \rightarrow Z\ell\ell\nu\nu$                                & $1.0 \times 10^{-2}$ & \multicolumn{3}{c}{48000}              & \pythia 8         \\
-    %%                              & $\TTBAR H \rightarrow \TTBAR WW$                                & $2.8 \times 10^{-2}$ & \multicolumn{3}{c}{7000 }              & \pythia 8         \\
-    %%                              & $W \rightarrow e\nu$                                            & 11000                & 100                       & 17   & 4   & \sherpa           \\
-    %%                              & $W \rightarrow \mu\nu$                                          & 11000                & 100                       & 17   & 4   & \sherpa           \\
-    %%                              & $W \rightarrow \tau\nu$                                         & 11000                & 100                       & 17   & 4   & \sherpa           \\
-    %%                              & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
-    %%                              & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
-    %%                              & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [40,70] \GeV$)   & 653                  & 44                        & 7    & 30  & \sherpa           \\
-    %%                              & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
-    %%                              & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
-    %%                              & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [70,140] \GeV$)  & 251                  & 160                       & 54   & 24  & \sherpa           \\
-    %%                              & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
-    %%                              & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
-    %%                              & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [140,280] \GeV$) & 31.2                 & 460                       & 260  & 80  & \sherpa           \\
-    %%                              & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
-    %%                              & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
-    %%                              & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \in [280,500] \GeV$) & 1.84                 & 590                       & 420  & 360 & \sherpa           \\
-    %%                              & $W \rightarrow e\nu$    ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 140 & \sherpa           \\
-    %%                              & $W \rightarrow \mu\nu$  ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 670 & \sherpa           \\
-    %%                              & $W \rightarrow \tau\nu$ ($p_\mathrm{T}^{W} \ge 500 \GeV$)       & 0.10                 & 890                       & 360  & 670 & \sherpa           \\
-    %%     \bottomrule
-    %%   \end{tabular}
-    %% }
       \begin{tabular}{c|cccccc}
         \toprule
         Grouping &
@@ -1535,7 +1391,8 @@ states this in the description.
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{Expected and observed $\MBL^0$ distribution in the Top CR and
+  \caption{
+    Expected and observed $\MBL^0$ distribution in the Top CR and
     $Z$ CR when all flavor channels are combined.
     The prediction in the Top CR shows reasonable agreement with the observed
     data.
@@ -1557,12 +1414,12 @@ the Top CR and $Z$ CR are shown in Figure~\ref{fig:cr_mbl_0__w_norm_factor}.
 While the prediction is roughly unchanged in the Top CR, the prediction in the
 $Z$ CR shows much better agreement with the data.
 The expected and observed event yields in the two CRs, broken out by background
-production process, are shown in Table~\ref{tab:region_contributions_cr}.
+production process, are shown in Table~\ref{tab:bkg_only_fit_results}.
 The expected signal yield in each of the CRs is low, with a signal to
 background ratio of less than 0.01.
 Additional kinematic distributions including the \pt\ of the leptons and
 $b$-jets are shown in
-\cref{fig:cr_lep_pt_0__w_norm_factor,fig:cr_lep_pt_1__w_norm_factor,fig:cr_b_jet_pt_0__w_norm_factor,fig:cr_b_jet_pt_1__w_norm_factor}.
+\Cref{fig:cr_lep_pt_0__w_norm_factor,fig:cr_lep_pt_1__w_norm_factor,fig:cr_b_jet_pt_0__w_norm_factor,fig:cr_b_jet_pt_1__w_norm_factor}.
 
 \begin{figure}
   \centering
@@ -1574,7 +1431,8 @@ $b$-jets are shown in
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{Expected and observed $\MBL^0$ distribution in the Top CR and
+  \caption{
+    Expected and observed $\MBL^0$ distribution in the Top CR and
     $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR
     when all flavor channels are combined.
     After applying the $k_Z$ normalization factor, both CRs show reasonable
@@ -1601,7 +1459,8 @@ $b$-jets are shown in
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__lep_pt_0__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{Expected and observed \pt\ distribution for the leading lepton in
+  \caption{
+    Expected and observed \pt\ distribution for the leading lepton in
     the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived
     in the $Z$ CR when all flavor channels are combined.
     % After applying the $k_Z$ normalization factor, both CRs show reasonable
@@ -1613,6 +1472,7 @@ $b$-jets are shown in
     The signal models have an assumed
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
     {\color{red} TODO remake with dashed line in ratio.}
+    {\color{red} TODO Change x-axis to ``lepton \pt''.}
   }
   \label{fig:cr_lep_pt_0__w_norm_factor}
   %%
@@ -1628,7 +1488,8 @@ $b$-jets are shown in
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__lep_pt_1__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{Expected and observed \pt\ distribution for the sub-leading lepton in
+  \caption{
+    Expected and observed \pt\ distribution for the sub-leading lepton in
     the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived
     in the $Z$ CR when all flavor channels are combined.
     % After applying the $k_Z$ normalization factor, both CRs show reasonable
@@ -1640,6 +1501,7 @@ $b$-jets are shown in
     The signal models have an assumed
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
     {\color{red} TODO remake with dashed line in ratio.}
+    {\color{red} TODO Change x-axis to ``lepton \pt''.}
   }
   \label{fig:cr_lep_pt_1__w_norm_factor}
   %%
@@ -1655,18 +1517,16 @@ $b$-jets are shown in
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__b_jet_pt_0__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{Expected and observed \pt\ distribution for the leading $b$-jet in
+  \caption{
+    Expected and observed \pt\ distribution for the leading $b$-jet in
     the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived
     in the $Z$ CR when all flavor channels are combined.
-    % After applying the $k_Z$ normalization factor, both CRs show reasonable
-    % agreement between the predicted and observed distributions.
-    % In each plot, the last bin includes the overflow for values beyond the
-    % maximum shown.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
     The signal models have an assumed
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
     {\color{red} TODO remake with dashed line in ratio.}
+    {\color{red} TODO Change x-axis to ``$b$-jet \pt''.}
   }
   \label{fig:cr_b_jet_pt_0__w_norm_factor}
   %%
@@ -1682,63 +1542,62 @@ $b$-jets are shown in
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__lep_pt_1__BMINUSL_CR_Z_MBL_200__log.pdf}
   }
-  \caption{Expected and observed \pt\ distribution for the sub-leading $b$-jet
+  \caption{
+    Expected and observed \pt\ distribution for the sub-leading $b$-jet
     in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor
     derived in the $Z$ CR when all flavor channels are combined.
-    % After applying the $k_Z$ normalization factor, both CRs show reasonable
-    % agreement between the predicted and observed distributions.
-    % In each plot, the last bin includes the overflow for values beyond the
-    % maximum shown.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
     The signal models have an assumed
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
     {\color{red} TODO remake with dashed line in ratio.}
+    {\color{red} TODO Change x-axis to ``$b$-jet \pt''.}
   }
   \label{fig:cr_b_jet_pt_1__w_norm_factor}
   %%
 \end{figure}
 
-\begin{table}
-  \caption{Number of expected events in each of the CRs broken down by process.
-    The uncertainty in the total background prediction is the MC statistical
-    uncertainty only for each background process.
-    The total uncertainty is obtained by summing the uncertainty in each
-    background process in quadrature.
-    The $k_Z$ normalization factor is applied to the \ZGAMMAJETS\ background
-    yield estimate.
-    For each signal model, the expected signal to background ratio is given in
-    parentheses.
-    % For each signal model, the ratio of expected signal events to the sum of the
-    % background in each region is show in parentheses.
-    {\color{red} TODO add observed number events in each CR.}
-    {\color{red} TODO update with only stat uncertainty.}
-    {\color{red} TODO update with breakdown by flavor channel.}
-  }
-  \label{tab:region_contributions_cr}
-  \centering{
-    \begin{tabular}{c|cc}
-      \toprule
-                                           & Top CR                            & $Z$ CR                            \\
-      \midrule
-      \TTBAR                               & $311.8$                           & $8.2$                             \\
-      \ZGAMMAJETS                          & $3.1$                             & $297.9$                           \\
-      Single top                           & $16.7$                            & $0.8$                             \\
-      Other                                & $2.9$                             & $8.6$                             \\
-      \midrule
-      Total                                & \multirow{2}{*}{$334.5 \pm 93.7$} & \multirow{2}{*}{$315.6 \pm 89.5$} \\
-      background                           &                                   &                                   \\
-      \midrule
-      \multirow{2}{*}{B-L stop (500 GeV)}  & $1.3$                             & $0.03$                            \\
-                                           & ($< 0.01$)                        & ($< 0.01$) \vspace{1ex}           \\
-      \multirow{2}{*}{B-L stop (800 GeV)}  & $< 0.01$                          & $< 0.01$                          \\
-                                           & ($< 0.01$)                        & ($< 0.01$) \vspace{1ex}           \\
-      \multirow{2}{*}{B-L stop (1000 GeV)} & $< 0.01$                          & $< 0.01$                          \\
-                                           & ($< 0.01$)                        & ($< 0.01$) \vspace{1ex}           \\
-      \bottomrule
-    \end{tabular}
-  }
-\end{table}
+% \begin{table}
+%   \caption{
+%     Number of expected events in each of the CRs broken down by process.
+%     The uncertainty in the total background prediction is the MC statistical
+%     uncertainty only for each background process.
+%     The total uncertainty is obtained by summing the uncertainty in each
+%     background process in quadrature.
+%     The $k_Z$ normalization factor is applied to the \ZGAMMAJETS\ background
+%     yield estimate.
+%     For each signal model, the expected signal to background ratio is given in
+%     parentheses.
+%     % For each signal model, the ratio of expected signal events to the sum of the
+%     % background in each region is show in parentheses.
+%     {\color{red} TODO add observed number events in each CR.}
+%     {\color{red} TODO update with only stat uncertainty.}
+%     {\color{red} TODO update with breakdown by flavor channel.}
+%   }
+%   \label{tab:region_contributions_cr}
+%   \centering{
+%     \begin{tabular}{c|cc}
+%       \toprule
+%                                            & Top CR                            & $Z$ CR                            \\
+%       \midrule
+%       \TTBAR                               & $311.8$                           & $8.2$                             \\
+%       \ZGAMMAJETS                          & $3.1$                             & $297.9$                           \\
+%       Single top                           & $16.7$                            & $0.8$                             \\
+%       Other                                & $2.9$                             & $8.6$                             \\
+%       \midrule
+%       Total                                & \multirow{2}{*}{$334.5 \pm 93.7$} & \multirow{2}{*}{$315.6 \pm 89.5$} \\
+%       background                           &                                   &                                   \\
+%       \midrule
+%       \multirow{2}{*}{B-L stop (500 GeV)}  & $1.3$                             & $0.03$                            \\
+%                                            & ($< 0.01$)                        & ($< 0.01$) \vspace{1ex}           \\
+%       \multirow{2}{*}{B-L stop (800 GeV)}  & $< 0.01$                          & $< 0.01$                          \\
+%                                            & ($< 0.01$)                        & ($< 0.01$) \vspace{1ex}           \\
+%       \multirow{2}{*}{B-L stop (1000 GeV)} & $< 0.01$                          & $< 0.01$                          \\
+%                                            & ($< 0.01$)                        & ($< 0.01$) \vspace{1ex}           \\
+%       \bottomrule
+%     \end{tabular}
+%   }
+% \end{table}
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
@@ -1779,52 +1638,53 @@ $Z$ CR, and relaxing the \METSIG\ requirement.
 The full VR selection criteria are outlined along with the other analysis
 regions in Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
 The expected and observed event yields in the VRs, broken out by background
-production process, are shown in Table~\ref{tab:region_contributions_vr}.
+production process, are shown in Table~\ref{tab:bkg_only_fit_results}.
 Select kinematic distributions in the VRs are shown in
 Figure~\ref{fig:vr_dists_w_norm_factor}.
 The agreement between the observed and predicted yields and distributions in the
 VRs is explored in more detail in Section~\ref{sec:bkg_fit}.
 
-\begin{table}
-  \caption{Number of expected events in each of the VRs broken down by process.
-    The uncertainty in the total background prediction is the MC statistical
-    uncertainty only for each background process.
-    The total uncertainty is obtained by summing the uncertainty in each
-    background process in quadrature.
-    The $k_Z$ normalization factor is applied to the \ZGAMMAJETS\ background
-    yield estimate.
-    For each signal model, the ratio of expected signal events to the sum of the
-    background in each region is show in parentheses.
-    {\color{red} TODO add observed number events in each VR.}
-    {\color{red} TODO update with only stat uncertainty.}
-    {\color{red} TODO update with breakdown by flavor channel.}
-  }
-  \label{tab:region_contributions_vr}
-  \centering{
-    \begin{tabular}{c|cccc}
-      \toprule
-                                             & Top VR 1                           & Top VR 2                           & Top VR 3                         & $Z$ VR                \\
-      \midrule
-      \TTBAR                                 & $542.6$                            & $447.3$                            & $48.9$                           & $2.7$                 \\
-      \ZGAMMAJETS                            & $58.4$                             & $59.6$                             & $1.5$                            & $115.5$               \\
-      Single top                             & $23.0$                             & $56.5$                             & $14.1$                           & $0.3$                 \\
-      Other                                  & $4.8$                              & $8.2$                              & $2.0$                            & $6.4$                 \\
-      \midrule
-      Total                                  & \multirow{2}{*}{$628.8 \pm 163.9$} & \multirow{2}{*}{$571.6 \pm 136.5$} & \multirow{2}{*}{$66.6 \pm 15.3$} & \multirow{2}{*}{$125.0 \pm 34.7$}               \\
-      background                             &                                    &                                    &                                  & \\
-      \midrule
-      \multirow{2}{*}{B-L stop (500 GeV)}    & $5.1$                              & $2.4$                              & $10.7$                           & $3.8$                 \\
-                                             & ($< 0.01$)                         & ($<0.01$)                          & ($0.2$)                          & ($0.03$) \vspace{1ex} \\
-      \multirow{2}{*}{B-L stop (800 GeV)}    & $< 0.01$                           & $< 0.01$                           & $0.6$                            & $0.02$   \\
-                                             & ($< 0.01$)                         & ($< 0.01$)                         & ($< 0.01$)                       & ($< 0.01$) \vspace{1ex} \\
-      \multirow{2}{*}{B-L stop (1000 GeV)}   & $< 0.01$                           & $< 0.01$                           & $0.1$                            & $< 0.01$                     \\
-                                             & ($< 0.01$)                         & ($< 0.01$)                         & ($< 0.01$)                       & ($< 0.01$)
-      \vspace{1ex} \\
-      \bottomrule
-    \end{tabular}
-
-  }
-\end{table}
+%% \begin{table}
+%%   \caption{
+%%     Number of expected events in each of the VRs broken down by process.
+%%     The uncertainty in the total background prediction is the MC statistical
+%%     uncertainty only for each background process.
+%%     The total uncertainty is obtained by summing the uncertainty in each
+%%     background process in quadrature.
+%%     The $k_Z$ normalization factor is applied to the \ZGAMMAJETS\ background
+%%     yield estimate.
+%%     For each signal model, the ratio of expected signal events to the sum of the
+%%     background in each region is show in parentheses.
+%%     {\color{red} TODO add observed number events in each VR.}
+%%     {\color{red} TODO update with only stat uncertainty.}
+%%     {\color{red} TODO update with breakdown by flavor channel.}
+%%   }
+%%   \label{tab:region_contributions_vr}
+%%   \centering{
+%%     \begin{tabular}{c|cccc}
+%%       \toprule
+%%                                              & Top VR 1                           & Top VR 2                           & Top VR 3                         & $Z$ VR                \\
+%%       \midrule
+%%       \TTBAR                                 & $542.6$                            & $447.3$                            & $48.9$                           & $2.7$                 \\
+%%       \ZGAMMAJETS                            & $58.4$                             & $59.6$                             & $1.5$                            & $115.5$               \\
+%%       Single top                             & $23.0$                             & $56.5$                             & $14.1$                           & $0.3$                 \\
+%%       Other                                  & $4.8$                              & $8.2$                              & $2.0$                            & $6.4$                 \\
+%%       \midrule
+%%       Total                                  & \multirow{2}{*}{$628.8 \pm 163.9$} & \multirow{2}{*}{$571.6 \pm 136.5$} & \multirow{2}{*}{$66.6 \pm 15.3$} & \multirow{2}{*}{$125.0 \pm 34.7$}               \\
+%%       background                             &                                    &                                    &                                  & \\
+%%       \midrule
+%%       \multirow{2}{*}{B-L stop (500 GeV)}    & $5.1$                              & $2.4$                              & $10.7$                           & $3.8$                 \\
+%%                                              & ($< 0.01$)                         & ($<0.01$)                          & ($0.2$)                          & ($0.03$) \vspace{1ex} \\
+%%       \multirow{2}{*}{B-L stop (800 GeV)}    & $< 0.01$                           & $< 0.01$                           & $0.6$                            & $0.02$   \\
+%%                                              & ($< 0.01$)                         & ($< 0.01$)                         & ($< 0.01$)                       & ($< 0.01$) \vspace{1ex} \\
+%%       \multirow{2}{*}{B-L stop (1000 GeV)}   & $< 0.01$                           & $< 0.01$                           & $0.1$                            & $< 0.01$                     \\
+%%                                              & ($< 0.01$)                         & ($< 0.01$)                         & ($< 0.01$)                       & ($< 0.01$)
+%%       \vspace{1ex} \\
+%%       \bottomrule
+%%     \end{tabular}
+%% 
+%%   }
+%% \end{table}
 
 \begin{figure}
   \centering
@@ -1844,7 +1704,8 @@ VRs is explored in more detail in Section~\ref{sec:bkg_fit}.
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
       {figs/blstop/w_data__w_k_factor__dists/flavor_all__ht_signal__BMINUSL_VR_Z_MBL_200__log.pdf}
   }
-  \caption{Expected and observed \MBL\ and \HT\ distributions in the
+  \caption{
+    Expected and observed \MBL\ and \HT\ distributions in the
     VRs and the $Z$ VR after applying the $k_Z$ normalization factor derived
     in the $Z$ CR when all flavor channels are combined.
     % In each plot, the last bin includes the overflow for values beyond the
@@ -1929,9 +1790,15 @@ systematic uncertainties.
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \begin{table}[ht]
-  \caption{The observed and expected event yields in the CRs and VRs. The
+  \caption[
+    The observed and expected event yields in the CRs and VRs. The
     expected event yields are shown before and after a fit to the data in
-    the CRs. The fitted background yields in the CRs match the observed
+    the CRs.
+  ]{
+    The observed and expected event yields in the CRs and VRs. The
+    expected event yields are shown before and after a fit to the data in
+    the CRs.
+    The fitted background yields in the CRs match the observed
     number of events in data by construction.
   }
   \label{tab:bkg_only_fit_results}
@@ -1939,23 +1806,27 @@ systematic uncertainties.
   \begin{center}
     \begin{tabular}{lrrrrrr}
       \toprule
-                         & Top CR           & Z CR            & Top VR 1       & Top VR 2      & Top VR 3        & Z VR            \\
+                         & Top CR           & $Z$ CR          & Top VR 1       & Top VR 2      & Top VR 3        & $Z$ VR          \\
       \midrule
       Observed           & $369$            & $327$           & $645$          & $606$         & $67$            & $101$           \\
       \midrule
       Fitted background  & $369   \pm 19$   & $327  \pm 18$   & $690  \pm 50$  & $630 \pm 40$  & $72   \pm 5$    & $130  \pm 60$   \\
       \midrule
-      Fitted \TTBAR      & $346   \pm 19$   & $9.1  \pm 0.7$  & $600  \pm 40$  & $497 \pm 35$  & $54   \pm 5$    & $2.99 \pm 0.24$ \\
-      Fitted \ZGAMMAJETS & $3.2   \pm 0.5$  & $309  \pm 18$   & $63   \pm 5$   & $64  \pm 5$   & $1.5  \pm 0.8$  & $120  \pm 60$   \\
-      Single top         & $16.7  \pm 2.0$  & $0.83 \pm 0.09$ & $23.0 \pm 2.6$ & $56  \pm 6$   & $14.1 \pm 1.9$  & $0.32 \pm 0.04$ \\
+      Fitted \TTBAR      & $346   \pm 19$   & $9.1  \pm 0.7$  & $600  \pm 40$  & $497 \pm 35$  & $54   \pm 5$    & $2.99 \pm 0.24$ \\[1ex]
+      Fitted \ZGAMMAJETS & $3.2   \pm 0.5$  & $309  \pm 18$   & $63   \pm 5$   & $64  \pm 5$   & $1.5  \pm 0.8$  & $120  \pm 60$   \\[1ex]
+      Single top         & $16.7  \pm 2.0$  & $0.83 \pm 0.09$ & $23.0 \pm 2.6$ & $56  \pm 6$   & $14.1 \pm 1.9$  & $0.32 \pm 0.04$ \\[1ex]
       Other              & $2.83  \pm 0.27$ & $8.64 \pm 1.0$  & $4.7  \pm 0.4$ & $8.2 \pm 0.8$ & $2.03 \pm 0.27$ & $6.4  \pm 0.7$  \\
       \midrule
       Input SM           & $330$            & $230$           & $614$          & $557$         & $66$            & $93$            \\
       \midrule
-      Input \TTBAR       & $310$            & $8.2$           & $543$          & $447$         & $49$            & $2.7$           \\
-      Input \ZGAMMAJETS  & $2.2$            & $220$           & $44$           & $45$          & $1.1$           & $83$            \\
-      Input single top   & $17$             & $0.8$           & $23$           & $57$          & $14$            & $0.30$          \\
+      Input \TTBAR       & $310$            & $8.2$           & $543$          & $447$         & $49$            & $2.7$           \\[1ex]
+      Input \ZGAMMAJETS  & $2.2$            & $220$           & $44$           & $45$          & $1.1$           & $83$            \\[1ex]
+      Input single top   & $17$             & $0.8$           & $23$           & $57$          & $14$            & $0.30$          \\[1ex]
       Input other        & $2.8$            & $8.6$           & $4.7$          & $8.2$         & $2.0$           & $6.40$          \\
+      \midrule
+      $B-L$ stop (500~\GeV)  & $1.3$        & $0.03$          & $5.1$          & $2.4$         & $10.7$          & $3.8$           \\[1ex]
+      $B-L$ stop (800~\GeV)  & $< 0.01$     & $< 0.01$        & $< 0.01$       & $< 0.01$      & $0.6$           & $0.02$          \\[1ex]
+      $B-L$ stop (1000~\GeV) & $< 0.01$     & $< 0.01$        & $< 0.01$       & $< 0.01$      & $0.1$           & $< 0.01$        \\
       \bottomrule
     \end{tabular}
   \end{center}
@@ -1964,7 +1835,8 @@ systematic uncertainties.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{figs/blstop/histpull_CR_detailed.pdf}
-\caption{The number of observed and expected events in the CRs,
+\caption{
+  The number of observed and expected events in the CRs,
   broken down by flavor channel and for each di-lepton flavor channel.
   The uncertainty band includes the statistical uncertainty as well as the
   systematic uncertainty (described in Section~\ref{sec:systematics}).
@@ -1981,7 +1853,8 @@ systematic uncertainties.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{figs/blstop/histpull_VR_detailed.pdf}
-\caption{The number of observed and expected events in the VRs,
+\caption{
+  The number of observed and expected events in the VRs,
   broken down by flavor channel and for each di-lepton flavor channel.
   The uncertainty band includes the statistical uncertainty as well as the
   systematic uncertainty (described in Section~\ref{sec:systematics}).
@@ -2009,7 +1882,8 @@ Figures~\ref{fig:mbl_vr} and~\ref{fig:ht_vr}.
   \subbottom[$Z$ VR]{
     \includegraphics[width=0.48\textwidth]{figs/blstop/vr_Z_mbl_0.pdf}
   }
-  \caption{The $\MBL^0$ distribution in Top VR 3 (left) and $Z$ VR (right).
+  \caption{
+    The $\MBL^0$ distribution in Top VR 3 (left) and $Z$ VR (right).
     The Standard Model background prediction is shown after setting the
     normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds based on the
     observed data in the CRs. The hashed bands show the uncertainty in the
@@ -2029,7 +1903,8 @@ Figures~\ref{fig:mbl_vr} and~\ref{fig:ht_vr}.
   \subbottom[$Z$ VR]{
     \includegraphics[width=0.48\textwidth]{figs/blstop/vr_Z_ht_signal.pdf}
   }
-  \caption{The \HT\ distribution in Top VR 3 (left) and $Z$ VR (right).
+  \caption{
+    The \HT\ distribution in Top VR 3 (left) and $Z$ VR (right).
     The Standard Model background prediction is shown after setting the
     normalization of the \TTBAR\ and \ZGAMMAJETS\ backgrounds based on the
     observed data in the CRs.
@@ -2133,6 +2008,8 @@ integrated luminosity is evaluated for all background processes except
 data control regions.
 A summary of the estimated effect of each source of systematic uncertainty
 (both experimental and theoretical) is in Table~\ref{tab:systematic_breakdown}.
+Several sources of theoretical systematic uncertainty which have a small effect
+on the total background estimate are grouped into the ``Other theory'' category.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 %% ttbar theory systematics
@@ -2280,15 +2157,16 @@ estimate in the SRs.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \begin{table}[ht]
-\caption{Summary of the effect of each considered sources of systematic
-  uncertainty on the total background estimate in SR~400 and SR~600.
-  % Several sources of theoretical systematic uncertainty which have a small
-  % effect on the total background estimate are grouped into the
-  % ``Other theory'' category.
-  If the uncertainty is asymmetric, the larger deviation is reported in this
-  table.
-  {\color{red} TODO update this table with broken down info and CRs.}
-}
+  \caption[
+    Summary of the effect of each considered sources of systematic
+    uncertainty on the total background estimate in SR~400 and SR~600.
+  ]{
+    Summary of the effect of each considered sources of systematic
+    uncertainty on the total background estimate in SR~400 and SR~600.
+    If the uncertainty is asymmetric, the larger deviation is reported in this
+    table.
+    % {\color{red} TODO update this table with broken down info and CRs.}
+  }
 \label{tab:systematic_breakdown}
 %
 \centering{
@@ -2299,15 +2177,15 @@ estimate in the SRs.
     \multirow{2}{*}{SR~600} \\
     Uncertainty (\%) \\
     \midrule
-    JES                          & 15     & 3  \\
-    $b$-tagging                  & 13     & 12 \\
-    JER                          & 5      & 1  \\
+    JES                          & 15     & 3  \\[1ex]
+    $b$-tagging                  & 13     & 12 \\[1ex]
+    JER                          & 5      & 1  \\[1ex]
     Luminosity                   & 1      & 1  \\
     \midrule                                   
-    \HT\ extrapolation           & 19     & 20 \\
-    MC statistical               & 13     & 23 \\
-    CR statistical               & 3      & 3 \\
-    $Wt$ cross section           & 2      & 2  \\
+    \HT\ extrapolation           & 19     & 20 \\[1ex]
+    MC statistical               & 13     & 23 \\[1ex]
+    CR statistical               & 3      & 3  \\[1ex]
+    $Wt$ cross section           & 2      & 2  \\[1ex]
     Other theory                 & 1      & 2  \\
     \bottomrule
     \end{tabular}
@@ -2356,7 +2234,8 @@ SR 400 are shown in Figure~\ref{fig:sr_dists}.
 Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
 
 \begin{table}
-  \caption{The expected and observed event yields in SR~400. The expected event
+  \caption{
+    The expected and observed event yields in SR~400. The expected event
     yields are shown before and after performing the fit to the data in the
     control regions.
     The last three rows show the model-independent 95\% CL on the visible
@@ -2397,7 +2276,8 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
 \end{table}
 
 \begin{table}
-  \caption{The expected and observed event yields in SR~600. The expected event
+  \caption{
+    The expected and observed event yields in SR~600. The expected event
     yields are shown before and after performing the fit to the data in the
     control regions.
     The last three rows show the model-independent 95\% CL on the visible
@@ -2438,8 +2318,13 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
 \end{table}
 
 \begin{table}
-  \caption{The event and object kinematics for the two events passing the
-    signal region selection. The first event passes the SR~400 selection
+  \caption[
+    The event and object kinematics for the two events passing the
+    signal region selection.
+  ]{
+    The event and object kinematics for the two events passing the
+    signal region selection.
+    The first event passes the SR~400 selection
     while the second event passes both SR~400 and SR~600 selections.
   }
   \label{tab:sr_event_kinematics}
@@ -2500,7 +2385,8 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
     % \includegraphics[width=0.75\textwidth]{figs/blstop/sr_ht.pdf}
     \includegraphics[width=0.70\textwidth]{figs/blstop/sr_ht.pdf}
   }
-  \caption{These plots show the $\MBL^0$ (left) and \HT\ (right) distributions
+  \caption{
+    These plots show the $\MBL^0$ (left) and \HT\ (right) distributions
     in SR 400.
     The Standard Model background prediction is taken from the fitted
     background prediction.
@@ -2522,7 +2408,8 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
     {figs/blstop/event_display_run_210302_event_2292645761.pdf}
     \label{fig:event_display_2}
   }
-  \caption{Event displays for the two observed events passing the signal region
+  \caption{
+    Event displays for the two observed events passing the signal region
     criteria.
     The event shown in Figure~\ref{fig:event_display_1} passes the SR~400
     selection with $\MBL^{0} = 558~\GeV$.
@@ -2606,7 +2493,8 @@ this choice of stop branching fractions is 900~\GeV.
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.75\textwidth]{figs/blstop/cls_plots/cls_vs_m_br_e_50_br_m_50_br_t_0.pdf}
-  \caption{Expected and observed $CL_S$ value as a function of stop mass for
+  \caption{
+    Expected and observed $CL_S$ value as a function of stop mass for
     the scenario with $Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$.
     The last mass which has an observed $CL_S < 0.05$ is where the limit is to
     be set.
@@ -2675,7 +2563,8 @@ decreasing number of expected events with two light leptons.
     \includegraphics[width=\textwidth]{figs/blstop/scale_factors.png}
     \label{fig:flavor_scaling_sf}
   }
-  \caption{Branching fraction and corresponding scale factor to each di-lepton
+  \caption{
+    Branching fraction and corresponding scale factor to each di-lepton
     flavor channel depending on the branching fractions of the stop.
     The di-stop branching fractions are given by
     Equation~\ref{eqn:branching_fractions}.
@@ -2801,7 +2690,8 @@ The nominal stop cross section is used when determining these limit contours.
   \centering
   \includegraphics[width=\textwidth]
     {figs/blstop/mass_limit_contours_no_extras_exp.pdf}
-  \caption{The expected mass limit on the stop at 95\% CL.
+  \caption{
+    The expected mass limit on the stop at 95\% CL.
     This limit is obtained using the nominal stop cross section.
     Stop masses between 400~\GeV\ and 1100~\GeV, in steps of 100~\GeV, are
     tested.
@@ -2830,7 +2720,8 @@ blue (expected) limit contour.
 \begin{figure}[p]
   \centering
   \includegraphics[width=\textwidth]{figs/blstop/limit_contours.pdf}
-  \caption{Expected and observed limit on the branching fractions for the stop
+  \caption{
+    Expected and observed limit on the branching fractions for the stop
     decaying to different lepton flavors shown for different stop mass
     hypotheses between 400~\GeV and 1~\TeV. The shaded area under the solid
     line represents the branching fractions which are excluded at 95\% CL
@@ -2863,7 +2754,8 @@ region~\cite{ATLAS:2013oea}.
   \centering
   \includegraphics[width=\textwidth]
     {figs/blstop/mass_limit_contours_no_extras_obs.pdf}
-  \caption{The observed mass limit on the stop at 95\% CL.
+  \caption{
+    The observed mass limit on the stop at 95\% CL.
     This limit is obtained using the nominal stop cross section.
     Stop masses between 400~\GeV\ and 1100~\GeV, in steps of 100~\GeV, are
     tested.

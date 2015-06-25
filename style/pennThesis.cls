@@ -62,6 +62,7 @@
 
 %% Load this last...  it's picky (but still useful).
 \RequirePackage[capitalize]{cleveref}
+% \usepackage[noabbrev]{cleveref}
 
 % Be careful with this.  LaTeX will look through the TEXINPUTS environment variable first, 
 % *then* through this graphicspath.  It's probably better to just add whatever path would 

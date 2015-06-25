@@ -22,7 +22,7 @@ Particle Physics.
 In this chapter, a brief overview of the theoretical background for this thesis
 is presented.
 The Standard Model and its shortcomings are discussed
-in \cref{sec:sm,sec:sm_shortcomings}.
+in \Cref{sec:sm,sec:sm_shortcomings}.
 Supersymmetry, a popular extension to the Standard Model, is introduced in
 Section~\ref{sec:susy}.
 The chapter concludes with a presentation of the particular $B-L$ extension to
@@ -61,7 +61,8 @@ strong forces.
 \begin{figure}[ht]
   \centering{
     \includegraphics[width=\textwidth]{figs/theory/sm_particle_content.pdf}
-    \caption{Fundamental particles described by the Standard Model.
+    \caption{
+      Fundamental particles described by the Standard Model.
       The masses of each particles are given in parentheses.
     }
     \label{fig:sm_particle_content}
@@ -96,7 +97,11 @@ A summary of the SM matter content, with the charges under the various
 parts of the SM symmetry group is shown in Table~\ref{tab:sm_matter_content}.
 
 \begin{table}
-  \caption{Summary of the matter particles described by the SM, along with the
+  \caption[
+    Summary of the matter particles described by the SM, along with the
+    associated quantum numbers.
+  ]{
+    Summary of the matter particles described by the SM, along with the
     associated quantum numbers.
     The quantum numbers include the spin, electric charge $Q$, the third
     component of weak isospin $T_3$, hypercharge $Y$, and the allowable color
@@ -424,6 +429,8 @@ neutral part of the scalar field acquires a vacuum expectation value (vev) $v$,
   v = \sqrt{\frac{-\mu^2}{\lambda}}.
 \end{equation}
 By acquiring a vev, electroweak symmetry is spontaneously broken.
+The green line, corresponds to the circle of minimum potential,
+represents the massless Goldstone mode.
 
 \begin{figure}[ht]
   \centering
@@ -431,21 +438,21 @@ By acquiring a vev, electroweak symmetry is spontaneously broken.
       {figs/theory/BoringPotential.png}
   \\
   \includegraphics[width=0.48\textwidth]
-      {figs/theory/Higgs-Potential-lookdown.png}
+  {figs/theory/Higgs-Potential-lookdown.png}
   \includegraphics[width=0.48\textwidth]
-      {figs/theory/Higgs-Potential-Goldstone.png}
-      \caption{The scalar potential under two configurations.
-        The configuration on the top shows the case where $\mu^2 > 0$, where
-        the scalar potential is always positive.
-        In this configuration, the scalar potential has a minimum at the origin.
-        The configuration with $\mu^2 < 0$ is shown on the bottom.
-        In this case, the minimum of the scalar potential occurs away from the
-        origin.
-        In this scenario, the scalar field moves away from the origin, in a
-        process of spontaneous symmetry breaking.
-        The green line corresponds to the circle of minimum potential,
-        corresponding to the massless Goldstone
-      mode~\cite{QuantumDiariesHiggs}}.
+  {figs/theory/Higgs-Potential-Goldstone.png}
+  \caption[
+    The scalar potential under two configurations:
+    $\mu^2 > 0$ and $\mu^2 < 0$~\cite{QuantumDiariesHiggs}.
+  ]{
+    The scalar potential under two configurations.
+    The configuration on the top shows the case where $\mu^2 > 0$, where
+    the scalar potential is always positive.
+    In this configuration, the scalar potential has a minimum at the origin.
+    The configuration with $\mu^2 < 0$ is shown on the bottom.
+    In this case, the minimum of the scalar potential occurs away from the
+    origin~\cite{QuantumDiariesHiggs}.
+  }
   \label{fig:symmetry_breaking}
 \end{figure}
 
@@ -514,7 +521,8 @@ by the ATLAS and CMS experiments.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.48\textwidth]{figs/theory/Higgs-Potential-radial.png}
-  \caption{The Higgs boson corresponds to an excitation in the radial direction
+  \caption{
+    The Higgs boson corresponds to an excitation in the radial direction
     of the scalar potential~\cite{QuantumDiariesHiggs}.
   }
   \label{fig:higgs_mass}
@@ -767,7 +775,10 @@ Section~\ref{sec:susy}.
     \node at (1.5,1.3) {$H$};
     \draw[spin0] (in) -- node [above]{$H$} (v1) -- (v2) -- node [above]{$H$} (out);
   \end{tikzpicture}
-  \caption{One-loop quantum corrections to the Higgs boson mass.
+  \caption[
+    One-loop quantum corrections to the Higgs boson mass.
+  ]{
+    One-loop quantum corrections to the Higgs boson mass.
     From left to right: contribution
     from the Yukawa interaction; two contributions from the gauge interaction;
     contribution from the Higgs self-interaction.
@@ -996,13 +1007,14 @@ The subscript represents the types of quark which interact with the Higgsino
 field.
 
 The full list of chiral and gauge supermultiplets contained in the MSSM are
-shown in \cref{tab:chiral_superfields,tab:gauge_superfields}.
+shown in \Cref{tab:chiral_superfields,tab:gauge_superfields}.
 It should also be noted that, just as the $W^3$ and $B$ fields of the SM mix to
 form the photon and the $Z$ boson, the corresponding gauginos mix to form the
 zino ($\tilde{Z}$) and the photino ($\tilde{\gamma}$).
 
 \begin{table}[ht]
-  \caption{Chiral supermultiplet fields in the
+  \caption{
+    Summary of the chiral supermultiplet fields in the
     MSSM~\cite{aitchison2007supersymmetry}.
   }
   \label{tab:chiral_superfields}
@@ -1068,7 +1080,8 @@ zino ($\tilde{Z}$) and the photino ($\tilde{\gamma}$).
 \end{table}
 
 \begin{table}[ht]
-  \caption{Gauge supermultiplet fields in the
+  \caption{
+    Summary of the gauge supermultiplet fields in the
     MSSM~\cite{aitchison2007supersymmetry}.
   }
   \label{tab:gauge_superfields}
@@ -1252,20 +1265,25 @@ structure of the neutrino sector.
 \begin{figure}[p]
   \centering{
     \includegraphics[width=\textwidth]{figs/theory/WithGaussian.pdf}
-    \caption{This plot shows the allowed branching ratios for the stop LSP
-      for various choices of the neutrino mass hierarchy and
-      $\sin^2\theta_{23}$,
-      obtained by varying various model parameters within a range of natural
-      values shown in Table~\ref{tab:pheno_ranges}~\cite{Marshall:2014cwa}.
+    \caption{
+      The allowed branching ratios for the stop LSP for various choices
+      of the neutrino mass hierarchy and $\sin^2\theta_{23}$, obtained by
+      varying various model parameters within a range of natural values shown
+      in Table~\ref{tab:pheno_ranges}~\cite{Marshall:2014cwa}.
     }
     \label{fig:pheno_bounds}
   }
 \end{figure}
 
 \begin{table}[ht]
-  \caption{Ranges for the parameter scan used to generate the simulated models
-    in \cref{fig:stop_vs_mixing_angle,fig:pheno_bounds}.
-    The neutrino sector constrains all buy one one of the R-parity violating
+  \caption[
+    Ranges for the parameter scan used to generate the simulated models
+    shown in
+    \Cref{fig:stop_vs_mixing_angle,fig:pheno_bounds}~\cite{Marshall:2014cwa}.
+  ]{
+    Ranges for the parameter scan used to generate the simulated models
+    shown in \Cref{fig:stop_vs_mixing_angle,fig:pheno_bounds}.
+    The neutrino sector constrains all but one one of the R-parity violating
     parameters, which is chosen to be $\epsilon_i$ where the generational
     index, $i$, is also scanned to avoid any biases.
     ``NH'' and ``IH'' represent the normal and inverted neutrino mass hierarchy
@@ -1337,10 +1355,11 @@ however~\cite{Marshall:2014cwa,Marshall:2014kea}.
       \includegraphics[width=\textwidth]{figs/theory/DecayLength.pdf}
       \label{fig:stop_decay_length_vs_mixing_angle}
     }
-    \caption{These plots show the stop decay length and branching ratio versus
+    \caption{
+      The stop decay length and branching ratio versus
       the stop mixing angle, assuming the stop is the LSP.
-      Each point in these plots represent a simulation with a particular
-      choice of model parameters, which are varies within a range of natural
+      Each point represents a simulation with a particular
+      choice of model parameters, which are sampled from a range of natural
       values~\cite{Marshall:2014cwa}.
     }
     \label{fig:stop_vs_mixing_angle}
@@ -1372,7 +1391,8 @@ The expected production cross section are shown in Figure~\ref{fig:stop_xsec}.
   \centering{
     \includegraphics[width=\textwidth]{figs/theory/xsec.pdf}
   }
-  \caption{Stop cross sections and their associated
+  \caption{
+    Stop cross sections and their associated
     uncertainties~\cite{Beenakker:1997ut,Beenakker:2010nq,Beenakker:2011fu}.
   }
   \label{fig:stop_xsec}
@@ -1383,25 +1403,29 @@ The expected production cross section are shown in Figure~\ref{fig:stop_xsec}.
 \subsection{Previous results}
 
 The results from existing leptoquark searches performed at ATLAS were
-re-interpreted in the context of this $B-L$ SUSY model with a stop LSP, and the
+re-interpreted in the context of this $B-L$ SUSY model, and the
 limits obtained on the minimum allowable stop mass across the plane of
 physical stop branching ratios are shown in
 Figure~\ref{fig:pheno_limit}~\cite{Marshall:2014cwa,Marshall:2014kea}.
-The leptoquark searches, used to obtain these mass limits, searched for
-models where the decay products are in the same generation.
+The phenomenological reinterpretation used to produce the limits shown in
+Figure~\ref{fig:pheno_limit} assumes the stop is the LSP, and it decays to a
+$b$-quark and a lepton.
+Previous leptoquark searches, including those used to obtain these mass limits,
+targeted models where the decay products of the leptoquark are in the same
+generation.
 As a result, $b$-tagging is only required in events associated with a $\tau$
 lepton, and events with a light lepton simply require a jet, regardless of the
 flavor.
 Additionally, previous leptoquark searches only consider decays to a single
 lepton flavor, resulting in final states with either two leptons of the same
 flavor and two jets, or a single charged lepton and at least one jet.
-The previous analyses did not consider final states with two charged leptons
+Previous analyses did not consider final states with two charged leptons
 with different flavors ($e\mu$) and at least two 
 jets~\cite{ATLAS:2013oea, ATLAS:2012aq, Aad:2011ch, CMS:2014qpa,
   Chatrchyan:2012sv, Chatrchyan:2012vza, Chatrchyan:2012st}.
 A dedicated search requiring $b$-tagged jets associated with light leptons
 (electrons and muons), and considering different flavored leptons in the final
-state can provide additional sensitivity to this model, as well as other models
+state provides additional sensitivity to this model, as well as other models
 which result in final states with $b$-quarks and light leptons in the final
 state.
 
@@ -1409,7 +1433,11 @@ state.
   \centering{
     \includegraphics[width=\textwidth]
     {figs/theory/BoundContourPlotNoCombination.pdf}
-    \caption{Limits on the stop mass obtained by reinterpreting leptoquark
+    \caption[
+      Limits on the stop mass obtained by reinterpreting leptoquark
+      searches performed at ATLAS~\cite{Marshall:2014cwa}.
+    ]{
+      Limits on the stop mass obtained by reinterpreting leptoquark
       searches performed at ATLAS.
       The mass limits assume the stop is the LSP, and decays to a $b$-quark
       and a lepton~\cite{Marshall:2014cwa}.
