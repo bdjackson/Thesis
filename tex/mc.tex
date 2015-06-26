@@ -22,7 +22,8 @@ Section~\ref{sec:event_gen}.
 In the event generation stage, the actual Physics processes that occur as a
 result of the collision are simulated.
 This includes the hard interaction as well as the resulting decay of any
-unstable particles.
+unstable particles, and finally the hadronization of any decay products with
+color charge.
 As in the real detector, once the proton collisions are simulated, the decay
 products travel through the detector, and may leave a measurable signature
 which can be measured.
@@ -42,7 +43,8 @@ At each of these crossings, protons from the two beams collide with one
 another, resulting in a spray of particles in the detector.
 Each of these crossings represents a single event.
 Figure~\ref{fig:mc_event} shows a pictorial representation of a simulated
-$t\bar{t}H$ event.
+$t\bar{t}H$ event, and Figure~\ref{fig:data_event} shows a $t\bar{t}H$
+candidate event as reconstructed in the ATLAS detector.
 
 \begin{figure}[p]
   \centering
@@ -64,6 +66,17 @@ $t\bar{t}H$ event.
   \label{fig:mc_event}
 \end{figure}
 
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth, clip=true, trim=0 0 0 0]
+  {figs/mc_gen/tth_event.png}
+  \caption{
+    Candidate $t\bar{t}H$ event, observed in the ATLAS
+    detector~\cite{Aad:2015iha}.
+  }
+  \label{fig:data_event}
+\end{figure}
+
 Looking more closely at the interactions taking place, one notices that,
 rather than the full protons interacting with each other, the interactions
 take place between the constituent quarks and gluons within the two protons.
@@ -77,15 +90,63 @@ addition to those coming from the hard interaction.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
+\subsection{Parton distribution function}
+\label{sec:pdf}
+
+It is often said a proton is made up of three quarks and the gluons holding
+them together.
+Due to the QCD effects, this is actually a simplification, and additional
+quarks and gluons are produced within hadrons, and have a large impact 
+on the interactions between colliding hadrons.
+The parton content with hadrons is described by a parton distribution
+function (PDF).
+
+The PDF of a proton, $p(x, \mu^2)$, gives the probability that, at a particular
+energy scale $\mu^2$, a particular parton, $p$, is found inside the proton, with
+a fraction of the total momentum between $x$ and $x+dx$.
+A proton must satisfy the following sum rules in order to have the correct
+``valance quark'' content.
+\begin{align}
+  \int_0^1 \left( u(x, \mu^2) - \bar{u}(x, \mu^2) \right) dx & = 2, \\
+  \int_0^1 \left( d(x, \mu^2) - \bar{d}(x, \mu^2) \right) dx & = 1, \\
+  \int_0^1 \left( q(x, \mu^2) - \bar{q}(x, \mu^2) \right) dx & = 0,
+\end{align}
+Where $q$ is any other quark flavor.
+
+PDFs are tuned to the observed data at collider experiments such as ATLAS,
+and improve over time as more data is collected at higher energy scales.
+Two example PDFs, provided by the NNPDF group, are shown in
+Figure~\ref{fig:pdfs}, corresponding to different energy scales.
+The CTEQ 6L1 PDF tune is used for the simulated stop pair production in the
+analysis described in this thesis.
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.80\textwidth]{figs/mc_gen/pdfs.png}
+  \caption{Parton distribution function (PDF) distributions for different
+    parton species within the proton as obtained by the NNPDF collaboration.
+    The two PDF distributions are obtained for different energy
+    scales ($\mu^2$)~\cite{nnpdf}.
+  }
+  \label{fig:pdfs}
+\end{figure}
+
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\FloatBarrier
 \subsection{Underlying event}
+\label{sec:underlying_event}
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsection{Matrix element}
+\label{sec:matrix_element}
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsection{Parton shower}
+\label{sec:parton_shower}
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier

@@ -24,137 +24,139 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Schematic view of the signatures left in the various sub-detectors of ATLAS in response to the primary particles which pass through it\nobreakspace {}\cite {Pequenao:1505342}. }}{39}{figure.3.10}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Pictorial representation of a $t\mathaccentV {bar}016{t}H$ event as produced by an event generator\nobreakspace {}\cite {Gleisberg:2008ta}. }}{42}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Candidate $t\mathaccentV {bar}016{t}H$ event, observed in the ATLAS detector\nobreakspace {}\cite {Aad:2015iha}. }}{43}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Parton distribution function (PDF) distributions for different parton species within the proton as obtained by the NNPDF collaboration. The two PDF distributions are obtained for different energy scales ($\mu ^2$)\nobreakspace {}\cite {nnpdf}. }}{44}{figure.4.3}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces The relative abundance of events where two, one, and zero pairs are grouped correctly. }}{50}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Efficiency of simulated stop events passing each single lepton trigger broken down by flavor channel. }}{54}{figure.5.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \texttt {EF\_e24vhi\_medium1}}}{54}{figure.5.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \texttt {EF\_e60\_medium1}}}{54}{figure.5.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces \texttt {EF\_mu24i\_tight trigger}}}{54}{figure.5.2}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces \texttt {EF\_mu36\_tight}}}{54}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Efficiency of simulated stop events passing each of the single electron triggers for several ranges of electron \ensuremath {E_{\mathrm {T}}}. }}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \texttt {EF\_e24vhi\_medium1}}}{54}{figure.5.3}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \texttt {EF\_e60\_medium1}}}{54}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Efficiency of simulated stop events passing the full trigger selection broken down by flavor channel. }}{55}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Expected \ensuremath {m_{\ell \ell }}, \ensuremath {H_{\mathrm {T}}}, \ensuremath {m_{b\ell }\nobreakspace {}\mathrm {asymmetry}}, and $\ensuremath {m_{b\ell }}^0$ distributions for SM background processes and three simulated stop samples with different masses. }}{58}{figure.5.5}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \ensuremath {m_{\ell \ell }}}}{58}{figure.5.5}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \ensuremath {H_{\mathrm {T}}}}}{58}{figure.5.5}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces \ensuremath {m_{b\ell }\nobreakspace {}\mathrm {asymmetry}}}}{58}{figure.5.5}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces $\ensuremath {m_{b\ell }}^0$}}{58}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Distributions of the variables which are used to define the SRs. These plots show the MC simulated background samples and three signal models, and are made after applying all the SR selection criteria except for that on the variable shown. }}{59}{figure.5.6}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \ensuremath {H_{\mathrm {T}}}}}{59}{figure.5.6}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \ensuremath {m_{b\ell }\nobreakspace {}\mathrm {asymmetry}}}}{59}{figure.5.6}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces $\ensuremath {m_{b\ell }}^0$}}{59}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Position of the control, validation, and signal regions in the \ensuremath {E_{\mathrm {T}}^{\mathrm {miss}}}\nobreakspace {}\text {significance}\ versus \ensuremath {H_{\mathrm {T}}}\ plane. }}{61}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Expected and observed $\ensuremath {m_{b\ell }}^0$ distribution in the Top CR and $Z$ CR when all flavor channels are combined. }}{67}{figure.5.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{67}{figure.5.8}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{67}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Expected and observed $\ensuremath {m_{b\ell }}^0$ distribution in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR when all flavor channels are combined. }}{68}{figure.5.9}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{68}{figure.5.9}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{68}{figure.5.9}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Expected and observed \ensuremath {p_{\mathrm {T}}}\ distribution for the leading lepton in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR when all flavor channels are combined. }}{69}{figure.5.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{69}{figure.5.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{69}{figure.5.10}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Expected and observed \ensuremath {p_{\mathrm {T}}}\ distribution for the sub-leading lepton in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR when all flavor channels are combined. }}{69}{figure.5.11}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{69}{figure.5.11}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{69}{figure.5.11}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Expected and observed \ensuremath {p_{\mathrm {T}}}\ distribution for the leading $b$-jet in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR when all flavor channels are combined. }}{70}{figure.5.12}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{70}{figure.5.12}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{70}{figure.5.12}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Expected and observed \ensuremath {p_{\mathrm {T}}}\ distribution for the sub-leading $b$-jet in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR when all flavor channels are combined. }}{70}{figure.5.13}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{70}{figure.5.13}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{70}{figure.5.13}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Expected and observed \ensuremath {m_{b\ell }}\ and \ensuremath {H_{\mathrm {T}}}\ distributions in the VRs. }}{72}{figure.5.14}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top VR 1}}{72}{figure.5.14}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Top VR 2}}{72}{figure.5.14}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces Top VR 3}}{72}{figure.5.14}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces $Z$ VR}}{72}{figure.5.14}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces The number of observed and expected events in the CRs, broken down by flavor channel and for each di-lepton flavor channel. The deviation of that channel's prediction from the observed number of events divided by the uncertainty in the prediction is also shown. }}{75}{figure.5.15}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces The number of observed and expected events in the VRs, broken down by flavor channel and for each di-lepton flavor channel. The deviation of that channel's prediction from the observed number of events divided by the uncertainty in the prediction is also shown. }}{76}{figure.5.16}
-\contentsline {figure}{\numberline {5.17}{\ignorespaces The $\ensuremath {m_{b\ell }}^0$ distribution in Top VR 3 (left) and $Z$ VR (right). }}{77}{figure.5.17}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top VR 3}}{77}{figure.5.17}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ VR}}{77}{figure.5.17}
-\contentsline {figure}{\numberline {5.18}{\ignorespaces The \ensuremath {H_{\mathrm {T}}}\ distribution in Top VR 3 (left) and $Z$ VR (right). }}{77}{figure.5.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top VR 3}}{77}{figure.5.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ VR}}{77}{figure.5.18}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The relative abundance of events where two, one, and zero pairs are grouped correctly. }}{52}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Efficiency of simulated stop events passing each single lepton trigger broken down by flavor channel. }}{56}{figure.5.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \texttt {EF\_e24vhi\_medium1}}}{56}{figure.5.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \texttt {EF\_e60\_medium1}}}{56}{figure.5.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces \texttt {EF\_mu24i\_tight trigger}}}{56}{figure.5.2}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces \texttt {EF\_mu36\_tight}}}{56}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Efficiency of simulated stop events passing each of the single electron triggers for several ranges of electron \ensuremath {E_{\mathrm {T}}}. }}{56}{figure.5.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \texttt {EF\_e24vhi\_medium1}}}{56}{figure.5.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \texttt {EF\_e60\_medium1}}}{56}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Efficiency of simulated stop events passing the full trigger selection broken down by flavor channel. }}{57}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Expected \ensuremath {m_{\ell \ell }}, \ensuremath {H_{\mathrm {T}}}, \ensuremath {m_{b\ell }\nobreakspace {}\mathrm {asymmetry}}, and $\ensuremath {m_{b\ell }}^0$ distributions for SM background processes and three simulated stop samples with different masses. }}{60}{figure.5.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \ensuremath {m_{\ell \ell }}}}{60}{figure.5.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \ensuremath {H_{\mathrm {T}}}}}{60}{figure.5.5}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces \ensuremath {m_{b\ell }\nobreakspace {}\mathrm {asymmetry}}}}{60}{figure.5.5}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces $\ensuremath {m_{b\ell }}^0$}}{60}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Distributions of the variables which are used to define the SRs. These plots show the MC simulated background samples and three signal models, and are made after applying all the SR selection criteria except for that on the variable shown. }}{61}{figure.5.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces \ensuremath {H_{\mathrm {T}}}}}{61}{figure.5.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \ensuremath {m_{b\ell }\nobreakspace {}\mathrm {asymmetry}}}}{61}{figure.5.6}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces $\ensuremath {m_{b\ell }}^0$}}{61}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Position of the control, validation, and signal regions in the \ensuremath {E_{\mathrm {T}}^{\mathrm {miss}}}\nobreakspace {}\text {significance}\ versus \ensuremath {H_{\mathrm {T}}}\ plane. }}{63}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Expected and observed $\ensuremath {m_{b\ell }}^0$ distribution in the Top CR and $Z$ CR when all flavor channels are combined. }}{69}{figure.5.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{69}{figure.5.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{69}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Expected and observed $\ensuremath {m_{b\ell }}^0$ distribution in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR when all flavor channels are combined. }}{70}{figure.5.9}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{70}{figure.5.9}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{70}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Expected and observed \ensuremath {p_{\mathrm {T}}}\ distribution for the leading lepton in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR when all flavor channels are combined. }}{71}{figure.5.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{71}{figure.5.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{71}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Expected and observed \ensuremath {p_{\mathrm {T}}}\ distribution for the sub-leading lepton in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR when all flavor channels are combined. }}{71}{figure.5.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{71}{figure.5.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{71}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Expected and observed \ensuremath {p_{\mathrm {T}}}\ distribution for the leading $b$-jet in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR when all flavor channels are combined. }}{72}{figure.5.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{72}{figure.5.12}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{72}{figure.5.12}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Expected and observed \ensuremath {p_{\mathrm {T}}}\ distribution for the sub-leading $b$-jet in the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR when all flavor channels are combined. }}{72}{figure.5.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top CR}}{72}{figure.5.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ CR}}{72}{figure.5.13}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Expected and observed \ensuremath {m_{b\ell }}\ and \ensuremath {H_{\mathrm {T}}}\ distributions in the VRs. }}{74}{figure.5.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top VR 1}}{74}{figure.5.14}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Top VR 2}}{74}{figure.5.14}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces Top VR 3}}{74}{figure.5.14}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces $Z$ VR}}{74}{figure.5.14}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces The number of observed and expected events in the CRs, broken down by flavor channel and for each di-lepton flavor channel. The deviation of that channel's prediction from the observed number of events divided by the uncertainty in the prediction is also shown. }}{77}{figure.5.15}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces The number of observed and expected events in the VRs, broken down by flavor channel and for each di-lepton flavor channel. The deviation of that channel's prediction from the observed number of events divided by the uncertainty in the prediction is also shown. }}{78}{figure.5.16}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces The $\ensuremath {m_{b\ell }}^0$ distribution in Top VR 3 (left) and $Z$ VR (right). }}{79}{figure.5.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top VR 3}}{79}{figure.5.17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ VR}}{79}{figure.5.17}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces The \ensuremath {H_{\mathrm {T}}}\ distribution in Top VR 3 (left) and $Z$ VR (right). }}{79}{figure.5.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Top VR 3}}{79}{figure.5.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces $Z$ VR}}{79}{figure.5.18}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces The $\ensuremath {m_{b\ell }}^0$ (top) and \ensuremath {H_{\mathrm {T}}}\ (bottom) distributions in SR\nobreakspace {}400. }}{84}{figure.6.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces $\ensuremath {m_{b\ell }}^0$}}{84}{figure.6.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \ensuremath {H_{\mathrm {T}}}}}{84}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Event displays for the two observed events passing the signal region criteria. }}{85}{figure.6.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Run 214216, Event 121272046}}{85}{figure.6.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Run 210302, Event 2292645761}}{85}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Expected and observed $CL_S$ value as a function of stop mass for the scenario with $Br(\mathaccentV {tilde}07E{t} \to eb) = Br(\mathaccentV {tilde}07E{t} \to \mu b) = 0.5$. }}{90}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Stop pair branching fraction and corresponding scale factor to each di-lepton flavor channel depending on the branching fractions of a single stop. }}{91}{figure.6.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Stop branching fractions for each flavor channel}}{91}{figure.6.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Scale factors for each flavor channel}}{91}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces The expected and observed $CL_S$ values in SR\nobreakspace {}400 for a stop mass of 500\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching fractions. }}{93}{figure.6.5}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ or SR\nobreakspace {}400}}{93}{figure.6.5}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ or SR\nobreakspace {}400}}{93}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces The expected and observed $CL_S$ values in SR\nobreakspace {}600 for a stop mass of 900\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching fractions. }}{93}{figure.6.6}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ or SR\nobreakspace {}600}}{93}{figure.6.6}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ or SR\nobreakspace {}600}}{93}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces The selected SR for several stop branching fractions for a stop mass of 500\nobreakspace {}\textrm {Ge\kern -0.1em V}(left) and 900\nobreakspace {}\textrm {Ge\kern -0.1em V}(right). The SR is selected by choosing the SR with the smallest expected $CL_S$ value for a given branching fraction. }}{94}{figure.6.7}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Selected SR for 500\nobreakspace {}Gev stop mass}}{94}{figure.6.7}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Selected SR for 900\nobreakspace {}Gev stop mass}}{94}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces The \textbf {expected} mass limit on the stop at 95\% CL. }}{95}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Expected and observed limit on the branching fractions for the stop decaying to different lepton flavors shown for different stop mass hypotheses between 400\nobreakspace {}\textrm {Ge\kern -0.1em V}and 1.1\nobreakspace {}\textrm {Te\kern -0.1em V}. }}{96}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces The \textbf {observed} mass limit on the stop at 95\% CL. }}{97}{figure.6.10}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces The $\ensuremath {m_{b\ell }}^0$ (top) and \ensuremath {H_{\mathrm {T}}}\ (bottom) distributions in SR\nobreakspace {}400. }}{86}{figure.6.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces $\ensuremath {m_{b\ell }}^0$}}{86}{figure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces \ensuremath {H_{\mathrm {T}}}}}{86}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Event displays for the two observed events passing the signal region criteria. }}{87}{figure.6.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Run 214216, Event 121272046}}{87}{figure.6.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Run 210302, Event 2292645761}}{87}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Expected and observed $CL_S$ value as a function of stop mass for the scenario with $Br(\mathaccentV {tilde}07E{t} \to eb) = Br(\mathaccentV {tilde}07E{t} \to \mu b) = 0.5$. }}{92}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Stop pair branching fraction and corresponding scale factor to each di-lepton flavor channel depending on the branching fractions of a single stop. }}{93}{figure.6.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Stop branching fractions for each flavor channel}}{93}{figure.6.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Scale factors for each flavor channel}}{93}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces The expected and observed $CL_S$ values in SR\nobreakspace {}400 for a stop mass of 500\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching fractions. }}{95}{figure.6.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ or SR\nobreakspace {}400}}{95}{figure.6.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ or SR\nobreakspace {}400}}{95}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces The expected and observed $CL_S$ values in SR\nobreakspace {}600 for a stop mass of 900\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching fractions. }}{95}{figure.6.6}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ or SR\nobreakspace {}600}}{95}{figure.6.6}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ or SR\nobreakspace {}600}}{95}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces The selected SR for several stop branching fractions for a stop mass of 500\nobreakspace {}\textrm {Ge\kern -0.1em V}(left) and 900\nobreakspace {}\textrm {Ge\kern -0.1em V}(right). The SR is selected by choosing the SR with the smallest expected $CL_S$ value for a given branching fraction. }}{96}{figure.6.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Selected SR for 500\nobreakspace {}Gev stop mass}}{96}{figure.6.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Selected SR for 900\nobreakspace {}Gev stop mass}}{96}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces The \textbf {expected} mass limit on the stop at 95\% CL. }}{97}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Expected and observed limit on the branching fractions for the stop decaying to different lepton flavors shown for different stop mass hypotheses between 400\nobreakspace {}\textrm {Ge\kern -0.1em V}and 1.1\nobreakspace {}\textrm {Te\kern -0.1em V}. }}{98}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces The \textbf {observed} mass limit on the stop at 95\% CL. }}{99}{figure.6.10}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 400\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{104}{figure.B.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{104}{figure.B.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{104}{figure.B.1}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 400\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{105}{figure.B.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{105}{figure.B.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{105}{figure.B.2}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces SR selection for a stop mass of 400\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{106}{figure.B.3}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 500\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{107}{figure.B.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{107}{figure.B.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{107}{figure.B.4}
-\contentsline {figure}{\numberline {B.5}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 500\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{108}{figure.B.5}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{108}{figure.B.5}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{108}{figure.B.5}
-\contentsline {figure}{\numberline {B.6}{\ignorespaces SR selection for a stop mass of 500\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{109}{figure.B.6}
-\contentsline {figure}{\numberline {B.7}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 600\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{110}{figure.B.7}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{110}{figure.B.7}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{110}{figure.B.7}
-\contentsline {figure}{\numberline {B.8}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 600\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{111}{figure.B.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{111}{figure.B.8}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{111}{figure.B.8}
-\contentsline {figure}{\numberline {B.9}{\ignorespaces SR selection for a stop mass of 600\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{112}{figure.B.9}
-\contentsline {figure}{\numberline {B.10}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 700\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{113}{figure.B.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{113}{figure.B.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{113}{figure.B.10}
-\contentsline {figure}{\numberline {B.11}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 700\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{114}{figure.B.11}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{114}{figure.B.11}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{114}{figure.B.11}
-\contentsline {figure}{\numberline {B.12}{\ignorespaces SR selection for a stop mass of 700\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{115}{figure.B.12}
-\contentsline {figure}{\numberline {B.13}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 800\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{116}{figure.B.13}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{116}{figure.B.13}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{116}{figure.B.13}
-\contentsline {figure}{\numberline {B.14}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 800\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{117}{figure.B.14}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{117}{figure.B.14}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{117}{figure.B.14}
-\contentsline {figure}{\numberline {B.15}{\ignorespaces SR selection for a stop mass of 800\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{118}{figure.B.15}
-\contentsline {figure}{\numberline {B.16}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 900\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{119}{figure.B.16}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{119}{figure.B.16}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{119}{figure.B.16}
-\contentsline {figure}{\numberline {B.17}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 900\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{120}{figure.B.17}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{120}{figure.B.17}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{120}{figure.B.17}
-\contentsline {figure}{\numberline {B.18}{\ignorespaces SR selection for a stop mass of 900\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{121}{figure.B.18}
-\contentsline {figure}{\numberline {B.19}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 1\nobreakspace {}\textrm {Te\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{122}{figure.B.19}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{122}{figure.B.19}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{122}{figure.B.19}
-\contentsline {figure}{\numberline {B.20}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 1\nobreakspace {}\textrm {Te\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{123}{figure.B.20}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{123}{figure.B.20}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{123}{figure.B.20}
-\contentsline {figure}{\numberline {B.21}{\ignorespaces SR selection for a stop mass of 1\nobreakspace {}\textrm {Te\kern -0.1em V}. }}{124}{figure.B.21}
-\contentsline {figure}{\numberline {B.22}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 1.1\nobreakspace {}\textrm {Te\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{125}{figure.B.22}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{125}{figure.B.22}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{125}{figure.B.22}
-\contentsline {figure}{\numberline {B.23}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 1.1\nobreakspace {}\textrm {Te\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{126}{figure.B.23}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{126}{figure.B.23}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{126}{figure.B.23}
-\contentsline {figure}{\numberline {B.24}{\ignorespaces SR selection for a stop mass of 1.1\nobreakspace {}\textrm {Te\kern -0.1em V}. }}{127}{figure.B.24}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 400\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{106}{figure.B.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{106}{figure.B.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{106}{figure.B.1}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 400\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{107}{figure.B.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{107}{figure.B.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{107}{figure.B.2}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces SR selection for a stop mass of 400\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{108}{figure.B.3}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 500\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{109}{figure.B.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{109}{figure.B.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{109}{figure.B.4}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 500\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{110}{figure.B.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{110}{figure.B.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{110}{figure.B.5}
+\contentsline {figure}{\numberline {B.6}{\ignorespaces SR selection for a stop mass of 500\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{111}{figure.B.6}
+\contentsline {figure}{\numberline {B.7}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 600\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{112}{figure.B.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{112}{figure.B.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{112}{figure.B.7}
+\contentsline {figure}{\numberline {B.8}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 600\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{113}{figure.B.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{113}{figure.B.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{113}{figure.B.8}
+\contentsline {figure}{\numberline {B.9}{\ignorespaces SR selection for a stop mass of 600\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{114}{figure.B.9}
+\contentsline {figure}{\numberline {B.10}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 700\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{115}{figure.B.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{115}{figure.B.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{115}{figure.B.10}
+\contentsline {figure}{\numberline {B.11}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 700\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{116}{figure.B.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{116}{figure.B.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{116}{figure.B.11}
+\contentsline {figure}{\numberline {B.12}{\ignorespaces SR selection for a stop mass of 700\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{117}{figure.B.12}
+\contentsline {figure}{\numberline {B.13}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 800\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{118}{figure.B.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{118}{figure.B.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{118}{figure.B.13}
+\contentsline {figure}{\numberline {B.14}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 800\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{119}{figure.B.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{119}{figure.B.14}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{119}{figure.B.14}
+\contentsline {figure}{\numberline {B.15}{\ignorespaces SR selection for a stop mass of 800\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{120}{figure.B.15}
+\contentsline {figure}{\numberline {B.16}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 900\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{121}{figure.B.16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{121}{figure.B.16}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{121}{figure.B.16}
+\contentsline {figure}{\numberline {B.17}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 900\nobreakspace {}\textrm {Ge\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{122}{figure.B.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{122}{figure.B.17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{122}{figure.B.17}
+\contentsline {figure}{\numberline {B.18}{\ignorespaces SR selection for a stop mass of 900\nobreakspace {}\textrm {Ge\kern -0.1em V}. }}{123}{figure.B.18}
+\contentsline {figure}{\numberline {B.19}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 1\nobreakspace {}\textrm {Te\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{124}{figure.B.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{124}{figure.B.19}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{124}{figure.B.19}
+\contentsline {figure}{\numberline {B.20}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 1\nobreakspace {}\textrm {Te\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{125}{figure.B.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{125}{figure.B.20}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{125}{figure.B.20}
+\contentsline {figure}{\numberline {B.21}{\ignorespaces SR selection for a stop mass of 1\nobreakspace {}\textrm {Te\kern -0.1em V}. }}{126}{figure.B.21}
+\contentsline {figure}{\numberline {B.22}{\ignorespaces Expected $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 1.1\nobreakspace {}\textrm {Te\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{127}{figure.B.22}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}400}}{127}{figure.B.22}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Expected $CL_S$ for SR\nobreakspace {}600}}{127}{figure.B.22}
+\contentsline {figure}{\numberline {B.23}{\ignorespaces Observed $CL_S$ values for SR\nobreakspace {}400 (top) and SR\nobreakspace {}600 (bottom) for a stop mass of 1.1\nobreakspace {}\textrm {Te\kern -0.1em V}, shown across the plane of physical stop branching ratios. }}{128}{figure.B.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}400}}{128}{figure.B.23}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces Observed $CL_S$ for SR\nobreakspace {}600}}{128}{figure.B.23}
+\contentsline {figure}{\numberline {B.24}{\ignorespaces SR selection for a stop mass of 1.1\nobreakspace {}\textrm {Te\kern -0.1em V}. }}{129}{figure.B.24}
