@@ -73,7 +73,11 @@ def draw_annotation(label_text, date_string, offset_x, offset_y,
     text_y = point_y + offset_y
 
     ax.annotate(label_text, color=text_color, xy=(point_x, point_y),
-                xytext=(text_x, text_y), arrowprops=arrow_props)
+                xytext=(text_x, text_y), arrowprops=arrow_props,
+                bbox=dict(boxstyle="round",
+                          fc=(1.0, 0.7, 0.7),
+                          ec=(1., .5, .5))
+                )
 
 # draw_annotation('Begin\nThesis',
 #                 date_string='Mar 27 2015',
@@ -86,28 +90,54 @@ draw_annotation('Started\noutline',
 
 draw_annotation('Started\nB-L stop\nchapter',
                 date_string='Apr 7 2015',
-                offset_x=-4, offset_y=+50,
+                offset_x=-7, offset_y=+45,
                 shrinkB=5, angle_a = 225, angle_b=140)
 
 draw_annotation('First draft\nB-L stop\nchapter',
                 date_string='May 8 2015',
-                offset_x=-20, offset_y=-30,
+                offset_x=-25, offset_y=-30,
                 shrinkB=15, angle_a = 90, angle_b=160)
 
-draw_annotation('Started\nTheory\nchapter',
-                date_string='May 19 2015',
-                offset_x=-25, offset_y=0,
-                shrinkB=15, angle_a = 20, angle_b=170)
+# draw_annotation('Interview!\nCivis - exam',
+#                 date_string='May 13 2015',
+#                 offset_x=-47, offset_y=4,
+#                 shrinkB=10, angle_a = -3, angle_b=165)
+
+# draw_annotation('Interview!\nCivis - phone',
+#                 date_string='May 18 2015',
+#                 offset_x=-27, offset_y=4,
+#                 shrinkB=10, angle_a = 0, angle_b=165)
+
+# draw_annotation('Started\nTheory\nchapter',
+#                 date_string='May 19 2015',
+#                 offset_x=-25, offset_y=0,
+#                 shrinkB=15, angle_a = 20, angle_b=170)
+
+# draw_annotation('Interview!\nCivis - phone',
+#                 date_string='May 29 2015',
+#                 offset_x=-25, offset_y=-5,
+#                 shrinkB=10, angle_a = 20, angle_b=90)
 
 draw_annotation('Moved to\nChicago',
                 date_string='May 30 2015',
-                offset_x=-25, offset_y=-10,
-                shrinkB=10, angle_a = 20, angle_b=90)
-
-draw_annotation('Interview!',
-                date_string='Jun 16 2015',
                 offset_x=-25, offset_y=-5,
                 shrinkB=10, angle_a = 20, angle_b=90)
+
+# draw_annotation('Interview!\nCivis - on site',
+#                 date_string='Jun 16 2015',
+#                 offset_x=-25, offset_y=-5,
+#                 shrinkB=10, angle_a = 20, angle_b=90)
+# 
+# draw_annotation('No job :-(',
+#                 date_string='Jun 25 2015',
+#                 offset_x=-25, offset_y=-5,
+#                 shrinkB=10, angle_a = 20, angle_b=90)
+
+draw_annotation('Draft to\ncommittee',
+                date_string='Jun 25 2015',
+                offset_x=-35, offset_y=-7,
+                shrinkB=10, angle_a = 20, angle_b=90)
+
 
 ## -----------------------------------------------------------------------------
 # save the figure to a pdf
