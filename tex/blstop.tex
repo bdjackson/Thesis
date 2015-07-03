@@ -438,7 +438,7 @@ provided by the Data Preparation group.\footnote{The GRL version
 \texttt{data12\_8TeV.periodAllYear\_DetStatus-v61-pro14-02\_DQDefects-00-01-00\_PHYS\_StandardGRL\_All\_Good}
 is used.}
 By applying the GRL requirement, the total integrated luminosity is reduced
-from 21.4~\ifb\ to 20.3~\ifb.
+from 21.4~\ifb\ to 20.3~\ifb\ as shown in Figure~\ref{fig:int_lumi}.
 The uncertainty in the luminosity is $\pm 2.8$\%.
 It is derived following the same methodology as that detailed
 in Reference~\cite{Lumi}.
@@ -446,6 +446,19 @@ The GRL requirement is applied to data events only; the MC simulation samples
 are scaled to match the target luminosity.
 Each event is also required to have at least one primary vertex with at least
 5 associated tracks.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{figs/lhc/intlumivstime2012DQ.eps}
+  \caption{
+    Integrated luminosity of proton-proton collision data delivered by
+    the LHC (green) and recorded by the ATLAS experiment (yellow) throughout
+    2012.
+    The blue area shows the integrated luminosity that passes data quality
+    requirements, and is declared good for Physics~\cite{atlas-lumi}.
+  }
+  \label{fig:int_lumi}
+\end{figure}
 
 % Several other detector errors can lead to an event being rejected.
 In the event of a certain detector busy condition, the Timing, Trigger, and

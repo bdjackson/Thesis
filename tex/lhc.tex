@@ -17,7 +17,7 @@
 
 %% ------------------------------------------------------------------------------
 \FloatBarrier
-\section{The LHC}
+\section{The LHC machine}
 \label{sec:lhc}
 
 The LHC~\cite{cern-jinst-lhc} is circular particle accelerator, with a
@@ -45,7 +45,7 @@ In 2012, the energy was increased to 8~\TeV.
 Four major experiments are positioned around the LHC to collect and analyze
 data from the hadron collisions.
 The experiments include \atlas~\cite{cern-jinst-atlas},
-\cms~\cite{cern-jinst-cms}, \alice~\cite{cern-jinst-alice,}, and
+\cms~\cite{cern-jinst-cms}, \alice~\cite{cern-jinst-alice}, and
 \lhcb~\cite{cern-jinst-lhcb}.
 \atlas\ and \cms\ are designed to be ``general purpose experiments,'' searching
 for physics beyond the Standard Model which may present itself in may ways.
@@ -85,6 +85,11 @@ is shown in Figure~\ref{fig:cern_complex}.
   \label{fig:cern_complex}
 \end{figure}
 
+%% ------------------------------------------------------------------------------
+\FloatBarrier
+\subsection{LHC beam conditions}
+\label{sec:beam_conditions}
+
 Rather than a constant stream of protons, the protons in the LHC are separated
 into over 1000 bunches, each containing over $10^{11}$ protons.
 In each of the interaction points around the LHC ring, proton bunches cross
@@ -108,11 +113,42 @@ Typically, once the LHC is filled with proton beams, and accelerated to their
 full energy, they are circulated for several hours before they are dumped, and
 the accelerator is filled again.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{figs/lhc/lumivstime.eps}
+  \caption{
+    Instantaneous luminosity collected by the ATLAS detector throughout
+    Run 1~\cite{atlas-lumi}.
+  }
+  \label{fig:inst_lumi_vs_time}
+\end{figure}
+
+Figure~\ref{fig:inst_lumi_vs_time} shows the instantaneous luminosity of
+proton-proton collisions provided to ATLAS by the LHC increased throughout the
+running period as the machine was thoroughly tested and better understood.
+This is accomplished by adding more protons, and squeezing the beams into
+a smaller area for the collisions.
+The higher instantaneous luminosity allowed for faster data collection in later
+running periods, but came at the cost of a larger number of interactions per
+crossing, seen in Figure~\ref{fig:int_lumi_vs_time_and_pileup}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.48\textwidth]{figs/lhc/intlumivsyear.eps}
+  \includegraphics[width=0.48\textwidth]{figs/lhc/mu_2011_2012-dec.eps}
+  \caption{
+    (Left) Integrated luminosity of proton-proton collision data collected by
+    ATLAS during the three years of Run 1.
+    The rate of data collection was increased in part by increasing the number
+    of interactions per crossing (right).
+  }
+  \label{fig:int_lumi_vs_time_and_pileup}
+\end{figure}
+
+
 %% ------------------------------------------------------------------------------
 \FloatBarrier
 \section{The \atlas\ experiment}
-
-{\color{red} Brief intro to \atlas\ before getting into the details}
 
 \begin{figure}[ht]
   \centering
@@ -126,31 +162,81 @@ the accelerator is filled again.
   \label{fig:atlas_det}
 \end{figure}
 
+Along with \cms, \atlas\ is one of the two general purpose experiments, which
+collect and analyze data from LHC collisions~\cite{cern-jinst-atlas}.
+\atlas\ is located at interaction point 1 of the LHC, across the street from
+the CERN Meyrin campus.
+The experiment is made up of many ``sub-detectors,'' using an array of
+technologies, which work together to reconstruct the collision events.
+Figure~\ref{fig:atlas_det} shows a cut-away diagram of the ATLAS experiment,
+highlighting the various sub-detectors.
+Starting from the interaction point, and moving outward, the sub-detectors
+are grouped into three main categories, an inner
+detector~(Section~\ref{sec:id}), used to measure the trajectory of charged
+particles, the calorimetry system~(Section~\ref{sec:calo}), which records the
+energy deposition of particles, and a muon spectrometer~(Section~\ref{sec:ms})
+which is used to identify and track muons.
+These systems and their components are described in more detain in the coming
+sections.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\FloatBarrier
+\subsection{Coordinate system} 
+\label{sec:coordinate_system}
+
+\atlas\ uses a right-handed coordinate system with its origin at the nominal
+interaction point (IP) in the center of the detector and the $z$-axis
+along the beam pipe. The $x$-axis points from the IP to the center of the
+LHC ring, and the $y$-axis points upward. Cylindrical coordinates
+($R,\phi$) are used in the transverse plane, $\phi$ being the azimuthal
+angle around the beam pipe. The pseudorapidity is defined in terms of the
+polar $\theta$ angle as
+\begin{equation}
+  \eta = -\ln\left[\tan(\frac{\theta}{2})\right].
+\end{equation}
+The distance parameter (in $\eta$-$\phi$ space)
+\begin{equation}
+  \Delta R = \sqrt{(\Delta \eta)^2 + (\Delta \phi)^2}
+\end{equation}
+is used.
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsection{Inner detector} 
-
-{\color{red} Introduce the ID and its purpose. Review tracking.}
+\label{sec:id}
 
 \begin{figure}[ht]
   \centering{
-    \includegraphics[width=\textwidth]{figs/lhc/id_schematic.jpg}
+    \includegraphics[width=0.8\textwidth]{figs/lhc/id_schematic_barrel.png}
+    \includegraphics[width=0.9\textwidth]{figs/lhc/id_schematic_endcap.png}
   }
   \caption[
     Schematic of the inner detector of the
-    \atlas\ experiment~\cite{Pequenao:1095926}.
+    \atlas\ experiment~\cite{1748-0221-3-08-S08003}.
   ]{
     Schematic of the inner detector of the \atlas\ experiment.
+    The barrel (top) and endcap (bottom) are show separately.
     The inner detector is made up of layers, consisting of the silicon pixels,
     the silicon semiconductor tracker (SCT), and the transition radiation
-    tracker (TRT)~\cite{Pequenao:1095926}.
+    tracker (TRT)~\cite{1748-0221-3-08-S08003}.
   }
   \label{fig:id_cartoon}
 \end{figure}
 
+The inner detector (ID) makes up the three innermost sub-detectors of ATLAS,
+the pixel detector, silicon semiconductor tracker (SCT), and the transition
+radiation tracker (TRT), shown in Figure~\ref{fig:id_cartoon}.
+All three sub-detectors of the ID work together to reconstruct the trajectory
+of charged particles from collision events.
+The pixel and SCT detectors use silicon technologies, while he TRT employs
+straws filled with a Xenon gas mixture.
+The three sub-detectors are described in \Cref{sec:pixel,sec:sct,sec:trt},
+and tracking is reviewed in Section~\ref{sec:tracking}.
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsubsection{Pixel detector} 
+\label{sec:pixel}
 
 \begin{figure}[ht]
   \centering{
@@ -170,9 +256,22 @@ the accelerator is filled again.
 %   \label{fig:pixel_module}
 % \end{figure}
 
+The pixel detector, shown in Figure~\ref{fig:pixel_cartoon}, is the closest
+sub-detector in \atlas\ to the interaction point.
+It uses silicon pixel technology to provide high granularity for precision
+tracking.
+The detector consists of three barrel layers, at radii of 50.5~mm, 88.5~mm,
+and 122.5~mm, and three disks on either side of the barrel, with mean $z$-values
+of 495~mm, 580~mm, and 650~mm.
+The pixel detector provides coverage up to $|\eta| = 2.5$.
+In total, there are $80 \times 10^{6}$ channels in the pixel detector, each 
+with a nominal pixel size is 50~\um\ in the $\phi$ dimension, and 400~\um\ in
+$z$~\cite{1748-0221-3-07-P07007}.
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsubsection{Silicon semiconductor tracker} 
+\label{sec:sct}
 
 \begin{figure}[ht]
   \centering{
@@ -193,9 +292,20 @@ the accelerator is filled again.
 %   \label{fig:sct_close_up}
 % \end{figure}
 
+The SCT, shown in Figure~\ref{fig:sct_photo}, is also made of silicon
+detectors, but rather than pixels, the SCT uses microstrip technology.
+The detector is made up of four double layers in the barrel, and nine
+endcap layers on each side of the barrel.
+The SCT provides coverage up to $|\eta| = 2.5$.
+A charged particle has, on average, eight hits in the SCT, with each hit
+in the barrel (endcap) having a resolution of 17~\um\ in the
+$r-\phi$~($z-\phi$)~plane, and 580~\um\ in the $z$ ($r$) dimension.
+There are 6.3 million read-out channels in the SCT.
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsubsection{Transition radiation tracker} 
+\label{sec:trt}
 
 {\color{red} Brief intro to TRT. }
 
@@ -222,7 +332,15 @@ the accelerator is filled again.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
+\subsubsection{Tracking} 
+\label{sec:tracking}
+
+
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\FloatBarrier
 \subsection{Calorimetry} 
+\label{sec:calo}
 
 {\color{red} Introduce the calo systems and its purpose}
 
@@ -246,14 +364,17 @@ the accelerator is filled again.
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsubsection{Electromagnetic calorimeter} 
+\label{sec:ecal}
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsubsection{Hadronic calorimeter} 
+\label{sec:hcal}
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsection{Muon spectrometer} 
+\label{sec:ms}
 
 {\color{red} Introduce the MS and its purpose}
 
@@ -368,3 +489,4 @@ objects and the calorimeter energy clusters not associated with reconstructed
 objects. This is denoted as missing transverse momentum, and the symbol
 $\met$ is used for its magnitude.  The $\met$ calculation is described
 elsewhere~\cite{ATLAS-CONF-2013-082}.
+ 
