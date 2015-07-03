@@ -8,3 +8,4 @@ thesis.pdf
 *.out
 *.toc
 thesis-feyn.*
+.ipynb_checkpoints

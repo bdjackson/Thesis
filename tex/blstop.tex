@@ -3,37 +3,39 @@
 \chapter[B-L stop search][B-L stop search]{B-L stop search}
 \label{ch:bl_stop}
 
-In this chapter, a search is presented for direct scalar top (stop) pair
-production where the stops decay via an $R$-parity violating (RPV) coupling to
-a final state with two leptons and two identified $b$-jets, show in
-Figure~\ref{fig:blstop_diagram}.
-The motivation and phenomenology of this model is described further in
-Section~\ref{sec:theory_bl_extension}.
-For this search, data collected with the ATLAS detector at the LHC,
-corresponding to 20.3~\ifb of $\sqrt{s} = 8\TeV$ proton-proton collision, is
-analyzed.
+\begin{quote}
+  In this chapter, a search is presented for direct scalar top (stop) pair
+  production where the stops decay via an $R$-parity violating (RPV) coupling to
+  a final state with two leptons and two identified $b$-jets, show in
+  Figure~\ref{fig:blstop_diagram}.
+  The motivation and phenomenology of this model is described further in
+  Section~\ref{sec:theory_bl_extension}.
+  For this search, data collected with the \atlas\ detector at the LHC,
+  corresponding to 20.3~\ifb of $\sqrt{s} = 8\TeV$ proton-proton collision, is
+  analyzed.
 
-This analysis required the generation of simulated signal Monte Carlo 
-(Section~\ref{sec:signal_model_mc}) to develop the selection criteria, and
-determine the expected sensitivity for the signatures of interest.
-The object definitions, event cleaning, and trigger selections are described in
-\Cref{sec:object_selection,sec:event_cleaning,sec:trigger_selection}.
-A ``cuts-based'' selection criteria is used to achieve a large separation between
-signal-like processes and Standard Model (SM) background processes.
-Two signal regions, expected to have a high signal-to-background ratio are
-defined in Section~\ref{sec:signal_regions}, and used to assess the
-compatibility of the data with the prediction from the target signal model,
-compared with that of the SM prediction alone.
-The background estimate is performed using MC simulation of SM processes, with
-the normalizations taken from the observed yields in dedicated Control Regions,
-defined in Section~\ref{sec:cr}, using a maximum likelihood fit, described in
-Section~\ref{sec:bkg_fit}.
-The extrapolation of the background estimate from the Control Regions to other
-regions in kinematic space is validated in several Validation Regions.
+  This analysis required the generation of simulated signal Monte Carlo 
+  (Section~\ref{sec:signal_model_mc}) to develop the selection criteria, and
+  determine the expected sensitivity for the signatures of interest.
+  The object definitions, event cleaning, and trigger selections are described in
+  \Cref{sec:object_selection,sec:event_cleaning,sec:trigger_selection}.
+  A ``cuts-based'' selection criteria is used to achieve a large separation between
+  signal-like processes and Standard Model (SM) background processes.
+  Two signal regions, expected to have a high signal-to-background ratio are
+  defined in Section~\ref{sec:signal_regions}, and used to assess the
+  compatibility of the data with the prediction from the target signal model,
+  compared with that of the SM prediction alone.
+  The background estimate is performed using MC simulation of SM processes, with
+  the normalizations taken from the observed yields in dedicated Control Regions,
+  defined in Section~\ref{sec:cr}, using a maximum likelihood fit, described in
+  Section~\ref{sec:bkg_fit}.
+  The extrapolation of the background estimate from the Control Regions to other
+  regions in kinematic space is validated in several Validation Regions.
 
-The observed event yields in the Signal Regions are consistent with the SM
-predictions, so limits are placed on the allowed stop masses and branching
-fractions in Chapter~\ref{ch:results}.
+  The observed event yields in the Signal Regions are consistent with the SM
+  predictions, so limits are placed on the allowed stop masses and branching
+  fractions in Chapter~\ref{ch:results}.
+\end{quote}
 
 % \begin{figure}[ht]
 %   \centering
@@ -288,7 +290,7 @@ Furthermore, the two highest \ET(\pt) leptons are required to have opposite char
 The identification efficiencies for the various objects used in this analysis
 differ in the data and the MC simulation.
 The efficiencies are determined in both data and MC simulation, by the relevant
-ATLAS performance working groups~\cite{egamma2014,Aad:2014rra}.
+\atlas\ performance working groups~\cite{egamma2014,Aad:2014rra}.
 The lepton identification scale factors and are computed for each of the two
 signal leptons in a MC simulated event, and depend on both the
 \pt\ and \eta\ of the leptons.
@@ -429,7 +431,7 @@ matched to a stop parent.
 \section{Event cleaning}
 \label{sec:event_cleaning}
 
-All sub-systems of the ATLAS detector are required to be operating acceptably
+All sub-systems of the \atlas\ detector are required to be operating acceptably
 during data-taking. 
 This data quality requirement is implemented using a good runs list (GRL)
 provided by the Data Preparation group.\footnote{The GRL version
@@ -1123,7 +1125,7 @@ showered with \PYTHIA\ version 6.426.
 When using the baseline \POWHEG+\PYTHIA\ \TTBAR\ production sample,
 events are reweighted in bins of the transverse mass (\pt) of the
 $t\bar{t}$ system to match the top quark pair differential cross section
-observed in ATLAS data~\cite{Aad:2012hg,Aad:2014zka}.
+observed in \atlas\ data~\cite{Aad:2012hg,Aad:2014zka}.
 The $Wt$-channel and $s$-channel of the single top background are modeled using
 \POWHEG\ revision~1556~\cite{Alioli:2009je}
 with \PYTHIA\ version 6.426, while the $t$-channel is modeled using
@@ -1733,7 +1735,7 @@ Due to this large normalization factor, the background is over-predicted in
 the $Z$ VR.
 The over-prediction is understood to be due to the difficulty in modeling
 the production of \ZGAMMA\ in association with heavy flavor quarks.
-This mismodeling is also observed by ATLAS in the SM measurement of
+This mismodeling is also observed by \atlas\ in the SM measurement of
 the $Z$~boson differential cross section~\cite{Aad:2013ysa,Aad:2014dvb}.
 To account for this over-prediction, an additional systematic uncertainty of
 50\% is taken on the background estimate from \ZGAMMAJETS\ events in regions
@@ -2480,8 +2482,10 @@ this choice of stop branching fractions is 900~\GeV.
     the scenario with $Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$.
     The last mass which has an observed $CL_S < 0.05$ is where the limit is to
     be set.
-    {\color{red} TODO remake with ATLAS Internal on plots and add marker where
-    tested stop masses are}
+    {
+      \color{red} TODO remake with \atlas\ Internal on plots and add marker
+      where tested stop masses are
+    }
   }
   \label{fig:exp_limit_br_5050}
 \end{figure}
