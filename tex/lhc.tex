@@ -1,11 +1,18 @@
 %% \chapter[htoc-titlei][hhead-titlei]{htitlei}
 %% -----------------------------------------------------------------------------
 \chapter[The LHC and the \atlas\ experiment][The LHC and \atlas]
-        {The LHC and the \atlas\ experiment}
+        {The Large Hadron Collider and the \atlas\ experiment}
 \label{ch:lhc}
 
 \begin{quote}
-  blah blah blah ...
+  As the name suggests, the Large Hadron Collider (LHC) is a particle collider,
+  which collides particles at very high energies.
+  There are four major experiments, including \atlas, which collect and study
+  data generated from these particle collisions in an effort to study
+  the properties of nature, and search for signs of physics beyond the Standard
+  Model.
+  This chapter gives a brief introduction to the LHC machine, and the
+  \atlas\ experiment.
 \end{quote}
 
 %% ------------------------------------------------------------------------------
@@ -13,8 +20,16 @@
 \section{The LHC}
 \label{sec:lhc}
 
-{\color{red}Standard stuff about the LHC accelerator complex, and there
-  are four major experiments. This shouldn't be too long}
+The LHC~\cite{cern-jinst-lhc} is circular particle accelerator, with a
+circumference of 27~km, built 100~m underground, underneath the French-Swiss
+border near the city of Geneva, Switzerland, shown in
+Figure~\ref{fig:lhc_aerial}.
+The LHC is operated by the European Organization for Nuclear Research
+(CERN~\footnote{Conseil Europ\'een pour la Recherche Nucl\'eaire}).
+The LHC became fully operational in 2010, providing proton-proton collisions
+to the experiments along the ring at an unprecedented center-of-mass energy
+of 7~\TeV.
+In 2012, the energy was increased to 8~\TeV.
 
 \begin{figure}[ht]
   \centering
@@ -27,6 +42,39 @@
   \label{fig:lhc_aerial}
 \end{figure}
 
+Four major experiments are positioned around the LHC to collect and analyze
+data from the hadron collisions.
+The experiments include \atlas~\cite{cern-jinst-atlas},
+\cms~\cite{cern-jinst-cms}, \alice~\cite{cern-jinst-alice,}, and
+\lhcb~\cite{cern-jinst-lhcb}.
+\atlas\ and \cms\ are designed to be ``general purpose experiments,'' searching
+for physics beyond the Standard Model which may present itself in may ways.
+The two experiments complement each other by providing independent results,
+which can be verified against the each other.
+\alice\ is designed to study the heavy ion (lead nuclei) collisions, studying
+the properties of quark-gluon plasma.
+The \lhcb\ experiment is primarily interested in studying the physics of
+$b$-hadrons.
+
+%% ------------------------------------------------------------------------------
+\FloatBarrier
+\subsection{CERN accelerator complex}
+\label{sec:accelerator_complex}
+
+The LHC is only the final stage in a series of accelerators, operated by CERN,
+used to provide high energy particle collisions.
+For proton-proton collisions, protons begin in the Linac 2 linear
+accelerator, where they are accelerated to an energy of 50~\MeV\ per proton.
+From there, they are fed through several circular accelerators, including
+the Proton Synchrotron Booster (PSB), Proton Synchrotron (PS), and the Super
+Proton Synchrotron (SPS), where the protons are accelerated to energies of
+1.4~\GeV, 25~\GeV, and 450~\GeV\ respectively.
+At this stage, the protons are injected into the LHC accelerator, where 
+in 2012, they were accelerated to an energy of 4~\TeV\ per proton, and finally
+collided.
+A schematic of the CERN accelerator complex, and how they link to one another
+is shown in Figure~\ref{fig:cern_complex}.
+
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth, clip=true, trim=15cm 0 15cm 10cm]
@@ -36,6 +84,29 @@
   }
   \label{fig:cern_complex}
 \end{figure}
+
+Rather than a constant stream of protons, the protons in the LHC are separated
+into over 1000 bunches, each containing over $10^{11}$ protons.
+In each of the interaction points around the LHC ring, proton bunches cross
+onces every 50~ns, where each crossing leads to potential collisions between
+the constituent protons.
+The instantaneous luminosity of collisions in these bunch crossings is given by
+\begin{equation}
+  \mathcal{L}_\mathrm{instantaneous} =
+  \frac{N_{1}N_{2} n_b f_\mathrm{rev}}
+  {4\pi \sigma_{x} \sigma_{y}}
+  F,
+\end{equation}
+where $N_{1,2}$ are the number of protons per bunch, $n_b$ is the number of
+bunches, $f_\mathrm{rev}$ is the frequency at which the protons are revolution
+frequency, $\sigma_{x,y}$ is the width of the beam in the transverse directions,
+and $F$ is a reduction factor, accounting for the fact that the beams cross
+at an angle, rather than head-on.
+As the proton beams circulate, and undergo collisions, they tend to spread out,
+increasing $\sigma_{x,y}$, and reducing the instantaneous luminosity over time.
+Typically, once the LHC is filled with proton beams, and accelerated to their
+full energy, they are circulated for several hours before they are dumped, and
+the accelerator is filled again.
 
 %% ------------------------------------------------------------------------------
 \FloatBarrier
