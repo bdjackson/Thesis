@@ -153,8 +153,8 @@ crossing, seen in Figure~\ref{fig:int_lumi_vs_time_and_pileup}.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth, clip=true, trim=0 0 0 0]
-    %{figs/lhc/atlas_det.jpg}
-    {figs/lhc/atlas_det_dino_1.jpg}
+    {figs/lhc/atlas_det.jpg}
+    % {figs/lhc/atlas_det_dino_1.jpg}
     % {figs/lhc/atlas_det_dino_2.jpg}
   \caption{
     The \atlas\ experiment~\cite{Pequenao:1095924}.
@@ -205,7 +205,7 @@ is used.
 \subsection{Inner detector} 
 \label{sec:id}
 
-\begin{figure}[ht]
+\begin{figure}[p]
   \centering{
     \includegraphics[width=0.8\textwidth]{figs/lhc/id_schematic_barrel.png}
     \includegraphics[width=0.9\textwidth]{figs/lhc/id_schematic_endcap.png}
@@ -307,18 +307,6 @@ There are 6.3 million read-out channels in the SCT.
 \subsubsection{Transition radiation tracker} 
 \label{sec:trt}
 
-{\color{red} Brief intro to TRT. }
-
-{\color{red}This section should talk about how the TRT operates, going into
-  what happens as a charged particle passes through the straw, and deposits
-  charge, and ultimately creates a signal.
-  % Then, I can get into $rt$ curves and tracking performance.
-}
-
-% {\color{red}I know less about this than TRT tracking, but since it's one of the
-%   main functions of the TRT, I think it's important to at least discuss this
-%     briefly}
-
 \begin{figure}[ht]
   \centering{
     \includegraphics[width=\textwidth]{figs/lhc/trt_photo.jpg}
@@ -330,12 +318,79 @@ There are 6.3 million read-out channels in the SCT.
   \label{fig:trt_module}
 \end{figure}
 
+The TRT, shown during the commissioning process in Figure~\ref{fig:trt_module}
+makes up the largest and outer layer of the ID, and is used for both tracking
+and particle identification.
+The TRT covers provides coverage up to $|\eta| - 2.0$.
+The TRT employs 350,000 straws filled with a gas mixture made up of
+Xe~(70\%), $\text{CO}_2$~(27\%), and $\text{O}_2$~(3\%).
+Each straw of the TRT has a 4~mm diameter, and is strung with a gold plated
+tungsten alloy wire.
+The outer wall of the straws is at a high electric potential, inducing a large
+electric field inside the straw.
+Charged particles pass through the straw, ionizing the electric field,
+resulting is a charge deposition on the wire, and a measurable current.
+
+The TRT has a less precise resolution than the silicon trackers, but a charged
+particle track may have more than 30 TRT hits, which can be combined to make
+up for for some of the difference in precision.
+The TRT barrel has a precision of 130~\um\  in the $r-\phi$ plane, but much
+worse resolution $z$ since there is little segmentation in this dimension.
+
+The TRT is also designed for use in particle identification.
+Transition radiation (TR) is emitted when a charged particle crosses a boundary
+between media with different dielectric constants.
+The amount of TR is proportional to the Lorentz~$\gamma$ factor, which is in
+turn related to the particle mass.
+Electrons are roughly 200 times less massive than pions, so have a higher
+probability to emit TR while crossing a boundary.
+The space between the TRT straws is filled with radiator material providing
+many such boundaries to facilitate TR.
+Xe was chosen as the active gas because it has a large absorption cross section
+for TR photons.
+The absorption of the additional TR photons induces more ionization, and
+therefore, more charge to build up on the wire.
+All this results in a larger signal, which can be detected by the TRT
+front-end electronics.
+The TRT operates with two threshold values (low- and high-threshold).
+The low threshold is used for tracking, and is tuned for the typical amount of
+ionization from a charged particle passing through the TRT straws.
+The high threshold is tuned to register the larger signal when the Xe gas
+absorbs the TR photons.
+The fraction of TRT hits associated with a charged particle track that exceed
+the high threshold is a discriminating variable used to identify electrons.
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsubsection{Tracking} 
 \label{sec:tracking}
 
+The ID is used to reconstruct the trajectory of charged particles.
+The individual measurements made along the trajectory of the charged particle
+are referred to as ``hits.''
+Hits from the three ID sub-detectors are combined into tracks using Kalman
+filtering tools which account for multiple scattering as a particle traverses
+the ID~\cite{ATLAS-CONF-2014-047,ATLAS-CONF-2012-042}.
 
+The ID is enclosed inside a solenoid magnet, with a field strength of 2~T.
+The magnetic field bends the trajectory of moving charged particles
+perpendicular to the field direction according to
+$\vec{F} = q \vec{v}\times \vec{B}$.
+The magnetic field is pointing along the direction of the beam, so charged
+particles coming from the interaction point will form a helix, with radius
+of curvature determined by the transverse momentum (\pt).
+Particles with low \pt\ will bend more than those with higher \pt.
+The \pt\ of charged particle tracks is determined based on the measured radius
+of curvature.
+\begin{equation}
+  \pt = qBr_\mathrm{curvature}
+\end{equation}
+It should be noted that the charge is not directly measured, but the sign of
+the charge is determined based on the direction the particle is bent.
+The momentum resolution of the tracking is limited by the position resolution.
+As the tracks become more straight, the precision of curvature becomes worse,
+resulting in worse momentum resolution for these high-\pt\ tracks.
+The relative momentum resolution is proportional to the \pt\ of the that track.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
