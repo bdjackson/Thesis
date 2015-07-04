@@ -397,8 +397,6 @@ The relative momentum resolution is proportional to the \pt\ of the that track.
 \subsection{Calorimetry} 
 \label{sec:calo}
 
-{\color{red} Introduce the calo systems and its purpose}
-
 \begin{figure}[ht]
   \centering{
     \includegraphics[width=\textwidth]{figs/lhc/calo_schematic.png}
@@ -415,16 +413,82 @@ The relative momentum resolution is proportional to the \pt\ of the that track.
   \label{fig:calo_cartoon}
 \end{figure}
 
+The calorimetry system, situated outside the ID and the solenoid, is shown
+in Figure~\ref{fig:calo_cartoon}.
+The calorimetry systems of \atlas\ are designed to compliment one another and
+offer full coverage in the $\phi$, and pseudorapidity coverage up to
+$|\eta| = 4.9$.
+The objective of the calorimeters is to stop particles like electrons, photons,
+and hadrons and measure their energy.
+\atlas\ uses ``sampling calorimeters,'' which absorb a fraction of the total
+energy, and must infer the full shower energy.
+This is achieved using a dense absorber material to initial a shower, and
+an active material to sample the energy deposition.
+
+The calorimetry system is broken up into three sub-systems, the electromagnetic
+calorimeter (EM calorimeter), the hadronic calorimeter, and the forward
+calorimeter (FCal).
+Each of the sub-systems employ different absorber and active materials.
+
+Unlike tracking systems, like the ID, the energy resolution from a calorimeter
+actually improves with higher energy deposition.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsubsection{Electromagnetic calorimeter} 
 \label{sec:ecal}
 
+The EM calorimeter is used to stop and measure the energy of electrons and
+photons.
+It is broken into a barrel component, covering $|\eta| < 1.5$, and two endcaps,
+covering $1.4 < |\eta| < 3.2$.
+Lead plates are used as an absorber material, and the active material is
+liquid argon (LAr).
+A pre-sampler is installed in the region $|\eta| < 1.8$ to sample energy from
+showers initiated before the first absorber plate.
+
+The active material is arranged in an accordion-style geometry to ensure full
+coverage in $\phi$.
+The barrel region is further sub-divided into three layers, with differing
+granularity.
+The first layer has the finest granularity, being arranged in strip-shaped
+cells with $\Delta\eta \times \Delta\phi = 0.025/8 \times 0.1$.
+This level of granularity provides good position resolution, which is useful
+in particle identification.
+The second layer is arranged in square cells, measuring
+$\Delta\eta \times \Delta\phi = 0.025 \times 0.025$.
+Layer 2 is the thickest layer, with 16 radiation lengths.
+The third layer is coarser than the previous
+layers~($\Delta\eta \times \Delta\phi = 0.050 \times 0.025$), and is used to
+capture any remaining energy from the electromagnetic shower.
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsubsection{Hadronic calorimeter} 
 \label{sec:hcal}
+
+The hadronic calorimeter is also broken up into barrel and endcap sections, but
+in this case, the two regions use different materials.
+The barrel section covers a region with $|\eta| < 1.7$, and uses steel
+absorbers and scintillating tiles as an active material.
+The endcaps use copper plates as an absorber material, and LAr for the active
+material.
+The hadronic calorimeter endcaps span $1.5 < |\eta| < 3.2$.
+Since the hadronic calorimeter is not used in particle identification, it is
+much coarser than the EM calorimeter, with granularity
+$\Delta\eta \times \Delta\phi = 0.1 \times 0.1$.
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+\FloatBarrier
+\subsubsection{Forward calorimeter} 
+\label{sec:fcal}
+
+The FCal captures energy from particles in the very forward region
+($3.1 < |\eta| < 4.9$).
+It is made up of three layers in each endcap, each using LAr as the active
+material.
+The first layer uses coper absorber, while the second and third layers utilize
+as an tungsten absorption material.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
