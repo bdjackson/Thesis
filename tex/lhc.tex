@@ -25,7 +25,7 @@ circumference of 27~km, built 100~m underground, underneath the French-Swiss
 border near the city of Geneva, Switzerland, shown in
 Figure~\ref{fig:lhc_aerial}.
 The LHC is operated by the European Organization for Nuclear Research
-(CERN~\footnote{Conseil Europ\'een pour la Recherche Nucl\'eaire}).
+(CERN\footnote{Conseil Europ\'een pour la Recherche Nucl\'eaire}).
 The LHC became fully operational in 2010, providing proton-proton collisions
 to the experiments along the ring at an unprecedented center-of-mass energy
 of 7~\TeV.
@@ -65,15 +65,15 @@ The LHC is only the final stage in a series of accelerators, operated by CERN,
 used to provide high energy particle collisions.
 For proton-proton collisions, protons begin in the Linac 2 linear
 accelerator, where they are accelerated to an energy of 50~\MeV\ per proton.
-From there, they are fed through several circular accelerators, including
+From there, the protons are fed through several circular accelerators, including
 the Proton Synchrotron Booster (PSB), Proton Synchrotron (PS), and the Super
 Proton Synchrotron (SPS), where the protons are accelerated to energies of
 1.4~\GeV, 25~\GeV, and 450~\GeV\ respectively.
 At this stage, the protons are injected into the LHC accelerator, where 
 in 2012, they were accelerated to an energy of 4~\TeV\ per proton, and finally
 collided.
-A schematic of the CERN accelerator complex, and how they link to one another
-is shown in Figure~\ref{fig:cern_complex}.
+A schematic of the CERN accelerator complex, and how the individual
+accelerators link to one another is shown in Figure~\ref{fig:cern_complex}.
 
 \begin{figure}[ht]
   \centering
@@ -107,11 +107,12 @@ bunches, $f_\mathrm{rev}$ is the frequency at which the protons are revolution
 frequency, $\sigma_{x,y}$ is the width of the beam in the transverse directions,
 and $F$ is a reduction factor, accounting for the fact that the beams cross
 at an angle, rather than head-on.
-As the proton beams circulate, and undergo collisions, they tend to spread out,
-increasing $\sigma_{x,y}$, and reducing the instantaneous luminosity over time.
+The proton beams tend to spread over time out as they circulate and undergo
+collisions, increasing $\sigma_{x,y}$, and reducing the instantaneous
+luminosity.
 Typically, once the LHC is filled with proton beams, and accelerated to their
-full energy, they are circulated for several hours before they are dumped, and
-the accelerator is filled again.
+full energy, the beams are circulated for several hours before they are dumped,
+and the accelerator is filled again.
 
 \begin{figure}
   \centering
@@ -162,7 +163,7 @@ crossing, seen in Figure~\ref{fig:int_lumi_vs_time_and_pileup}.
   \label{fig:atlas_det}
 \end{figure}
 
-Along with \cms, \atlas\ is one of the two general purpose experiments, which
+\atlas\ is one of the two general purpose experiments, which
 collect and analyze data from LHC collisions~\cite{cern-jinst-atlas}.
 \atlas\ is located at interaction point 1 of the LHC, across the street from
 the CERN Meyrin campus.
@@ -194,11 +195,13 @@ polar $\theta$ angle as
 \begin{equation}
   \eta = -\ln\left[\tan(\frac{\theta}{2})\right].
 \end{equation}
+$\eta$ is preferred over $\theta$ because particle production is roughly
+constant in $\eta$.
 The distance parameter (in $\eta$-$\phi$ space)
 \begin{equation}
   \Delta R = \sqrt{(\Delta \eta)^2 + (\Delta \phi)^2}
 \end{equation}
-is used.
+is used when measuring the distance between signatures in the detector.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
@@ -223,7 +226,7 @@ is used.
   \label{fig:id_cartoon}
 \end{figure}
 
-The inner detector (ID) makes up the three innermost sub-detectors of ATLAS,
+The inner detector (ID) comprises the three innermost sub-detectors of ATLAS,
 the pixel detector, silicon semiconductor tracker (SCT), and the transition
 radiation tracker (TRT), shown in Figure~\ref{fig:id_cartoon}.
 All three sub-detectors of the ID work together to reconstruct the trajectory
@@ -383,7 +386,7 @@ Particles with low \pt\ will bend more than those with higher \pt.
 The \pt\ of charged particle tracks is determined based on the measured radius
 of curvature.
 \begin{equation}
-  \pt = qBr_\mathrm{curvature}
+  \pt = q \cdot B \cdot r_\mathrm{curvature}
 \end{equation}
 It should be noted that the charge is not directly measured, but the sign of
 the charge is determined based on the direction the particle is bent.
