@@ -1,11 +1,14 @@
 *.log
 *.aux
 thesis.pdf
+jackson__defense.pdf
 *.d
 *.bbl
 *.blg
 *.brf
 *.out
 *.toc
+*.snm
+*.nav
 thesis-feyn.*
 .ipynb_checkpoints

@@ -356,12 +356,12 @@ therefore, more charge to build up on the wire.
 All this results in a larger signal, which can be detected by the TRT
 front-end electronics.
 The TRT operates with two threshold values (low- and high-threshold).
-The low threshold is used for tracking, and is tuned for the typical amount of
+The low-threshold is used for tracking, and is tuned for the typical amount of
 ionization from a charged particle passing through the TRT straws.
-The high threshold is tuned to register the larger signal when the Xe gas
+The high-threshold is tuned to register the larger signal when the Xe gas
 absorbs the TR photons.
 The fraction of TRT hits associated with a charged particle track that exceed
-the high threshold is a discriminating variable used to identify electrons.
+the high-threshold is a discriminating variable used to identify electrons.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
@@ -528,7 +528,7 @@ The four sub-detectors of the MS are
     The gas in the tube is ionized in the presence of a muon, and attracted to
     the wire in the center of the tube, leading to a measurable signal, which
     is read out by the electronics.
-    The MDTs span the full range of the MS system ($|\eta| < 2.7$).
+    The MDTs span the full range of the MS system, $|\eta| < 2.7$.
   \item[Cathode strip chambers (CSCs):] 
     Chambers, consisting anode wires and cathode strips.
     As a muon passes through a CSC, the gas within the chamber is ionized, and
@@ -609,63 +609,104 @@ Table~\ref{tab:trigger_specs}.
   \label{fig:particle_signatures}
 \end{figure}
 
+Particles created during collision events, and their decay products leave
+signatures in the various sub-detectors of \atlas.
+In order to perform a physics analysis, these detector signatures are identified
+translated into reconstructed objects with calibrated trajectory and
+momentum (energy) measurements.
+Figure~\ref{fig:particle_signatures} shows a simplified diagram of the
+detector signatures left by various classes of particles.
+
+The analysis described in this thesis relies on identified
+electrons~(Section~\ref{sec:electrons}), muons~(Section~\ref{sec:muons}),
+jets~(Section~\ref{sec:jets}), and missing transverse
+momentum~(Section~\ref{sec:met}).
+Flavor tagging~(Section~\ref{sec:flavor_tagging}) is also used to identify the
+jets originating from the decay of $B$-hadrons.
+Each of these signatures are described in more detail in the upcoming sections.
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsection{Electrons} 
-\label{sec:elctrons}
+\label{sec:electrons}
 
-{\color{red} TODO Write about electrons}
+Electron pass through the inner detector, leaving behind hits, and deposit a
+shower of energy in the EM calorimeter.
+The hits are combined to form a track, as described in
+Section~\ref{sec:tracking}, which points toward the EM shower.
+This signature can be faked by many charge particles, such as charged pions, so
+selection criteria are placed on the track and the shower shape to ensure the
+particle is indeed an electron.
+For instance, the EM shower from electrons is expected to be narrow, and the
+shower is expected to be fully absorbed within the EM calorimeter, resulting in
+little to no energy in the hadronic calorimeter.
+Additionally, electrons are more likely to emit TR photons while traversing
+through the TRT, resulting in some of the TRT hits passing the high-threshold.
+Heavier particles will have fewer high-threshold hits, so a requirement is
+placed on the fraction of TRT hits exceeding this high-threshold.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsection{Muons} 
 \label{sec:muons}
 
-{\color{red} TODO Write about electrons}
+Muons are minimum ionizing particles, so are able to reach the outermost
+detectors of \atlas\ (the MS) while deposit little energy in the calorimetry
+system.
+A muon is identified as a track in the ID, and a track in the MS, which are
+consistent with one another in both trajectory, and the momentum.
+Quality criteria are placed on both the ID and MS track segments.
+The analysis described in this thesis uses the \textit{Staco Combined}
+algorithm, which takes the two track segments as inputs, and performs
+a statistical combination to obtain a combined muon track.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsection{Jets} 
 \label{sec:jets}
 
-{\color{red} TODO this is the text from the CONF note. Update and expand...}
-
+Quarks and gluons produced during a proton-proton collision will hadronize,
+producing a collimated shower of charged and neutral hadrons.
+This spray of hadrons is collectively referred to as a jet.
 Jets are reconstructed using the anti-$k_{t}$
 algorithm~\cite{Cacciari:2008gp, Cacciari:2005hq} with a radius
 parameter $R = $ 0.4 from calibrated clusters of energy deposits in
-the calorimeters. The differences in calorimeter response between
-electrons, photons and hadrons are taken into account by classifying
-each cluster, prior to the jet reconstruction, as coming from an
-electromagnetic or hadronic shower on the basis of its shape
-\cite{JES}.  The jet energy thus accounts for electromagnetic
-and hadronic energy deposits at the cluster level with correction
-factors derived from MC simulation.  A further correction,
-used to calibrate the jet energy to the scale of its constituent
-particles, (JES) \cite{JES,JES2}, is then applied.  The impact of
-pileup is accounted for using
-a technique, based on jet areas, that provides an event-by-event and
-jet-by-jet correction \cite{Cacciari:2007fd}.  Jets are required
-to have transverse momentum \pt\ $>$ 40~\GeV\ and $|\eta| < 4.9$.
+the calorimeters.
+The differences in calorimeter response between electrons, photons and hadrons
+are taken into account by classifying each cluster, prior to the jet
+reconstruction, as coming from an electromagnetic or hadronic shower on the
+basis of its shape~\cite{JES}.
+The jet energy thus accounts for electromagnetic and hadronic energy deposits
+at the cluster level with correction factors derived from MC simulation.
+A further correction, used to calibrate the jet energy to the scale of its
+constituent particles, JES~\cite{JES,JES2}, is then applied.
+The impact of pileup is accounted for using a technique, based on jet areas,
+that provides an event-by-event and jet-by-jet
+correction~\cite{Cacciari:2007fd}.
+% Jets are required to have transverse momentum \pt\ $>$ 40~\GeV\ and
+% $|\eta| < 4.9$.
+
 In order to reduce contamination from jets produced by pileup,
 the scalar sum of the \pt\ of the tracks matched to the jet and
 originating from the primary vertex must be at least 50\% of the
-scalar sum of the \pt\ of all tracks matched to the jet.  This
-criterion is only applied to jets with $\pt < 50 \GeV$ and $|\eta| < 2.4$.
+scalar sum of the \pt\ of all tracks matched to the jet.
+This criterion is only applied to jets with $\pt < 50 \GeV$ and
+$|\eta| < 2.4$.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
-\subsection{Flavor tagging} 
+\subsubsection{Flavor tagging} 
 \label{sec:flavor_tagging}
 
-{\color{red} TODO this is the text from the CONF note. Update and expand...}
-
+Jets originating from $B$-hadrons can be distinguished from those originating
+from light quarks and gluons due to a significant lifetime of $B$-hadrons.
 The identification of $b$-jets uses the MV1 flavor tagging
 algorithm~\cite{ATLAS-CONF-2014-004, ATLAS-CONF-2014-046}, which is
-based on an artificial neural network
-algorithm that exploits the impact parameters of charged particle
-tracks, the parameters of reconstructed secondary vertices, and the
-topology of $b$- and $c$-hadron decays inside a jet.  The operating
-point corresponds to an overall 80\% $b$-tagging efficiency, as
+based on an artificial neural network algorithm that exploits the impact
+parameters of charged particle tracks, the parameters of reconstructed
+secondary vertices, and the topology of $b$- and $c$-hadron decays inside a
+jet.
+The operating point corresponds to an overall 80\% $b$-tagging efficiency, as
 measured in simulated \TTBAR\ events, a rejection factor of 25 for jets
 originating from light quarks or gluons, and a rejection factor of
 3 for jets originating from charm quarks.
@@ -675,13 +716,12 @@ originating from light quarks or gluons, and a rejection factor of
 \subsection{Missing energy} 
 \label{sec:met}
 
-% {\color{red} missing momentum?}
-{\color{red} TODO this is the text from the CONF note. Update and expand...}
-
-The vector momentum imbalance in the transverse plane is obtained from
-the negative vector sum of the reconstructed and calibrated physics
-objects and the calorimeter energy clusters not associated with reconstructed
-objects. This is denoted as missing transverse momentum, and the symbol
-$\met$ is used for its magnitude.  The $\met$ calculation is described
-elsewhere~\cite{ATLAS-CONF-2013-082}.
- 
+Some particles such as neutrinos, and potentially new particles such as
+neutralinos, do not interact with the detector at all, and instead escape
+without being measured at all.
+The existence of these particles can be identified as an imbalance in vector
+sum of the momentum in an event, obtained from the negative vector sum of the
+reconstructed calibrated physics objects and ``soft terms,'' consisting of
+calorimeter energy clusters not associated with reconstructed objects.
+This is denoted as missing transverse momentum, and the symbol
+$\met$ is used for its magnitude~\cite{ATLAS-CONF-2013-082}.
