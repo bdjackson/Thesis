@@ -264,13 +264,6 @@
 % \institute{University of Pennsylvania}
 
 
-\AtBeginSection[]
-{
-  \begin{frame}{Table of Contents} \tableofcontents[currentsection]
-  \end{frame}
-}
-
-
 \begin{document}
 
 % ------------------------------------------------------------------------------
@@ -292,7 +285,7 @@
 \end{frame}
 
 % ==============================================================================
-\section*{Introduction}
+\section{Introduction}
 
 % ------------------------------------------------------------------------------
 \begin{frame}
@@ -320,6 +313,19 @@
       \end{itemize}
   \end{description}
 \end{frame}
+
+% ------------------------------------------------------------------------------
+% Display TOC and set up so that TOC is displayed before each section
+\begin{frame}{Table of Contents}
+  \tableofcontents
+\end{frame}
+
+\AtBeginSection[]
+{
+  \begin{frame}{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
 
 % ==============================================================================
 \section{Theoretical motivation}
