@@ -2,7 +2,7 @@
 \def\MBLASYM{\ensuremath{m_{b\ell}~\mathrm{asymmetry}}}
 \def\METSIG{\ensuremath{E_{\mathrm{T}}^{\mathrm{miss}}}~\text{significance}}
 \def\METSIGEQN{\ensuremath{\nicefrac{\MET}{\sqrt{\HT}}}}
-\def\DZEROSIG{\ensuremath{ \left| \frac{d_0}{\sigma(d_0)} \right| }}
+\def\DZEROSIG{\ensuremath{ \left| \nicefrac{d_0}{\sigma(d_0)} \right| }}
 \def\ZZEROSINTHETA{\ensuremath{ \left| z_0\,\sin(\theta) \right| }}
 \def\TTBAR{\ensuremath{t\bar{t}}}
 \def\ZGAMMA{\ensuremath{Z/\gamma^{*}}}
@@ -24,3 +24,213 @@
 \newcommand\us{\ensuremath{\mu s}}
 
 \newcommand\BMINUSL{\ensuremath{ B \kern-0.25em - \kern-0.30em L }}
+
+% ------------------------------------------------------------------------------
+\colorlet{pairing_l_1}{green!50!white}
+\colorlet{pairing_l_2}{green!20!white}
+\colorlet{pairing_b_1}{red!50!white}
+\colorlet{pairing_b_2}{red!20!white}
+
+
+\colorlet{nice_blue}{RoyalBlue!80!white}
+\colorlet{nice_red}{Crimson!90!white}
+
+% ------------------------------------------------------------------------------
+\newcommand{\Simley}[1]{%
+  \begin{tikzpicture}[scale=0.11]
+    \newcommand*{\SmileyRadius}{1.0}%
+    \draw [fill=brown!10] (0,0) circle (\SmileyRadius)% outside circle
+    %node [yshift=-0.22*\SmileyRadius cm] {\tiny #1}% uncomment this to see the smile factor
+    ;
+
+    \pgfmathsetmacro{\eyeX}{0.5*\SmileyRadius*cos(30)}
+    \pgfmathsetmacro{\eyeY}{0.5*\SmileyRadius*sin(30)}
+    \draw [fill=cyan,draw=none] (\eyeX,\eyeY) circle (0.15cm);
+    \draw [fill=cyan,draw=none] (-\eyeX,\eyeY) circle (0.15cm);
+
+    \pgfmathsetmacro{\xScale}{2*\eyeX/180}
+    \pgfmathsetmacro{\yScale}{1.0*\eyeY}
+    \draw[color=red, domain=-\eyeX:\eyeX]
+    plot ({\x},{
+      -0.1+#1*0.15 % shift the smiley as smile decreases
+    -#1*1.75*\yScale*(sin((\x+\eyeX)/\xScale))-\eyeY});
+  \end{tikzpicture}%
+}%
+
+% ------------------------------------------------------------------------------
+\newcommand{\MyGrid}{
+  \draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+  \foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+  \foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+}
+
+
+% ------------------------------------------------------------------------------
+\def\tikzoverlay{%
+  \tikz[baseline,overlay]\node[]
+}%
+
+\newcommand{\UpdateFlag}{
+  \tikzoverlay[text width=3cm] at (10cm, +2cm) {
+    \tikz node at (0., 0.) {
+      \node[rectangle, rounded corners=1ex,
+            minimum width=2cm, minimum height=2cm,
+            fill=Goldenrod, text=black] at (0., 0.) {
+        \huge
+        Update slide
+      };
+    };
+  };
+}
+
+\newcommand{\ToBackup}{
+  \tikzoverlay[text width=3cm] at (10cm, +2cm) {
+    \tikz node at (0., 0.) {
+      \node[rectangle, rounded corners=1ex,
+            minimum width=2cm, minimum height=2cm,
+            fill=Goldenrod, text=black] at (0., 0.) {
+        \huge
+        To Backup
+      };
+    };
+  };
+}
+
+% ------------------------------------------------------------------------------
+\tikzset{
+  update node/.style={
+    rectangle, fill=Goldenrod, text=black, rounded corners=1ex, anchor=north east
+    % draw=black,anchor=north west,
+  },
+}
+\def\updateoverlay{%
+  \tikz[baseline,overlay]\node[update node]
+}%
+\newcommand{\BLAH}{
+  \updateoverlay[text width=3cm] at (0,0) {
+    \tikz node at (0,0) {
+      fml
+    };
+  };
+}
+
+% ------------------------------------------------------------------------------
+\usetikzlibrary{decorations.pathmorphing} % foton- en gluonlijnen
+\usetikzlibrary{decorations.markings} % pijltjes en dergelijke
+\usetikzlibrary{arrows}
+\tikzset{
+  % propagator styles
+  spin0/.style={
+    dashed
+  },
+  photon/.style={
+    decorate,
+    decoration={
+      snake,
+      amplitude=2pt,
+      segment length=6pt,
+      post length=0mm
+    }
+  },
+  gluon/.style={
+    decorate,
+    decoration={
+      coil,
+      amplitude=4pt,
+      segment length=8pt,
+      aspect=1
+    }
+  },
+  massvect/.style={
+    decorate,
+    decoration={
+      snake
+    }
+  },
+  antifermion/.style={
+    postaction={
+      decorate,
+      decoration={
+        markings,
+        mark=at position .5 with {
+          \draw (1.5pt,-1pt) -- (-1.5pt,0pt) -- (1.5pt,1pt);
+        }
+      }
+    }
+  },
+  fermion/.style={
+    postaction={
+      decorate,
+      decoration={
+        markings,
+        mark=at position .5 with {
+          \draw (-1.5pt,-1pt) -- (1.5pt,0pt) -- (-1.5pt,1pt);
+        }
+      }
+    }
+  },
+  toextpot/.style={
+    postaction={
+      decorate,
+      decoration={
+        markings,
+        mark=at position 1 with {
+          \draw (-2pt,-2pt) -- (2pt,2pt);
+          \draw (-2pt,2pt) -- (2pt,-2pt);
+        }
+      }
+    }
+  },
+  arclabel/.style={
+    preaction={
+      decorate,
+      decoration={
+        markings,
+        mark=at position .5 with {
+          \node[void] at (0,0) [label=#1]{};
+        }
+      }
+    }
+  },
+  % These prevent the path from being drawn -> needs to be done twice
+  momarrowr/.style={
+    decorate,decoration={
+      markings,
+      mark=at position .5 with {
+        \draw[->] (-2.5mm,-2.5mm) -- node [label=#1]{} (2.5mm,-2.5mm);
+      }
+    }
+  },
+  momarrowl/.style={
+    decorate,decoration={
+      markings,mark=at position .5 with {
+        \draw[->] (-2.5mm,2.5mm) -- node [label=#1]{} (2.5mm,2.5mm);
+      }
+    }
+  },
+  vertex/.style={
+    circle,
+    draw,
+    fill=black,
+    inner sep=0pt,
+    minimum size=.8mm
+  },
+  blob/.style={
+    circle,
+    draw=black!100,
+    fill=black!15,
+    inner sep=1pt,
+    minimum size=5mm
+  },
+  void/.style={
+    inner sep=0pt,
+    minimum size=0pt
+  },
+  counterterm/.style={
+    lamp,
+    draw,
+    inner sep=0pt,
+    minimum size=6pt
+  },
+}
+
