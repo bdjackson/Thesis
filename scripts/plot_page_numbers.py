@@ -95,7 +95,7 @@ draw_annotation('Started\nB-L stop\nchapter',
 
 draw_annotation('First draft\nB-L stop\nchapter',
                 date_string='May 8 2015',
-                offset_x=-25, offset_y=-30,
+                offset_x=-25, offset_y=0,
                 shrinkB=15, angle_a = 90, angle_b=160)
 
 # draw_annotation('Interview!\nCivis - exam',
@@ -120,7 +120,7 @@ draw_annotation('First draft\nB-L stop\nchapter',
 
 draw_annotation('Moved to\nChicago',
                 date_string='May 30 2015',
-                offset_x=-25, offset_y=-5,
+                offset_x=0, offset_y=-45,
                 shrinkB=10, angle_a = 20, angle_b=90)
 
 # draw_annotation('Interview!\nCivis - on site',
@@ -133,9 +133,19 @@ draw_annotation('Moved to\nChicago',
 #                 offset_x=-25, offset_y=-5,
 #                 shrinkB=10, angle_a = 20, angle_b=90)
 
-draw_annotation('Draft to\ncommittee',
-                date_string='Jun 25 2015',
+# draw_annotation('Draft to\ncommittee',
+#                 date_string='Jun 25 2015',
+#                 offset_x=-55, offset_y=-30,
+#                 shrinkB=10, angle_a = 20, angle_b=220)
+
+draw_annotation('Complete draft\nto committee',
+                date_string='Jul 4 2015',
                 offset_x=-35, offset_y=-7,
+                shrinkB=10, angle_a = 20, angle_b=90)
+
+draw_annotation('Defense!',
+                date_string='Jul 8 2015',
+                offset_x=-10, offset_y=-40,
                 shrinkB=10, angle_a = 20, angle_b=90)
 
 
