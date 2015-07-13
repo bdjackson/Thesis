@@ -274,7 +274,7 @@
       \draw[spin0] (v2) -- node [above]{$H$} (out);
     \end{tikzpicture}
     %%
-    \vspace{0.75ex}
+    \vspace{1ex}
     %%
     \begin{tikzpicture}[scale=0.9]
       \node[void] (in) at (0,0)  {};
@@ -630,7 +630,7 @@
   \begin{itemize}
     \item Searching for stop pair production
       \begin{itemize}
-        \item stops decay to
+        \item Stops decay to
           {\color{nice_red} $b$-quark + lepton }
       \end{itemize}
       %%
@@ -781,6 +781,7 @@
   \begin{itemize}
     \item Electrons, muons, and jets required to have $\pt > 40 \GeV$
     % \item Remove overlap between objects
+    \item Apply $b$-tagging to jets
     \item At least two leptons with opposite charge and two $b$-tagged jets
       \begin{itemize}
         \item Select two leading lepton and two leading b-tagged jets if
@@ -797,15 +798,15 @@
             \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black] (l1) at (-2.50,+0.5) {$\ell_1$};
             \node[rectangle, rounded corners=1ex, fill=pairing_b_2, text=black] (b2) at (+1.25,+0.5) {$b_2$};
             \node[rectangle, rounded corners=1ex, fill=pairing_l_2, text=black] (l2) at (+2.00,+0.5) {$\ell_2$};
-            \node[rectangle, text=black] (m11) at (-1.0,+0.5) {$\Rightarrow m_{b1\ell1} = m_{b\ell}^{0}$};
-            \node[rectangle, text=black] (m22) at (+3.5,+0.5) {$\Rightarrow m_{b2\ell2} = m_{b\ell}^{1}$};
+            \node[rectangle, text=black] (m11) at (-1.0,+0.5) {$\Rightarrow m_{b1\ell1} = m_{b\ell}^{11}$};
+            \node[rectangle, text=black] (m22) at (+3.5,+0.5) {$\Rightarrow m_{b2\ell2} = m_{b\ell}^{22}$};
 
             \node[rectangle, rounded corners=1ex, fill=pairing_b_1, text=black] (b1) at (-3.25,-0.5) {$b_1$};
             \node[rectangle, rounded corners=1ex, fill=pairing_l_2, text=black] (l2) at (-2.50,-0.5) {$\ell_2$};
             \node[rectangle, rounded corners=1ex, fill=pairing_b_2, text=black] (b2) at (+1.25,-0.5) {$b_2$};
             \node[rectangle, rounded corners=1ex, fill=pairing_l_1, text=black] (l1) at (+2.00,-0.5) {$\ell_1$};
-            \node[rectangle, text=black] (m12) at (-1.0,-0.5) {$\Rightarrow m_{b1\ell2} = m_{b\ell}^{0} $};
-            \node[rectangle, text=black] (m21) at (+3.5,-0.5) {$\Rightarrow m_{b2\ell1} = m_{b\ell}^{1} $};
+            \node[rectangle, text=black] (m12) at (-1.0,-0.5) {$\Rightarrow m_{b1\ell2} = m_{b\ell}^{12} $};
+            \node[rectangle, text=black] (m21) at (+3.5,-0.5) {$\Rightarrow m_{b2\ell1} = m_{b\ell}^{21} $};
           \end{tikzpicture}
         }
       \end{center}
@@ -837,8 +838,12 @@
     \item[\HT:] Decay products from massive stops have high-\pt
       \begin{itemize}
         \item Decay products from SM parents have lower \pt
-        \item Require scalar sum of the \pt\ of the two $b$-tagged jets and
-          the two leptons be $\geq 1100 \GeV$
+        \item Require
+          {
+            \color{nice_blue} scalar sum of the \pt\ of the two $b$-tagged jets
+            and the two leptons
+        }
+        be $\geq 1100 \GeV$
       \end{itemize}
       %%
     \item[\MBLASYM:] Resonant decay of stop
@@ -846,7 +851,9 @@
         \item Small difference in \MBL\ of two pairs for stop decay
         \item Difference can be large in SM decays like \TTBAR
         \item Require
-          $\nicefrac{\left(\MBL^0-\MBL^1\right)}{\left(\MBL^0+\MBL^1\right)}
+          ${\color{nice_blue}
+            \nicefrac{\left(\MBL^0-\MBL^1\right)}{\left(\MBL^0+\MBL^1\right)}
+          }
           \leq 0.2$
       \end{itemize}
       %%
@@ -929,10 +936,11 @@
   \begin{itemize}
     \item Construct control regions for \TTBAR\ and \ZGAMMAJETS
       \begin{description}
-        \item[Top CR] Low \HT, high \MET, $Z$-veto
-        \item[$Z$ CR] Low \HT, low \MET, select $Z$-window
+        \item[Top CR:] Low \HT, high \MET, $Z$-veto
+        \item[$Z$ CR:] Low \HT, low \MET, select $Z$-window
       \end{description}
-    \item Determine normalization from maximum likelihood fit to data
+    \item Determine normalization for \TTBAR\ and \ZGAMMAJETS\ using maximum
+      likelihood fit to data
     \item Other backgrounds taken from Monte Carlo simulation
     \item Validation regions for extrapolation from control regions to other
       kinematic regions
@@ -1413,6 +1421,16 @@
 
 % ------------------------------------------------------------------------------
 \begin{frame}
+  \frametitle{Stop cross section}
+  %%
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{figures/theory/xsec.pdf}
+  \end{center}
+\end{frame}
+
+
+% ------------------------------------------------------------------------------
+\begin{frame}
   \frametitle{Object selection}
   %%
   \begin{columns}
@@ -1686,6 +1704,31 @@
 
 % ------------------------------------------------------------------------------
 \begin{frame}
+  \frametitle{Cutflow table}
+  %%
+  \resizebox{\linewidth}{!}{
+    \centering{
+      \begin{tabular}{l|ccc}
+        \toprule
+        Selection                        & $m_{\tilde{t}} = 500 \GeV$ & $m_{\tilde{t}} = 800 \GeV$ & $m_{\tilde{t}} = 1000 \GeV$ \\
+        \midrule
+        $\sigma \cdot L$                 & $1750 \pm 260$             & $59 \pm 12$                & $8.9 \pm 2.5$ \\
+        \midrule
+        $bb\ell\ell$                     & $624 \pm 4$                & $19.65 \pm 0.18$           & $2.68 \pm 0.05$   \\[1ex]
+        $Z$ veto                         & $619 \pm 4$                & $19.62 \pm 0.18$           & $2.68 \pm 0.05$   \\[1ex]
+        $H_{T} \ge 1100 \GeV$            & $122.9 \pm 1.8$            & $16.01 \pm 0.17$           & $2.50 \pm 0.04$   \\[1ex]
+        $m_{b\ell}$ asymmetry $\leq 0.2$ & $112.8 \pm 1.7$            & $14.00 \pm 0.15$           & $2.11 \pm 0.04$   \\
+        \midrule
+        $m_{b\ell} \geq 400 \GeV$        & $110.3 \pm 1.7$            & $13.74 \pm 0.15$           & $2.09 \pm 0.04$   \\[1ex]
+        $m_{b\ell} \geq 600 \GeV$        & $7.7 \pm 0.4$              & $12.86 \pm 0.15$           & $1.99 \pm 0.04$   \\
+        \bottomrule
+      \end{tabular}
+    }
+  }
+\end{frame}
+
+% ------------------------------------------------------------------------------
+\begin{frame}
   \frametitle{Top control region}
   %%
   \begin{columns}
@@ -1752,16 +1795,6 @@
     \item No need for an additional systematic uncertainty on the
       \TTBAR\ background
   \end{itemize}
-\end{frame}
-
-
-% ------------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Stop cross section}
-  %%
-  \begin{center}
-    \includegraphics[width=0.9\textwidth]{figures/theory/xsec.pdf}
-  \end{center}
 \end{frame}
 
 
