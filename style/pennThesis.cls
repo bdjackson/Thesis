@@ -2,7 +2,8 @@
 \ProvidesClass{pennThesis}[11/04/\the\year2011 UPenn HEP Thesis Class] 
 
 % the 'oneside' option is needed for single-sided documents
-% \LoadClass[10pt,letterpaper,openany,twoside]{memoir}
+% \LoadClass[10pt,letterpaper,openany,oneside]{memoir}
+% \LoadClass[10pt,letterpaper,openany]{memoir}
 \LoadClass[10pt,letterpaper,twoside]{memoir}
 
 %% -----------------------------------------------------------------------------

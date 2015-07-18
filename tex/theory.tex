@@ -10,8 +10,8 @@ These forces include gravity, electromagnetism, and the strong and weak nuclear
 forces.
 Despite being the weakest of the four forces, gravity is certainly the most
 familiar to everyday life, as it assures objects fall to the ground.
-The Gravitational force is described by the general theory of relativity, and
-to this day, a successful quantum theory of gravity has yet to be developed.
+The Gravitational force is described by the general theory of relativity,
+but a successful quantum theory of gravity has yet to be developed.
 Since gravity is so weak, it does not significantly affect the physics at the
 LHC energy scale, and can safely be ignored for the purpose of this thesis.
 Of the remaining three forces,  electromagnetism and the weak force have been
@@ -28,7 +28,7 @@ Supersymmetry, a popular extension to the Standard Model, is introduced in
 Section~\ref{sec:susy}.
 The chapter concludes with a presentation of the particular $B-L$ extension to
 the SM, which is the focus of the search presented in this dissertation.
-Section~\ref{sec:theory_bl_extension} includes presents a brief description of
+Section~\ref{sec:theory_bl_extension} presents a brief description of
 the underlying theory, as well as some of the interesting phenomenology expected
 in the scenario where the scalar top is the LSP.
 \end{quote}
@@ -47,9 +47,9 @@ of the elementary particles, and their interactions, and has been developed,
 and rigorously tested by experiments over the last fifty years.
 In 2012, the final particle predicted by the SM, the ``Higgs boson`` was
 discovered at CERN by the \atlas\ and \cms\ collaborations, marking a great
-achievement for the both the experimental collaborations and the theorists
+achievement for both the experimental collaborations and the theorists
 who predicted the particle's existence.
-The SM Lagrangian is a non-abelian gauge theory with symmetry group 
+The SM Lagrangian is a non-Abelian gauge theory with symmetry group 
 $\mathrm{SU}(3)_\mathrm{C} \times
 \mathrm{SU}(2)_\mathrm{L} \times
 \mathrm{U}(1)_\mathrm{Y}$,
@@ -60,12 +60,12 @@ called quarks and leptons.
 Massless gauge bosons (spin 1) mediate the interactions of the electroweak and
 strong forces.
 
-\begin{figure}[ht]
+\begin{figure}[th]
   \centering{
     \includegraphics[width=\textwidth]{figs/theory/sm_particle_content.pdf}
     \caption{
       Fundamental particles described by the Standard Model.
-      The masses of each particles are given in parentheses.
+      The mass of each particles are given in parentheses.
     }
     \label{fig:sm_particle_content}
   }
@@ -79,7 +79,7 @@ The fermionic matter is arranged into three families, or generations, each
 containing quarks and leptons.
 These particles can be charged under each part of the SM symmetry group,
 where the particle's charge determines how it interacts with each of the
-corces.
+forces.
 Each generation contains two chiral left-handed quarks, arranged in a isospin
 doublet, consisting of an up-type and a down-type quark.
 There are also two chiral left-handed leptons, one with electric charge, and
@@ -88,7 +88,7 @@ As with the quarks, the two left-handed leptons are arranged into an isospin
 doublet.
 Finally, each fermionic family contains chiral right-handed counterparts to
 the two quarks, and the charged lepton.
-No right-handed neutrinos are included in the SM, as they would no react with
+No right-handed neutrinos are included in the SM, as they would not react with
 any known forces, as will be explained shortly.
 The right-handed fermions are isospin singlets.
 The three generations are essentially copies of one another, differing only in
@@ -106,8 +106,8 @@ parts of the SM symmetry group is shown in Table~\ref{tab:sm_matter_content}.
     Summary of the matter particles described by the SM, along with the
     associated quantum numbers.
     The quantum numbers include the spin, electric charge $Q$, the third
-    component of weak isospin $T_3$, hypercharge $Y$, and the allowable color
-    charges.
+    component of weak isospin $T_3$, hypercharge $Y = 2 \left(Q-T_3\right)$,
+    and the allowable color charges.
   }
   \label{tab:sm_matter_content}
   \begin{center}
@@ -222,15 +222,15 @@ parts of the SM symmetry group is shown in Table~\ref{tab:sm_matter_content}.
 \end{table}
 
 %% ------------------------------------------------------------------------------
-\subsection{Quantum electrodynamics}
+\subsection{Electroweak Theory}
 \label{sec:qed}
 
-In addition to a charge, each piece of the SM symmetry group is associated with
+Each piece of the SM symmetry group is associated with
 a massless gauge boson, which mediates the interactions between particles.
 The electroweak sector has the symmetry group
 $\mathrm{SU}(2)_\mathrm{L} \times \mathrm{U}(1)_\mathrm{Y}$, and describes the
-interactions with fields with isospin or hypercharge ($Y$) in a theory called
-quantum electrodynamics (QED).
+interactions with fields with isospin or hypercharge ($Y$).
+% in a theory called quantum electrodynamics (QED).
 The electroweak sector is a chiral theory, meaning right- and left-handed
 particles transform differently under the gauge group.
 Left-handed fermions have a value of the third component of isospin equal to
@@ -241,20 +241,23 @@ bosons, arranged in a weak isospin triplet, and a $B^0$ boson, which is a weak
 isospin singlet.
 
 Since chiral fields translate differently, depending on their chiral handedness,
-there can be no mixing between the right- and left-handed states, which would
+there can be no mixing between the right- and left-handed states, as this would
 break gauge invariance.
-Unfortunately, a mass term, allows for exactly this mixing, implying the
-fermions, as well as the gauge bosons must be massless.
+Unfortunately, a mass term allows for exactly this mixing, implying the
+fermions must be massless.
 On the other hand, the weak force is observed to be short ranged, implying
 massive gauge bosons, and fermions do indeed have measurable masses.
 Adding masses to a chiral quantum field theory is a difficult endeavor, and
 is achieved through a process called ``spontaneous symmetry breaking,'' which
 is explained in Section~\ref{sec:higgs}.
-The broken symmetry leads to a mixing of the $W^3$ and $B^0$ gauge bosons into
-a massless photon, and the massive $Z$ boson.
-The $W^1$ and $W^2$ become the massive $W^{+}$ and $W^{-}$.
+The broken symmetry leads to a mixing of the electrically neutral $W^3$ and
+$B^0$ gauge bosons into a massless photon, and the massive $Z$ boson.
+The $W^1$ and $W^2$ mix to form the massive $W^{+}$ and $W^{-}$.
 The $W^{\pm}$ and $Z$ bosons both have mass, and act as the propagator of the
 weak force, while the massless photon mediates the electromagnetic force.
+The first quantum field theory, developed earlier than the electroweak theory,
+describes the interaction of the massless photon with electrically charged
+particles and is known as quantum electrodynamics (QED).
 
 Since right-handed neutrinos have no charge under any part of the SM symmetry
 group, they are not expected to interact with the known components of the SM,
@@ -277,15 +280,17 @@ $\mathrm{SU}(3)_\mathrm{C}$ symmetry group are called gluons, and are
 themselves colored objects.
 This leads to self interaction, and some interesting phenomenology!
 
-Because the gluon are allowed to interact with one another, QED and QCD have
-some very important differences.
+The gluons of QCD are allowed to interact with each other, while the photon of
+QED is not self-interacting.
+This leads to some important differences between the strong force and the
+electromagnetic force.
 Perhaps, the most interesting, is related to the concept of ``screening''.
-In QED, as one moves further from a charged paricle, the charge tends to look
+In QED, as one moves further from a charged particle, the charge tends to look
 smaller as a result of the polarization of the vacuum around the charge, where
-electron pairs pop out of the vacuum.
-The further from the particle one is, the more electron pairs are visible,
-obscuring the initial charge more.
-In QCD, this same screening effect occurs, with quark-anti-quark pairs being
+electron-positron pairs pop out of the vacuum.
+The further from the particle one is, the more electron-positron pairs are
+visible, obscuring the initial charge more.
+In QCD, this same screening effect occurs, with quark anti-quark pairs being
 pair-produced from the vacuum, however gluon pairs may also be produced out of
 the vacuum.
 These gluon pairs produce the opposite screening effect, known as
@@ -298,21 +303,22 @@ small, and they can be treated as free particles, in an effect known as
 ``asymptotic freedom.''
 Alternatively, as two charged particles move apart, the polarization of the
 vacuum between them results in an increasing energy buildup, until it is
-energetically favorable to pair produce a quark-anti-quark pair from the vacuum.
+energetically favorable to pair produce a quark anti-quark pair from the vacuum.
 For this reason, no free quarks or gluons have been observed, rather any
-objects with color charge will tend to into bound states called ``hadrons,''
-which has no net color.
-Hadrons can either be a bound state of a quark-anti-quark pair, called mesons,
+objects with color charge will tend to form bound states called ``hadrons,''
+which has no net color charge.
+Hadrons can either be a bound state of a quark anti-quark pair, called mesons,
 or three-quark bound states, called baryons.
+Additionally, five-quark bound states have recently been found by the
+\lhcb\ experiment~\cite{Aaij:2015tga}.
 The anti-quark contained in a meson must have the corresponding anti-color of 
 the constituent quark.
 Similarly, the three quarks, which make up a baryon, must have colors that add
-to ``white,'' meaning one red , one green, and one blue quark.
+to ``white,'' meaning one red, one green, and one blue quark.
 
 In particle collisions, this effect also leads to the phenomenon of ``jets,''
 where a spray of hadrons is projected at the particle detector, resulting from
-the multiple colored objects being pulled apart due to the energy of the
-collision.
+multiple colored objects flying apart after the collision.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
@@ -321,9 +327,9 @@ collision.
 
 As mentioned in Section~\ref{sec:qed}, the fermions and gauge bosons described
 in the SM Lagrangian are massless, however, many of those observed in nature
-do, in fact, have a non-negligible mass.
-This would seem to allow for the mixing of chiral left- and right-handed
-fields, which would in turn break gauge invariance.
+do, in fact, have a non-zero mass.
+This would seem to allow for the mixing of chiral left-handed and singlet
+right-handed fields, which would in turn break gauge invariance.
 A method to add mass terms to the SM Lagrangian without breaking the necessary
 gauge invariance was developed during the 1960's by several groups of theorists,
 including Robert Brout and Francois Englert~\cite{PhysRevLett.13.321},
@@ -331,12 +337,12 @@ Peter Higgs~\cite{Higgs1964132,PhysRevLett.13.508},
 and Gerald Guralnik, Carl R. Hagen, and Tom Kibble~\cite{PhysRevLett.13.585}
 working in parallel, and is commonly called the Brout-Englert-Higgs (BEH)
 mechanism.
-The BEH mechanism adds an additional complex scaler field to the Lagrangian,
+The BEH mechanism adds an additional complex scalar field to the Lagrangian,
 which acquires a vacuum expectation value (vev), which ``spontaneously''
 breaks the symmetry of the SM Lagrangian.
 
-Each spontaneously broken symmetry leads to new massive scalar particle, know
-as a ``Goldstone boson.''
+Each spontaneously broken symmetry leads to a new massive scalar particle,
+known as a ``Goldstone boson.''
 The gauge bosons can then absorb these Goldstone bosons in a process where they
 acquire a mass.
 Recall, before symmetry breaking, the electroweak sector has four massless
@@ -345,8 +351,9 @@ observe massive $W^{\pm}$, and the $Z$ bosons, associated with the weak force,
 and a massless photon to mediate the electromagnetic force.
 An electric charge $Q$ is also conserved.
 This implies that the
-$\mathrm{SU}(2)_\mathrm{L} \times \mathrm{U}(1)_\mathrm{Y}$ of QED is broken in
-a way that leaves only a $\mathrm{U}(1)_\mathrm{EM}$ symmetry group.
+$\mathrm{SU}(2)_\mathrm{L} \times \mathrm{U}(1)_\mathrm{Y}$ of electroweak
+theory is broken in a way that gives a different $\mathrm{U}(1)$ symmetry group
+corresponding to electromagnetism.
 This symmetry breaking requires at least three Goldstone bosons to be absorbed,
 and give masses to the gauge bosons.
 The simplest method to accomplish this is to add a complex scalar field
@@ -357,7 +364,7 @@ The simplest method to accomplish this is to add a complex scalar field
 %which is a doublet with positive hypercharge ($Y=\nicefrac{1}{2}$).
 which is a doublet with positive hypercharge ($Y=1$).
 
-To show how this, it is useful to consider the SM Lagrangian, ignoring the
+To show this, it is useful to consider the SM Lagrangian, ignoring the
 QCD part,
 \begin{equation}
   \mathcal{L} =
@@ -366,7 +373,7 @@ QCD part,
   + \bar{L}_i \left(i D_{\mu} \gamma^{\mu} \right) L_i
   + \bar{e}_{\mathrm{R},i}\left(i D_{\mu} \gamma^{\mu}\right)e_{\mathrm{R},i},
 \end{equation}
-where the $i$ index runs over the three generations, the $\mu$,$\nu$ are
+where the $i$ index runs over the three generations, the $\mu$ and $\nu$ are
 Lorentz indices, and $a$ runs over the generators in the gauge group.
 The field strengths are given by
 \begin{eqnarray}
@@ -391,7 +398,7 @@ and the covariant derivatives for the left- and right-handed lepton fields are
     \partial_{\mu} - ig_{1}YB_{\mu}
   \right) e_\mathrm{R}.
 \end{eqnarray}
-$T_a$ are the generators of the gauge group, and $g_1$ and $g_2$ are the
+Where $T_a$ are the generators of the gauge group, and $g_1$ and $g_2$ are the
 coupling constants for electroweak interactions.
 
 Adding the complex scalar field from Equation~\ref{eqn:scalar_field} adds an
@@ -418,7 +425,7 @@ and the minimum occurs at
 \begin{equation}
   \bra{0} \Phi \ket{0} = \begin{pmatrix} 0 \\ 0 \end{pmatrix}.
 \end{equation}
-There is no spontaneous symmetry is this scenario.
+There is no spontaneous symmetry breaking is this scenario.
 On the other hand, if $\mu^2 < 0$, the scalar potential takes on the famous
 ``Mexican hat'' shape, and the minimum of the potential is no longer located at
 the origin.
@@ -431,10 +438,10 @@ neutral part of the scalar field acquires a vacuum expectation value (vev) $v$,
   v = \sqrt{\frac{-\mu^2}{\lambda}}.
 \end{equation}
 By acquiring a vev, electroweak symmetry is spontaneously broken.
-The green line, corresponds to the circle of minimum potential,
-represents the massless Goldstone mode.
+The green line in Figure~\ref{fig:symmetry_breaking}, corresponds to the
+circle of minimum potential, represents the massless Goldstone mode.
 
-\begin{figure}[ht]
+\begin{figure}[th]
   \centering
   \includegraphics[width=0.48\textwidth]
       {figs/theory/BoringPotential.png}
@@ -466,7 +473,7 @@ symmetry with a conserved charge of
 \end{equation}
 corresponding to the electric charge.
 
-Expanding the scalar field $\Phi$ around it's minimum $\Phi_0$, one gets
+Expanding the scalar field $\Phi$ around its minimum $\Phi_0$, one gets
 \begin{equation}
   \Phi(x) = \frac{1}{\sqrt{2}} \begin{pmatrix} 0 \\ v + h(x) \end{pmatrix},
 \end{equation}
@@ -484,7 +491,7 @@ and redefining the gauge fields as
                 \left( g_2 W_{\mu}^{3} + g_1 B_{\mu} \right),
 \end{eqnarray}
 where the redefined gauge fields correspond to the physical gauge bosons
-of QED, the $W^{\pm}$, $Z$, and the photon.
+of electroweak theory, the $W^{\pm}$, $Z$, and the photon.
 The covariant derivative becomes
 \begin{equation}
   \left| D_{\mu}\Phi \right|^2 =
@@ -517,10 +524,11 @@ Figure~\ref{fig:higgs_mass}.
 The Higgs mass has no other handles in the SM, and must be determined
 experimentally.
 It was found to be equal to
-$125.02^{+0.22}_{0.27}\mathrm{(stat)}^{+0.14}_{-0.15}\mathrm{(syst)} \GeV$
-by the \atlas\ and \cms\ experiments.
+% $125.02^{+0.22}_{0.27}\mathrm{(stat)}^{+0.14}_{-0.15}\mathrm{(syst)} \GeV$
+$125.09 \pm 0.21 \mathrm{(stat)} \pm 0.11 \mathrm{(syst)} \GeV$
+by the \atlas\ and \cms\ experiments~\cite{Aad:2015zhl}.
 
-\begin{figure}[ht]
+\begin{figure}[th]
   \centering
   \includegraphics[width=0.48\textwidth]{figs/theory/Higgs-Potential-radial.png}
   \caption{
@@ -531,7 +539,7 @@ by the \atlas\ and \cms\ experiments.
 \end{figure}
 
 The final piece to add to the SM are masses for the fermions, which are
-introduced through Yukawa cuplings between the fermion fields and the scalar
+introduced through Yukawa couplings between the fermion fields and the scalar
 field.
 An additional set of terms are added to the Lagrangian for the interactions
 between the scalar field and the fermion sector.
@@ -619,8 +627,8 @@ fermions.
 Since the neutrinos have no isospin, they do not interact with the scalar
 potential, and therefore, do not pick up a mass.
 It should also be noted that the $G$'s, thus the fermion masses, are not
-predicted by the SM, and the fermion masses must be measured, and inputed
-into the theory.
+predicted by the SM, and the fermion masses must be measured, and put into
+the theory.
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
@@ -630,12 +638,10 @@ into the theory.
 While the SM has been a very successful theory in describing particles
 and their interactions across many orders of magnitude, it does have some
 shortcomings.
-Some of these shortcomings, such as the existence of dark matter arise from
-experimental observations, which point toward potential problems with the SM,
-and currently constructed.
-Others, such as the Hierarchy problem arise from parts of the SM, which seem
-to require, seemingly unnatural, amounts of ``fine tuning'' of the parameters
-of the theory.
+Some of these shortcomings, such as the existence of dark matter, arise from
+experimental observations, which point toward potential problems with the SM.
+Others, such as the Hierarchy problem, arise from parts of the SM that require
+unnatural, amounts of ``fine tuning'' of the parameters of the theory.
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
@@ -643,9 +649,9 @@ of the theory.
 
 One (seemingly obvious) feature, missing from the SM is the gravitational
 force.
-This seems counterintuitive because this is probably the force people are most
+This seems counterintuitive because this is the force people are most
 familiar with, in their daily lives.
-However, gravity remains a very weak force, compared to the electroweak scale,
+However, gravity remains a very weak force, compared to the electroweak force,
 and no successful quantum theory of gravity has been created.
 A spin 2 graviton particle has been proposed, which seems as if it can be added
 to the SM, but experiments have yet to observe such a particle.
@@ -664,15 +670,16 @@ Dark matter is localized, and tends to be found in clumps, while dark energy
 permeates all of space.
 
 From the perspective of gravity, dark matter is expected to behave similar to
-normal matter, in that gravity exerts an attractive force on the dark matter.
-Dark matter differs in that it does not interact with electromagnetism,
+normal matter in that gravity exerts an attractive force on the dark matter.
+Dark matter differs in that it does not interact via the electromagnetic force,
 which is why it is called ``dark.''
 The other properties of dark matter are unknown.
 It is possible that it interacts with the strong or weak forces, however, this
 is by no means guaranteed.
 
-Dark energy, on the other hand, opposed the force of gravity, applying a
-repulsive force, accelerating the expansion of the universe.
+Dark energy, on the other hand, opposes the force of gravity and appears to
+be responsible for the acceleration of the expansion of the universe.
+The nature of dark energy is unknown.
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
@@ -680,13 +687,13 @@ repulsive force, accelerating the expansion of the universe.
 
 As shown in Section~\ref{sec:higgs}, the BEH mechanism leaves the neutrinos
 massless in the SM because they have no chiral right-handed counterpart, and
-don't generate the Yukawa coupling with the scalar field.
-Neutrino experiments, have observed neutrino flavor oscillation, suggesting
-they do, in fact, have a mass~\cite{PhysRevD.86.010001}.
+don't have the Yukawa coupling with the scalar field.
+Neutrino experiments have observed neutrino flavor
+oscillation~\cite{PhysRevD.86.010001}.
 For these oscillations to occur, the physical neutrino eigenstates must be
-a mixture of the flavor eigenstates, and have distinct masses.
+a mixture of the flavor eigenstates and have distinct masses.
 This provides evidence that there is a non-zero mass for at least two of the
-three neutrino masses.
+three neutrino.
 Some of the proposed mechanisms to generate massive neutrino masses with the
 SM are the addition of ``sterile'' right-handed neutrinos, or the possibility
 that neutrinos are Majorana particles, and they are their own anti-particle.
@@ -695,7 +702,7 @@ that neutrinos are Majorana particles, and they are their own anti-particle.
 \FloatBarrier
 \subsection{Hierarchy problem}
 
-Several potential problems arises from the large differences in energy scale
+Several potential problems arise from the large differences in energy scale
 between the electroweak scale ($\mathcal{O}(100)~\GeV$), where experiments are
 able to effectively probe, and the Planck scale ($\mathcal{O}(10^{18})~\GeV$),
 where the effects of gravity can no longer be ignored, and the theory is no
@@ -723,7 +730,7 @@ dependent on the cutoff scale.
 Gauge bosons are similarly protected through the local gauge symmetry.
 The Higgs boson is a scalar, and has a quadratic dependence on the cutoff
 scale.
-This tends to push the mass much higher than the weak scale.
+% This tends to push the mass much higher than the weak scale.
 
 The Higgs mass is observed to be at 125~\GeV, so if the bare mass and the
 radiative correction terms are truly at such a high scale, it would be a large
@@ -836,16 +843,15 @@ where $P^{\mu}$ is the generator of spacetime transformations.
 
 The particles are now arranged in ``supermultiplets,'' each containing a
 fermion and a boson.
-Another effect of adding the $Q$ generator is new particle content, in addition
-to the SM particles, is added to the theory.
+Another effect of adding the $Q$ generator is that new particles are added.
 Each supermultiplet contains one SM particle and one new field, and $Q$
 translates between the two fields within a particular multiplet.
 $Q$ and $Q^{\dagger}$ commute with generators of the gauge transformations,
 so the particles within a supermultiplet have the same gauge transformations.
-This implies, the supersymmetric partners undergo the same interactions as
+This implies that the supersymmetric partners undergo the same interactions as
 their SM counterparts, with the same coupling strengths.
-$Q$ and $Q^{\dagger}$ also commute with $P^2$, which implies the supersymmetric
-partners have the same mass as the SM particles.
+$Q$ and $Q^{\dagger}$ also commute with $P^{\mu}$, which implies the
+supersymmetric partners have the same mass as the SM particles.
 This is clearly not the case, as SUSY has not yet been observed at these low
 mass scales; thus, if supersymmetry is a real symmetry of nature, it must be
 a broken symmetry.
@@ -860,14 +866,12 @@ Section~\ref{sec:sm_shortcomings}.
     loop diagrams of the Higgs boson.
     These new particles provide radiative corrections to the Higgs mass which
     have opposite sign compared to the corrections from their SM counterparts.
-    These radiative corrections can provide a cutoff scale, removing the
-    quadratic dependence on the Planck scale, preventing the Higgs mass from
-    becoming too large.
+    These radiative corrections can remove the quadratic dependence on the
+    Planck scale, preventing the Higgs mass from becoming too large.
   \item[Dark matter] \hfill \\
     The SM does not include any particles with the
     properties necessary to describe the dark matter content of the universe.
-    By adding new, massive particles, SUSY can potentially offer a dark matter
-    candidate.
+    By adding new, massive particles, SUSY can offer a dark matter candidate.
     In many SUSY models, the lightest supersymmetric particle (LSP) is massive,
     stable, and has no electric charge.
     These are exactly the properties needed by a dark matter candidate!
@@ -899,9 +903,8 @@ This class of supermultiplets describes the SM fermions, along with their
 supersymmetric partner, the scalar fermion (sfermion).
 The scalar Higgs fields also form these types of supermultiplets.
 Unlike the case of fermions, however, the Higgs fields have spin-0, and their
-partners, the higgsino, are fermions, with spin-\nicefrac{1}{2}.
-It should be noted that, the left- and right-handed fermions reside in
-different multiplets.
+partners, the Higgsino, are fermions, with spin-\nicefrac{1}{2}.
+The left- and right-handed fermions reside in different multiplets.
 For this reason, the sfermions are assigned a ``handedness'' even though
 the concept of handedness is somewhat ambiguous for a scalar particle.
 In this case, it simply refers to the handedness of the fermionic partner.
@@ -916,7 +919,7 @@ Therefore, the left- and right-handed gauginos are in the same supermultiplet.
 
 As mentioned in Section~\ref{sec:susy_motivation}, no supersymmetric particles
 have been observed with the same mass as their SM counterparts; for this
-reason, if SUSY is a true symmetry of nature, it must be a broken.
+reason, if SUSY is a true symmetry of nature, it must be broken.
 In order to solve the hierarchy problem, only soft SUSY breaking is allowed,
 otherwise, quadratic divergences reappear.
 This means that the relation between dimensionless coupling constants must
@@ -931,11 +934,11 @@ This leaves only logarithmically diverging terms of the form
     + ...
   \right),
 \end{equation}
-If the masses of the supersymmetric partners become too large,
 $m_\mathrm{soft}$ is related to the masses of the supersymmetric partners, so
+if the masses of the supersymmetric partners become too large,
 the corrections to the Higgs mass become large again, reintroducing the
 hierarchy problem.
-This suggests that, at least some of the new particles must be light to avoid
+This suggests at least some of the new particles must be light to avoid
 the fine-tuning of the hierarchy problem.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -943,8 +946,8 @@ the fine-tuning of the hierarchy problem.
 \subsection{Minimal supersymmetric Standard Model}
 \label{sec:mssm}
 
-In order to construct a supersymmetric Standard Model (MSSM), the SM particles
-must be placed into the context of supersymmetric multiplets.
+In order to construct a minimal supersymmetric Standard Model (MSSM), the SM
+particles must be placed into the context of supersymmetric multiplets.
 As discussed in Section~\ref{sec:susy_formalism}, there are two types of
 supermultiplets which can be used to construct the model, chiral superfields,
 and gauge superfields.
@@ -976,7 +979,7 @@ Since the Higgs boson is a scalar, it must be placed into a chiral
 supermultiplet, with a fermion Higgsino.
 It should be noted that in the supersymmetric model, a single Higgs boson is
 not sufficient, and a second chiral Higgs supermultiplet is added.
-A second supermultiplet is necessary in a due to the basic structure of
+A second supermultiplet is necessary due to the basic structure of
 supersymmetric models and to cancel anomalies that arise due to the additional
 symmetry breaking.
 \begin{description}
@@ -992,7 +995,7 @@ symmetry breaking.
     give masses to the down-type quarks and the charged leptons
   \item[Anomaly cancellation] \hfill \\
     In general, breaking a gauge symmetry of the Lagrangian can introduce
-    anomalies, and cause the theory to be inconsistent.
+    anomalies and cause the theory to be inconsistent.
     While the SM has several broken symmetries, it remains a consistent theory
     because it satisfies the condition
     $\Tr\left[ T_3^2 Y \right] = \Tr\left[ Y^3 \right] = 0$, where the trace
@@ -1003,18 +1006,24 @@ symmetry breaking.
     Adding a second Higgsino field with the opposite hypercharge restores the
     cancellation.
 \end{description}
-The two Higgsino fields in the MSSM are named $H_\mathrm{u}$ and $H_\mathrm{d}$,
+The two Higgs superfields in the MSSM are named $H_\mathrm{u}$ and
+$H_\mathrm{d}$,
 and have $Y=+\nicefrac{1}{2}$ and $Y=-\nicefrac{1}{2}$ respectively.
 The subscript represents the types of quark which interact with the Higgsino
 field.
+The additional Higgs fields adds four more degrees of freedom to the MSSM,
+which adds four additional Higgs bosons (five in total).
 
 The full list of chiral and gauge supermultiplets contained in the MSSM are
 shown in \Cref{tab:chiral_superfields,tab:gauge_superfields}.
 It should also be noted that, just as the $W^3$ and $B$ fields of the SM mix to
-form the photon and the $Z$ boson, the corresponding gauginos mix to form the
-zino ($\tilde{Z}$) and the photino ($\tilde{\gamma}$).
+form the photon and the $Z$ boson, the
+neutral (charged) gauginos and Higgsinos mix to form the
+neutralinos (charginos).
+% corresponding gauginos mix to form the
+% zino ($\tilde{Z}$) and the photino ($\tilde{\gamma}$).
 
-\begin{table}[ht]
+\begin{table}[th]
   \caption{
     Summary of the chiral supermultiplet fields in the
     MSSM~\cite{aitchison2007supersymmetry}.
@@ -1081,7 +1090,7 @@ zino ($\tilde{Z}$) and the photino ($\tilde{\gamma}$).
   \end{center}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[th]
   \caption{
     Summary of the gauge supermultiplet fields in the
     MSSM~\cite{aitchison2007supersymmetry}.
@@ -1134,11 +1143,10 @@ The kinetic terms of a supersymmetric Lagrangian are of the form
   - \left( D_{\mu} \phi_{i} \right)^{\dagger} D^{\mu} \phi^{i},
 \end{equation}
 where $G$ and $\tilde{G}$ represent any gauge boson and gaugino in the theory
-respectively.
-$f$ is any fermion, and $\phi$ is any scaler field.
+respectively, $f$ is any fermion, and $\phi$ is any scaler field.
 
 The interaction terms are written in terms of a superpotential $\mathcal{W}$,
-and takes the form.
+and take the form.
 \begin{equation}
   \mathcal{L}_\mathrm{int} =
   - \sum_{i} \left| \frac{\partial \mathcal{W}}{\partial z_i} \right|^2
@@ -1150,7 +1158,7 @@ and takes the form.
 \end{equation}
 $z_i$ are the superfields of theory, and the theory is specified by
 $\mathcal{W}$.
-The particular form of $mathcal{W}$ that leads to the MSSM is 
+The particular form of $\mathcal{W}$ that leads to the MSSM is 
 \begin{equation}
   \mathcal{W} =
   \sum_{ij}
@@ -1161,10 +1169,10 @@ The particular form of $mathcal{W}$ that leads to the MSSM is
     + \mu H_\mathrm{u} \cdot H_\mathrm{d}
   \right),
 \end{equation}
-where $Y_{ij}$ are Yukawa couplings among generations, and superscript is a
+where $Y_{ij}$ are Yukawa couplings among generations, and the superscript is a
 label for the type of interaction rather than an index to be summed over.
-First three terms are generalizations of SM Yukawa interactions.
-Last term is globally supersymmetric mass for the Higgs fields.
+The first three terms are generalizations of SM Yukawa interactions.
+The last term is the globally supersymmetric mass for the Higgs fields.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
@@ -1173,7 +1181,7 @@ Last term is globally supersymmetric mass for the Higgs fields.
 
 The extension of the Standard Model of particle physics with supersymmetry
 immediately leads to processes that violate both baryon number ($B$) and
-lepton number ($L$).
+lepton number ($L$) conservation.
 In addition to the interaction terms given in
 Equation~\ref{eqn:mssm_lagrange_int}, the most general MSSM Lagrangian may
 contain terms such as
@@ -1206,16 +1214,16 @@ defined as
 where $s$ is the spin of the particle.
 This has a value of $+1$ for Standard Model particles and $-1$ for
 SUSY particles.
-In this case SUSY particles are produced in pairs, and the LSP is stable.
-Further, this stable LSP cannot carry electric charge or color charge without
-coming into conflict with astrophysical data.
+In this case, SUSY particles are produced in pairs, and the LSP is stable.
+Furthermore, the stable LSP cannot carry electric charge or color charge
+without coming into conflict with astrophysical data.
 A stable LSP also serves as a viable dark matter candidate.
 At the LHC, the conventional experimental signature for SUSY particles
 includes significant missing transverse momentum due to the non-interaction of
 the LSP with the detector.
 
 %% -----------------------------------------------------------------------------
-\FloatBarrier
+% \FloatBarrier
 \section{B-L extension}
 \label{sec:theory_bl_extension}
 
@@ -1233,38 +1241,17 @@ for a right-handed sneutrino in order to spontaneously break the
 $B-L$ symmetry~\cite{FileviezPerez:2008sx, Barger:2008wn, FileviezPerez:2009gr,
 Everett:2009vy, Evans:1986ada, Lukas:1998yy, Braun:2005ux, Braun:2005nv,
 Braun:2006ae, Ambroso:2009jd, Ambroso:2010pe, Ovrut:2012wg}.
-This minimal $B-L$ model violates lepton number but not baryon number, and is
-consistent with proton stability and the bounds on lepton number violation.
+This minimal $B-L$ model violates lepton number conservation, but not baryon
+number conservation, and is consistent with proton stability and the bounds on
+lepton number violation.
 The LSP can now decay via $R$-parity-violating (RPV) processes, and may now
 carry color and electric charge.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\FloatBarrier
+% \FloatBarrier
 \subsection{Phenomenology}
 
-This leads to unique signatures~\cite{FileviezPerez:2012mj, Perez:2013kla,
-Ovrut:2012wg, Ovrut:2014rba, Ovrut:2015uea} that are disallowed in conventional
-models with $R$-parity conservation.
-The case where the LSP is a scalar top (stop) is most interesting
-since, in general, the large mass of the top quark acts to make the
-lightest stop significantly lighter than the other squarks due to
-renormalization group effects~\cite{Barbieri:1987fn,deCarlos:1993yy}.
-The stop decays via an RPV interaction to a charged lepton (of any
-flavor) and a $b$-quark.
-The decay branching fractions to $e b$, $\mu b$, and $\tau b$ may be different,
-in a manner related to the neutrino mass
-hierarchy seen in Figure~\ref{fig:pheno_bounds}.
-Each point in this plot represents a simulation with a particular choice of
-model parameters, all varied within a natural range of values, shown in
-Table~\ref{tab:pheno_ranges}, and the four colors represent different choices
-for the neutrino mass hierarchy and 
-$\sin^2\theta_{23}$~\cite{Marshall:2014cwa,Marshall:2014kea}.
-There is a clear relation between the neutrino mass hierarchy and the allowed
-stop branching ratios, therefore if a stop consistent with this model is
-discovered, its properties could potentially give information about the
-structure of the neutrino sector.
-
-\begin{figure}[p]
+\begin{figure}[t]
   \centering{
     \includegraphics[width=\textwidth]{figs/theory/WithGaussian.pdf}
     \caption{
@@ -1277,7 +1264,31 @@ structure of the neutrino sector.
   }
 \end{figure}
 
-\begin{table}[ht]
+This leads to unique signatures~\cite{FileviezPerez:2012mj, Perez:2013kla,
+Ovrut:2012wg, Ovrut:2014rba, Ovrut:2015uea} that are disallowed in conventional
+models with $R$-parity conservation.
+The case where the LSP is a scalar top (stop) is most interesting.
+Since the top quark is the heaviest SM particle, the lightest stop must be
+reasonably light in order to cancel the radiative corrections to the Higgs
+mass.
+Since the other quarks are significantly lighter, the other squarks may be
+heavy without introducing too much fine tuning~\cite{Barbieri:1987fn,deCarlos:1993yy}.
+The stop decays via an RPV interaction to a charged lepton (of any
+flavor) and a $b$-quark.
+The decay branching fractions to $e b$, $\mu b$, and $\tau b$ may be different,
+in a manner related to the neutrino mass
+hierarchy seen in Figure~\ref{fig:pheno_bounds}.
+Each point in this plot represents a simulation with a particular choice of
+model parameters, all varied within a natural range of values, shown in
+Table~\ref{tab:pheno_ranges}, and the four colors represent different choices
+for the neutrino mass hierarchy and 
+$\sin^2\theta_{23}$~\cite{Marshall:2014cwa,Marshall:2014kea}.
+There is a clear relation between the neutrino mass hierarchy and the allowed
+stop branching ratios.
+If a stop consistent with this model is discovered, its properties could
+potentially give information about the structure of the neutrino sector.
+
+\begin{table}[th]
   \caption[
     Ranges for the parameter scan used to generate the simulated models
     shown in
@@ -1285,7 +1296,7 @@ structure of the neutrino sector.
   ]{
     Ranges for the parameter scan used to generate the simulated models
     shown in \Cref{fig:stop_vs_mixing_angle,fig:pheno_bounds}.
-    The neutrino sector constrains all but one one of the R-parity violating
+    The neutrino sector constrains all but one of the R-parity violating
     parameters, which is chosen to be $\epsilon_i$ where the generational
     index, $i$, is also scanned to avoid any biases.
     ``NH'' and ``IH'' represent the normal and inverted neutrino mass hierarchy
@@ -1297,18 +1308,18 @@ structure of the neutrino sector.
       \toprule
       Parameter & Range \\
       \midrule
-      $M_3~[\TeV]$               & $1.5 - 10$    \\[1ex]
-      $M_{Z_\mathrm{R}}~[\TeV]$  & $2.5 - 10$    \\[1ex]
-      $\tan\beta$                & $2 - 55$      \\[1ex]
-      $\mu~[\GeV]$               & $150 - 1000$  \\[1ex]
-      $m_{\stop_1}~[\GeV]$       & $400 - 1000$  \\[1ex]
-      $\theta_t~[^\circ]$        & $0 - 90$      \\[1ex]
-      $|\epsilon_i|~[\GeV]$      & $10^{-4} - 1$ \\[1ex]
-      $\arg(\epsilon_i)$         & $0 - 360$     \\[1ex]
-      $i$                        & $1 - 3$       \\[1ex]
-      $\xi_0, \xi_3$             & $-1, 1$       \\[1ex]
-      $\delta,\alpha~[^{\circ}]$ & $0 - 360$     \\[1ex]
-      Neutrino Hierarchy         & NH, IH        \\
+      $M_3~[\TeV]$                          & $1.5 - 10$    \\[1ex]
+      $M_{Z_\mathrm{R}}~[\TeV]$             & $2.5 - 10$    \\[1ex]
+      $\tan\beta$                           & $2 - 55$      \\[1ex]
+      $\mu~[\GeV]$                          & $150 - 1000$  \\[1ex]
+      $m_{\stop_1}~[\GeV]$                  & $400 - 1000$  \\[1ex]
+      $\theta_t~[^\circ]$                   & $0 - 90$      \\[1ex]
+      $|\epsilon_i|~[\GeV]$                 & $10^{-4} - 1$ \\[1ex]
+      $\arg(\epsilon_i)~[^{\circ}]$ & $0 - 360$     \\[1ex]
+      $i$                                   & $1 - 3$       \\[1ex]
+      $\xi_0, \xi_3$                        & $-1, 1$       \\[1ex]
+      $\delta,\alpha~[^{\circ}]$            & $0 - 360$     \\[1ex]
+      Neutrino Hierarchy                    & NH, IH        \\
       \bottomrule
     \end{tabular}
   }
@@ -1317,19 +1328,14 @@ structure of the neutrino sector.
 Within this model, a stop LSP can decay in one of two ways, depending on
 the handedness of the stop.
 A right-handed stop decays to a top quark and a right-handed neutrino with a
-coupling strength proportional to vacuum expectation value (VEV) of the
-left-handed neutrino mass.
+coupling strength proportional to vacuum expectation value (vev) of the
+left-handed sneutrino mass.
 This must be small because the left-handed sneutrino interacts with the
-$W$ and $Z$ bosons, and a large VEV would result in these bosons gaining
+$W$ and $Z$ bosons, and a large vev would result in these bosons gaining
 additional mass.
-% {\color{red} (TODO check this statement is true - I think I'm missing
-% something).}
 A purely left-handed stop decays to a $b$-quark and a lepton with the coupling
-strength proportional to the VEV of the right-handed sneutrino, which may be
-large, as the right-handed sneutrino does not couple to the electroweak bosons,
-a large VEV does not break electroweak symmetry.
-% {\color{red} (TODO check this statement is true - I think I'm missing
-% something)}.
+strength proportional to the vev of the right-handed sneutrino, which may be
+large, as the right-handed sneutrino does not couple to the electroweak bosons.
 In the scenario where the stop LSP is an admixture of left- and right-handed
 stops, the preferred decay mode depends on the stop mixing angle ($\theta_t$).
 This dependence is plotted in Figure~\ref{fig:stop_br_vs_mixing_angle}, which
@@ -1339,26 +1345,28 @@ versus $\theta_t$.
 Each point represents a simulation with a particular choice of model parameters,
 again scanning over the natural values in Table~\ref{tab:pheno_ranges}.
 The $\stop \to b\ell$ decay is the dominant decay mode for mixing angles less
-than abut $80^{\circ}$, where the LSP stop is mostly right handed, and the
-$\stop \to t\nu$ decay becomes significance.
+than about $80^{\circ}$, where the LSP stop is mostly right handed, and the
+$\stop \to t\nu$ decay becomes significant.
 The $\stop \to b\ell$ decay is still non-negligible for a mostly right-handed
 stop in many of the simulated models,
 however~\cite{Marshall:2014cwa,Marshall:2014kea}.
 
-\begin{figure}[ht]
+\begin{figure}[p]
   \centering{
     \subbottom[Stop branching ratio]{
-      % \includegraphics[width=0.70\textwidth]{figs/theory/StopBranchingRatiosVsMixingAngle.pdf}
-      \includegraphics[width=\textwidth]{figs/theory/StopBranchingRatiosVsMixingAngle.pdf}
+      \includegraphics[width=\textwidth]
+      {figs/theory/StopBranchingRatiosVsMixingAngle.pdf}
       \label{fig:stop_br_vs_mixing_angle}
     }
     \subbottom[Stop decay length]{
-      % \includegraphics[width=0.70\textwidth]{figs/theory/DecayLength.pdf}
       \includegraphics[width=\textwidth]{figs/theory/DecayLength.pdf}
       \label{fig:stop_decay_length_vs_mixing_angle}
     }
     \caption{
-      The stop decay length and branching ratio versus
+      The stop decay 
+      branching ratio (a)
+      and stop decay length (b)
+      versus
       the stop mixing angle, assuming the stop is the LSP.
       Each point represents a simulation with a particular
       choice of model parameters, which are sampled from a range of natural
@@ -1378,18 +1386,25 @@ be reinterpreted for this model.
 
 It is also reasonable to assume the stop decays in this model are prompt, and
 decay with a negligible impact parameter, as shown in
-Figure~\ref{fig:stop_decay_length_vs_mixing_angle}, where for most natural
+Figure~\ref{fig:stop_decay_length_vs_mixing_angle}.
+For most natural
 models, the stop is expected to have a decay length of less than
 $10^{-3}~\mathrm{mm}$;
 in particular, this is true for models where the stop is not mostly
-right-handed ($\theta_t \leq 80$)~\cite{Marshall:2014cwa,Marshall:2014kea}.
-Therefore, long-lived particles are not considered in this analysis.
+right-handed
+($\theta_t \leq 80^{\circ]}$)~\cite{Marshall:2014cwa,Marshall:2014kea}.
+% Therefore, long-lived particles are not considered in this analysis.
 
-In this $B-L$ extension to the MSSM, stop pair production has the same
-production cross section as in the traditional MSSM.
-The expected production cross section are shown in Figure~\ref{fig:stop_xsec}.
+In this $B-L$ extension to the MSSM, the $R$-Parity conserving terms are the
+same as the traditional MSSM model, and have larger coupling strength than
+the $R$-Parity violating terms.
+Therefore, stop pair production has the same production cross section as in the
+traditional MSSM.
+The expected production cross sections are shown in Figure~\ref{fig:stop_xsec}.
+If the stop is assumed to be the LSP, it must decay via an $R$-Parity
+violating interaction.
 
-\begin{figure}[ht]
+\begin{figure}[th]
   \centering{
     \includegraphics[width=\textwidth]{figs/theory/xsec.pdf}
   }
@@ -1431,7 +1446,7 @@ state provides additional sensitivity to this model, as well as other models
 which result in final states with $b$-quarks and light leptons in the final
 state.
 
-\begin{figure}[p]
+\begin{figure}[bh]
   \centering{
     \includegraphics[width=\textwidth]
     {figs/theory/BoundContourPlotNoCombination.pdf}

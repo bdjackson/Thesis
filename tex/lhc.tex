@@ -27,7 +27,7 @@ Figure~\ref{fig:lhc_aerial}.
 The LHC is operated by the European Organization for Nuclear Research
 (CERN\footnote{Conseil Europ\'een pour la Recherche Nucl\'eaire}).
 The LHC became fully operational in 2010, providing proton-proton collisions
-to the experiments along the ring at an unprecedented center-of-mass energy
+to the experiments along the ring at an record high center-of-mass energy
 of 7~\TeV.
 In 2012, the energy was increased to 8~\TeV.
 
@@ -48,11 +48,11 @@ The experiments include \atlas~\cite{cern-jinst-atlas},
 \cms~\cite{cern-jinst-cms}, \alice~\cite{cern-jinst-alice}, and
 \lhcb~\cite{cern-jinst-lhcb}.
 \atlas\ and \cms\ are designed to be ``general purpose experiments,'' searching
-for physics beyond the Standard Model which may present itself in may ways.
+for physics beyond the Standard Model which may present itself in many ways.
 The two experiments complement each other by providing independent results,
 which can be verified against the each other.
-\alice\ is designed to study the heavy ion (lead nuclei) collisions, studying
-the properties of quark-gluon plasma.
+\alice\ is designed to study the heavy ion (lead nuclei) collisions, 
+including the properties of a quark-gluon plasma.
 The \lhcb\ experiment is primarily interested in studying the physics of
 $b$-hadrons.
 
@@ -102,19 +102,25 @@ The instantaneous luminosity of collisions in these bunch crossings is given by
   {4\pi \sigma_{x} \sigma_{y}}
   F,
 \end{equation}
-where $N_{1,2}$ are the number of protons per bunch, $n_b$ is the number of
-bunches, $f_\mathrm{rev}$ is the frequency at which the protons are revolution
-frequency, $\sigma_{x,y}$ is the width of the beam in the transverse directions,
+where $N_{1,2}$ are the number of protons per bunch (about $10^{11}$),
+$n_b$ is the number of bunches (up to 2808, though only 1404 for
+50~ns operation), $f_\mathrm{rev}$ is the revolution frequency of each
+bunch (about 11,245~Hz),
+$\sigma_{x,y}$ is the width of the beam (about 20~\um\ after being brought
+into focus by strong quadrapole magnets near the collision point),
 and $F$ is a reduction factor, accounting for the fact that the beams cross
 at an angle, rather than head-on.
 The proton beams tend to spread over time out as they circulate and undergo
 collisions, increasing $\sigma_{x,y}$, and reducing the instantaneous
 luminosity.
-Typically, once the LHC is filled with proton beams, and accelerated to their
-full energy, the beams are circulated for several hours before they are dumped,
-and the accelerator is filled again.
+Typically, the LHC is filled with proton beams at an injection energy of
+450~\GeV, then the proton beams are accelerated to the full energy of
+4~\TeV\ per beam in 2012, then the two counter-rotating proton beams are
+brought into collision for a period of several hours for stable data-taking by
+the experiments, and then finally the beams are dumped when the instantaneous
+luminosity has fallen below some threshold.
 
-\begin{figure}
+\begin{figure}[th]
   \centering
   \includegraphics[width=0.9\textwidth]{figs/lhc/lumivstime.eps}
   \caption{
@@ -124,7 +130,7 @@ and the accelerator is filled again.
   \label{fig:inst_lumi_vs_time}
 \end{figure}
 
-Figure~\ref{fig:inst_lumi_vs_time} shows the instantaneous luminosity of
+Figure~\ref{fig:inst_lumi_vs_time} shows that the instantaneous luminosity of
 proton-proton collisions provided to ATLAS by the LHC increased throughout the
 running period as the machine was thoroughly tested and better understood.
 This is accomplished by adding more protons, and squeezing the beams into
@@ -133,7 +139,7 @@ The higher instantaneous luminosity allowed for faster data collection in later
 running periods, but came at the cost of a larger number of interactions per
 crossing, seen in Figure~\ref{fig:int_lumi_vs_time_and_pileup}.
 
-\begin{figure}
+\begin{figure}[th]
   \centering
   \includegraphics[width=0.48\textwidth]{figs/lhc/intlumivsyear.eps}
   \includegraphics[width=0.48\textwidth]{figs/lhc/mu_2011_2012-dec.eps}
@@ -148,7 +154,7 @@ crossing, seen in Figure~\ref{fig:int_lumi_vs_time_and_pileup}.
 
 
 %% ------------------------------------------------------------------------------
-\FloatBarrier
+% \FloatBarrier
 \section{The \atlas\ experiment}
 
 \begin{figure}[ht]
@@ -177,11 +183,11 @@ detector~(Section~\ref{sec:id}), used to measure the trajectory of charged
 particles, the calorimetry system~(Section~\ref{sec:calo}), which records the
 energy deposition of particles, and a muon spectrometer~(Section~\ref{sec:ms})
 which is used to identify and track muons.
-These systems and their components are described in more detain in the coming
+These systems and their components are described in more detail in the coming
 sections.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\FloatBarrier
+% \FloatBarrier
 \subsection{Coordinate system} 
 \label{sec:coordinate_system}
 
@@ -195,8 +201,8 @@ polar $\theta$ angle as
 \begin{equation}
   \eta = -\ln\left[\tan(\frac{\theta}{2})\right].
 \end{equation}
-$\eta$ is preferred over $\theta$ because particle production is roughly
-constant in $\eta$.
+where $\eta$ is preferred over $\theta$ because particle production is roughly
+constant in $\eta$ at a hadron collider.
 The distance parameter (in $\eta$-$\phi$ space)
 \begin{equation}
   \Delta R = \sqrt{(\Delta \eta)^2 + (\Delta \phi)^2}
@@ -204,7 +210,7 @@ The distance parameter (in $\eta$-$\phi$ space)
 is used when measuring the distance between signatures in the detector.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\FloatBarrier
+% \FloatBarrier
 \subsection{Inner detector} 
 \label{sec:id}
 
@@ -229,15 +235,14 @@ is used when measuring the distance between signatures in the detector.
 The inner detector (ID) comprises the three innermost sub-detectors of ATLAS,
 the pixel detector, silicon semiconductor tracker (SCT), and the transition
 radiation tracker (TRT), shown in Figure~\ref{fig:id_cartoon}.
-All three sub-detectors of the ID work together to reconstruct the trajectory
-of charged particles from collision events.
-The pixel and SCT detectors use silicon technologies, while he TRT employs
-straws filled with a Xenon gas mixture.
+The passage of high energy charged particles is detected from the electron-hole
+pairs produced in the silicon semiconductor sensors of the pixel and SCT, and
+from the ionization production in the gas-filled straws of the TRT
 The three sub-detectors are described in \Cref{sec:pixel,sec:sct,sec:trt},
 and tracking is reviewed in Section~\ref{sec:tracking}.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\FloatBarrier
+% \FloatBarrier
 \subsubsection{Pixel detector} 
 \label{sec:pixel}
 
@@ -250,14 +255,6 @@ and tracking is reviewed in Section~\ref{sec:tracking}.
   }
   \label{fig:pixel_cartoon}
 \end{figure}
-
-% \begin{figure}[ht]
-%   \centering{
-%     \includegraphics[width=0.8\textwidth]{figs/lhc/pixel_module.jpg}
-%   }
-%   \caption{{\color{red}TODO}~\cite{Wermes:43561}.}
-%   \label{fig:pixel_module}
-% \end{figure}
 
 The pixel detector, shown in Figure~\ref{fig:pixel_cartoon}, is the closest
 sub-detector in \atlas\ to the interaction point.
@@ -286,14 +283,6 @@ $z$~\cite{1748-0221-3-07-P07007}.
   }
   \label{fig:sct_photo}
 \end{figure}
-
-% \begin{figure}[ht]
-%   \centering{
-%     \includegraphics[width=0.8\textwidth]{figs/lhc/sct_close_up.jpg}
-%   }
-%   \caption{{\color{red}TODO}~\cite{Maximilien:43814}.}
-%   \label{fig:sct_close_up}
-% \end{figure}
 
 The SCT, shown in Figure~\ref{fig:sct_photo}, is also made of silicon
 detectors, but rather than pixels, the SCT uses microstrip technology.
@@ -324,19 +313,18 @@ There are 6.3 million read-out channels in the SCT.
 The TRT, shown during the commissioning process in Figure~\ref{fig:trt_module}
 makes up the largest and outer layer of the ID, and is used for both tracking
 and particle identification.
-The TRT covers provides coverage up to $|\eta| - 2.0$.
+The TRT covers up to $|\eta| = 2.0$.
 The TRT employs 350,000 straws filled with a gas mixture made up of
 Xe~(70\%), $\text{CO}_2$~(27\%), and $\text{O}_2$~(3\%).
-Each straw of the TRT has a 4~mm diameter, and is strung with a gold plated
-tungsten alloy wire.
-The outer wall of the straws is at a high electric potential, inducing a large
-electric field inside the straw.
-Charged particles pass through the straw, ionizing the electric field,
-resulting is a charge deposition on the wire, and a measurable current.
+Each straw of the TRT is 4~mm in diameter and has at its center a
+30~\um\ diameter gold-plated tungsten wire at ground potential.
+The outer wall of the straw is a cathode at $-1530~\mathrm{V}$, leading to
+an electric field that separates the ionized electrons and ions, and a large
+gas gain of $2.5 \times 10^{4}$ in the high field region close to the wire.
 
 The TRT has a less precise resolution than the silicon trackers, but a charged
-particle track may have more than 30 TRT hits, which can be combined to make
-up for for some of the difference in precision.
+particle track may have more than 30 TRT hits and a large lever arm out
+to 1.1~m from the beamline
 The TRT barrel has a precision of 130~\um\  in the $r-\phi$ plane, but much
 worse resolution $z$ since there is little segmentation in this dimension.
 
@@ -383,17 +371,28 @@ The magnetic field is pointing along the direction of the beam, so charged
 particles coming from the interaction point will form a helix, with radius
 of curvature determined by the transverse momentum (\pt).
 Particles with low \pt\ will bend more than those with higher \pt.
-The \pt\ of charged particle tracks is determined based on the measured radius
-of curvature.
+As the particle \pt\ increases, the track becomes closer to a straight line.
+The \pt\ of charged particle tracks is related to the radius of curvature by
 \begin{equation}
-  \pt = q \cdot B \cdot r_\mathrm{curvature}
+  \pt = q \cdot B \cdot r.
 \end{equation}
-It should be noted that the charge is not directly measured, but the sign of
-the charge is determined based on the direction the particle is bent.
-The momentum resolution of the tracking is limited by the position resolution.
-As the tracks become more straight, the precision of curvature becomes worse,
-resulting in worse momentum resolution for these high-\pt\ tracks.
-The relative momentum resolution is proportional to the \pt\ of the that track.
+It should be noted that we actually measure the sagitta of the arc (which is
+the amount the measured arc bows from a cord) for the hits on a particle's
+trajectory.
+The sagitta is inversely proportional to the radius of
+curvature ($s=\frac{L^2}{8r}$ where L is the length of the cord, or lever-arm)
+and $s$ is the sagitta).
+Thus the uncertainty on the \pt\ is proportional to the square of the \pt.
+This is usually written as the relative momentum resolution being proportional
+to the \pt\ of the particle ($\frac{\Delta \pt}{\pt} \propto \pt$).
+The uncertainty on the sagitta decreases with better position resolution for
+each hit, higher number of hits, stronger magnetic field and larger radius for
+tracking.
+Although the position resolution of the TRT is worse per hit than for the
+silicon detectors, the TRT does provide a large number of hits (about 30) per
+track and doubles the active tracking radius.
+The TRT is in fact critical to obtaining the best possible momentum resolution
+at high~\pt.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
@@ -418,14 +417,14 @@ The relative momentum resolution is proportional to the \pt\ of the that track.
 
 The calorimetry system, situated outside the ID and the solenoid, is shown
 in Figure~\ref{fig:calo_cartoon}.
-The calorimetry systems of \atlas\ are designed to compliment one another and
+The calorimetry systems of \atlas\ are designed to complement one another and
 offer full coverage in the $\phi$, and pseudorapidity coverage up to
 $|\eta| = 4.9$.
 The objective of the calorimeters is to stop particles like electrons, photons,
 and hadrons and measure their energy.
 \atlas\ uses ``sampling calorimeters,'' which absorb a fraction of the total
 energy, and must infer the full shower energy.
-This is achieved using a dense absorber material to initial a shower, and
+This is achieved using a dense absorber material to initiate a shower, and
 an active material to sample the energy deposition.
 
 The calorimetry system is broken up into three sub-systems, the electromagnetic
@@ -433,16 +432,26 @@ calorimeter (EM calorimeter), the hadronic calorimeter, and the forward
 calorimeter (FCal).
 Each of the sub-systems employ different absorber and active materials.
 
-Unlike tracking systems, like the ID, the energy resolution from a calorimeter
-actually improves with higher energy deposition.
+A calorimeter samples the scintillation light or ionization from the charged
+particles in the shower, and the number of charged particles in the shower
+increases with energy.
+Thus the relative energy resolution of the calorimeter is inversely proportional
+to the square root of the incident particle's energy
+($\frac{\Delta E}{E} \propto \frac{1}{\sqrt{E}}$).
+It is important to note that the energy resolution of calorimeters improves
+with increasing energy, while the momentum resolution of tracking detectors
+worsens with increasing \pt.
+Thus the relative energy resolution of electrons and jets will improve with
+increasing energy, while the relative momentum resolution of muons will worsen
+with increasing \pt.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsubsection{Electromagnetic calorimeter} 
 \label{sec:ecal}
 
-The EM calorimeter is used to stop and measure the energy of electrons and
-photons.
+The EM calorimeter is used to stop and measure the energy of electrons,
+positrons, and photons.
 It is broken into a barrel component, covering $|\eta| < 1.5$, and two endcaps,
 covering $1.4 < |\eta| < 3.2$.
 Lead plates are used as an absorber material, and the active material is
@@ -457,7 +466,7 @@ granularity.
 The first layer has the finest granularity, being arranged in strip-shaped
 cells with $\Delta\eta \times \Delta\phi = 0.025/8 \times 0.1$.
 This level of granularity provides good position resolution, which is useful
-in particle identification.
+in particle identification to discriminate between photons and neutral pions.
 The second layer is arranged in square cells, measuring
 $\Delta\eta \times \Delta\phi = 0.025 \times 0.025$.
 Layer 2 is the thickest layer, with 16 radiation lengths.
@@ -477,9 +486,9 @@ absorbers and scintillating tiles as an active material.
 The endcaps use copper plates as an absorber material, and LAr for the active
 material.
 The hadronic calorimeter endcaps span $1.5 < |\eta| < 3.2$.
-Since the hadronic calorimeter is not used in particle identification, it is
-much coarser than the EM calorimeter, with granularity
-$\Delta\eta \times \Delta\phi = 0.1 \times 0.1$.
+% Since the hadronic calorimeter is not used in particle identification, it is
+% much coarser than the EM calorimeter, with granularity
+% $\Delta\eta \times \Delta\phi = 0.1 \times 0.1$.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
@@ -491,7 +500,7 @@ The FCal captures energy from particles in the very forward region
 It is made up of three layers in each endcap, each using LAr as the active
 material.
 The first layer uses coper absorber, while the second and third layers utilize
-as an tungsten absorption material.
+a tungsten absorption material.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
@@ -509,11 +518,15 @@ as an tungsten absorption material.
   \label{fig:ms_cartoon}
 \end{figure}
 
-The muon spectrometer (MS) comprise the four sub-detectors of the
+The muon spectrometer (MS) comprises the four sub-detectors of the
 \atlas\ experiment furthest from the interaction point, and is shown in
 Figure~\ref{fig:ms_cartoon}.
-Muons are minimum ionizing particle, and if they have sufficient energy, are
-able to pass through the calorimetry system unstopped.
+% Muons are minimum ionizing particle, and if they have sufficient energy, are
+% able to pass through the calorimetry system unstopped.
+Unlike electrons, muons are too massive to lose energy by radiation in the
+calorimeters.
+Muons only lose a very small amount of energy by ionization in the calorimeters
+and escape the calorimeters into the muon spectrometer.
 The MS has coverage up to $|\eta| = 2.7$, and is designed to make precision
 tracking measurements of the muon trajectory and momentum.
 A strong magnetic field is generated by eight large toroidal magnets in the
@@ -553,15 +566,15 @@ The four sub-detectors of the MS are
 
 In 2012, the LHC delivered proton collisions every 50~ns, corresponding to
 20~MHz.
-Not only are most of these collisions uninteresting, \atlas\ does not have
-the bandwidth or computing resources to read out every event, and reconstruct
-them for offline use.
-The trigger system uses a three step process to select only potentially
-interesting events to reduce the data rate to something manageable.
+Not only are most of these collisions already well-understood, \atlas\ does not
+have the bandwidth or computing resources to read out every event, and
+reconstruct them for offline use.
+The trigger system uses a three step process to select only the rare
+potentially interesting events to reduce the data rate to something manageable.
 
 The \atlas\ trigger system includes a level 1 (L1) trigger, implemented in
 hardware, which is required to be fast.
-Only information from the calorimetry system and the MC is used in the L1
+Only information from the calorimetry system and the MS is used in the L1
 trigger since tracking takes too long to process.
 The second (level 2) and third (event filter) stages are referred to,
 collectively, as the high level trigger (HLT), and are implemented in computer
@@ -571,7 +584,7 @@ more time than L1.
 The level 2 stage includes the information in a region of interest (ROI)
 produced by the L1 trigger, and the event filter is able to use the full
 detector information, and run full event reconstruction.
-The specifications of each trigger level is given in
+The specifications of each trigger level are given in
 Table~\ref{tab:trigger_specs}.
 
 \begin{table}[ht]
@@ -612,8 +625,8 @@ Table~\ref{tab:trigger_specs}.
 Particles created during collision events, and their decay products leave
 signatures in the various sub-detectors of \atlas.
 In order to perform a physics analysis, these detector signatures are identified
-translated into reconstructed objects with calibrated trajectory and
-momentum (energy) measurements.
+translated into reconstructed objects with calibrated momentum and energy
+measurements.
 Figure~\ref{fig:particle_signatures} shows a simplified diagram of the
 detector signatures left by various classes of particles.
 
@@ -623,14 +636,14 @@ jets~(Section~\ref{sec:jets}), and missing transverse
 momentum~(Section~\ref{sec:met}).
 Flavor tagging~(Section~\ref{sec:flavor_tagging}) is also used to identify the
 jets originating from the decay of $B$-hadrons.
-Each of these signatures are described in more detail in the upcoming sections.
+These signatures are described in more detail in the upcoming sections.
 
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsection{Electrons} 
 \label{sec:electrons}
 
-Electron pass through the inner detector, leaving behind hits, and deposit a
+Electrons pass through the inner detector, leaving behind hits, and deposit a
 shower of energy in the EM calorimeter.
 The hits are combined to form a track, as described in
 Section~\ref{sec:tracking}, which points toward the EM shower.
@@ -650,11 +663,11 @@ placed on the fraction of TRT hits exceeding this high-threshold.
 \subsection{Muons} 
 \label{sec:muons}
 
-Muons are minimum ionizing particles, so are able to reach the outermost
+Muons are the only charged particle able to reach the outermost
 detectors of \atlas\ (the MS) while deposit little energy in the calorimetry
 system.
 A muon is identified as a track in the ID, and a track in the MS, which are
-consistent with one another in both trajectory, and the momentum.
+consistent with one another.
 Quality criteria are placed on both the ID and MS track segments.
 The analysis described in this thesis uses the \textit{Staco Combined}
 algorithm, which takes the two track segments as inputs, and performs
@@ -699,11 +712,16 @@ $|\eta| < 2.4$.
 \label{sec:flavor_tagging}
 
 Jets originating from $B$-hadrons can be distinguished from those originating
-from light quarks and gluons due to a significant lifetime of $B$-hadrons.
+from light quarks and gluons due to the relatively long lifetime
+of around 1.5~ps.
+For example, a $B$-hadron with mass 5~\GeV\ and energy of 100~\GeV\ would have
+a time dilation gamma factor ($\nicefrac{E}{m}$) of about 20, so it would
+travel about 9~mm before decaying into several particles.
 The identification of $b$-jets uses the MV1 flavor tagging
 algorithm~\cite{ATLAS-CONF-2014-004, ATLAS-CONF-2014-046}, which is
 based on an artificial neural network algorithm that exploits the impact
-parameters of charged particle tracks, the parameters of reconstructed
+parameters of charged particle tracks from the decay products of the
+$B$-hadrons, the parameters of reconstructed
 secondary vertices, and the topology of $b$- and $c$-hadron decays inside a
 jet.
 The operating point corresponds to an overall 80\% $b$-tagging efficiency, as
@@ -725,3 +743,10 @@ reconstructed calibrated physics objects and ``soft terms,'' consisting of
 calorimeter energy clusters not associated with reconstructed objects.
 This is denoted as missing transverse momentum, and the symbol
 $\met$ is used for its magnitude~\cite{ATLAS-CONF-2013-082}.
+
+Conservation of momentum before and after the collision can be used to infer
+the momentum of the missing particles.
+This works well in the transverse plane to the beam, where the initial
+transverse momentum of the beams is zero, but not along the beamline since the
+fraction of momentum carried by the colliding constituents of the proton is
+unknown.

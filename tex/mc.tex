@@ -37,6 +37,26 @@
 \section{Event Generation}
 \label{sec:event_gen}
 
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth, clip=true, trim=0 0 0 0]
+  {figs/mc_gen/full_mc_event.png}
+  \caption[
+    Pictorial representation of a $t\bar{t}H$ event as produced by an event
+    generator~\cite{Gleisberg:2008ta}.
+  ]{
+    Pictorial representation of a $t\bar{t}H$ event as produced by an event
+    generator.
+    The hard interaction (big red blob) is followed by the decay of both top
+    quarks and the Higgs boson (small red blobs).
+    Additional hard QCD radiation is produced (red) and a secondary
+    interaction takes place (purple blob) before the final-state partons
+    hadronize (light green blobs) and hadrons decay (dark green blobs).
+    Photon radiation occurs at any stage (yellow)~\cite{Gleisberg:2008ta}.
+  }
+  \label{fig:mc_event}
+\end{figure}
+
 Before discussing the details of event generation, it is useful to first
 introduce the concept of an ``event.''
 At the LHC, beams of protons are accelerated in opposite directions, and
@@ -62,12 +82,6 @@ potential double counting of certain event types.
 The double counting is eliminated using a ``jet matching'' algorithm described
 in Section~\ref{sec:jet_matching}.
 
-% Looking closely at the interactions taking place, one notices that,
-% rather than the full protons interacting with each other, the interactions
-% take place between the constituent quarks and gluons within the two protons.
-% In some cases, there is a ``hard interaction,'' or an inelastic scattering
-% where additional particles are created.
-
 There are also soft interactions between the remaining remnants of the proton
 after the hard interaction in a process called the ``underlying event.''
 The underlying event produces charged particles and jets in the detector, in
@@ -79,31 +93,8 @@ As with the underlying event, pileup events produce additional charged
 particles and jets that leave a signature in the detector.
 
 
-% For comparison, Figure~\ref{fig:data_event} shows a $t\bar{t}H$
-% candidate event as reconstructed in the \atlas\ detector.
-
-\begin{figure}[p]
-  \centering
-  \includegraphics[width=\textwidth, clip=true, trim=0 0 0 0]
-  {figs/mc_gen/full_mc_event.png}
-  \caption[
-    Pictorial representation of a $t\bar{t}H$ event as produced by an event
-    generator~\cite{Gleisberg:2008ta}.
-  ]{
-    Pictorial representation of a $t\bar{t}H$ event as produced by an event
-    generator.
-    The hard interaction (big red blob) is followed by the decay of both top
-    quarks and the Higgs boson (small red blobs).
-    Additional hard QCD radiation is produced (red) and a secondary
-    interaction takes place (purple blob) before the final-state partons
-    hadronize (light green blobs) and hadrons decay (dark green blobs).
-    Photon radiation occurs at any stage (yellow)~\cite{Gleisberg:2008ta}.
-  }
-  \label{fig:mc_event}
-\end{figure}
-
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\FloatBarrier
+% \FloatBarrier
 \subsection{Parton distribution function}
 \label{sec:pdf}
 

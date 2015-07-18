@@ -37,15 +37,6 @@
   fractions in Chapter~\ref{ch:results}.
 \end{quote}
 
-% \begin{figure}[ht]
-%   \centering
-%   \includegraphics[width=0.60\textwidth]{figs/blstop/b_minus_l_stop_stop.pdf}
-%   \caption{Simplified model of pair production of stop quarks, with decay to a
-%     charged lepton and $b$-quark.
-%   }
-%   \label{fig:blstop_diagram}
-% \end{figure}
-
 %% -----------------------------------------------------------------------------
 \FloatBarrier
 \section{Signal model simulation}
@@ -129,9 +120,9 @@ the search sensitivity, and it is not included in the simulated samples.
 
 Events are required to have at least two light leptons (electrons or muons)
 with opposite charge, and two $b$-tagged jets.
-The object selection is performed in multiple steps. First, lepton and jet
-objects are reconstructed using detector signatures as described in
-\Cref{sec:elctrons,sec:muons,sec:jets}.
+The object selection is performed in multiple steps.
+First, lepton and jet objects are reconstructed using detector signatures
+as described in \Cref{sec:electrons,sec:muons,sec:jets}.
 Baseline requirements are applied to remove poorly reconstructed objects.
 All baseline objects are required to have $\ET(\pt) \geq 40 \GeV$ since the
 stop signatures of interest are of high mass and produce high momentum decay
@@ -295,7 +286,7 @@ The lepton identification scale factors and are computed for each of the two
 signal leptons in a MC simulated event, and depend on both the
 \pt\ and \eta\ of the leptons.
 The product of the scale factors is taken as an event weight, ranging from
-{\color{red} TODO find the range of lepton SF event weights}.
+0.85 to 1.05.
 
 Data and MC simulation also have different efficiencies for tagging a $b$-jet
 and for misidentifying jets originating from the fragmentation of light-flavor
@@ -557,7 +548,24 @@ Table~\ref{tab:trigger_defs}.
   }
 \end{table}
 
-\begin{table}[ht]
+At least one of the reconstructed leptons is required to be within 
+$\Delta R \leq 0.15$ of the detector signature found by the trigger.
+A reconstructed lepton must be matched to a trigger object of the correct flavor.
+For example, a reconstructed electron which is very close to a muon trigger
+object is not considered matched for these purposes.
+The expected trigger efficiencies for simulated stop events are shown
+for each trigger individually in Figure~\ref{fig:single_trigger_efficiency}.
+The two muon triggers have roughly the same trigger efficiency, of about 93\% 
+for $\mu\mu$ events and 75\% for $e\mu$ events, for all stop masses.
+The two electron triggers, however, have dramatically different shapes.
+The \texttt{EF\_e24vhi\_medium1} trigger is highly efficient for $ee$ and
+$e\mu$ events only at low stop mass values.
+The \texttt{EF\_e60\_medium1} trigger only reaches 95\% efficiency for
+$ee$ and $e\mu$ events from stops with $m_{\tilde{t}} > 200 \GeV$.
+Due to the trigger requirement, and the overlap removal procedure,
+$ee$~($\mu\mu$) events do not pass the single muon (electron) triggers.
+
+\begin{table}[bh]
   \caption{
     Requirements for the triggers used in this analysis.
   }
@@ -580,23 +588,6 @@ Table~\ref{tab:trigger_defs}.
     \end{tabular}
   }
 \end{table}
-
-At least one of the reconstructed leptons is required to be within 
-$\Delta R \leq 0.15$ of the detector signature found by the trigger.
-A reconstructed lepton must be matched to a trigger object of the correct flavor.
-For example, a reconstructed electron which is very close to a muon trigger
-object is not considered matched for these purposes.
-The expected trigger efficiencies for simulated stop events are shown
-for each trigger individually in Figure~\ref{fig:single_trigger_efficiency}.
-The two muon triggers have roughly the same trigger efficiency, of about 93\% 
-for $\mu\mu$ events and 75\% for $e\mu$ events, for all stop masses.
-The two electron triggers, however, have dramatically different shapes.
-The \texttt{EF\_e24vhi\_medium1} trigger is highly efficient for $ee$ and
-$e\mu$ events only at low stop mass values.
-The \texttt{EF\_e60\_medium1} trigger only reaches 95\% efficiency for
-$ee$ and $e\mu$ events from stops with $m_{\tilde{t}} > 200 \GeV$.
-Due to the trigger requirement, and the overlap removal procedure,
-$ee$~($\mu\mu$) events do not pass the single muon (electron) triggers.
 
 The dependence on the stop mass is a result of the \ET\ dependence of the
 electron triggers.
@@ -665,7 +656,7 @@ and does not depend on the stop mass; between 93\% and 98\% of simulated
 signal events pass the trigger selection depending on the flavor channel as
 shown in Figure~\ref{fig:full_trigger_efficiency}.
 
-\begin{figure}[ht]
+\begin{figure}[bh]
   \centering
   \includegraphics[width=0.75\textwidth]
     {figs/trigger/EF_e24vhi_medium1_OR_EF_e60_medium1_OR_EF_mu24i_tight_OR_EF_mu36_tight.pdf}
@@ -1187,30 +1178,7 @@ $m_{Z/\gamma^{*}}$ is obtained by searching through the truth record for the
 decay products of the $Z/\gamma^{*}$, and computing the (truth level) invariant
 mass of the di-lepton pair.
 
-The full list of background samples used, as well as the event generator used,
-SM production cross section, and the effective luminosity generated is given in 
-Tables~\ref{tab:background_grouping}
-and \ref{tab:background_grouping_other}.\footnote{The effective luminosity is
-given by $\nicefrac{N_\mathrm{gen}\sigma}{\epsilon_\mathrm{filter}}$, where
-$N_\mathrm{gen}$ is the number of MC events which were generated, $\sigma$ is
-the production cross section, and $\epsilon_\mathrm{filter}$ is the efficiency
-of any filter which was applied to the MC sample.}
-Unless \pythia8 is specified, \pythia\ version 6 is used for samples labeled
-with \pythia.
-
-The MC simulation is generated with an assumption on the distribution of
-the number of simulated interactions per crossing that differs from that
-recorded in the data.
-A weight is applied to the MC samples based on this difference.
-
-Additionally, several of the MC generators provide event weights, which can
-be positive or negative.
-These weights account for the diagram subtraction that enters the NLL or NLO
-calculations, and are commonly referred to as the ``MC event weight.''
-When the generator provides MC event weights, they are applied to each event in
-the MC background sample; otherwise, they are not used.
-
-\begin{table}[ht]
+\begin{table}[bh]
   \caption[
     Partial summary of background samples and their cross sections used
     in this analysis.
@@ -1265,7 +1233,7 @@ the MC background sample; otherwise, they are not used.
   }
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[p]
   \caption[
     Summary of other background samples and their cross sections used in
     this analysis.
@@ -1329,7 +1297,148 @@ the MC background sample; otherwise, they are not used.
   }
 \end{table}
 
-\FloatBarrier
+
+The full list of background samples used, as well as the event generator used,
+SM production cross section, and the effective luminosity generated is given in 
+Tables~\ref{tab:background_grouping}
+and \ref{tab:background_grouping_other}.\footnote{The effective luminosity is
+given by $\nicefrac{N_\mathrm{gen}\sigma}{\epsilon_\mathrm{filter}}$, where
+$N_\mathrm{gen}$ is the number of MC events which were generated, $\sigma$ is
+the production cross section, and $\epsilon_\mathrm{filter}$ is the efficiency
+of any filter which was applied to the MC sample.}
+Unless \pythia8 is specified, \pythia\ version 6 is used for samples labeled
+with \pythia.
+
+The MC simulation is generated with an assumption on the distribution of
+the number of simulated interactions per crossing that differs from that
+recorded in the data.
+A weight is applied to the MC samples based on this difference.
+
+Additionally, several of the MC generators provide event weights, which can
+be positive or negative.
+These weights account for the diagram subtraction that enters the NLL or NLO
+calculations, and are commonly referred to as the ``MC event weight.''
+When the generator provides MC event weights, they are applied to each event in
+the MC background sample; otherwise, they are not used.
+
+%% ~~moved up a bit~~ \begin{table}[p]
+%% ~~moved up a bit~~   \caption[
+%% ~~moved up a bit~~     Partial summary of background samples and their cross sections used
+%% ~~moved up a bit~~     in this analysis.
+%% ~~moved up a bit~~   ]{
+%% ~~moved up a bit~~     Partial summary of background samples and their cross sections used
+%% ~~moved up a bit~~     in this analysis.
+%% ~~moved up a bit~~     For each di-lepton flavor channel, samples are generated with requirements
+%% ~~moved up a bit~~     on the \pt\ of the $Z$ boson.
+%% ~~moved up a bit~~     For the inclusive \ZGAMMAJETS\ sample, only events with
+%% ~~moved up a bit~~     $\pt^{Z} \le 40 \GeV$ were used.
+%% ~~moved up a bit~~     For each combination of di-lepton flavor and \pt\ requirement, three
+%% ~~moved up a bit~~     samples are generated, with filters applied on the three jet flavors 
+%% ~~moved up a bit~~     different lepton
+%% ~~moved up a bit~~     flavor channels and filters applied on the jet flavor.
+%% ~~moved up a bit~~     The different filter efficiencies, lead to different effective
+%% ~~moved up a bit~~     luminosities.
+%% ~~moved up a bit~~     The left column shows the effective luminosity for the sample generated
+%% ~~moved up a bit~~     with a $b$-filter.
+%% ~~moved up a bit~~     The middle column represents the sample with a $c$-filter and $b$-veto.
+%% ~~moved up a bit~~     The right column shows the effective luminosity of the sample generated
+%% ~~moved up a bit~~     with a veto on both $b$- and $c$-quarks.
+%% ~~moved up a bit~~   }
+%% ~~moved up a bit~~   \label{tab:background_grouping}
+%% ~~moved up a bit~~   \centering{
+%% ~~moved up a bit~~     \begin{tabular}{c|cccccc}
+%% ~~moved up a bit~~       \toprule
+%% ~~moved up a bit~~       Grouping                      & Process                                          & Cross-section [pb]                    & \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} & Generator \\
+%% ~~moved up a bit~~       \midrule
+%% ~~moved up a bit~~       \TTBAR                        & \TTBAR                                           & 253                                   & \multicolumn{3}{c}{727.4}                                                                                 & \powheg+\pythia \\
+%% ~~moved up a bit~~       \midrule
+%% ~~moved up a bit~~       \multirow{3}{*}{Single top}   & $t$-channel                                      & 25.8                                  & \multicolumn{3}{c}{320}                                                                                   & \acermc+\pythia \\
+%% ~~moved up a bit~~                                     & $s$-channel                                      & 1.64                                  & \multicolumn{3}{c}{330}                                                                                   & \powheg+\pythia \\
+%% ~~moved up a bit~~                                     & $Wt$-channel                                     & 2.15                                  & \multicolumn{3}{c}{4200}                                                                                  & \powheg+\pythia \\
+%% ~~moved up a bit~~       \midrule
+%% ~~moved up a bit~~       \multirow{15}{*}{\ZGAMMAJETS} & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & 1110                                  & 110                                                 & 9                           & 6                     & \sherpa  \\ [1ex]
+%% ~~moved up a bit~~                                     & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{70.5}                 & \multirow{2}{*}{110}                                & \multirow{2}{*}{22}         & \multirow{2}{*}{30}   & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                     & $p_{T}^{Z} \in [40 ,70] \GeV$                    & & & & &  \\ [1ex]
+%% ~~moved up a bit~~                                     & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{29.5}                 & \multirow{2}{*}{510}                                & \multirow{2}{*}{90}         & \multirow{2}{*}{110}  & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                     & $p_{T}^{Z} \in [70 ,140] \GeV$                   & & & & &  \\ [1ex]
+%% ~~moved up a bit~~                                     & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{3.99}                 & \multirow{2}{*}{470}                                & \multirow{2}{*}{240}        & \multirow{2}{*}{250}  & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                     & $p_{T}^{Z} \in [140,280] \GeV$                   & & & & &  \\ [1ex]
+%% ~~moved up a bit~~                                     & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{0.24}                 & \multirow{2}{*}{680}                                & \multirow{2}{*}{480}        & \multirow{2}{*}{360}  & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                     & $p_{T}^{Z} \in [280,500] \GeV$                   & & & & &  \\ [1ex]
+%% ~~moved up a bit~~                                     & $Z \rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$  & \multirow{2}{*}{$1.3 \times 10^{-2}$} & \multirow{2}{*}{5700}                               & \multirow{2}{*}{1700}       & \multirow{2}{*}{7000} & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                     & $p_{T}^{Z} \ge 500 \GeV$                         & & & & &  \\ [1ex]
+%% ~~moved up a bit~~                                     & DY $\rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$ & \multirow{2}{*}{92.1}                 & \multicolumn{3}{c}{\multirow{2}{*}{50}}                                                                   & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                     & $m_{Z/\gamma^{*}} \in [8 ,15] \GeV$              & & & & &  \\ [1ex]
+%% ~~moved up a bit~~                                     & DY $\rightarrow \ell\ell (ee, \mu\mu, \tau\tau)$ & \multirow{2}{*}{279}                  & \multicolumn{3}{c}{\multirow{2}{*}{50}}                                                                   & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                     & $m_{Z/\gamma^{*}} \in [15,40] \GeV$              & & & & &  \\
+%% ~~moved up a bit~~       \bottomrule
+%% ~~moved up a bit~~     \end{tabular}
+%% ~~moved up a bit~~   }
+%% ~~moved up a bit~~ \end{table}
+%% ~~moved up a bit~~ 
+%% ~~moved up a bit~~ \begin{table}[p]
+%% ~~moved up a bit~~   \caption[
+%% ~~moved up a bit~~     Summary of other background samples and their cross sections used in
+%% ~~moved up a bit~~     this analysis.
+%% ~~moved up a bit~~   ]{
+%% ~~moved up a bit~~     Summary of other background samples and their cross sections used in
+%% ~~moved up a bit~~     this analysis.
+%% ~~moved up a bit~~     The $W \rightarrow \ell\nu$ and $Z \rightarrow \ell\ell$ processes have 
+%% ~~moved up a bit~~     dedicated samples for each lepton flavor as indicated in the parentheses.
+%% ~~moved up a bit~~     The $W$ samples are generated with filters on the jet flavor.
+%% ~~moved up a bit~~     As in Table~\ref{tab:background_grouping}, the three columns under the
+%% ~~moved up a bit~~     effective luminosity represent the three samples ($b$-filter, $c$-filter
+%% ~~moved up a bit~~     and $b$-veto, veto on both $b$- and $c$-quarks).
+%% ~~moved up a bit~~   }
+%% ~~moved up a bit~~   \label{tab:background_grouping_other}
+%% ~~moved up a bit~~   \centering{
+%% ~~moved up a bit~~       \begin{tabular}{c|cccccc}
+%% ~~moved up a bit~~         \toprule
+%% ~~moved up a bit~~         Grouping &
+%% ~~moved up a bit~~         Process &
+%% ~~moved up a bit~~         Cross-section [pb] &
+%% ~~moved up a bit~~         \multicolumn{3}{c}{Luminosity [$\mathrm{fb}^{-1}$]} &
+%% ~~moved up a bit~~         Generator \\
+%% ~~moved up a bit~~         \midrule
+%% ~~moved up a bit~~         \multirow{35}{*}{Other}    & $\TTBAR\,W$                                         & 0.10                  & \multicolumn{3}{c}{3300 } & \madgraph+\pythia \\
+%% ~~moved up a bit~~                                    & $\TTBAR\,Wj$                                        & $9.3 \times 10^{-2}$  & \multicolumn{3}{c}{3600 } & \madgraph+\pythia \\ [1ex]
+%% ~~moved up a bit~~                                    & $\TTBAR\,Z$                                         & $6.8 \times 10^{-2}$  & \multicolumn{3}{c}{4400 } & \madgraph+\pythia \\
+%% ~~moved up a bit~~                                    & $\TTBAR\,Zj$                                        & $8.7 \times 10^{-2}$  & \multicolumn{3}{c}{3400 } & \madgraph+\pythia \\ [1ex]
+%% ~~moved up a bit~~                                    & $\TTBAR\,WW$                                        & $9.2 \times 10^{-4}$  & \multicolumn{3}{c}{11000} & \madgraph+\pythia \\ [1ex]
+%% ~~moved up a bit~~                                    & $WW \rightarrow \ell\ell\nu\nu$                     & 5.30                  & \multicolumn{3}{c}{1400 } & \sherpa           \\
+%% ~~moved up a bit~~                                    & $WW \rightarrow \ell\nu qq (e,\mu,\tau)$            & 7.3                   & \multicolumn{3}{c}{100  } & \sherpa           \\ [1ex]
+%% ~~moved up a bit~~                                    & $WZ \rightarrow \ell\ell\ell\nu$                    & 9.74                  & \multicolumn{3}{c}{260  } & \sherpa           \\
+%% ~~moved up a bit~~                                    & $WZ \rightarrow \ell\nu\nu\nu$                      & 1.40                  & \multicolumn{3}{c}{270  } & \sherpa           \\
+%% ~~moved up a bit~~                                    & $WZ \rightarrow \ell\nu qq (e,\mu,\tau)$            & 1.9                   & \multicolumn{3}{c}{110  } & \sherpa           \\
+%% ~~moved up a bit~~                                    & $WZ \rightarrow \ell\ell qq (ee, \mu\mu, \tau\tau)$ & 1.46                  & \multicolumn{3}{c}{110  } & \sherpa           \\
+%% ~~moved up a bit~~                                    & $WZ \rightarrow \nu\nu qq$                          & 2.70                  & \multicolumn{3}{c}{64   } & \sherpa           \\ [1ex]
+%% ~~moved up a bit~~                                    & $ZZ \rightarrow \ell\ell\nu\nu$                     & 0.49                  & \multicolumn{3}{c}{1700 } & \sherpa           \\
+%% ~~moved up a bit~~                                    & $ZZ \rightarrow \ell\ell qq (ee, \mu\mu, \tau\tau)$ & 0.25                  & \multicolumn{3}{c}{120  } & \sherpa           \\
+%% ~~moved up a bit~~                                    & $ZZ \rightarrow \nu\nu qq$                          & 1.74                  & \multicolumn{3}{c}{69   } & \sherpa           \\ [1ex]
+%% ~~moved up a bit~~                                    & ggf $H \rightarrow WW$                              & 0.44                  & \multicolumn{3}{c}{2000 } & \powheg+\pythia 8 \\
+%% ~~moved up a bit~~                                    & ggf $H \rightarrow ZZ$                              & $4.7 \times 10^{-2}$  & \multicolumn{3}{c}{2000 } & \powheg+\pythia 8 \\
+%% ~~moved up a bit~~                                    & VBF $H \rightarrow WW$                              & $3.6 \times 10^{-2}$  & \multicolumn{3}{c}{17000} & \powheg+\pythia 8 \\
+%% ~~moved up a bit~~                                    & VBF $H \rightarrow ZZ$                              & $3.8 \times 10^{-3}$  & \multicolumn{3}{c}{18000} & \powheg+\pythia 8 \\ [1ex]
+%% ~~moved up a bit~~                                    & $WH \rightarrow W\ell\nu\ell\nu$                    & 0.15                  & \multicolumn{3}{c}{1000 } & \pythia 8         \\
+%% ~~moved up a bit~~                                    & $WH \rightarrow W\ell\ell\nu\nu$                    & $1.7 \times 10^{-3}$  & \multicolumn{3}{c}{27000} & \pythia 8         \\ [1ex]
+%% ~~moved up a bit~~                                    & $ZH \rightarrow Z\ell\nu\ell\nu$                    & $8.9 \times 10^{-3}$  & \multicolumn{3}{c}{2000 } & \pythia 8         \\
+%% ~~moved up a bit~~                                    & $ZH \rightarrow Z\ell\ell\nu\nu$                    & $1.0 \times 10^{-2}$  & \multicolumn{3}{c}{48000} & \pythia 8         \\ [1ex]
+%% ~~moved up a bit~~                                    & $\TTBAR H \rightarrow \TTBAR WW$                    & $2.8 \times 10^{-2}$  & \multicolumn{3}{c}{7000 } & \pythia 8         \\ [1ex]
+%% ~~moved up a bit~~                                    & $W \rightarrow \ell\nu (e, \mu, \tau)$              & 11000                 & 100                       & 17                   & 4                    & \sherpa \\ [1ex]
+%% ~~moved up a bit~~                                    & $W \rightarrow \ell\nu (e, \mu, \tau)$              & \multirow{2}{*}{653}  & \multirow{2}{*}{44}       & \multirow{2}{*}{7}   & \multirow{2}{*}{30}  & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                    & $p_\mathrm{T}^{W} \in [40,70] \GeV$                 &                       &                           &                      &                      & \\ [1ex]
+%% ~~moved up a bit~~                                    & $W \rightarrow \ell\nu (e, \mu, \tau)$              & \multirow{2}{*}{251}  & \multirow{2}{*}{160}      & \multirow{2}{*}{54}  & \multirow{2}{*}{24}  & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                    & $p_\mathrm{T}^{W} \in [70,140] \GeV$                &                       &                           &                      &                      & \\ [1ex]
+%% ~~moved up a bit~~                                    & $W \rightarrow \ell\nu (e, \mu, \tau)$              & \multirow{2}{*}{31.2} & \multirow{2}{*}{460}      & \multirow{2}{*}{260} & \multirow{2}{*}{80}  & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                    & $p_\mathrm{T}^{W} \in [140,280] \GeV$               &                       &                           &                      &                      & \\ [1ex]
+%% ~~moved up a bit~~                                    & $W \rightarrow \ell\nu (e, \mu, \tau)$              & \multirow{2}{*}{1.84} & \multirow{2}{*}{590}      & \multirow{2}{*}{420} & \multirow{2}{*}{360} & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                    & $p_\mathrm{T}^{W} \in [280,500] \GeV$               &                       &                           &                      &                      & \\ [1ex]
+%% ~~moved up a bit~~                                    & $W \rightarrow \ell\nu (e, \mu, \tau)$              & \multirow{2}{*}{0.10} & \multirow{2}{*}{890}      & \multirow{2}{*}{360} & \multirow{2}{*}{140} & \multirow{2}{*}{\sherpa} \\
+%% ~~moved up a bit~~                                    & $p_\mathrm{T}^{W} \ge 500 \GeV$                     &                       &                           &                      &                      &  \\
+%% ~~moved up a bit~~         \bottomrule
+%% ~~moved up a bit~~       \end{tabular}
+%% ~~moved up a bit~~   }
+%% ~~moved up a bit~~ \end{table}
 
 
 %% -----------------------------------------------------------------------------
@@ -1384,6 +1493,34 @@ The $Z$ CR, requires events be within this $Z$ region.
 The definitions of the CRs are summarized in Table~\ref{tab:regions} and
 Figure~\ref{fig:region_coverage}.
 
+\begin{figure}[th]
+  \centering
+  \subbottom[Top CR]{
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
+      {figs/blstop/w_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_TOP_MBL_200__log.pdf}
+  }
+  \subbottom[$Z$ CR]{
+    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
+      {figs/blstop/w_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_Z_MBL_200__log.pdf}
+  }
+  \caption[
+    Expected and observed $\MBL^0$ distribution in the Top CR and
+    $Z$ CR when all flavor channels are combined.
+  ]{
+    Expected and observed $\MBL^0$ distribution in the Top CR and
+    $Z$ CR when all flavor channels are combined.
+    The prediction in the Top CR shows reasonable agreement with the observed
+    data.
+    The hashed error bands show only the statistical uncertainty in the
+    background MC simulation samples.
+    The signal models have assumed stop branching fractions of
+    $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
+  }
+  \label{fig:cr_mbl_0__no_norm_factor}
+  %%
+\end{figure}
+
+
 The expected and observed $\MBL^{0}$ distributions in the Top CR and $Z$ CR,
 shown in Figure~\ref{fig:cr_mbl_0__no_norm_factor} show reasonable agreement
 between the predicted and observed data in the Top CR.
@@ -1413,50 +1550,7 @@ This normalization factor is not included in the final fit to data, and any plot
 or figure which is produced using this normalization factor explicitly
 states this in the description.
 
-\begin{figure}
-  \centering
-  \subbottom[Top CR]{
-    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
-      {figs/blstop/w_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_TOP_MBL_200__log.pdf}
-  }
-  \subbottom[$Z$ CR]{
-    \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
-      {figs/blstop/w_data__no_k_factor__dists/flavor_all__mbl_0__BMINUSL_CR_Z_MBL_200__log.pdf}
-  }
-  \caption[
-    Expected and observed $\MBL^0$ distribution in the Top CR and
-    $Z$ CR when all flavor channels are combined.
-  ]{
-    Expected and observed $\MBL^0$ distribution in the Top CR and
-    $Z$ CR when all flavor channels are combined.
-    The prediction in the Top CR shows reasonable agreement with the observed
-    data.
-    % The background is underpredicted in the $Z$ CR.
-    % In each plot, the last bin includes the overflow for values beyond the
-    % maximum shown.
-    The hashed error bands show only the statistical uncertainty in the
-    background MC simulation samples.
-    The signal models have assumed stop branching fractions of
-    $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
-    {\color{red} TODO remake with dashed line in ratio.}
-  }
-  \label{fig:cr_mbl_0__no_norm_factor}
-  %%
-\end{figure}
-
-After applying the $k_Z$ normalization factor the $\MBL^0$ distributions in
-the Top CR and $Z$ CR are shown in Figure~\ref{fig:cr_mbl_0__w_norm_factor}.
-While the prediction is roughly unchanged in the Top CR, the prediction in the
-$Z$ CR shows much better agreement with the data.
-The expected and observed event yields in the two CRs, broken out by background
-production process, are shown in Table~\ref{tab:bkg_only_fit_results}.
-The expected signal yield in each of the CRs is low, with a signal to
-background ratio of less than 0.01.
-Additional kinematic distributions including the \pt\ of the leptons and
-$b$-jets are shown in
-\Cref{fig:cr_lep_pt_0__w_norm_factor,fig:cr_lep_pt_1__w_norm_factor,fig:cr_b_jet_pt_0__w_norm_factor,fig:cr_b_jet_pt_1__w_norm_factor}.
-
-\begin{figure}
+\begin{figure}[ht]
   \centering
   \subbottom[Top CR]{
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
@@ -1474,21 +1568,28 @@ $b$-jets are shown in
     Expected and observed $\MBL^0$ distribution in the Top CR and
     $Z$ CR after applying the $k_Z$ normalization factor derived in the $Z$ CR
     when all flavor channels are combined.
-    % After applying the $k_Z$ normalization factor, both CRs show reasonable
-    % agreement between the predicted and observed distributions.
-    % In each plot, the last bin includes the overflow for values beyond the
-    % maximum shown.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
     The signal models have assumed stop branching fractions of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
-    {\color{red} TODO remake with dashed line in ratio.}
   }
   \label{fig:cr_mbl_0__w_norm_factor}
   %%
 \end{figure}
 
-\begin{figure}
+After applying the $k_Z$ normalization factor the $\MBL^0$ distributions in
+the Top CR and $Z$ CR are shown in Figure~\ref{fig:cr_mbl_0__w_norm_factor}.
+While the prediction is roughly unchanged in the Top CR, the prediction in the
+$Z$ CR shows much better agreement with the data.
+The expected and observed event yields in the two CRs, broken out by background
+production process, are shown in Table~\ref{tab:bkg_only_fit_results}.
+The expected signal yield in each of the CRs is low, with a signal to
+background ratio of less than 0.01.
+Additional kinematic distributions including the \pt\ of the leptons and
+$b$-jets are shown in
+\Cref{fig:cr_lep_pt_0__w_norm_factor,fig:cr_lep_pt_1__w_norm_factor,fig:cr_b_jet_pt_0__w_norm_factor,fig:cr_b_jet_pt_1__w_norm_factor}.
+
+\begin{figure}[p]
   \centering
   \subbottom[Top CR]{
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
@@ -1506,22 +1607,16 @@ $b$-jets are shown in
     Expected and observed \pt\ distribution for the leading lepton in
     the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived
     in the $Z$ CR when all flavor channels are combined.
-    % After applying the $k_Z$ normalization factor, both CRs show reasonable
-    % agreement between the predicted and observed distributions.
-    % In each plot, the last bin includes the overflow for values beyond the
-    % maximum shown.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
     The signal models have assumed stop branching fractions of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
-    {\color{red} TODO remake with dashed line in ratio.}
-    {\color{red} TODO Change x-axis to ``lepton \pt''.}
   }
   \label{fig:cr_lep_pt_0__w_norm_factor}
   %%
 \end{figure}
 
-\begin{figure}
+\begin{figure}[p]
   \centering
   \subbottom[Top CR]{
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
@@ -1539,22 +1634,16 @@ $b$-jets are shown in
     Expected and observed \pt\ distribution for the sub-leading lepton in
     the Top CR and $Z$ CR after applying the $k_Z$ normalization factor derived
     in the $Z$ CR when all flavor channels are combined.
-    % After applying the $k_Z$ normalization factor, both CRs show reasonable
-    % agreement between the predicted and observed distributions.
-    % In each plot, the last bin includes the overflow for values beyond the
-    % maximum shown.
     The hashed error bands show only the statistical uncertainty in the
     background MC simulation samples.
     The signal models have assumed stop branching fractions of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
-    {\color{red} TODO remake with dashed line in ratio.}
-    {\color{red} TODO Change x-axis to ``lepton \pt''.}
   }
   \label{fig:cr_lep_pt_1__w_norm_factor}
   %%
 \end{figure}
 
-\begin{figure}
+\begin{figure}[p]
   \centering
   \subbottom[Top CR]{
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
@@ -1576,14 +1665,12 @@ $b$-jets are shown in
     background MC simulation samples.
     The signal models have assumed stop branching fractions of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
-    {\color{red} TODO remake with dashed line in ratio.}
-    {\color{red} TODO Change x-axis to ``$b$-jet \pt''.}
   }
   \label{fig:cr_b_jet_pt_0__w_norm_factor}
   %%
 \end{figure}
 
-\begin{figure}
+\begin{figure}[p]
   \centering
   \subbottom[Top CR]{
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
@@ -1605,15 +1692,13 @@ $b$-jets are shown in
     background MC simulation samples.
     The signal models have assumed stop branching fractions of
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
-    {\color{red} TODO remake with dashed line in ratio.}
-    {\color{red} TODO Change x-axis to ``$b$-jet \pt''.}
   }
   \label{fig:cr_b_jet_pt_1__w_norm_factor}
   %%
 \end{figure}
 
 %% -----------------------------------------------------------------------------
-\FloatBarrier
+% \FloatBarrier
 \subsection{Validation regions}
 \label{sec:vr}
 
@@ -1644,20 +1729,7 @@ prediction from the low \HT\ Top CR to the high \HT\ region of the SRs.
 The Top VR 3 region is obtained by reversing the \HT\ selection criteria from
 the Top VR 2 region, giving a region with $\MBLASYM > 0.2$ and $\HT > 500 \GeV$.
 
-The $Z$ VR is used to validate the extrapolation of the \ZGAMMAJETS\ background
-prediction from the $Z$ CR to kinematic regions higher \HT.
-This region is constructed by reversing the \HT\ selection criteria from the
-$Z$ CR, and relaxing the \METSIG\ requirement.
-The full VR selection criteria are outlined along with the other analysis
-regions in Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
-The expected and observed event yields in the VRs, broken out by background
-production process, are shown in Table~\ref{tab:bkg_only_fit_results}.
-Select kinematic distributions in the VRs are shown in
-Figure~\ref{fig:vr_dists_w_norm_factor}.
-The agreement between the observed and predicted yields and distributions in the
-VRs is explored in more detail in Section~\ref{sec:bkg_fit}.
-
-\begin{figure}
+\begin{figure}[hb]
   \centering
   \subbottom[Top VR 1]{
     \includegraphics[width=0.48\textwidth, clip=true, trim=0 0 1cm 0]
@@ -1685,16 +1757,79 @@ VRs is explored in more detail in Section~\ref{sec:bkg_fit}.
     background MC simulation samples.
     The signal models have an assumed
     $Br(\tilde{t}\rightarrow be) = Br(\tilde{t}\rightarrow b\mu) = 0.5$.
-    {\color{red} TODO remake with dashed line in ratio.}
+    % {\color{red} TODO remake with dashed line in ratio.}
   }
   \label{fig:vr_dists_w_norm_factor}
 \end{figure}
+
+The $Z$ VR is used to validate the extrapolation of the \ZGAMMAJETS\ background
+prediction from the $Z$ CR to kinematic regions higher \HT.
+This region is constructed by reversing the \HT\ selection criteria from the
+$Z$ CR, and relaxing the \METSIG\ requirement.
+The full VR selection criteria are outlined along with the other analysis
+regions in Table~\ref{tab:regions} and Figure~\ref{fig:region_coverage}.
+The expected and observed event yields in the VRs, broken out by background
+production process, are shown in Table~\ref{tab:bkg_only_fit_results}.
+Select kinematic distributions in the VRs are shown in
+Figure~\ref{fig:vr_dists_w_norm_factor}.
+The agreement between the observed and predicted yields and distributions in the
+VRs is explored in more detail in Section~\ref{sec:bkg_fit}.
 
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
 \subsection{Background fit}
 \label{sec:bkg_fit}
+
+\begin{table}[t]
+  \caption[
+    The observed and expected event yields in the CRs and VRs. The
+    expected event yields are shown before and after a fit to the data in
+    the CRs.
+  ]{
+    The observed and expected event yields in the CRs and VRs. The
+    expected event yields are shown before and after a fit to the data in
+    the CRs.
+    The fitted background yields in the CRs match the observed
+    number of events in data by construction.
+  }
+  \label{tab:bkg_only_fit_results}
+  %
+  \begin{center}
+    \begin{tabular}{lrrrrrr}
+      \toprule
+                         & Top CR           & $Z$ CR          & Top VR 1       & Top VR 2      & Top VR 3        & $Z$ VR          \\
+      \midrule
+      Observed           & $369$            & $327$           & $645$          & $606$         & $67$            & $101$           \\
+      \midrule
+      Fitted background  & $369   \pm 19$   & $327  \pm 18$   & $690  \pm 50$  & $630 \pm 40$  & $72   \pm 5$    & $130  \pm 60$   \\
+      \midrule
+      Fitted \TTBAR      & $346   \pm 19$   & $9.1  \pm 0.7$  & $600  \pm 40$  & $497 \pm 35$  & $54   \pm 5$    & $2.99 \pm 0.24$ \\[1ex]
+      Fitted \ZGAMMAJETS & $3.2   \pm 0.5$  & $309  \pm 18$   & $63   \pm 5$   & $64  \pm 5$   & $1.5  \pm 0.8$  & $120  \pm 60$   \\[1ex]
+      Single top         & $16.7  \pm 2.0$  & $0.83 \pm 0.09$ & $23.0 \pm 2.6$ & $56  \pm 6$   & $14.1 \pm 1.9$  & $0.32 \pm 0.04$ \\[1ex]
+      Other              & $2.83  \pm 0.27$ & $8.64 \pm 1.0$  & $4.7  \pm 0.4$ & $8.2 \pm 0.8$ & $2.03 \pm 0.27$ & $6.4  \pm 0.7$  \\
+      \midrule
+      Input SM           & $330$            & $230$           & $614$          & $557$         & $66$            & $93$            \\
+      \midrule
+      Input \TTBAR       & $310$            & $8.2$           & $543$          & $447$         & $49$            & $2.7$           \\[1ex]
+      Input \ZGAMMAJETS  & $2.2$            & $220$           & $44$           & $45$          & $1.1$           & $83$            \\[1ex]
+      Input single top   & $17$             & $0.8$           & $23$           & $57$          & $14$            & $0.30$          \\[1ex]
+      Input other        & $2.8$            & $8.6$           & $4.7$          & $8.2$         & $2.0$           & $6.40$          \\
+      \midrule
+      % $B-L$ stop (500~\GeV)  & $1.3$        & $0.03$          & $5.1$          & $2.4$         & $10.7$          & $3.8$           \\[1ex
+      % $B-L$ stop (800~\GeV)  & $< 0.01$     & $< 0.01$        & $< 0.01$       & $< 0.01$      & $0.6$           & $0.02$          \\[1ex]
+      % $B-L$ stop (1000~\GeV) & $< 0.01$     & $< 0.01$        & $< 0.01$       & $< 0.01$      & $0.1$           & $< 0.01$        \\
+      $B-L$ stop  & \multirow{2}{*}{$1.3$}    & \multirow{2}{*}{$0.03$}   & \multirow{2}{*}{$5.1$}    & \multirow{2}{*}{$2.4$}    & \multirow{2}{*}{$10.7$} & \multirow{2}{*}{$3.8$}    \\
+      (500~\GeV)  &                           &                           &                           &                           &                         &                           \\[1ex]
+      $B-L$ stop  & \multirow{2}{*}{$< 0.01$} & \multirow{2}{*}{$< 0.01$} & \multirow{2}{*}{$< 0.01$} & \multirow{2}{*}{$< 0.01$} & \multirow{2}{*}{$0.6$}  & \multirow{2}{*}{$0.02$}   \\
+      (800~\GeV)  &                           &                           &                           &                           &                         &                           \\[1ex]
+      $B-L$ stop  & \multirow{2}{*}{$< 0.01$} & \multirow{2}{*}{$< 0.01$} & \multirow{2}{*}{$< 0.01$} & \multirow{2}{*}{$< 0.01$} & \multirow{2}{*}{$0.1$}  & \multirow{2}{*}{$< 0.01$} \\
+      (1000~\GeV) &                           &                           &                           &                           &                         &                           \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}
+
 
 The normalization of the \TTBAR\ and the \ZGAMMAJETS\ backgrounds are
 determined using a simultaneous fit, which takes into account
@@ -1742,75 +1877,17 @@ channels of the SRs is \ZGAMMAJETS\ followed by single top and
 \TTBAR. In the $e\mu$ channel, the \ZGAMMAJETS\ background does
 not contribute, thus, the largest backgrounds are single top and \TTBAR.
 
-As a result of the fit, the \ZGAMMAJETS\ background is scaled up by
-approximately 40\%.
-Due to this large normalization factor, the background is over-predicted in
-the $Z$ VR.
-The over-prediction is understood to be due to the difficulty in modeling
-the production of \ZGAMMA\ in association with heavy flavor quarks.
-This mismodeling is also observed by \atlas\ in the SM measurement of
-the $Z$~boson differential cross section~\cite{Aad:2013ysa,Aad:2014dvb}.
-To account for this over-prediction, an additional systematic uncertainty of
-50\% is taken on the background estimate from \ZGAMMAJETS\ events in regions
-with large values of \HT.
-This is described in Section~\ref{sec:systematics} along with the other
-systematic uncertainties.
-
-% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\begin{table}[ht]
-  \caption[
-    The observed and expected event yields in the CRs and VRs. The
-    expected event yields are shown before and after a fit to the data in
-    the CRs.
-  ]{
-    The observed and expected event yields in the CRs and VRs. The
-    expected event yields are shown before and after a fit to the data in
-    the CRs.
-    The fitted background yields in the CRs match the observed
-    number of events in data by construction.
-  }
-  \label{tab:bkg_only_fit_results}
-  %
-  \begin{center}
-    \begin{tabular}{lrrrrrr}
-      \toprule
-                         & Top CR           & $Z$ CR          & Top VR 1       & Top VR 2      & Top VR 3        & $Z$ VR          \\
-      \midrule
-      Observed           & $369$            & $327$           & $645$          & $606$         & $67$            & $101$           \\
-      \midrule
-      Fitted background  & $369   \pm 19$   & $327  \pm 18$   & $690  \pm 50$  & $630 \pm 40$  & $72   \pm 5$    & $130  \pm 60$   \\
-      \midrule
-      Fitted \TTBAR      & $346   \pm 19$   & $9.1  \pm 0.7$  & $600  \pm 40$  & $497 \pm 35$  & $54   \pm 5$    & $2.99 \pm 0.24$ \\[1ex]
-      Fitted \ZGAMMAJETS & $3.2   \pm 0.5$  & $309  \pm 18$   & $63   \pm 5$   & $64  \pm 5$   & $1.5  \pm 0.8$  & $120  \pm 60$   \\[1ex]
-      Single top         & $16.7  \pm 2.0$  & $0.83 \pm 0.09$ & $23.0 \pm 2.6$ & $56  \pm 6$   & $14.1 \pm 1.9$  & $0.32 \pm 0.04$ \\[1ex]
-      Other              & $2.83  \pm 0.27$ & $8.64 \pm 1.0$  & $4.7  \pm 0.4$ & $8.2 \pm 0.8$ & $2.03 \pm 0.27$ & $6.4  \pm 0.7$  \\
-      \midrule
-      Input SM           & $330$            & $230$           & $614$          & $557$         & $66$            & $93$            \\
-      \midrule
-      Input \TTBAR       & $310$            & $8.2$           & $543$          & $447$         & $49$            & $2.7$           \\[1ex]
-      Input \ZGAMMAJETS  & $2.2$            & $220$           & $44$           & $45$          & $1.1$           & $83$            \\[1ex]
-      Input single top   & $17$             & $0.8$           & $23$           & $57$          & $14$            & $0.30$          \\[1ex]
-      Input other        & $2.8$            & $8.6$           & $4.7$          & $8.2$         & $2.0$           & $6.40$          \\
-      \midrule
-      $B-L$ stop (500~\GeV)  & $1.3$        & $0.03$          & $5.1$          & $2.4$         & $10.7$          & $3.8$           \\[1ex]
-      $B-L$ stop (800~\GeV)  & $< 0.01$     & $< 0.01$        & $< 0.01$       & $< 0.01$      & $0.6$           & $0.02$          \\[1ex]
-      $B-L$ stop (1000~\GeV) & $< 0.01$     & $< 0.01$        & $< 0.01$       & $< 0.01$      & $0.1$           & $< 0.01$        \\
-      \bottomrule
-    \end{tabular}
-  \end{center}
-\end{table}
-
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{figs/blstop/histpull_CR_detailed.pdf}
   \caption[
     The number of observed and expected events in the CRs,
-    broken down by flavor channel and for each di-lepton flavor channel.
+    broken down by flavor channel.
     The deviation of that channel's prediction from the observed number of
     events divided by the uncertainty in the prediction is also shown.
   ]{
     The number of observed and expected events in the CRs,
-    broken down by flavor channel and for each di-lepton flavor channel.
+    broken down by flavor channel.
     The uncertainty band includes the statistical uncertainty as well as the
     systematic uncertainty (described in Section~\ref{sec:systematics}).
     The deviation of that channel's prediction from the observed number of
@@ -1828,12 +1905,12 @@ systematic uncertainties.
   \includegraphics[width=\textwidth]{figs/blstop/histpull_VR_detailed.pdf}
   \caption[
     The number of observed and expected events in the VRs,
-    broken down by flavor channel and for each di-lepton flavor channel.
+    broken down by flavor channel.
     The deviation of that channel's prediction from the observed number of
     events divided by the uncertainty in the prediction is also shown.
   ]{
     The number of observed and expected events in the VRs,
-    broken down by flavor channel and for each di-lepton flavor channel.
+    broken down by flavor channel.
     The uncertainty band includes the statistical uncertainty as well as the
     systematic uncertainty (described in Section~\ref{sec:systematics}).
     The deviation of that channel's prediction from the observed number of
@@ -1844,6 +1921,109 @@ systematic uncertainties.
   }
   \label{fig:pull_dist_vr}
 \end{figure}
+
+As a result of the fit, the \ZGAMMAJETS\ background is scaled up by
+approximately 40\%.
+Due to this large normalization factor, the background is over-predicted in
+the $Z$ VR.
+The over-prediction is understood to be due to the difficulty in modeling
+the production of \ZGAMMA\ in association with heavy flavor quarks.
+This mismodeling is also observed by \atlas\ in the SM measurement of
+the $Z$~boson differential cross section~\cite{Aad:2013ysa,Aad:2014dvb}.
+To account for this over-prediction, an additional systematic uncertainty of
+50\% is taken on the background estimate from \ZGAMMAJETS\ events in regions
+with large values of \HT.
+This is described in Section~\ref{sec:systematics} along with the other
+systematic uncertainties.
+
+%% ~~moved above~~ % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+%% ~~moved above~~ \begin{table}[t]
+%% ~~moved above~~   \caption[
+%% ~~moved above~~     The observed and expected event yields in the CRs and VRs. The
+%% ~~moved above~~     expected event yields are shown before and after a fit to the data in
+%% ~~moved above~~     the CRs.
+%% ~~moved above~~   ]{
+%% ~~moved above~~     The observed and expected event yields in the CRs and VRs. The
+%% ~~moved above~~     expected event yields are shown before and after a fit to the data in
+%% ~~moved above~~     the CRs.
+%% ~~moved above~~     The fitted background yields in the CRs match the observed
+%% ~~moved above~~     number of events in data by construction.
+%% ~~moved above~~   }
+%% ~~moved above~~   \label{tab:bkg_only_fit_results}
+%% ~~moved above~~   %
+%% ~~moved above~~   \begin{center}
+%% ~~moved above~~     \begin{tabular}{lrrrrrr}
+%% ~~moved above~~       \toprule
+%% ~~moved above~~                          & Top CR           & $Z$ CR          & Top VR 1       & Top VR 2      & Top VR 3        & $Z$ VR          \\
+%% ~~moved above~~       \midrule
+%% ~~moved above~~       Observed           & $369$            & $327$           & $645$          & $606$         & $67$            & $101$           \\
+%% ~~moved above~~       \midrule
+%% ~~moved above~~       Fitted background  & $369   \pm 19$   & $327  \pm 18$   & $690  \pm 50$  & $630 \pm 40$  & $72   \pm 5$    & $130  \pm 60$   \\
+%% ~~moved above~~       \midrule
+%% ~~moved above~~       Fitted \TTBAR      & $346   \pm 19$   & $9.1  \pm 0.7$  & $600  \pm 40$  & $497 \pm 35$  & $54   \pm 5$    & $2.99 \pm 0.24$ \\[1ex]
+%% ~~moved above~~       Fitted \ZGAMMAJETS & $3.2   \pm 0.5$  & $309  \pm 18$   & $63   \pm 5$   & $64  \pm 5$   & $1.5  \pm 0.8$  & $120  \pm 60$   \\[1ex]
+%% ~~moved above~~       Single top         & $16.7  \pm 2.0$  & $0.83 \pm 0.09$ & $23.0 \pm 2.6$ & $56  \pm 6$   & $14.1 \pm 1.9$  & $0.32 \pm 0.04$ \\[1ex]
+%% ~~moved above~~       Other              & $2.83  \pm 0.27$ & $8.64 \pm 1.0$  & $4.7  \pm 0.4$ & $8.2 \pm 0.8$ & $2.03 \pm 0.27$ & $6.4  \pm 0.7$  \\
+%% ~~moved above~~       \midrule
+%% ~~moved above~~       Input SM           & $330$            & $230$           & $614$          & $557$         & $66$            & $93$            \\
+%% ~~moved above~~       \midrule
+%% ~~moved above~~       Input \TTBAR       & $310$            & $8.2$           & $543$          & $447$         & $49$            & $2.7$           \\[1ex]
+%% ~~moved above~~       Input \ZGAMMAJETS  & $2.2$            & $220$           & $44$           & $45$          & $1.1$           & $83$            \\[1ex]
+%% ~~moved above~~       Input single top   & $17$             & $0.8$           & $23$           & $57$          & $14$            & $0.30$          \\[1ex]
+%% ~~moved above~~       Input other        & $2.8$            & $8.6$           & $4.7$          & $8.2$         & $2.0$           & $6.40$          \\
+%% ~~moved above~~       \midrule
+%% ~~moved above~~       $B-L$ stop (500~\GeV)  & $1.3$        & $0.03$          & $5.1$          & $2.4$         & $10.7$          & $3.8$           \\[1ex]
+%% ~~moved above~~       $B-L$ stop (800~\GeV)  & $< 0.01$     & $< 0.01$        & $< 0.01$       & $< 0.01$      & $0.6$           & $0.02$          \\[1ex]
+%% ~~moved above~~       $B-L$ stop (1000~\GeV) & $< 0.01$     & $< 0.01$        & $< 0.01$       & $< 0.01$      & $0.1$           & $< 0.01$        \\
+%% ~~moved above~~       \bottomrule
+%% ~~moved above~~     \end{tabular}
+%% ~~moved above~~   \end{center}
+%% ~~moved above~~ \end{table}
+
+%% ~~moved above~~ \begin{figure}[ht]
+%% ~~moved above~~   \centering
+%% ~~moved above~~   \includegraphics[width=\textwidth]{figs/blstop/histpull_CR_detailed.pdf}
+%% ~~moved above~~   \caption[
+%% ~~moved above~~     The number of observed and expected events in the CRs,
+%% ~~moved above~~     broken down by flavor channel and for each di-lepton flavor channel.
+%% ~~moved above~~     The deviation of that channel's prediction from the observed number of
+%% ~~moved above~~     events divided by the uncertainty in the prediction is also shown.
+%% ~~moved above~~   ]{
+%% ~~moved above~~     The number of observed and expected events in the CRs,
+%% ~~moved above~~     broken down by flavor channel and for each di-lepton flavor channel.
+%% ~~moved above~~     The uncertainty band includes the statistical uncertainty as well as the
+%% ~~moved above~~     systematic uncertainty (described in Section~\ref{sec:systematics}).
+%% ~~moved above~~     The deviation of that channel's prediction from the observed number of
+%% ~~moved above~~     events divided by the uncertainty in the prediction is also shown.
+%% ~~moved above~~     The normalization of the background yields are determined
+%% ~~moved above~~     by fitting the \TTBAR\ and \ZGAMMAJETS\ backgrounds to the observed
+%% ~~moved above~~     data in the two CRs, so the Top CR and $Z$ CR bins have perfect agreement
+%% ~~moved above~~     by construction.
+%% ~~moved above~~   }
+%% ~~moved above~~   \label{fig:pull_dist_cr}
+%% ~~moved above~~ \end{figure}
+%% ~~moved above~~ 
+%% ~~moved above~~ \begin{figure}[ht]
+%% ~~moved above~~   \centering
+%% ~~moved above~~   \includegraphics[width=\textwidth]{figs/blstop/histpull_VR_detailed.pdf}
+%% ~~moved above~~   \caption[
+%% ~~moved above~~     The number of observed and expected events in the VRs,
+%% ~~moved above~~     broken down by flavor channel and for each di-lepton flavor channel.
+%% ~~moved above~~     The deviation of that channel's prediction from the observed number of
+%% ~~moved above~~     events divided by the uncertainty in the prediction is also shown.
+%% ~~moved above~~   ]{
+%% ~~moved above~~     The number of observed and expected events in the VRs,
+%% ~~moved above~~     broken down by flavor channel and for each di-lepton flavor channel.
+%% ~~moved above~~     The uncertainty band includes the statistical uncertainty as well as the
+%% ~~moved above~~     systematic uncertainty (described in Section~\ref{sec:systematics}).
+%% ~~moved above~~     The deviation of that channel's prediction from the observed number of
+%% ~~moved above~~     events divided by the uncertainty in the prediction is also shown.
+%% ~~moved above~~     The normalization of the background yields are determined
+%% ~~moved above~~     by fitting the \TTBAR\ and \ZGAMMAJETS\ backgrounds to the observed data in
+%% ~~moved above~~     the two CRs.
+%% ~~moved above~~   }
+%% ~~moved above~~   \label{fig:pull_dist_vr}
+%% ~~moved above~~ \end{figure}
 
 The extrapolation from low \HT\ CRs to the high \HT\ region
 where the SRs are located is validated using the Top VR 3
@@ -2147,7 +2327,6 @@ estimate in the SRs.
     uncertainty on the total background estimate in SR~400 and SR~600.
     If the uncertainty is asymmetric, the larger deviation is reported in this
     table.
-    % {\color{red} TODO update this table with broken down info and CRs.}
   }
 \label{tab:systematic_breakdown}
 %
@@ -2186,13 +2365,16 @@ from in Table~\ref{tab:stop_xsec}.
 \chapter[Results][Results]{Results}
 \label{ch:results}
 
-This chapter presents the results of the $B-L$ stop search, which was
-introduced in Chapter~\ref{ch:bl_stop}.
-The observed event yields and the background prediction, obtained using a
-maximum likelihood fit, are shown in Section~\ref{sec:event_yields}.
-The chapter concludes in Section~\ref{sec:model_dependent_limits} with the
-expected and observed limits limits on the allowable stop masses in the
-context of the particular supersymmetric model with $B-L$ stop pair production.
+\begin{quote}
+  This chapter presents the results of the $B-L$ stop search, which was
+  introduced in Chapter~\ref{ch:bl_stop}.
+  The observed event yields and the background prediction, obtained using a
+  maximum likelihood fit, are shown in Section~\ref{sec:event_yields}.
+  The chapter concludes in Section~\ref{sec:model_dependent_limits} with the
+  expected and observed limits limits on the allowable stop masses in the
+  context of the particular supersymmetric model with $B-L$ stop pair
+  production.
+\end{quote}
 
 %% -----------------------------------------------------------------------------
 \FloatBarrier
@@ -2215,7 +2397,7 @@ Table~\ref{tab:sr_event_kinematics}, the $\MBL^0$ and \HT\ distributions in
 SR 400 are shown in Figure~\ref{fig:sr_dists}.
 Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
 
-\begin{table}
+\begin{table}[p]
   \caption[
     The expected and observed event yields in SR~400. The expected event yields.
     The last three rows show the model-independent 95\% CL on the visible
@@ -2261,7 +2443,7 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
   \end{center}
 \end{table}
 
-\begin{table}
+\begin{table}[p]
   \caption[
     The expected and observed event yields in SR~600. The expected event yields.
     The last three rows show the model-independent 95\% CL on the visible
@@ -2307,7 +2489,7 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
   \end{center}
 \end{table}
 
-\begin{table}
+\begin{table}[p]
   \caption[
     The event and object kinematics for the two events passing the
     signal region selection.
@@ -2365,7 +2547,7 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
   \end{center}
 \end{table}
 
-\begin{figure}[p]
+\begin{figure}[ht]
   \centering
   \subbottom[$\MBL^0$]{
     % \includegraphics[width=0.75\textwidth]{figs/blstop/sr_mbl_0.pdf}
@@ -2387,7 +2569,7 @@ Event displays of the two events are shown in Figure~\ref{fig:event_displays}.
   \label{fig:sr_dists}
 \end{figure}
 
-\begin{figure}[p]
+\begin{figure}[ht]
   \centering
   \subbottom[Run 214216, Event 121272046]{
     \includegraphics[height=0.41\textheight]
@@ -2431,7 +2613,7 @@ $\sigma_\mathrm{vis}$ is stronger than expected in the $ee$ and $e\mu$
 channels, and weaker than expected in the $\mu\mu$ channel.
 
 %% -----------------------------------------------------------------------------
-\FloatBarrier
+% \FloatBarrier
 \section{Model dependent limits}
 \label{sec:model_dependent_limits}
 
@@ -2450,7 +2632,7 @@ Then, the simulated signal samples are rescaled in order to determine mass
 limits for different choices of stop branching fractions.
 
 %% -----------------------------------------------------------------------------
-\FloatBarrier
+% \FloatBarrier
 \subsection{Single mass limit}
 \label{sec:single_mass_limit}
 
@@ -2483,9 +2665,9 @@ are excluded.
 No interpolation between the mass points is performed, so the mass limit for
 this choice of stop branching fractions is 900~\GeV.
 
-\begin{figure}[t]
+\begin{figure}[ht]
   \centering
-  \includegraphics[width=0.75\textwidth]
+  \includegraphics[width=0.85\textwidth]
   {figs/blstop/cls_plots/cls_vs_m_br_e_50_br_m_50_br_t_0.pdf}
   \caption[
     Expected and observed $CL_S$ value as a function of stop mass for
@@ -2495,16 +2677,16 @@ this choice of stop branching fractions is 900~\GeV.
     the scenario with $Br(\tilde{t} \to eb) = Br(\tilde{t} \to \mu b) = 0.5$.
     The last mass which has an observed $CL_S < 0.05$ is where the limit is to
     be set.
-    {
-      \color{red} TODO remake with \atlas\ Internal on plots and add marker
-      where tested stop masses are
-    }
+    %% {
+    %%   \color{red} TODO remake with \atlas\ Internal on plots and add marker
+    %%   where tested stop masses are
+    %% }
   }
   \label{fig:exp_limit_br_5050}
 \end{figure}
 
 %% -----------------------------------------------------------------------------
-\FloatBarrier
+% \FloatBarrier
 \subsection{Branching fraction scan}
 \label{sec:branching_fraction_scan}
 
@@ -2576,10 +2758,6 @@ decreasing number of expected events with two light leptons.
     Equation~\ref{eqn:flavor_scale_factor}.
     In all six plots, a darker color corresponds to a higher value for the
     branching fraction or the scale factor.
-    % {\color{red} TODO Do I want to keep this scale factor plot in here? It's
-    % just a rescaling of the branching fraction plot, so it may not add
-    % anything.
-    % }
   }
   \label{fig:flavor_scaling}
 \end{figure}
@@ -2661,11 +2839,11 @@ mass which is excluded is taken to be the mass limit.
 % \begin{figure}[p]
   \centering
   \subbottom[Selected SR for 500~Gev stop mass]{
-    \includegraphics[width=0.48\textwidth]
+    \includegraphics[width=0.70\textwidth]
       {figs/blstop/region_selection/region_choice_vs_br_m_500.pdf}
   }
   \subbottom[Selected SR for 900~Gev stop mass]{
-    \includegraphics[width=0.48\textwidth]
+    \includegraphics[width=0.70\textwidth]
       {figs/blstop/region_selection/region_choice_vs_br_m_900.pdf}
   }
   \caption{
@@ -2673,11 +2851,6 @@ mass which is excluded is taken to be the mass limit.
     500~\GeV (left) and 900~\GeV (right).
     The SR is selected by choosing the SR with the smallest expected $CL_S$
     value for a given branching fraction.
-    % For several points in the branching fraction plane, SR~400 was selected because
-    % the two regions have the same expected $CL_S$ value, with the numerical
-    % precision of the statistical software.
-    % For these points, the expected sensitivity for both SRs is such that
-    % there is little difference between the expected sensitivity.
   }
   \label{fig:sr_selection}
 \end{figure}
