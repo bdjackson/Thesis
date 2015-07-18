@@ -5,7 +5,19 @@
 \label{apx:stat_interpretation}
 
 \begin{quote}
-blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+  Statistical interpretation is a critical part of any Physics analysis.
+  It is used in many aspects of an analysis, including background fits,
+  and to translate the observation into a result, either a discovery
+  or an exclusion.
+
+  The analysis presented in this thesis uses a maximum likelihood fit to the
+  data to obtain a background fit.
+  The particular likelihood function uses for this analysis is described in
+  Section~\ref{apx:likelihood}.
+  Ultimately, the \cls\ method is used to set exclusion limits on the stop
+  mass and branching fraction.
+  The \cls\ method uses a modified frequentest technique, and is described
+  in Section~\ref{apx:cls}.
 \end{quote}
 
 %% -----------------------------------------------------------------------------
@@ -125,6 +137,23 @@ hypothesis, and if the data is incompatible ($p$-value less than some
 threshold, $\alpha$), the null hypothesis is rejected, and the alternate
 hypothesis is accepted with a confidence level of $(1-\alpha)$.
 
+\begin{figure}[t]
+  \centering
+  \subbottom[Large separation]{
+    \includegraphics[width=0.45\textwidth]{figs/stats/pdf_large_separation.pdf}
+    \label{fig:example_pdf_large_sep}
+  }
+  \subbottom[Small separation]{
+    \includegraphics[width=0.45\textwidth]{figs/stats/pdf_small_separation.pdf}
+    \label{fig:example_pdf_small_sep}
+  }
+  \caption{
+    Examples probability distribution functions for signal+background and
+    background-only hypotheses.
+  }
+  \label{fig:example_pdfs}
+\end{figure}
+
 While the $p$-value test is useful for evaluating a discovery, but if the
 data is found to be compatible with the prediction, limits can be set, where
 signal models are rejected if they are expected to be observed in the available
@@ -143,7 +172,7 @@ which maximize the likelihood ratio.
 The test statistic is calculated for the observation in the analysis regions, 
 and the quantity \clsb\ is defined in such a way to give the probability
 of a measurement at least as extreme as the observed test statistic.
-if the observed test statistic is greater than the mean of the expected
+If the observed test statistic is greater than the mean of the expected
 signal+background probability distribution function, \clsb\ is defined as
 \begin{equation}
   \clsb = \int_{q_\mathrm{obs}}^{\inf} P\left(q\left(\mu\right)\right) dq.
@@ -161,46 +190,16 @@ well separated, as shown in Figure~\ref{fig:example_pdf_small_sep}, the
 \clsb\ technique can (and does) reject signal models in favor of the
 background-only hypothesis, when the data is incompatible with both!
 
-\begin{figure}
-  \centering
-  \subbottom[Large separation]{
-    \includegraphics[width=0.45\textwidth]{figs/stats/pdf_large_separation.pdf}
-    \label{fig:example_pdf_large_sep}
-  }
-  \subbottom[Small separation]{
-    \includegraphics[width=0.45\textwidth]{figs/stats/pdf_small_separation.pdf}
-    \label{fig:example_pdf_small_sep}
-  }
-  \caption{
-    Examples probability distribution functions for signal+background and
-    background-only hypotheses.
-  }
-  \label{fig:example_pdfs}
-\end{figure}
-
 The \cls\ technique provides protection from this sort of error by including
 the agreement with the background-only hypothesis.
 The compatibility of the observation with the background-only hypothesis is
 \begin{equation}
-  \clb = \int_{-\inf}^{q_\mathrm{obs}} P\left(q\left(\mu=0\right)\right) dq,
+  \clb = \int_{q_\mathrm{obs}}^{-\inf} P\left(q\left(\mu=0\right)\right) dq,
 \end{equation}
 assuming $q_\mathrm{obs}$ less than the mean of the expected background-only
 probability distribution function.
 
-The \clsb\ and \clb\ quantities are used to construct \cls, which is defined as
-\begin{equation}
-  \cls = \frac{\clsb}{\clb},
-\end{equation}
-An example of the application of the \cls\ method is shown in
-Figure~\ref{fig:cls}.
-The two curves represent the expected probability distributions for the
-signal+background hypothesis (blue) and the background-only hypotheses (red),
-and the black line is placed at the value of $q$ corresponding to the
-observation.
-The shaded areas are equal to the \clsb\ (green) and \clb\ (yellow), thus
-\cls\ is equal to the ratio of these areas.
-
-\begin{figure}
+\begin{figure}[t]
   \centering
   \includegraphics[width=0.80\textwidth]{figs/stats/cls.pdf}
   \caption[
@@ -214,6 +213,19 @@ The shaded areas are equal to the \clsb\ (green) and \clb\ (yellow), thus
   }
   \label{fig:cls}
 \end{figure}
+
+The \clsb\ and \clb\ quantities are used to construct \cls, which is defined as
+\begin{equation}
+  \cls = \frac{\clsb}{\clb},
+\end{equation}
+An example of the application of the \cls\ method is shown in
+Figure~\ref{fig:cls}.
+The two curves represent the expected probability distributions for the
+signal+background hypothesis (blue) and the background-only hypotheses (red),
+and the black line is placed at the value of $q$ corresponding to the
+observation.
+The shaded areas are equal to the \clsb\ (green) and $1-\clb$ (yellow), thus
+\cls\ is equal to the ratio of these areas.
 
 The \cls\ value is penalized if the data is incompatible with both the
 signal+background and background-only hypotheses or if the two hypotheses are
