@@ -11,7 +11,7 @@
 \RequirePackage{ifthen}
 
 \newboolean{boolVersionForPenn}
-\setboolean{boolVersionForPenn}{false}
+\setboolean{boolVersionForPenn}{true}
 
 %% -----------------------------------------------------------------------------
 
