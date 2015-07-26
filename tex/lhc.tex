@@ -59,16 +59,16 @@ $b$-hadrons.
 %% ------------------------------------------------------------------------------
 \FloatBarrier
 
-% TODO comment out for final printing
-\begin{figure}[th]
-  \centering
-  \includegraphics[width=\textwidth, clip=true, trim=15cm 0 15cm 10cm]
-    {figs/lhc/accelerator_complex.jpg}
-  \caption{
-    Schematic view of the CERN accelerator complex~\cite{Marcastel:1621583}.
-  }
-  \label{fig:cern_complex}
-\end{figure}
+%% % TODO comment out for final printing
+%% \begin{figure}[th]
+%%   \centering
+%%   \includegraphics[width=\textwidth, clip=true, trim=15cm 0 15cm 10cm]
+%%     {figs/lhc/accelerator_complex.jpg}
+%%   \caption{
+%%     Schematic view of the CERN accelerator complex~\cite{Marcastel:1621583}.
+%%   }
+%%   \label{fig:cern_complex}
+%% \end{figure}
 
 \subsection{CERN accelerator complex}
 \label{sec:accelerator_complex}
@@ -88,18 +88,15 @@ A schematic of the CERN accelerator complex, and how the individual
 accelerators link to one another is shown in Figure~\ref{fig:cern_complex}.
 
 % TODO move figure here for final printing
-% \begin{figure}[th]
-%   \centering
-%   \includegraphics[width=\textwidth, clip=true, trim=15cm 0 15cm 10cm]
-%     {figs/lhc/accelerator_complex.jpg}
-%   \caption{
-%     Schematic view of the CERN accelerator complex~\cite{Marcastel:1621583}.
-%   }
-%   \label{fig:cern_complex}
-% \end{figure}
-% 
-% \subsection{CERN accelerator complex}
-% \label{sec:accelerator_complex}
+\begin{figure}[th]
+  \centering
+  \includegraphics[width=\textwidth, clip=true, trim=15cm 0 15cm 10cm]
+    {figs/lhc/accelerator_complex.jpg}
+  \caption{
+    Schematic view of the CERN accelerator complex~\cite{Marcastel:1621583}.
+  }
+  \label{fig:cern_complex}
+\end{figure}
 
 %% ------------------------------------------------------------------------------
 \FloatBarrier
@@ -136,7 +133,7 @@ brought into collision for a period of several hours for stable data-taking by
 the experiments, and then finally the beams are dumped when the instantaneous
 luminosity has fallen below some threshold.
 
-\begin{figure}[th]
+\begin{figure}[t!]
   \centering
   \includegraphics[width=0.9\textwidth]{figs/lhc/lumivstime.eps}
   \caption{
@@ -230,6 +227,15 @@ is used when measuring the distance between signatures in the detector.
 \subsection{Inner detector} 
 \label{sec:id}
 
+The inner detector (ID) comprises the three innermost sub-detectors of ATLAS,
+the pixel detector, silicon semiconductor tracker (SCT), and the transition
+radiation tracker (TRT), shown in Figure~\ref{fig:id_cartoon}.
+The passage of high energy charged particles is detected from the electron-hole
+pairs produced in the silicon semiconductor sensors of the pixel and SCT, and
+from the ionization production in the gas-filled straws of the TRT
+The three sub-detectors are described in \Cref{sec:pixel,sec:sct,sec:trt},
+and tracking is reviewed in Section~\ref{sec:tracking}.
+
 \begin{figure}[p]
   \centering{
     \includegraphics[width=0.8\textwidth]{figs/lhc/id_schematic_barrel.png}
@@ -248,29 +254,10 @@ is used when measuring the distance between signatures in the detector.
   \label{fig:id_cartoon}
 \end{figure}
 
-The inner detector (ID) comprises the three innermost sub-detectors of ATLAS,
-the pixel detector, silicon semiconductor tracker (SCT), and the transition
-radiation tracker (TRT), shown in Figure~\ref{fig:id_cartoon}.
-The passage of high energy charged particles is detected from the electron-hole
-pairs produced in the silicon semiconductor sensors of the pixel and SCT, and
-from the ionization production in the gas-filled straws of the TRT
-The three sub-detectors are described in \Cref{sec:pixel,sec:sct,sec:trt},
-and tracking is reviewed in Section~\ref{sec:tracking}.
-
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 % \FloatBarrier
 \subsubsection{Pixel detector} 
 \label{sec:pixel}
-
-\begin{figure}[ht]
-  \centering{
-    \includegraphics[width=\textwidth]{figs/lhc/pixel_schematic.jpg}
-  }
-  \caption{
-    The Silicon pixel tracker of the \atlas\ experiment~\cite{Pequenao:1095925}.
-  }
-  \label{fig:pixel_cartoon}
-\end{figure}
 
 The pixel detector, shown in Figure~\ref{fig:pixel_cartoon}, is the closest
 sub-detector in \atlas\ to the interaction point.
@@ -284,21 +271,20 @@ In total, there are $80 \times 10^{6}$ channels in the pixel detector, each
 with a nominal pixel size is 50~\um\ in the $\phi$ dimension, and 400~\um\ in
 $z$~\cite{1748-0221-3-07-P07007}.
 
+\begin{figure}[th]
+  \centering{
+    \includegraphics[width=\textwidth]{figs/lhc/pixel_schematic.jpg}
+  }
+  \caption{
+    The Silicon pixel tracker of the \atlas\ experiment~\cite{Pequenao:1095925}.
+  }
+  \label{fig:pixel_cartoon}
+\end{figure}
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 \FloatBarrier
 \subsubsection{Silicon semiconductor tracker} 
 \label{sec:sct}
-
-\begin{figure}[ht]
-  \centering{
-    \includegraphics[width=\textwidth]{figs/lhc/sct_photo.jpg}
-  }
-  \caption{
-    Photograph of the silicon semiconductor tracker of the
-    \atlas\ experiment~\cite{Maximilien:883305}.
-  }
-  \label{fig:sct_photo}
-\end{figure}
 
 The SCT, shown in Figure~\ref{fig:sct_photo}, is also made of silicon
 detectors, but rather than pixels, the SCT uses microstrip technology.
@@ -310,21 +296,21 @@ in the barrel (endcap) having a resolution of 17~\um\ in the
 $r-\phi$~($z-\phi$)~plane, and 580~\um\ in the $z$ ($r$) dimension.
 There are 6.3 million read-out channels in the SCT.
 
-%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\FloatBarrier
-\subsubsection{Transition radiation tracker} 
-\label{sec:trt}
-
-\begin{figure}[ht]
+\begin{figure}[th]
   \centering{
-    \includegraphics[width=\textwidth]{figs/lhc/trt_photo.jpg}
+    \includegraphics[width=\textwidth]{figs/lhc/sct_photo.jpg}
   }
   \caption{
-    Photograph of the transition radiation tracker of the
-    \atlas\ experiment during its commissioning~\cite{Maximilien:889555}.
+    Photograph of the silicon semiconductor tracker of the
+    \atlas\ experiment~\cite{Maximilien:883305}.
   }
-  \label{fig:trt_module}
+  \label{fig:sct_photo}
 \end{figure}
+
+%% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+% \FloatBarrier
+\subsubsection{Transition radiation tracker} 
+\label{sec:trt}
 
 The TRT, shown during the commissioning process in Figure~\ref{fig:trt_module}
 makes up the largest and outer layer of the ID, and is used for both tracking
@@ -367,8 +353,19 @@ absorbs the TR photons.
 The fraction of TRT hits associated with a charged particle track that exceed
 the high-threshold is a discriminating variable used to identify electrons.
 
+\begin{figure}[t!]
+  \centering{
+    \includegraphics[width=\textwidth]{figs/lhc/trt_photo.jpg}
+  }
+  \caption{
+    Photograph of the transition radiation tracker of the
+    \atlas\ experiment during its commissioning~\cite{Maximilien:889555}.
+  }
+  \label{fig:trt_module}
+\end{figure}
+
 %% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-\FloatBarrier
+% \FloatBarrier
 \subsubsection{Tracking} 
 \label{sec:tracking}
 
